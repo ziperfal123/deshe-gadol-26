@@ -56,7 +56,7 @@ deshe-gadol-26/
 
 ## 6. Results & manual data
 
-- **Group scores → automatic.** Source: **openfootball** raw JSON (keyless, primary): `https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup.json`. Fallback: **football-data.org** free key (`X-Auth-Token`, 10 req/min, WC = comp `WC`). Map names → codes via `teams.json`.
+- **Group scores → automatic.** Primary: **ESPN** unofficial JSON (keyless, near-live): `https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=YYYYMMDD` (one UTC day per call; iterate the date window). **Join on `competitor.team.abbreviation`, which equals our FIFA `code` for all 48 teams** (no name mapping needed); `homeAway:"home"` = our home = side A (verified 72/72 direct key match); `status.type.state == "post"` = finished. Fallbacks: **openfootball** raw JSON (`https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup.json`, keyless, hand-updated ~1×/day, join via `teams.json` name_en aliases) then **football-data.org** free key (`X-Auth-Token`, 10 req/min, WC = comp `WC`).
 - **Knockout advancement + special-bet answers → manual**, hand-entered into `data/manual/` (a static JSON we fill in together as the tournament progresses). `map.xlsx` also has empty result columns if manual score entry is ever preferred over the API.
 
 ## 7. Recompute flow (the job)

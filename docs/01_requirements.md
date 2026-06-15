@@ -83,7 +83,7 @@ High-level algorithm (full detail in `03_architecture_scoring.md`):
 
 Results enter the system through two paths, by design:
 
-- **Group-stage match results → automatic.** The recompute job pulls the 72 group-game scores from the results API (openfootball raw JSON, keyless; football-data.org free key as fallback — see architecture doc §3a). These drive the 1X2 scoring with no human action.
+- **Group-stage match results → automatic.** The recompute job pulls the 72 group-game scores from the results API (ESPN unofficial JSON, keyless & near-live, primary; openfootball then football-data.org as fallbacks, see architecture doc §3a). These drive the 1X2 scoring with no human action.
 - **Advanced / knockout stages → manual (admin).** Which teams *advanced* (the 32 group qualifiers and their positions, and who reaches Round of 16 / quarter / semi / final / champion) is **entered by an admin**, not parsed from the API. Rationale: advancement involves tie-break rules, best-third-place selection, and bracket placeholders that are noisy to derive from a feed; a few manual clicks per stage are simpler and less error-prone for a friends' game. Special-bet answers (top scorer, cards totals, etc.) are likewise entered manually at the relevant time.
 
 This keeps the automated path trivial (just scores) while the human handles the handful of judgment points.
@@ -117,7 +117,7 @@ Implementation note (lean): the simplest admin path is editing the JSON files (`
 |---|---|
 | Group-stage scoring | "Correct result" 1X2 (1/X/2), right-hand team = home. 2 pts per correct. |
 | Players shown | Active **and** approved only. |
-| Results source | Group scores: API (openfootball, keyless; football-data.org fallback). Knockout advancement + specials: manual admin entry. |
+| Results source | Group scores: API (ESPN keyless near-live, primary; openfootball + football-data.org fallbacks). Knockout advancement + specials: manual admin entry. |
 | Numeric special bets | Scored by **exact match**, resolved at tournament end. |
 | Architecture | Static frontend reading pre-built JSON + a scheduled recompute job (no always-on backend). |
 | Language | Hebrew only, RTL. |
