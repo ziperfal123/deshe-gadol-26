@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { useLocalStorage } from 'usehooks-ts'
 import type {
+  AdvGroupPick,
   GroupItem,
   MatchPickStats,
   PlayerFile,
@@ -117,20 +118,14 @@ function Section({
   )
 }
 
-/** Football badge used as a "versus" separator between two team names. */
+/** Clean "VS" separator between two team names. */
 function Versus({ big }: { big?: boolean }) {
   return (
     <span
       aria-label="נגד"
-      className={cn(
-        'flex shrink-0 items-center justify-center rounded-full bg-ink/10 text-ink/70',
-        big ? 'h-6 w-6' : 'h-5 w-5',
-      )}
+      className={cn('shrink-0 font-bold tracking-wide text-ink/55', big ? 'text-xs' : 'text-[11px]')}
     >
-      <svg viewBox="0 0 24 24" className={cn(big ? 'h-3.5 w-3.5' : 'h-3 w-3')} fill="none" stroke="currentColor" strokeWidth="2" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="9" />
-        <path d="M12 7.5l4.3 3.1-1.6 5h-5.4l-1.6-5z" />
-      </svg>
+      VS
     </span>
   )
 }
@@ -213,23 +208,38 @@ function ViewToggle({ mode, setMode }: { mode: ViewMode; setMode: (m: ViewMode) 
   )
 }
 
-/** Compact row (standard view). */
+/**
+ * Compact row (standard view). Teams use equal flexible columns so they align
+ * across rows and only truncate when there is genuinely no room. The result /
+ * pick / points cluster on the left, separated by a divider for breathing room.
+ */
 function GroupRow({ item }: { item: GroupItem }) {
   const played = item.actual_score_a !== null && item.actual_score_b !== null
   return (
-    <li className="flex items-center gap-2 px-2 py-2.5">
-      <span className="w-5 text-center text-xs font-bold text-ink/30">{item.group}</span>
-      <MatchTeams home={item.home_he} away={item.away_he} />
-      <PickBadge pick={item.pick_1x2} />
-      {renderResultIfNeeded(played, item)}
-      <PointsTag status={item.status} points={item.points} />
+    <li className="flex items-center gap-2 px-2 py-3">
+      <span className="w-4 shrink-0 text-center text-xs font-bold text-ink/30">{item.group}</span>
+      <div className="flex min-w-0 flex-1 items-center gap-2">
+        <span className="min-w-0 truncate text-sm font-medium text-ink" title={item.home_he ?? ''}>
+          {item.home_he}
+        </span>
+        <Versus />
+        <span className="min-w-0 truncate text-sm font-medium text-ink" title={item.away_he ?? ''}>
+          {item.away_he}
+        </span>
+      </div>
+      <div className="flex shrink-0 items-center gap-3 ps-1">
+        <PickBadge pick={item.pick_1x2} />
+        <span className="h-4 w-px bg-ink/15" />
+        {renderResultIfNeeded(played, item)}
+        <PointsTag status={item.status} points={item.points} />
+      </div>
     </li>
   )
 }
 
 function renderResultIfNeeded(played: boolean, item: GroupItem) {
-  if (!played) return <span className="w-12 text-center text-xs text-ink/30">טרם</span>
-  return <Score a={item.actual_score_a} b={item.actual_score_b} className="w-12 justify-center text-xs font-semibold text-ink/60" />
+  if (!played) return <span className="w-10 shrink-0 text-center text-xs text-ink/30">טרם</span>
+  return <Score a={item.actual_score_a} b={item.actual_score_b} className="w-10 shrink-0 justify-center text-xs font-semibold text-ink/60" />
 }
 
 /** Score with the home value (first child) on the right, matching RTL team order. */
@@ -349,14 +359,10 @@ function AdvancementSection({ player }: { player: PlayerFile }) {
     <Section title="העפלה ושלבי הנוקאאוט">
       <div className="px-2 py-2">
         <SubTitle>ניחושי דירוג בבתים</SubTitle>
-        <div className="flex flex-wrap gap-1.5">
-          {adv.group_stage.map((g, i) => (
-            <Chip key={i} label={`${g.team_he} (${g.position})`} status={g.status} />
-          ))}
-        </div>
+        <GroupStandingPicks items={adv.group_stage} />
       </div>
       {stages.map((s) => (
-        <div key={s} className="border-t border-ink/5 px-2 py-2">
+        <div key={s} className="border-t border-ink/10 px-2 py-3">
           <SubTitle>{STAGE_LABELS[s]}</SubTitle>
           <div className="flex flex-wrap gap-1.5">
             {adv[s].map((p, i) => (
@@ -366,6 +372,29 @@ function AdvancementSection({ player }: { player: PlayerFile }) {
         </div>
       ))}
     </Section>
+  )
+}
+
+const POSITION_LABELS: Record<number, string> = { 1: 'מקום 1', 2: 'מקום 2', 3: 'מקום 3' }
+
+/** Group-stage advancement picks, split into labeled sub-groups by predicted position. */
+function GroupStandingPicks({ items }: { items: AdvGroupPick[] }) {
+  const positions = [1, 2, 3].filter((pos) => items.some((g) => g.position === pos))
+  return (
+    <div className="divide-y divide-ink/10">
+      {positions.map((pos) => (
+        <div key={pos} className="py-3 first:pt-0 last:pb-0">
+          <div className="mb-1.5 text-[11px] font-bold text-ink/40">{POSITION_LABELS[pos]}</div>
+          <div className="flex flex-wrap gap-2">
+            {items
+              .filter((g) => g.position === pos)
+              .map((g, i) => (
+                <Chip key={i} label={g.team_he} status={g.status} />
+              ))}
+          </div>
+        </div>
+      ))}
+    </div>
   )
 }
 

@@ -136,16 +136,14 @@ Historical note — our earlier inference (before the file arrived) was 62/72 ex
 
 File shape: `{ matches: [ { order, match_id, group, home_code, away_code, home_he, away_he } ] }`.
 
-### 2.4 `champion_odds.json` — ✅ GENERATED (lives in `data/seed/`)
-The rules score the champion guess on a sliding scale that rewards surprising picks: **favorite = 20 pts, biggest surprise = 40 pts**. No table was supplied, so it was generated from one bookmaker's outright market (**BetMGM**, captured 2026-06-16) and frozen. Points are log-interpolated across decimal odds (favorite → 20, longest shot → 40), covering all 48 teams.
+### 2.4 `champion_odds.json` — ✅ OFFICIAL TABLE (lives in `data/seed/`)
+The champion guess is scored on a sliding scale that rewards surprising picks: **favorite (France) = 20 pts, biggest surprise = 60 pts**. The **official organizer table** was supplied (2026-06-16) and hand-keyed in, covering all 48 teams. (This replaced an earlier odds-derived estimate.)
 ```json
 {
-  "_meta": { "rule": "fav=20, surprise=40, log-scaled", "source": "BetMGM", "range": [20,40] },
-  "odds_decimal": { "ESP": 5.5, "...": 2501.0 },
-  "points": { "ESP": 20, "FRA": 20, "HAI": 40, "CUW": 40 }   // team code → points if that team wins
+  "_meta": { "rule": "official table: fav=20, surprise=60", "source": "organizer", "range": [20,60] },
+  "points": { "FRA": 20, "ESP": 22, "BRA": 24, "...": 60 }   // team code → points if that team wins
 }
 ```
-Re-generate from the same formula if odds are refreshed before predictions lock.
 
 ---
 

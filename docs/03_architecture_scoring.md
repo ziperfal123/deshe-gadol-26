@@ -79,7 +79,7 @@ Runs every 12h (and can be triggered manually):
 | Reaches quarter-final — 8 teams | **10** |
 | Reaches semi-final — 4 teams | **15** |
 | Reaches final — 2 teams | **20** |
-| Champion (winner) | **20-40 per `champion_odds.json`** (fav 20 → surprise 40) |
+| Champion (winner) | **20-60 per `champion_odds.json`** (official table: fav 20 → surprise 60) |
 
 ### Special bets
 | Bet | Points | Notes |
@@ -160,7 +160,7 @@ Primary = **ESPN** (keyless, near-live, code-join). Fallbacks = **openfootball r
 ---
 
 ## 6. Open items / decisions needed
-1. **Champion-odds scoring table** — ✅ resolved. Generated to `data/seed/champion_odds.json` from BetMGM outright odds (2026-06-16): favorite = 20 pts, biggest surprise = 40 pts, log-interpolated across all 48 teams. Engine scores `winner` picks from `points[code]`; still 0 / "pending" until the final is played.
+1. **Champion-odds scoring table** — ✅ resolved. `data/seed/champion_odds.json` holds the **official organizer table** (provided 2026-06-16): favorite (France) = 20 pts, biggest surprise = 60 pts, across all 48 teams. Engine scores `winner` picks from `points[code]`; still 0 / "pending" until the final is played.
 2. **Results API** — ✅ resolved (see §3a): **ESPN** unofficial JSON (primary, keyless, near-live, code-join) → openfootball raw JSON → football-data.org free key (fallbacks). Knockout-stage results resolved manually by admin (see requirements doc).
 3. **`match_id` → fixtures mapping** — ✅ resolved: reconstructed deterministically (insertion-order = group-major FIFA order) and validated (4/4 derivable outcomes, 70/72 strength consistency, 0 contradictions). Frozen to `data/seed/match_map.json`. (See data-model doc §2.3b.)
 4. **Frontend framework / hosting** — ✅ resolved: React+Vite+TS+Tailwind, TS engine, GitHub Pages (public repo). See "Final stack" above.

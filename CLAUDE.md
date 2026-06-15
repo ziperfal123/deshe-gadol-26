@@ -50,7 +50,7 @@ deshe-gadol-26/
 - **Group match (1X2):** correct result = **2 pts**. side A = home.
 - **Group→knockout advancement** (32 of 48 advance): **+2** per picked team that advanced (any place) **+1** bonus if exact in-group position correct.
 - **Reach-stage picks:** Round of 16 = **5** each, quarter = **10**, semi = **15**, final = **20**.
-- **Champion (`winner`):** scored from `data/seed/champion_odds.json` (`points[code]`, range **20-40**). Favorite = 20, biggest surprise = 40, log-interpolated from BetMGM outright odds (captured 2026-06-16). Award the team's points to each player whose `winner` pick wins. Until the final is decided, score as 0 / "pending".
+- **Champion (`winner`):** scored from `data/seed/champion_odds.json` (`points[code]`, range **20-60**, the **official organizer table**). Favorite (France) = 20, biggest surprise = 60. Award the team's points to each player whose `winner` pick wins. Until the final is decided, score as 0 / "pending".
 - **Specials:** top scorer 20, best player 20, top assists 15; most/most-conceded team group-stage 10 each; most/most-conceded team tournament 10 each; most-cards & fewest-cards team 10 each; total red cards 8; total extra-times 5; penalty-shootout matches 5. Player-name ties (scorer/assists) → all pickers get full points. Numeric bets scored by **exact match**, resolved at tournament end.
 - **Tie-breakers (rank order):** champion → correct finalists → semis → quarters → R16 → first-knockout-round (32 advancers) → group-stage results.
 

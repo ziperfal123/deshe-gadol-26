@@ -1693,7 +1693,7 @@
   "champion": {
     "team_he": "פורטוגל",
     "team_code": "POR",
-    "points_if_correct": 21,
+    "points_if_correct": 28,
     "status": "pending",
     "points": 0
   },
@@ -1783,5 +1783,5 @@
       "points": 0
     }
   ],
-  "synced_at": "2026-06-15T22:14:55+00:00"
+  "synced_at": "2026-06-15T22:34:57+00:00"
 }

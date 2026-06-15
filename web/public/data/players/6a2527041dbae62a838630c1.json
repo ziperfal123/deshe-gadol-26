@@ -1710,7 +1710,7 @@
   "champion": {
     "team_he": "בלגיה",
     "team_code": "BEL",
-    "points_if_correct": 26,
+    "points_if_correct": 34,
     "status": "pending",
     "points": 0
   },
@@ -1800,5 +1800,5 @@
       "points": 0
     }
   ],
-  "synced_at": "2026-06-15T22:14:55+00:00"
+  "synced_at": "2026-06-15T22:34:57+00:00"
 }
