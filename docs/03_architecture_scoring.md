@@ -39,7 +39,7 @@ A real backend/DB would only be justified by live multi-user writes or sub-secon
 
 ### Repo structure
 ```
-deshe_2.0/
+deshe-gadol-26/
 ├── data/{seed,manual,public}/
 ├── engine/              # TS scoring + openfootball fetch + Vitest tests
 ├── web/                 # React + Vite app (RTL)
@@ -79,7 +79,7 @@ Runs every 12h (and can be triggered manually):
 | Reaches quarter-final — 8 teams | **10** |
 | Reaches semi-final — 4 teams | **15** |
 | Reaches final — 2 teams | **20** |
-| Champion (winner) | **per champion-odds table** ⚠️ missing |
+| Champion (winner) | **20-40 per `champion_odds.json`** (fav 20 → surprise 40) |
 
 ### Special bets
 | Bet | Points | Notes |
@@ -154,7 +154,7 @@ Primary = **openfootball raw JSON** (keyless). Fallback = **football-data.org fr
 ---
 
 ## 6. Open items / decisions needed
-1. **Champion-odds scoring table** — *deferred by decision.* `winner` guesses are stored but not scored until the odds table is provided. Engine should treat champion points as 0 / "pending" for now.
+1. **Champion-odds scoring table** — ✅ resolved. Generated to `data/seed/champion_odds.json` from BetMGM outright odds (2026-06-16): favorite = 20 pts, biggest surprise = 40 pts, log-interpolated across all 48 teams. Engine scores `winner` picks from `points[code]`; still 0 / "pending" until the final is played.
 2. **Results API** — ✅ resolved (see §3a): openfootball raw JSON (primary, keyless) + football-data.org free key (fallback). Knockout-stage results resolved manually by admin (see requirements doc).
 3. **`match_id` → fixtures mapping** — ✅ resolved: reconstructed deterministically (insertion-order = group-major FIFA order) and validated (4/4 derivable outcomes, 70/72 strength consistency, 0 contradictions). Frozen to `data/seed/match_map.json`. (See data-model doc §2.3b.)
 4. **Frontend framework / hosting** — ✅ resolved: React+Vite+TS+Tailwind, TS engine, GitHub Pages (public repo). See "Final stack" above.

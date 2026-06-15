@@ -1,0 +1,9 @@
+# Frozen, machine-read seed data. Collapse in GitHub PRs (linguist-generated)
+# and suppress the textual diff (-diff) so large one-time rewrites don't
+# produce reviewer-hostile diffs. These files are derived, never hand-reviewed.
+data/seed/predictions.json     linguist-generated -diff
+data/seed/team_predictions.json linguist-generated -diff
+data/seed/special_predictions.json linguist-generated -diff
+
+# Computed outputs are also generated, not hand-written.
+data/public/**                 linguist-generated -diff
