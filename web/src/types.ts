@@ -6,6 +6,8 @@ export interface StandingsRow {
   name: string
   total_points: number
   correct_group: number
+  /** true when this row shares its score with others (tie-break is a placeholder for now). */
+  tied?: boolean
 }
 
 export interface Standings {
@@ -72,6 +74,19 @@ export interface SpecialPick {
   status: PredStatus
   points: number
 }
+
+export interface MatchPickStats {
+  counts: { '1': number; X: number; '2': number }
+  pct: { '1': number; X: number; '2': number }
+  total: number
+}
+
+export interface MatchStatsFile {
+  synced_at: string
+  matches: Record<string, MatchPickStats>
+}
+
+export type ViewMode = 'standard' | 'detailed'
 
 export interface PlayerFile {
   player_id: string

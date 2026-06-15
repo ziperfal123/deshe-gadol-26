@@ -1,4 +1,4 @@
-import type { PlayerFile, Standings } from '../types'
+import type { MatchStatsFile, PlayerFile, Standings } from '../types'
 
 const base = import.meta.env.BASE_URL
 
@@ -13,5 +13,12 @@ export async function fetchStandings(): Promise<Standings> {
 export async function fetchPlayer(id: string): Promise<PlayerFile> {
   const res = await fetch(`${base}data/players/${id}.json`)
   if (!res.ok) throw new Error('failed to load player')
+  return res.json()
+}
+
+/** Fetch the global crowd split (how all players guessed each match). */
+export async function fetchMatchStats(): Promise<MatchStatsFile> {
+  const res = await fetch(`${base}data/match_stats.json`)
+  if (!res.ok) throw new Error('failed to load match stats')
   return res.json()
 }

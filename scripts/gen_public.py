@@ -6,6 +6,7 @@ Scores ONLY the group stage (the only thing resolvable now). Advancement,
 specials and champion are stored and marked 'pending'.
 """
 import json, os, datetime, urllib.request, pathlib
+from collections import Counter
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SEED = ROOT / "data" / "seed"
@@ -200,13 +201,33 @@ for pl in players:
     }
     rows.append({"player_id": pid, "name": pl["name"], "total_points": total, "correct_group": correct})
 
-# rank: points desc, then correct_group desc, then name
+# rank: DENSE ranking — equal scores share a position, ranks ascend 1,2,3 with
+# NO gaps (so 4-way tie for 1st is 1,1,1,1 then 2, not 1,1,1,1,5). Sort by
+# points desc, correct_group desc, name asc (stable). `tied` flags shared scores.
 rows.sort(key=lambda r: (-r["total_points"], -r["correct_group"], r["name"]))
-rank = 0; prev = None
-for i, r in enumerate(rows):
+score_counts = Counter((r["total_points"], r["correct_group"]) for r in rows)
+rank, prev = 0, None
+for r in rows:
     key = (r["total_points"], r["correct_group"])
-    if key != prev: rank = i + 1; prev = key
+    if key != prev:
+        rank += 1
+        prev = key
     r["rank"] = rank
+    r["tied"] = score_counts[key] > 1
+
+# ---- crowd split per match: how all players guessed each game (1/X/2) ----
+match_picks = {}
+for p in preds:
+    match_picks.setdefault(p["match_id"], Counter())[p["pick_1x2"]] += 1
+match_stats = {}
+for mid, cnt in match_picks.items():
+    total = sum(cnt.values())
+    def pct(k): return round(100 * cnt.get(k, 0) / total) if total else 0
+    match_stats[mid] = {
+        "counts": {"1": cnt.get("1", 0), "X": cnt.get("X", 0), "2": cnt.get("2", 0)},
+        "pct": {"1": pct("1"), "X": pct("X"), "2": pct("2")},
+        "total": total,
+    }
 
 synced = datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds")
 PUB.mkdir(parents=True, exist_ok=True)
@@ -216,6 +237,8 @@ json.dump({"synced_at": synced, "players_played": len(results), "standings": row
 for pid, pf in player_files.items():
     pf["synced_at"] = synced
     json.dump(pf, open(PUB / "players" / f"{pid}.json", "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+json.dump({"synced_at": synced, "matches": match_stats},
+          open(PUB / "match_stats.json", "w", encoding="utf-8"), ensure_ascii=False, indent=2)
 json.dump({"synced_at": synced, "tournament_stage": "group", "scoring_version": "stopgap-1",
            "matches_resolved": len(results)},
           open(PUB / "meta.json", "w", encoding="utf-8"), ensure_ascii=False, indent=2)

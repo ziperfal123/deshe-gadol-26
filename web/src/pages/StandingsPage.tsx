@@ -41,12 +41,12 @@ function renderBodyIfNeeded(
 
   return (
     <>
-      <div className="sticky top-0 z-10 -mx-4 px-4 pt-3 pb-3 bg-sand/85 backdrop-blur">
+      <div className="sticky top-0 z-10 -mx-4 rounded-b-3xl border-b border-ink/10 bg-sand/90 px-4 pb-3 pt-3 shadow-header backdrop-blur">
         <input
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="חיפוש שחקן…"
-          className="w-full rounded-2xl border border-ink/10 bg-white px-4 py-2.5 text-sm shadow-soft outline-none focus:border-sage focus:ring-2 focus:ring-sage/30"
+          className="w-full rounded-2xl border border-ink/15 bg-transparent px-4 py-2.5 text-sm outline-none placeholder:text-ink/40 focus:border-sage focus:ring-2 focus:ring-sage/30"
         />
       </div>
       <ul className="mt-3 space-y-2">

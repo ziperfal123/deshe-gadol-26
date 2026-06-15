@@ -31,6 +31,22 @@ export function pickLabel(pick: '1' | 'X' | '2'): string {
   return 'X'
 }
 
+/** Format a match kickoff (UTC ISO) as Israel-time date + hour, e.g. "18.06, 22:00". */
+export function formatKickoffIL(iso: string | null | undefined): string {
+  if (!iso) return ''
+  try {
+    return new Intl.DateTimeFormat('he-IL', {
+      timeZone: 'Asia/Jerusalem',
+      day: '2-digit',
+      month: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+    }).format(new Date(iso))
+  } catch {
+    return ''
+  }
+}
+
 /** Format the sync timestamp as a readable Hebrew date-time. */
 export function formatSync(iso: string): string {
   try {
