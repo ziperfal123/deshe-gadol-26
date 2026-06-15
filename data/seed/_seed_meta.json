@@ -1,0 +1,13 @@
+{
+  "generated_at": "2026-06-15T19:01:29",
+  "source_file": "‎⁨גיבוי לפני איפוס raw_db_backup_2026-06-14 (1)⁩.numbers",
+  "filter": "account_status=active AND submission_status=approved",
+  "counts": {
+    "players": 153,
+    "predictions": 11075,
+    "team_predictions_players": 153,
+    "special_predictions": 154,
+    "distinct_match_ids": 72,
+    "distinct_team_names": 48
+  }
+}

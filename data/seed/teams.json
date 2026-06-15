@@ -1,0 +1,586 @@
+{
+  "note": "Canonical 2026 team registry. group derived from seed data (consistent across all players). Map any free-text Hebrew name to code via name_he/aliases. name_en_aliases lists English spellings (incl. openfootball source) for matching.",
+  "teams": [
+    {
+      "code": "CZE",
+      "name_he": "צ׳כיה",
+      "name_en": "Czechia",
+      "group": "A",
+      "aliases": [
+        "צ׳כיה"
+      ],
+      "name_en_aliases": [
+        "Czechia",
+        "Czech Republic"
+      ]
+    },
+    {
+      "code": "KOR",
+      "name_he": "דרום קוריאה",
+      "name_en": "South Korea",
+      "group": "A",
+      "aliases": [
+        "דרום קוריאה"
+      ],
+      "name_en_aliases": [
+        "South Korea"
+      ]
+    },
+    {
+      "code": "MEX",
+      "name_he": "מקסיקו",
+      "name_en": "Mexico",
+      "group": "A",
+      "aliases": [
+        "מקסיקו"
+      ],
+      "name_en_aliases": [
+        "Mexico"
+      ]
+    },
+    {
+      "code": "RSA",
+      "name_he": "דרום אפריקה",
+      "name_en": "South Africa",
+      "group": "A",
+      "aliases": [
+        "דרום אפריקה"
+      ],
+      "name_en_aliases": [
+        "South Africa"
+      ]
+    },
+    {
+      "code": "BIH",
+      "name_he": "בוסניה והרצגובינה",
+      "name_en": "Bosnia and Herzegovina",
+      "group": "B",
+      "aliases": [
+        "בוסניה והרצגובינה"
+      ],
+      "name_en_aliases": [
+        "Bosnia and Herzegovina",
+        "Bosnia & Herzegovina"
+      ]
+    },
+    {
+      "code": "CAN",
+      "name_he": "קנדה",
+      "name_en": "Canada",
+      "group": "B",
+      "aliases": [
+        "קנדה"
+      ],
+      "name_en_aliases": [
+        "Canada"
+      ]
+    },
+    {
+      "code": "QAT",
+      "name_he": "קטאר",
+      "name_en": "Qatar",
+      "group": "B",
+      "aliases": [
+        "קטאר"
+      ],
+      "name_en_aliases": [
+        "Qatar"
+      ]
+    },
+    {
+      "code": "SUI",
+      "name_he": "שווייץ",
+      "name_en": "Switzerland",
+      "group": "B",
+      "aliases": [
+        "שווייץ"
+      ],
+      "name_en_aliases": [
+        "Switzerland"
+      ]
+    },
+    {
+      "code": "BRA",
+      "name_he": "ברזיל",
+      "name_en": "Brazil",
+      "group": "C",
+      "aliases": [
+        "ברזיל"
+      ],
+      "name_en_aliases": [
+        "Brazil"
+      ]
+    },
+    {
+      "code": "HAI",
+      "name_he": "האיטי",
+      "name_en": "Haiti",
+      "group": "C",
+      "aliases": [
+        "האיטי"
+      ],
+      "name_en_aliases": [
+        "Haiti"
+      ]
+    },
+    {
+      "code": "MAR",
+      "name_he": "מרוקו",
+      "name_en": "Morocco",
+      "group": "C",
+      "aliases": [
+        "מרוקו"
+      ],
+      "name_en_aliases": [
+        "Morocco"
+      ]
+    },
+    {
+      "code": "SCO",
+      "name_he": "סקוטלנד",
+      "name_en": "Scotland",
+      "group": "C",
+      "aliases": [
+        "סקוטלנד"
+      ],
+      "name_en_aliases": [
+        "Scotland"
+      ]
+    },
+    {
+      "code": "AUS",
+      "name_he": "אוסטרליה",
+      "name_en": "Australia",
+      "group": "D",
+      "aliases": [
+        "אוסטרליה"
+      ],
+      "name_en_aliases": [
+        "Australia"
+      ]
+    },
+    {
+      "code": "PAR",
+      "name_he": "פרגוואי",
+      "name_en": "Paraguay",
+      "group": "D",
+      "aliases": [
+        "פרגוואי"
+      ],
+      "name_en_aliases": [
+        "Paraguay"
+      ]
+    },
+    {
+      "code": "TUR",
+      "name_he": "טורקיה",
+      "name_en": "Türkiye",
+      "group": "D",
+      "aliases": [
+        "טורקיה"
+      ],
+      "name_en_aliases": [
+        "Türkiye",
+        "Turkey"
+      ]
+    },
+    {
+      "code": "USA",
+      "name_he": "ארצות הברית",
+      "name_en": "United States",
+      "group": "D",
+      "aliases": [
+        "ארצות הברית"
+      ],
+      "name_en_aliases": [
+        "United States",
+        "USA"
+      ]
+    },
+    {
+      "code": "CIV",
+      "name_he": "חוף השנהב",
+      "name_en": "Côte d'Ivoire",
+      "group": "E",
+      "aliases": [
+        "חוף השנהב"
+      ],
+      "name_en_aliases": [
+        "Côte d'Ivoire",
+        "Ivory Coast"
+      ]
+    },
+    {
+      "code": "CUW",
+      "name_he": "קוראסאו",
+      "name_en": "Curaçao",
+      "group": "E",
+      "aliases": [
+        "קוראסאו"
+      ],
+      "name_en_aliases": [
+        "Curaçao"
+      ]
+    },
+    {
+      "code": "ECU",
+      "name_he": "אקוודור",
+      "name_en": "Ecuador",
+      "group": "E",
+      "aliases": [
+        "אקוודור"
+      ],
+      "name_en_aliases": [
+        "Ecuador"
+      ]
+    },
+    {
+      "code": "GER",
+      "name_he": "גרמניה",
+      "name_en": "Germany",
+      "group": "E",
+      "aliases": [
+        "גרמניה"
+      ],
+      "name_en_aliases": [
+        "Germany"
+      ]
+    },
+    {
+      "code": "JPN",
+      "name_he": "יפן",
+      "name_en": "Japan",
+      "group": "F",
+      "aliases": [
+        "יפן"
+      ],
+      "name_en_aliases": [
+        "Japan"
+      ]
+    },
+    {
+      "code": "NED",
+      "name_he": "הולנד",
+      "name_en": "Netherlands",
+      "group": "F",
+      "aliases": [
+        "הולנד"
+      ],
+      "name_en_aliases": [
+        "Netherlands"
+      ]
+    },
+    {
+      "code": "SWE",
+      "name_he": "שוודיה",
+      "name_en": "Sweden",
+      "group": "F",
+      "aliases": [
+        "שוודיה"
+      ],
+      "name_en_aliases": [
+        "Sweden"
+      ]
+    },
+    {
+      "code": "TUN",
+      "name_he": "תוניסיה",
+      "name_en": "Tunisia",
+      "group": "F",
+      "aliases": [
+        "תוניסיה"
+      ],
+      "name_en_aliases": [
+        "Tunisia"
+      ]
+    },
+    {
+      "code": "BEL",
+      "name_he": "בלגיה",
+      "name_en": "Belgium",
+      "group": "G",
+      "aliases": [
+        "בלגיה"
+      ],
+      "name_en_aliases": [
+        "Belgium"
+      ]
+    },
+    {
+      "code": "EGY",
+      "name_he": "מצרים",
+      "name_en": "Egypt",
+      "group": "G",
+      "aliases": [
+        "מצרים"
+      ],
+      "name_en_aliases": [
+        "Egypt"
+      ]
+    },
+    {
+      "code": "IRN",
+      "name_he": "איראן",
+      "name_en": "Iran",
+      "group": "G",
+      "aliases": [
+        "איראן"
+      ],
+      "name_en_aliases": [
+        "Iran"
+      ]
+    },
+    {
+      "code": "NZL",
+      "name_he": "ניו זילנד",
+      "name_en": "New Zealand",
+      "group": "G",
+      "aliases": [
+        "ניו זילנד"
+      ],
+      "name_en_aliases": [
+        "New Zealand"
+      ]
+    },
+    {
+      "code": "CPV",
+      "name_he": "כף ורדה",
+      "name_en": "Cape Verde",
+      "group": "H",
+      "aliases": [
+        "כף ורדה"
+      ],
+      "name_en_aliases": [
+        "Cape Verde"
+      ]
+    },
+    {
+      "code": "ESP",
+      "name_he": "ספרד",
+      "name_en": "Spain",
+      "group": "H",
+      "aliases": [
+        "ספרד"
+      ],
+      "name_en_aliases": [
+        "Spain"
+      ]
+    },
+    {
+      "code": "KSA",
+      "name_he": "ערב הסעודית",
+      "name_en": "Saudi Arabia",
+      "group": "H",
+      "aliases": [
+        "ערב הסעודית"
+      ],
+      "name_en_aliases": [
+        "Saudi Arabia"
+      ]
+    },
+    {
+      "code": "URU",
+      "name_he": "אורוגוואי",
+      "name_en": "Uruguay",
+      "group": "H",
+      "aliases": [
+        "אורוגוואי"
+      ],
+      "name_en_aliases": [
+        "Uruguay"
+      ]
+    },
+    {
+      "code": "FRA",
+      "name_he": "צרפת",
+      "name_en": "France",
+      "group": "I",
+      "aliases": [
+        "צרפת"
+      ],
+      "name_en_aliases": [
+        "France"
+      ]
+    },
+    {
+      "code": "IRQ",
+      "name_he": "עיראק",
+      "name_en": "Iraq",
+      "group": "I",
+      "aliases": [
+        "עיראק"
+      ],
+      "name_en_aliases": [
+        "Iraq"
+      ]
+    },
+    {
+      "code": "NOR",
+      "name_he": "נורבגיה",
+      "name_en": "Norway",
+      "group": "I",
+      "aliases": [
+        "נורבגיה"
+      ],
+      "name_en_aliases": [
+        "Norway"
+      ]
+    },
+    {
+      "code": "SEN",
+      "name_he": "סנגל",
+      "name_en": "Senegal",
+      "group": "I",
+      "aliases": [
+        "סנגל"
+      ],
+      "name_en_aliases": [
+        "Senegal"
+      ]
+    },
+    {
+      "code": "ALG",
+      "name_he": "אלג'יריה",
+      "name_en": "Algeria",
+      "group": "J",
+      "aliases": [
+        "אלג'יריה"
+      ],
+      "name_en_aliases": [
+        "Algeria"
+      ]
+    },
+    {
+      "code": "ARG",
+      "name_he": "ארגנטינה",
+      "name_en": "Argentina",
+      "group": "J",
+      "aliases": [
+        "ארגנטינה"
+      ],
+      "name_en_aliases": [
+        "Argentina"
+      ]
+    },
+    {
+      "code": "AUT",
+      "name_he": "אוסטריה",
+      "name_en": "Austria",
+      "group": "J",
+      "aliases": [
+        "אוסטריה"
+      ],
+      "name_en_aliases": [
+        "Austria"
+      ]
+    },
+    {
+      "code": "JOR",
+      "name_he": "ירדן",
+      "name_en": "Jordan",
+      "group": "J",
+      "aliases": [
+        "ירדן"
+      ],
+      "name_en_aliases": [
+        "Jordan"
+      ]
+    },
+    {
+      "code": "COD",
+      "name_he": "קונגו הדמוקרטית",
+      "name_en": "DR Congo",
+      "group": "K",
+      "aliases": [
+        "קונגו הדמוקרטית"
+      ],
+      "name_en_aliases": [
+        "DR Congo"
+      ]
+    },
+    {
+      "code": "COL",
+      "name_he": "קולומביה",
+      "name_en": "Colombia",
+      "group": "K",
+      "aliases": [
+        "קולומביה"
+      ],
+      "name_en_aliases": [
+        "Colombia"
+      ]
+    },
+    {
+      "code": "POR",
+      "name_he": "פורטוגל",
+      "name_en": "Portugal",
+      "group": "K",
+      "aliases": [
+        "פורטוגל"
+      ],
+      "name_en_aliases": [
+        "Portugal"
+      ]
+    },
+    {
+      "code": "UZB",
+      "name_he": "אוזבקיסטן",
+      "name_en": "Uzbekistan",
+      "group": "K",
+      "aliases": [
+        "אוזבקיסטן"
+      ],
+      "name_en_aliases": [
+        "Uzbekistan"
+      ]
+    },
+    {
+      "code": "CRO",
+      "name_he": "קרואטיה",
+      "name_en": "Croatia",
+      "group": "L",
+      "aliases": [
+        "קרואטיה"
+      ],
+      "name_en_aliases": [
+        "Croatia"
+      ]
+    },
+    {
+      "code": "ENG",
+      "name_he": "אנגליה",
+      "name_en": "England",
+      "group": "L",
+      "aliases": [
+        "אנגליה"
+      ],
+      "name_en_aliases": [
+        "England"
+      ]
+    },
+    {
+      "code": "GHA",
+      "name_he": "גאנה",
+      "name_en": "Ghana",
+      "group": "L",
+      "aliases": [
+        "גאנה"
+      ],
+      "name_en_aliases": [
+        "Ghana"
+      ]
+    },
+    {
+      "code": "PAN",
+      "name_he": "פנמה",
+      "name_en": "Panama",
+      "group": "L",
+      "aliases": [
+        "פנמה"
+      ],
+      "name_en_aliases": [
+        "Panama"
+      ]
+    }
+  ]
+}
