@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    margin: 0;
+    color: #3d405b; /* ink */
+    background-color: #f6f0e2; /* sand */
+    background-image: radial-gradient(
+        circle at 12% 8%,
+        rgba(129, 178, 154, 0.18),
+        transparent 38%
+      ),
+      radial-gradient(circle at 88% 4%, rgba(242, 204, 143, 0.22), transparent 34%);
+    background-attachment: fixed;
+    font-family: 'Heebo', 'Assistant', system-ui, sans-serif;
+  }
+}
