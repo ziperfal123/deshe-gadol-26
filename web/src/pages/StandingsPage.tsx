@@ -178,7 +178,7 @@ function renderLastPlayerButtonIfNeeded(
           </>
         ) : (
           <>
-            למה אחרונים תמיד בסוף? <span aria-hidden>⬇</span>
+            למה האחרונים תמיד בסוף? <span aria-hidden>⬇</span>
           </>
         )}
       </button>
