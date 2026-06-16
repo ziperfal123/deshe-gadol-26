@@ -16,6 +16,13 @@ export interface Standings {
   standings: StandingsRow[]
 }
 
+/** A user-defined view: a named subset of players, stored in localStorage. */
+export interface CustomGroup {
+  id: string
+  name: string
+  playerIds: string[]
+}
+
 export interface GroupItem {
   match_id: string
   order: number | null

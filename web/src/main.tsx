@@ -5,13 +5,13 @@ import './index.css'
 import { StandingsPage } from './pages/StandingsPage'
 import { PlayerPage } from './pages/PlayerPage'
 import { StatsPage } from './pages/StatsPage'
-import { AnnouncementDialog } from './components/AnnouncementDialog'
+// AnnouncementDialog is intentionally not rendered for now (kept for future use).
+// import { AnnouncementDialog } from './components/AnnouncementDialog'
 import { ScrollToTopButton } from './components/ScrollToTopButton'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <HashRouter>
-      <AnnouncementDialog />
       <Routes>
         <Route path="/" element={<StandingsPage />} />
         <Route path="/player/:id" element={<PlayerPage />} />

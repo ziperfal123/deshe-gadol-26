@@ -1,19 +1,25 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useEventListener } from 'usehooks-ts'
-import type { Standings, StandingsRow } from '../types'
+import { useEventListener, useLocalStorage } from 'usehooks-ts'
+import type { CustomGroup, Standings, StandingsRow } from '../types'
 import { fetchStandings } from '../lib/data'
 import { useFlashScroll } from '../lib/useFlashScroll'
+import { rankStandings } from '../lib/ranking'
 import { cn } from '../lib/cn'
 import { Header } from '../components/Header'
 import { NavTabs } from '../components/NavTabs'
+import { GroupViewBar } from '../components/GroupViewBar'
+import { GroupEditorDialog } from '../components/GroupEditorDialog'
 
-/** Home screen: the full standings table, click a row to open a player. */
+/** Home screen: the standings table (all players or a custom group view). */
 export function StandingsPage() {
   const [data, setData] = useState<Standings>()
   const [error, setError] = useState<string>()
   const [query, setQuery] = useState('')
   const [scrolled, setScrolled] = useState(false)
+  const [groups, setGroups] = useLocalStorage<CustomGroup[]>('custom-groups', [])
+  const [activeView, setActiveView] = useState('all')
+  const [editor, setEditor] = useState<{ open: boolean; editing?: CustomGroup }>({ open: false })
   const { flashScrollTo } = useFlashScroll('player')
   const navigate = useNavigate()
 
@@ -26,38 +32,106 @@ export function StandingsPage() {
   }, [])
 
   const onRowClick = (id: string) => navigate(`/player/${id}`)
-  const lastId = data?.standings.at(-1)?.player_id
+  const activeGroup = groups.find((g) => g.id === activeView)
+  // Custom group views are re-ranked within the chosen subset.
+  const rows = data
+    ? activeGroup
+      ? rankStandings(data.standings.filter((r) => activeGroup.playerIds.includes(r.player_id)))
+      : data.standings
+    : []
+
+  const onSaveGroup = (g: CustomGroup) => {
+    setGroups((prev) => {
+      const i = prev.findIndex((x) => x.id === g.id)
+      if (i < 0) return [...prev, g]
+      const copy = [...prev]
+      copy[i] = g
+      return copy
+    })
+    setActiveView(g.id)
+    setEditor({ open: false })
+  }
+
+  const onDeleteGroup = (id: string) => {
+    setGroups((prev) => prev.filter((x) => x.id !== id))
+    setActiveView('all')
+    setEditor({ open: false })
+  }
 
   return (
     <div className="mx-auto max-w-3xl px-4 pb-16">
       <Header syncedAt={data?.synced_at} />
       <NavTabs />
-      {renderBodyIfNeeded({ data, error, query, setQuery, onRowClick, lastId, scrolled, flashScrollTo })}
+      {data && (
+        <GroupViewBar
+          groups={groups}
+          activeView={activeView}
+          onSelect={setActiveView}
+          onCreate={() => setEditor({ open: true })}
+        />
+      )}
+      {renderActiveGroupToolbarIfNeeded(activeGroup, () => setEditor({ open: true, editing: activeGroup }))}
+      {renderBodyIfNeeded({ data, error, rows, query, setQuery, onRowClick, scrolled, flashScrollTo })}
+      {renderEditorIfNeeded(editor, data, onSaveGroup, onDeleteGroup, () => setEditor({ open: false }))}
     </div>
+  )
+}
+
+function renderActiveGroupToolbarIfNeeded(group: CustomGroup | undefined, onEdit: () => void) {
+  if (!group) return <></>
+  return (
+    <div className="mt-2 flex items-center justify-between gap-2 px-1">
+      <span className="text-sm font-bold text-ink/70">
+        {group.name} · {group.playerIds.length} חברים
+      </span>
+      <button onClick={onEdit} className="rounded-full px-2 py-0.5 text-xs font-bold text-leaf transition hover:bg-leaf/10">
+        ✎ עריכה
+      </button>
+    </div>
+  )
+}
+
+function renderEditorIfNeeded(
+  editor: { open: boolean; editing?: CustomGroup },
+  data: Standings | undefined,
+  onSave: (g: CustomGroup) => void,
+  onDelete: (id: string) => void,
+  onClose: () => void,
+) {
+  if (!editor.open || !data) return <></>
+  return (
+    <GroupEditorDialog
+      players={data.standings}
+      initial={editor.editing}
+      onSave={onSave}
+      onDelete={editor.editing ? onDelete : undefined}
+      onClose={onClose}
+    />
   )
 }
 
 interface BodyProps {
   data: Standings | undefined
   error: string | undefined
+  rows: StandingsRow[]
   query: string
   setQuery: (q: string) => void
   onRowClick: (id: string) => void
-  lastId: string | undefined
   scrolled: boolean
   flashScrollTo: (id: string | undefined) => void
 }
 
-function renderBodyIfNeeded({ data, error, query, setQuery, onRowClick, lastId, scrolled, flashScrollTo }: BodyProps) {
+function renderBodyIfNeeded({ data, error, rows, query, setQuery, onRowClick, scrolled, flashScrollTo }: BodyProps) {
   if (error) return <p className="mt-10 text-center text-clay">{error}</p>
   if (!data) return <p className="mt-10 text-center text-ink/40">טוען…</p>
 
-  const filtered = data.standings.filter((r) => r.name.includes(query.trim()))
+  const filtered = rows.filter((r) => r.name.includes(query.trim()))
   const filtering = query.trim() !== ''
+  const lastId = rows.at(-1)?.player_id
 
   return (
     <>
-      <div className="sticky top-0 z-10 -mx-4 rounded-b-3xl border-b border-ink/10 bg-sand/90 px-4 pb-3 pt-3 shadow-header backdrop-blur">
+      <div className="sticky top-0 z-10 -mx-4 mt-2 rounded-b-3xl border-b border-ink/10 bg-sand/90 px-4 pb-3 pt-3 shadow-header backdrop-blur">
         <input
           value={query}
           onChange={(e) => setQuery(e.target.value)}
@@ -95,10 +169,7 @@ function renderLastPlayerButtonIfNeeded(
           'inline-flex items-center gap-1 rounded-full text-sm transition',
           scrolled
             ? 'bg-leaf px-3.5 py-1.5 font-bold text-white shadow-soft hover:brightness-95'
-            : cn(
-                'px-2 py-0.5 font-medium text-clay/80',
-                disabled ? 'cursor-not-allowed opacity-40' : 'hover:bg-clay/10',
-              ),
+            : cn('px-2 py-0.5 font-medium text-clay/80', disabled ? 'cursor-not-allowed opacity-40' : 'hover:bg-clay/10'),
         )}
       >
         {scrolled ? (
