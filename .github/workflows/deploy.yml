@@ -15,7 +15,7 @@ on:
   # load, which is worst at the top of the hour. Odd minutes reduce that.
   # NOTE: outside IDT (Israel Standard Time, UTC+2) these drift by one hour.
   schedule:
-    - cron: '7 4 * * *'    # ~07:07 Israel time (IDT, UTC+3)
+    - cron: '7 3 * * *'    # ~06:07 Israel time (IDT, UTC+3) — 1h early to absorb GitHub's scheduler lag
     - cron: '37 19 * * *'  # ~22:37 Israel time (IDT, UTC+3)
 
 # Least-privilege permissions required for GitHub Pages deployment.

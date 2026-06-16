@@ -44,8 +44,11 @@ The World Cup 2026 (June-July 2026) falls entirely within Israel Daylight Time
 
 | Israel time (IDT) | UTC | cron |
 | --- | --- | --- |
-| ~07:07 | 04:07 | `7 4 * * *` |
+| ~06:07 | 03:07 | `7 3 * * *` |
 | ~22:37 | 19:37 | `37 19 * * *` |
+
+The morning run is set an hour early (06:07 rather than ~07:00) to absorb
+GitHub's scheduler lag, so the fresh data is live well before the morning.
 
 Minutes are intentionally off the round `:00`/`:30` marks: GitHub's scheduled
 runs are best-effort and get delayed or dropped under load, worst at the top of
