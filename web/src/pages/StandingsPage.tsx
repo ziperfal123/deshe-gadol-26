@@ -6,6 +6,7 @@ import { fetchStandings } from '../lib/data'
 import { useFlashScroll } from '../lib/useFlashScroll'
 import { cn } from '../lib/cn'
 import { Header } from '../components/Header'
+import { NavTabs } from '../components/NavTabs'
 
 /** Home screen: the full standings table, click a row to open a player. */
 export function StandingsPage() {
@@ -30,6 +31,7 @@ export function StandingsPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 pb-16">
       <Header syncedAt={data?.synced_at} />
+      <NavTabs />
       {renderBodyIfNeeded({ data, error, query, setQuery, onRowClick, lastId, scrolled, flashScrollTo })}
     </div>
   )

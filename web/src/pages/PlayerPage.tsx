@@ -543,7 +543,10 @@ function ChampionSection({ player, championStat }: { player: PlayerFile; champio
     <Section title="אלופת העולם">
       <div className="flex items-center gap-2 px-2 py-2">
         <span aria-hidden className="text-xl">🏆</span>
-        <span className="flex-1 font-semibold text-ink">{c.team_he ? withFlag(c.team_code, c.team_he) : '—'}</span>
+        <div className="min-w-0 flex-1">
+          <div className="font-semibold text-ink">{c.team_he ? withFlag(c.team_code, c.team_he) : '—'}</div>
+          {renderChampionCrowdIfNeeded(c)}
+        </div>
         <StatTooltip stat={championStat} />
         {renderChampionPotentialIfNeeded(c.points_if_correct)}
         <Chip label={c.status === 'pending' ? 'ממתין' : `+${c.points}`} status={c.status} />
@@ -555,6 +558,16 @@ function ChampionSection({ player, championStat }: { player: PlayerFile; champio
 function renderChampionPotentialIfNeeded(pts?: number) {
   if (pts === undefined) return <></>
   return <span className="text-xs text-ink/40">שווי: {pts} נק׳</span>
+}
+
+function renderChampionCrowdIfNeeded(c: PlayerFile['champion']) {
+  if (!c.crowd || !c.team_he) return <></>
+  return (
+    <div className="mt-0.5 flex items-center gap-1 text-xs font-medium text-leaf">
+      <span aria-hidden>👥</span>
+      {c.crowd.count}/{c.crowd.total} בחרו ב{c.team_he} ({c.crowd.pct}%)
+    </div>
+  )
 }
 
 function SpecialsSection({ player, specialStats }: { player: PlayerFile; specialStats?: Record<string, CrowdStat> }) {

@@ -137,6 +137,14 @@ for p in preds:
 tp_by_player = {t["player_id"]: t for t in teampreds}
 sp_by_player = {s["player_id"]: s for s in specials}
 
+# champion pick distribution (used to show each player how many share their champion pick)
+champ_pick_cnt = Counter()
+for t in teampreds:
+    w = (t.get("winner") or [None])[0]
+    if w:
+        champ_pick_cnt[w] += 1
+champ_pick_tot = sum(champ_pick_cnt.values())
+
 GROUP_PTS = 2
 rows = []
 player_files = {}
@@ -182,9 +190,13 @@ for pl in players:
                                for n in tp.get(stage, [])]
     winner_he = (tp.get("winner") or [None])[0]
     wc = he2code(winner_he) if winner_he else None
+    champ_count = champ_pick_cnt.get(winner_he, 0) if winner_he else 0
     champion = {"team_he": winner_he, "team_code": wc,
                 "points_if_correct": champ["points"].get(wc) if wc else None,
-                "status": "pending", "points": 0}
+                "status": "pending", "points": 0,
+                "crowd": {"count": champ_count, "total": champ_pick_tot,
+                          "pct": round(100 * champ_count / champ_pick_tot) if champ_pick_tot else 0}
+                if winner_he else None}
 
     sp = sp_by_player.get(pid, {})
     SPEC_PTS = {"top_scorer":20,"best_player":20,"top_assists":15,"most_goals_group_stage_team":10,
@@ -269,6 +281,58 @@ for t in teampreds:
 champ_tot = sum(champ_cnt.values())
 champion_stats = {"total": champ_tot, "top": top3(champ_cnt, champ_tot)}
 
+# ---- full distributions for the dedicated statistics page ----
+def dist(counter, total, limit=None, with_code=False):
+    items = counter.most_common(limit) if limit else counter.most_common()
+    out = []
+    for v, c in items:
+        row = {"value": v, "count": c, "pct": round(100 * c / total) if total else 0}
+        if with_code:
+            row["code"] = code_by_he.get(v)
+        out.append(row)
+    return out
+
+n_players = len(players)
+stats_champion = {"total": champ_tot, "dist": dist(champ_cnt, champ_tot, with_code=True)}
+
+stats_specials = {}
+for key in SPECIAL_KEYS:
+    cnt = Counter()
+    for s in specials:
+        v = s.get(key)
+        if v in (None, ""):
+            continue
+        cnt[str(v)] += 1
+    tot = sum(cnt.values())
+    # team-based special bets carry a code (for the flag); player/number bets don't
+    is_team_bet = key.endswith("_team")
+    stats_specials[key] = {"total": tot, "dist": dist(cnt, tot, 12, with_code=is_team_bet)}
+
+stats_advancement = {}
+for stage in ["round_of_16", "quarter_final", "semi_final", "final"]:
+    cnt = Counter()
+    for t in teampreds:
+        for team in (t.get(stage) or []):
+            cnt[team] += 1
+    # denominator = all players, so pct = "% of players who picked this team to reach this stage"
+    stats_advancement[stage] = {"total": n_players, "dist": dist(cnt, n_players, 12, with_code=True)}
+
+# group-stage highlights: most one-sided and most split matches (by dominant 1/X/2 share)
+group_rows = []
+for mid, st in match_stats.items():
+    meta = mid_meta.get(mid, {})
+    dom = max(st["pct"].values()) if st["pct"] else 0
+    dom_pick = max(st["pct"], key=st["pct"].get) if st["pct"] else None
+    group_rows.append({
+        "home_he": meta.get("home_he"), "away_he": meta.get("away_he"),
+        "home_code": meta.get("home_code"), "away_code": meta.get("away_code"),
+        "group": meta.get("group"), "dominant_pct": dom, "dominant_pick": dom_pick,
+    })
+stats_group = {
+    "most_consensus": sorted(group_rows, key=lambda x: -x["dominant_pct"])[:5],
+    "most_split": sorted(group_rows, key=lambda x: x["dominant_pct"])[:5],
+}
+
 synced = datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds")
 PUB.mkdir(parents=True, exist_ok=True)
 (PUB / "players").mkdir(exist_ok=True)
@@ -295,6 +359,9 @@ for g in groups_out:
     groups_out[g].sort(key=lambda x: x["code"])
 json.dump({"groups": {k: groups_out[k] for k in sorted(groups_out)}},
           open(PUB / "groups.json", "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+json.dump({"synced_at": synced, "total_players": n_players, "champion": stats_champion,
+           "specials": stats_specials, "advancement": stats_advancement, "group": stats_group},
+          open(PUB / "stats.json", "w", encoding="utf-8"), ensure_ascii=False, indent=2)
 json.dump({"synced_at": synced, "tournament_stage": "group", "scoring_version": "stopgap-1",
            "matches_resolved": len(results)},
           open(PUB / "meta.json", "w", encoding="utf-8"), ensure_ascii=False, indent=2)

@@ -1,4 +1,4 @@
-import type { GroupsFile, MatchStatsFile, MatchVoters, PlayerFile, SpecialStatsFile, Standings } from '../types'
+import type { GroupsFile, MatchStatsFile, MatchVoters, PlayerFile, SpecialStatsFile, Standings, StatsFile } from '../types'
 
 const base = import.meta.env.BASE_URL
 
@@ -41,5 +41,12 @@ export async function fetchSpecialStats(): Promise<SpecialStatsFile> {
 export async function fetchGroups(): Promise<GroupsFile> {
   const res = await fetch(`${base}data/groups.json`)
   if (!res.ok) throw new Error('failed to load groups')
+  return res.json()
+}
+
+/** Fetch the full aggregate statistics across all guesses. */
+export async function fetchStats(): Promise<StatsFile> {
+  const res = await fetch(`${base}data/stats.json`)
+  if (!res.ok) throw new Error('failed to load stats')
   return res.json()
 }

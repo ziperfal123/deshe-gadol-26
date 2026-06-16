@@ -65,6 +65,7 @@ export interface ChampionPick {
   points_if_correct?: number
   status: PredStatus
   points: number
+  crowd?: { count: number; total: number; pct: number }
 }
 
 export interface SpecialPick {
@@ -102,6 +103,31 @@ export interface StatChoice {
   value: string
   count: number
   pct: number
+  code?: string
+}
+
+export interface Distribution {
+  total: number
+  dist: StatChoice[]
+}
+
+export interface GroupHighlight {
+  home_he: string | null
+  away_he: string | null
+  home_code: string | null
+  away_code: string | null
+  group: string | null
+  dominant_pct: number
+  dominant_pick: '1' | 'X' | '2' | null
+}
+
+export interface StatsFile {
+  synced_at: string
+  total_players: number
+  champion: Distribution
+  specials: Record<string, Distribution>
+  advancement: Record<string, Distribution>
+  group: { most_consensus: GroupHighlight[]; most_split: GroupHighlight[] }
 }
 
 /** Crowd split for a single bet: total respondents + the top choices. */

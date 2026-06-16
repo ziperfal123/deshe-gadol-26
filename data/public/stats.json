@@ -1,0 +1,1313 @@
+{
+  "synced_at": "2026-06-16T12:31:01+00:00",
+  "total_players": 153,
+  "champion": {
+    "total": 153,
+    "dist": [
+      {
+        "value": "צרפת",
+        "count": 41,
+        "pct": 27,
+        "code": "FRA"
+      },
+      {
+        "value": "ספרד",
+        "count": 33,
+        "pct": 22,
+        "code": "ESP"
+      },
+      {
+        "value": "פורטוגל",
+        "count": 25,
+        "pct": 16,
+        "code": "POR"
+      },
+      {
+        "value": "ברזיל",
+        "count": 14,
+        "pct": 9,
+        "code": "BRA"
+      },
+      {
+        "value": "ארגנטינה",
+        "count": 13,
+        "pct": 8,
+        "code": "ARG"
+      },
+      {
+        "value": "אנגליה",
+        "count": 10,
+        "pct": 7,
+        "code": "ENG"
+      },
+      {
+        "value": "גרמניה",
+        "count": 7,
+        "pct": 5,
+        "code": "GER"
+      },
+      {
+        "value": "הולנד",
+        "count": 6,
+        "pct": 4,
+        "code": "NED"
+      },
+      {
+        "value": "אורוגוואי",
+        "count": 2,
+        "pct": 1,
+        "code": "URU"
+      },
+      {
+        "value": "בלגיה",
+        "count": 1,
+        "pct": 1,
+        "code": "BEL"
+      },
+      {
+        "value": "נורבגיה",
+        "count": 1,
+        "pct": 1,
+        "code": "NOR"
+      }
+    ]
+  },
+  "specials": {
+    "top_scorer": {
+      "total": 152,
+      "dist": [
+        {
+          "value": "קיליאן אמבפה",
+          "count": 32,
+          "pct": 21
+        },
+        {
+          "value": "הארי קיין",
+          "count": 31,
+          "pct": 20
+        },
+        {
+          "value": "אמבפה",
+          "count": 8,
+          "pct": 5
+        },
+        {
+          "value": "פראן טורס",
+          "count": 5,
+          "pct": 3
+        },
+        {
+          "value": "חוליאן אלברס",
+          "count": 5,
+          "pct": 3
+        },
+        {
+          "value": "ארלינג האלנד",
+          "count": 4,
+          "pct": 3
+        },
+        {
+          "value": "מייקל אוליסה",
+          "count": 4,
+          "pct": 3
+        },
+        {
+          "value": "כריסטיאנו רונאלדו",
+          "count": 3,
+          "pct": 2
+        },
+        {
+          "value": "ארלינג האלאנד",
+          "count": 3,
+          "pct": 2
+        },
+        {
+          "value": "ויניסיוס ג'וניור",
+          "count": 3,
+          "pct": 2
+        },
+        {
+          "value": "ראפיניה",
+          "count": 3,
+          "pct": 2
+        },
+        {
+          "value": "מיקל אויארסבאל",
+          "count": 3,
+          "pct": 2
+        }
+      ]
+    },
+    "best_player": {
+      "total": 150,
+      "dist": [
+        {
+          "value": "קיליאן אמבפה",
+          "count": 20,
+          "pct": 13
+        },
+        {
+          "value": "לאמין ימאל",
+          "count": 16,
+          "pct": 11
+        },
+        {
+          "value": "ברונו פרננדש",
+          "count": 11,
+          "pct": 7
+        },
+        {
+          "value": "מייקל אוליסה",
+          "count": 8,
+          "pct": 5
+        },
+        {
+          "value": "הארי קיין",
+          "count": 8,
+          "pct": 5
+        },
+        {
+          "value": "אמבפה",
+          "count": 6,
+          "pct": 4
+        },
+        {
+          "value": "ברונו פרננדס",
+          "count": 5,
+          "pct": 3
+        },
+        {
+          "value": "מסי",
+          "count": 5,
+          "pct": 3
+        },
+        {
+          "value": "פדרי",
+          "count": 4,
+          "pct": 3
+        },
+        {
+          "value": "לאמין יאמל",
+          "count": 4,
+          "pct": 3
+        },
+        {
+          "value": "ויניסיוס ג'וניור",
+          "count": 3,
+          "pct": 2
+        },
+        {
+          "value": "חוליאן אלברס",
+          "count": 3,
+          "pct": 2
+        }
+      ]
+    },
+    "top_assists": {
+      "total": 151,
+      "dist": [
+        {
+          "value": "ברונו פרננדש",
+          "count": 26,
+          "pct": 17
+        },
+        {
+          "value": "לאמין ימאל",
+          "count": 20,
+          "pct": 13
+        },
+        {
+          "value": "מייקל אוליסה",
+          "count": 13,
+          "pct": 9
+        },
+        {
+          "value": "ברונו פרננדס",
+          "count": 7,
+          "pct": 5
+        },
+        {
+          "value": "מסי",
+          "count": 7,
+          "pct": 5
+        },
+        {
+          "value": "פדרי",
+          "count": 5,
+          "pct": 3
+        },
+        {
+          "value": "לאמין יאמל",
+          "count": 4,
+          "pct": 3
+        },
+        {
+          "value": "ליאו מסי",
+          "count": 3,
+          "pct": 2
+        },
+        {
+          "value": "אוליסה",
+          "count": 3,
+          "pct": 2
+        },
+        {
+          "value": "דני אולמו",
+          "count": 3,
+          "pct": 2
+        },
+        {
+          "value": "ליונל מסי",
+          "count": 3,
+          "pct": 2
+        },
+        {
+          "value": "דמבלה",
+          "count": 2,
+          "pct": 1
+        }
+      ]
+    },
+    "most_goals_group_stage_team": {
+      "total": 153,
+      "dist": [
+        {
+          "value": "ספרד",
+          "count": 57,
+          "pct": 37,
+          "code": "ESP"
+        },
+        {
+          "value": "ברזיל",
+          "count": 20,
+          "pct": 13,
+          "code": "BRA"
+        },
+        {
+          "value": "צרפת",
+          "count": 19,
+          "pct": 12,
+          "code": "FRA"
+        },
+        {
+          "value": "פורטוגל",
+          "count": 17,
+          "pct": 11,
+          "code": "POR"
+        },
+        {
+          "value": "גרמניה",
+          "count": 16,
+          "pct": 10,
+          "code": "GER"
+        },
+        {
+          "value": "אנגליה",
+          "count": 6,
+          "pct": 4,
+          "code": "ENG"
+        },
+        {
+          "value": "בלגיה",
+          "count": 6,
+          "pct": 4,
+          "code": "BEL"
+        },
+        {
+          "value": "ארגנטינה",
+          "count": 5,
+          "pct": 3,
+          "code": "ARG"
+        },
+        {
+          "value": "נורבגיה",
+          "count": 4,
+          "pct": 3,
+          "code": "NOR"
+        },
+        {
+          "value": "הולנד",
+          "count": 2,
+          "pct": 1,
+          "code": "NED"
+        },
+        {
+          "value": "אורוגוואי",
+          "count": 1,
+          "pct": 1,
+          "code": "URU"
+        }
+      ]
+    },
+    "most_conceded_group_stage_team": {
+      "total": 153,
+      "dist": [
+        {
+          "value": "האיטי",
+          "count": 32,
+          "pct": 21,
+          "code": "HAI"
+        },
+        {
+          "value": "עיראק",
+          "count": 30,
+          "pct": 20,
+          "code": "IRQ"
+        },
+        {
+          "value": "קוראסאו",
+          "count": 27,
+          "pct": 18,
+          "code": "CUW"
+        },
+        {
+          "value": "כף ורדה",
+          "count": 25,
+          "pct": 16,
+          "code": "CPV"
+        },
+        {
+          "value": "קונגו הדמוקרטית",
+          "count": 8,
+          "pct": 5,
+          "code": "COD"
+        },
+        {
+          "value": "ירדן",
+          "count": 7,
+          "pct": 5,
+          "code": "JOR"
+        },
+        {
+          "value": "איראן",
+          "count": 5,
+          "pct": 3,
+          "code": "IRN"
+        },
+        {
+          "value": "קטאר",
+          "count": 4,
+          "pct": 3,
+          "code": "QAT"
+        },
+        {
+          "value": "אוזבקיסטן",
+          "count": 3,
+          "pct": 2,
+          "code": "UZB"
+        },
+        {
+          "value": "פנמה",
+          "count": 3,
+          "pct": 2,
+          "code": "PAN"
+        },
+        {
+          "value": "ניו זילנד",
+          "count": 2,
+          "pct": 1,
+          "code": "NZL"
+        },
+        {
+          "value": "אוסטריה",
+          "count": 1,
+          "pct": 1,
+          "code": "AUT"
+        }
+      ]
+    },
+    "most_goals_tournament_team": {
+      "total": 151,
+      "dist": [
+        {
+          "value": "ספרד",
+          "count": 56,
+          "pct": 37,
+          "code": "ESP"
+        },
+        {
+          "value": "צרפת",
+          "count": 41,
+          "pct": 27,
+          "code": "FRA"
+        },
+        {
+          "value": "ברזיל",
+          "count": 17,
+          "pct": 11,
+          "code": "BRA"
+        },
+        {
+          "value": "פורטוגל",
+          "count": 12,
+          "pct": 8,
+          "code": "POR"
+        },
+        {
+          "value": "אנגליה",
+          "count": 10,
+          "pct": 7,
+          "code": "ENG"
+        },
+        {
+          "value": "גרמניה",
+          "count": 6,
+          "pct": 4,
+          "code": "GER"
+        },
+        {
+          "value": "ארגנטינה",
+          "count": 4,
+          "pct": 3,
+          "code": "ARG"
+        },
+        {
+          "value": "נורבגיה",
+          "count": 2,
+          "pct": 1,
+          "code": "NOR"
+        },
+        {
+          "value": "בלגיה",
+          "count": 1,
+          "pct": 1,
+          "code": "BEL"
+        },
+        {
+          "value": "הולנד",
+          "count": 1,
+          "pct": 1,
+          "code": "NED"
+        },
+        {
+          "value": "קולומביה",
+          "count": 1,
+          "pct": 1,
+          "code": "COL"
+        }
+      ]
+    },
+    "most_conceded_tournament_team": {
+      "total": 152,
+      "dist": [
+        {
+          "value": "האיטי",
+          "count": 31,
+          "pct": 20,
+          "code": "HAI"
+        },
+        {
+          "value": "קוראסאו",
+          "count": 24,
+          "pct": 16,
+          "code": "CUW"
+        },
+        {
+          "value": "עיראק",
+          "count": 22,
+          "pct": 14,
+          "code": "IRQ"
+        },
+        {
+          "value": "כף ורדה",
+          "count": 22,
+          "pct": 14,
+          "code": "CPV"
+        },
+        {
+          "value": "קונגו הדמוקרטית",
+          "count": 5,
+          "pct": 3,
+          "code": "COD"
+        },
+        {
+          "value": "ערב הסעודית",
+          "count": 4,
+          "pct": 3,
+          "code": "KSA"
+        },
+        {
+          "value": "מקסיקו",
+          "count": 4,
+          "pct": 3,
+          "code": "MEX"
+        },
+        {
+          "value": "ירדן",
+          "count": 4,
+          "pct": 3,
+          "code": "JOR"
+        },
+        {
+          "value": "פנמה",
+          "count": 3,
+          "pct": 2,
+          "code": "PAN"
+        },
+        {
+          "value": "אוזבקיסטן",
+          "count": 3,
+          "pct": 2,
+          "code": "UZB"
+        },
+        {
+          "value": "ניו זילנד",
+          "count": 3,
+          "pct": 2,
+          "code": "NZL"
+        },
+        {
+          "value": "ברזיל",
+          "count": 3,
+          "pct": 2,
+          "code": "BRA"
+        }
+      ]
+    },
+    "most_cards_team": {
+      "total": 153,
+      "dist": [
+        {
+          "value": "ארגנטינה",
+          "count": 31,
+          "pct": 20,
+          "code": "ARG"
+        },
+        {
+          "value": "אורוגוואי",
+          "count": 17,
+          "pct": 11,
+          "code": "URU"
+        },
+        {
+          "value": "ברזיל",
+          "count": 16,
+          "pct": 10,
+          "code": "BRA"
+        },
+        {
+          "value": "טורקיה",
+          "count": 15,
+          "pct": 10,
+          "code": "TUR"
+        },
+        {
+          "value": "אלג'יריה",
+          "count": 11,
+          "pct": 7,
+          "code": "ALG"
+        },
+        {
+          "value": "אנגליה",
+          "count": 11,
+          "pct": 7,
+          "code": "ENG"
+        },
+        {
+          "value": "מרוקו",
+          "count": 8,
+          "pct": 5,
+          "code": "MAR"
+        },
+        {
+          "value": "איראן",
+          "count": 7,
+          "pct": 5,
+          "code": "IRN"
+        },
+        {
+          "value": "עיראק",
+          "count": 6,
+          "pct": 4,
+          "code": "IRQ"
+        },
+        {
+          "value": "קולומביה",
+          "count": 5,
+          "pct": 3,
+          "code": "COL"
+        },
+        {
+          "value": "הולנד",
+          "count": 4,
+          "pct": 3,
+          "code": "NED"
+        },
+        {
+          "value": "צרפת",
+          "count": 4,
+          "pct": 3,
+          "code": "FRA"
+        }
+      ]
+    },
+    "least_cards_team": {
+      "total": 153,
+      "dist": [
+        {
+          "value": "יפן",
+          "count": 30,
+          "pct": 20,
+          "code": "JPN"
+        },
+        {
+          "value": "ניו זילנד",
+          "count": 13,
+          "pct": 8,
+          "code": "NZL"
+        },
+        {
+          "value": "כף ורדה",
+          "count": 9,
+          "pct": 6,
+          "code": "CPV"
+        },
+        {
+          "value": "קוראסאו",
+          "count": 8,
+          "pct": 5,
+          "code": "CUW"
+        },
+        {
+          "value": "אוזבקיסטן",
+          "count": 8,
+          "pct": 5,
+          "code": "UZB"
+        },
+        {
+          "value": "דרום קוריאה",
+          "count": 7,
+          "pct": 5,
+          "code": "KOR"
+        },
+        {
+          "value": "קנדה",
+          "count": 6,
+          "pct": 4,
+          "code": "CAN"
+        },
+        {
+          "value": "האיטי",
+          "count": 5,
+          "pct": 3,
+          "code": "HAI"
+        },
+        {
+          "value": "גאנה",
+          "count": 4,
+          "pct": 3,
+          "code": "GHA"
+        },
+        {
+          "value": "אוסטרליה",
+          "count": 4,
+          "pct": 3,
+          "code": "AUS"
+        },
+        {
+          "value": "ארגנטינה",
+          "count": 4,
+          "pct": 3,
+          "code": "ARG"
+        },
+        {
+          "value": "גרמניה",
+          "count": 4,
+          "pct": 3,
+          "code": "GER"
+        }
+      ]
+    },
+    "total_red_cards": {
+      "total": 153,
+      "dist": [
+        {
+          "value": "8",
+          "count": 23,
+          "pct": 15
+        },
+        {
+          "value": "7",
+          "count": 22,
+          "pct": 14
+        },
+        {
+          "value": "12",
+          "count": 16,
+          "pct": 10
+        },
+        {
+          "value": "4",
+          "count": 14,
+          "pct": 9
+        },
+        {
+          "value": "5",
+          "count": 12,
+          "pct": 8
+        },
+        {
+          "value": "10",
+          "count": 11,
+          "pct": 7
+        },
+        {
+          "value": "6",
+          "count": 9,
+          "pct": 6
+        },
+        {
+          "value": "9",
+          "count": 9,
+          "pct": 6
+        },
+        {
+          "value": "13",
+          "count": 6,
+          "pct": 4
+        },
+        {
+          "value": "11",
+          "count": 5,
+          "pct": 3
+        },
+        {
+          "value": "15",
+          "count": 4,
+          "pct": 3
+        },
+        {
+          "value": "14",
+          "count": 4,
+          "pct": 3
+        }
+      ]
+    },
+    "total_extra_time": {
+      "total": 153,
+      "dist": [
+        {
+          "value": "6",
+          "count": 22,
+          "pct": 14
+        },
+        {
+          "value": "7",
+          "count": 22,
+          "pct": 14
+        },
+        {
+          "value": "5",
+          "count": 20,
+          "pct": 13
+        },
+        {
+          "value": "9",
+          "count": 19,
+          "pct": 12
+        },
+        {
+          "value": "4",
+          "count": 17,
+          "pct": 11
+        },
+        {
+          "value": "8",
+          "count": 14,
+          "pct": 9
+        },
+        {
+          "value": "10",
+          "count": 10,
+          "pct": 7
+        },
+        {
+          "value": "12",
+          "count": 8,
+          "pct": 5
+        },
+        {
+          "value": "3",
+          "count": 7,
+          "pct": 5
+        },
+        {
+          "value": "2",
+          "count": 6,
+          "pct": 4
+        },
+        {
+          "value": "11",
+          "count": 5,
+          "pct": 3
+        },
+        {
+          "value": "13",
+          "count": 2,
+          "pct": 1
+        }
+      ]
+    },
+    "total_penalties": {
+      "total": 153,
+      "dist": [
+        {
+          "value": "4",
+          "count": 37,
+          "pct": 24
+        },
+        {
+          "value": "5",
+          "count": 28,
+          "pct": 18
+        },
+        {
+          "value": "3",
+          "count": 25,
+          "pct": 16
+        },
+        {
+          "value": "7",
+          "count": 20,
+          "pct": 13
+        },
+        {
+          "value": "6",
+          "count": 18,
+          "pct": 12
+        },
+        {
+          "value": "2",
+          "count": 14,
+          "pct": 9
+        },
+        {
+          "value": "8",
+          "count": 5,
+          "pct": 3
+        },
+        {
+          "value": "1",
+          "count": 4,
+          "pct": 3
+        },
+        {
+          "value": "10",
+          "count": 1,
+          "pct": 1
+        },
+        {
+          "value": "-38",
+          "count": 1,
+          "pct": 1
+        }
+      ]
+    }
+  },
+  "advancement": {
+    "round_of_16": {
+      "total": 153,
+      "dist": [
+        {
+          "value": "צרפת",
+          "count": 153,
+          "pct": 100,
+          "code": "FRA"
+        },
+        {
+          "value": "ברזיל",
+          "count": 151,
+          "pct": 99,
+          "code": "BRA"
+        },
+        {
+          "value": "פורטוגל",
+          "count": 151,
+          "pct": 99,
+          "code": "POR"
+        },
+        {
+          "value": "ספרד",
+          "count": 151,
+          "pct": 99,
+          "code": "ESP"
+        },
+        {
+          "value": "גרמניה",
+          "count": 150,
+          "pct": 98,
+          "code": "GER"
+        },
+        {
+          "value": "ארגנטינה",
+          "count": 150,
+          "pct": 98,
+          "code": "ARG"
+        },
+        {
+          "value": "אנגליה",
+          "count": 148,
+          "pct": 97,
+          "code": "ENG"
+        },
+        {
+          "value": "הולנד",
+          "count": 131,
+          "pct": 86,
+          "code": "NED"
+        },
+        {
+          "value": "בלגיה",
+          "count": 129,
+          "pct": 84,
+          "code": "BEL"
+        },
+        {
+          "value": "נורבגיה",
+          "count": 127,
+          "pct": 83,
+          "code": "NOR"
+        },
+        {
+          "value": "ארצות הברית",
+          "count": 113,
+          "pct": 74,
+          "code": "USA"
+        },
+        {
+          "value": "מקסיקו",
+          "count": 98,
+          "pct": 64,
+          "code": "MEX"
+        }
+      ]
+    },
+    "quarter_final": {
+      "total": 153,
+      "dist": [
+        {
+          "value": "ארגנטינה",
+          "count": 142,
+          "pct": 93,
+          "code": "ARG"
+        },
+        {
+          "value": "ספרד",
+          "count": 142,
+          "pct": 93,
+          "code": "ESP"
+        },
+        {
+          "value": "צרפת",
+          "count": 140,
+          "pct": 92,
+          "code": "FRA"
+        },
+        {
+          "value": "אנגליה",
+          "count": 135,
+          "pct": 88,
+          "code": "ENG"
+        },
+        {
+          "value": "ברזיל",
+          "count": 134,
+          "pct": 88,
+          "code": "BRA"
+        },
+        {
+          "value": "פורטוגל",
+          "count": 128,
+          "pct": 84,
+          "code": "POR"
+        },
+        {
+          "value": "גרמניה",
+          "count": 93,
+          "pct": 61,
+          "code": "GER"
+        },
+        {
+          "value": "הולנד",
+          "count": 71,
+          "pct": 46,
+          "code": "NED"
+        },
+        {
+          "value": "נורבגיה",
+          "count": 46,
+          "pct": 30,
+          "code": "NOR"
+        },
+        {
+          "value": "בלגיה",
+          "count": 42,
+          "pct": 27,
+          "code": "BEL"
+        },
+        {
+          "value": "טורקיה",
+          "count": 25,
+          "pct": 16,
+          "code": "TUR"
+        },
+        {
+          "value": "מרוקו",
+          "count": 24,
+          "pct": 16,
+          "code": "MAR"
+        }
+      ]
+    },
+    "semi_final": {
+      "total": 153,
+      "dist": [
+        {
+          "value": "ספרד",
+          "count": 123,
+          "pct": 80,
+          "code": "ESP"
+        },
+        {
+          "value": "צרפת",
+          "count": 122,
+          "pct": 80,
+          "code": "FRA"
+        },
+        {
+          "value": "ברזיל",
+          "count": 81,
+          "pct": 53,
+          "code": "BRA"
+        },
+        {
+          "value": "פורטוגל",
+          "count": 73,
+          "pct": 48,
+          "code": "POR"
+        },
+        {
+          "value": "ארגנטינה",
+          "count": 71,
+          "pct": 46,
+          "code": "ARG"
+        },
+        {
+          "value": "אנגליה",
+          "count": 57,
+          "pct": 37,
+          "code": "ENG"
+        },
+        {
+          "value": "גרמניה",
+          "count": 38,
+          "pct": 25,
+          "code": "GER"
+        },
+        {
+          "value": "הולנד",
+          "count": 17,
+          "pct": 11,
+          "code": "NED"
+        },
+        {
+          "value": "נורבגיה",
+          "count": 13,
+          "pct": 8,
+          "code": "NOR"
+        },
+        {
+          "value": "אורוגוואי",
+          "count": 4,
+          "pct": 3,
+          "code": "URU"
+        },
+        {
+          "value": "מקסיקו",
+          "count": 3,
+          "pct": 2,
+          "code": "MEX"
+        },
+        {
+          "value": "קולומביה",
+          "count": 3,
+          "pct": 2,
+          "code": "COL"
+        }
+      ]
+    },
+    "final": {
+      "total": 153,
+      "dist": [
+        {
+          "value": "ספרד",
+          "count": 77,
+          "pct": 50,
+          "code": "ESP"
+        },
+        {
+          "value": "צרפת",
+          "count": 72,
+          "pct": 47,
+          "code": "FRA"
+        },
+        {
+          "value": "פורטוגל",
+          "count": 42,
+          "pct": 27,
+          "code": "POR"
+        },
+        {
+          "value": "ברזיל",
+          "count": 33,
+          "pct": 22,
+          "code": "BRA"
+        },
+        {
+          "value": "ארגנטינה",
+          "count": 31,
+          "pct": 20,
+          "code": "ARG"
+        },
+        {
+          "value": "אנגליה",
+          "count": 18,
+          "pct": 12,
+          "code": "ENG"
+        },
+        {
+          "value": "גרמניה",
+          "count": 13,
+          "pct": 8,
+          "code": "GER"
+        },
+        {
+          "value": "הולנד",
+          "count": 10,
+          "pct": 7,
+          "code": "NED"
+        },
+        {
+          "value": "נורבגיה",
+          "count": 4,
+          "pct": 3,
+          "code": "NOR"
+        },
+        {
+          "value": "אורוגוואי",
+          "count": 2,
+          "pct": 1,
+          "code": "URU"
+        },
+        {
+          "value": "קולומביה",
+          "count": 2,
+          "pct": 1,
+          "code": "COL"
+        },
+        {
+          "value": "בלגיה",
+          "count": 1,
+          "pct": 1,
+          "code": "BEL"
+        }
+      ]
+    }
+  },
+  "group": {
+    "most_consensus": [
+      {
+        "home_he": "ברזיל",
+        "away_he": "האיטי",
+        "home_code": "BRA",
+        "away_code": "HAI",
+        "group": "C",
+        "dominant_pct": 100,
+        "dominant_pick": "1"
+      },
+      {
+        "home_he": "גרמניה",
+        "away_he": "קוראסאו",
+        "home_code": "GER",
+        "away_code": "CUW",
+        "group": "E",
+        "dominant_pct": 100,
+        "dominant_pick": "1"
+      },
+      {
+        "home_he": "צרפת",
+        "away_he": "עיראק",
+        "home_code": "FRA",
+        "away_code": "IRQ",
+        "group": "I",
+        "dominant_pct": 100,
+        "dominant_pick": "1"
+      },
+      {
+        "home_he": "מרוקו",
+        "away_he": "האיטי",
+        "home_code": "MAR",
+        "away_code": "HAI",
+        "group": "C",
+        "dominant_pct": 99,
+        "dominant_pick": "1"
+      },
+      {
+        "home_he": "ספרד",
+        "away_he": "כף ורדה",
+        "home_code": "ESP",
+        "away_code": "CPV",
+        "group": "H",
+        "dominant_pct": 99,
+        "dominant_pick": "1"
+      }
+    ],
+    "most_split": [
+      {
+        "home_he": "טורקיה",
+        "away_he": "ארצות הברית",
+        "home_code": "TUR",
+        "away_code": "USA",
+        "group": "D",
+        "dominant_pct": 38,
+        "dominant_pick": "X"
+      },
+      {
+        "home_he": "קונגו הדמוקרטית",
+        "away_he": "אוזבקיסטן",
+        "home_code": "COD",
+        "away_code": "UZB",
+        "group": "K",
+        "dominant_pct": 40,
+        "dominant_pick": "1"
+      },
+      {
+        "home_he": "חוף השנהב",
+        "away_he": "אקוודור",
+        "home_code": "CIV",
+        "away_code": "ECU",
+        "group": "E",
+        "dominant_pct": 41,
+        "dominant_pick": "X"
+      },
+      {
+        "home_he": "צ׳כיה",
+        "away_he": "מקסיקו",
+        "home_code": "CZE",
+        "away_code": "MEX",
+        "group": "A",
+        "dominant_pct": 42,
+        "dominant_pick": "X"
+      },
+      {
+        "home_he": "יפן",
+        "away_he": "שוודיה",
+        "home_code": "JPN",
+        "away_code": "SWE",
+        "group": "F",
+        "dominant_pct": 43,
+        "dominant_pick": "1"
+      }
+    ]
+  }
+}

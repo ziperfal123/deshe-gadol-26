@@ -4,6 +4,7 @@ import { HashRouter, Route, Routes } from 'react-router-dom'
 import './index.css'
 import { StandingsPage } from './pages/StandingsPage'
 import { PlayerPage } from './pages/PlayerPage'
+import { StatsPage } from './pages/StatsPage'
 import { AnnouncementDialog } from './components/AnnouncementDialog'
 import { ScrollToTopButton } from './components/ScrollToTopButton'
 
@@ -14,6 +15,7 @@ createRoot(document.getElementById('root')!).render(
       <Routes>
         <Route path="/" element={<StandingsPage />} />
         <Route path="/player/:id" element={<PlayerPage />} />
+        <Route path="/stats" element={<StatsPage />} />
       </Routes>
       <ScrollToTopButton />
     </HashRouter>
