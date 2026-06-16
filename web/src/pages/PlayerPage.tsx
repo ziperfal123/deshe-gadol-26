@@ -10,6 +10,7 @@ import type {
 } from '../types'
 import { fetchMatchStats, fetchPlayer } from '../lib/data'
 import { cn } from '../lib/cn'
+import { findNextMatchId, liveStatus } from '../lib/matchTime'
 import {
   SPECIAL_LABELS,
   STAGE_LABELS,
@@ -164,8 +165,17 @@ interface GroupSectionProps {
 
 function GroupStageSection({ items, stats, mode, setMode }: GroupSectionProps) {
   const detailed = mode === 'detailed'
+  const now = new Date()
+  const nextId = findNextMatchId(items, now)
+  const target = items.find((it) => it.match_id === nextId)
+  const nextIsLive = target ? liveStatus(target.kickoff, now) === 'live' : false
+  const onGoToNext = () => {
+    if (!nextId) return
+    document.getElementById(`match-${nextId}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+  }
   return (
     <Section title="שלב הבתים · ניחושי 1X2" action={<ViewToggle mode={mode} setMode={setMode} />} bare={detailed}>
+      {renderNextGameButtonIfNeeded(nextId, nextIsLive, onGoToNext)}
       {detailed ? (
         <div className="space-y-3">
           {items.map((it) => (
@@ -180,6 +190,31 @@ function GroupStageSection({ items, stats, mode, setMode }: GroupSectionProps) {
         </ul>
       )}
     </Section>
+  )
+}
+
+function renderNextGameButtonIfNeeded(nextId: string | undefined, live: boolean, onClick: () => void) {
+  if (!nextId) return <></>
+  return (
+    <div className="mb-3 flex justify-center">
+      <button
+        onClick={onClick}
+        className="inline-flex items-center gap-2 rounded-full bg-leaf/10 px-4 py-1.5 text-xs font-bold text-leaf transition hover:bg-leaf/20"
+      >
+        {live ? <LiveDot /> : <span aria-hidden>⬇</span>}
+        {live ? 'למשחק החי' : 'למשחק הבא'}
+      </button>
+    </div>
+  )
+}
+
+/** Blinking green dot indicating a live match. */
+function LiveDot() {
+  return (
+    <span className="relative flex h-2.5 w-2.5 shrink-0">
+      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-leaf opacity-75" />
+      <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-leaf" />
+    </span>
   )
 }
 
@@ -216,7 +251,7 @@ function ViewToggle({ mode, setMode }: { mode: ViewMode; setMode: (m: ViewMode) 
 function GroupRow({ item }: { item: GroupItem }) {
   const played = item.actual_score_a !== null && item.actual_score_b !== null
   return (
-    <li className="flex items-center gap-2 px-2 py-3">
+    <li id={`match-${item.match_id}`} className="flex scroll-mt-44 items-center gap-2 px-2 py-3">
       <span className="w-4 shrink-0 text-center text-xs font-bold text-ink/30">{item.group}</span>
       <div className="flex min-w-0 flex-1 items-center gap-2">
         <span className="min-w-0 truncate text-sm font-medium text-ink" title={item.home_he ?? ''}>
@@ -238,7 +273,12 @@ function GroupRow({ item }: { item: GroupItem }) {
 }
 
 function renderResultIfNeeded(played: boolean, item: GroupItem) {
-  if (!played) return <span className="w-10 shrink-0 text-center text-xs text-ink/30">טרם</span>
+  if (!played) {
+    const status = liveStatus(item.kickoff)
+    if (status === 'live') return <span className="flex w-10 shrink-0 justify-center"><LiveDot /></span>
+    if (status === 'awaiting') return <span className="w-10 shrink-0 text-center text-xs text-ink/30" title="הסתיים, ממתין לעדכון">⏳</span>
+    return <span className="w-10 shrink-0 text-center text-xs text-ink/30">טרם</span>
+  }
   return <Score a={item.actual_score_a} b={item.actual_score_b} className="w-10 shrink-0 justify-center text-xs font-semibold text-ink/60" />
 }
 
@@ -276,7 +316,7 @@ function DetailedGroupCard({ item, stats }: { item: GroupItem; stats?: MatchPick
   // option order [1, X, 2] → in RTL the home win (1) sits on the right.
   const options: ('1' | 'X' | '2')[] = ['1', 'X', '2']
   return (
-    <div className="rounded-2xl border border-ink/10 bg-white p-4 shadow-soft">
+    <div id={`match-${item.match_id}`} className="scroll-mt-44 rounded-2xl border border-ink/10 bg-white p-4 shadow-soft">
       <div className="mb-3 flex items-center gap-2">
         <span className="rounded-full bg-ink/5 px-2 py-0.5 text-[10px] font-bold text-ink/40">
           בית {item.group}
@@ -333,6 +373,22 @@ function renderKickoffIfNeeded(kickoff: string) {
 
 function renderDetailedResultIfNeeded(played: boolean, item: GroupItem) {
   if (!played) {
+    const status = liveStatus(item.kickoff)
+    if (status === 'live') {
+      return (
+        <div className="mt-3 flex items-center gap-2 text-[11px] font-bold text-leaf">
+          <LiveDot />
+          משחק חי
+        </div>
+      )
+    }
+    if (status === 'awaiting') {
+      return (
+        <p className="mt-3 text-[11px] font-medium text-ink/60">
+          הסתיים. התוצאה תתעדכן בעדכון הבא ⏳
+        </p>
+      )
+    }
     const kickoff = formatKickoffIL(item.kickoff)
     return (
       <p className="mt-3 text-[11px] font-medium text-ink/60">
