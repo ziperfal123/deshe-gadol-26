@@ -288,19 +288,19 @@ function ViewToggle({ mode, setMode }: { mode: ViewMode; setMode: (m: ViewMode) 
 function GroupRow({ item, groupTeams }: { item: GroupItem; groupTeams?: GroupTeam[] }) {
   const played = item.actual_score_a !== null && item.actual_score_b !== null
   return (
-    <li id={`match-${item.match_id}`} className="flex scroll-mt-44 items-center gap-2 rounded-xl px-2 py-3">
+    <li id={`match-${item.match_id}`} className="flex scroll-mt-44 items-center gap-1.5 rounded-xl px-2 py-3 sm:gap-2">
       <GroupTooltip
         group={item.group}
         teams={groupTeams}
         label={item.group ?? ''}
         triggerClassName="w-4 shrink-0 text-center text-xs font-bold text-ink/30"
       />
-      <div className="flex min-w-0 flex-1 items-center gap-2">
-        <TeamLabel name={item.home_he} code={item.home_code} className="text-sm font-medium text-ink" />
+      <div className="flex min-w-0 flex-1 items-center gap-1.5 sm:gap-2">
+        <TeamLabel name={item.home_he} code={item.home_code} className="text-[13px] font-medium text-ink sm:text-sm" />
         <Versus />
-        <TeamLabel name={item.away_he} code={item.away_code} className="text-sm font-medium text-ink" />
+        <TeamLabel name={item.away_he} code={item.away_code} className="text-[13px] font-medium text-ink sm:text-sm" />
       </div>
-      <div className="flex shrink-0 items-center gap-3 ps-1">
+      <div className="flex shrink-0 items-center gap-1.5 ps-0.5 sm:gap-3 sm:ps-1">
         <PickBadge pick={item.pick_1x2} />
         <span className="h-4 w-px bg-ink/15" />
         {renderResultIfNeeded(played, item)}
@@ -313,11 +313,11 @@ function GroupRow({ item, groupTeams }: { item: GroupItem; groupTeams?: GroupTea
 function renderResultIfNeeded(played: boolean, item: GroupItem) {
   if (!played) {
     const status = liveStatus(item.kickoff)
-    if (status === 'live') return <span className="flex w-10 shrink-0 justify-center"><LiveDot /></span>
-    if (status === 'awaiting') return <span className="w-10 shrink-0 text-center text-xs text-ink/30" title="הסתיים, ממתין לעדכון">⏳</span>
-    return <span className="w-10 shrink-0 text-center text-xs text-ink/30">טרם</span>
+    if (status === 'live') return <span className="flex w-8 shrink-0 justify-center sm:w-10"><LiveDot /></span>
+    if (status === 'awaiting') return <span className="w-8 shrink-0 text-center text-xs text-ink/30 sm:w-10" title="הסתיים, ממתין לעדכון">⏳</span>
+    return <span className="w-8 shrink-0 text-center text-[11px] text-ink/30 sm:w-10 sm:text-xs">טרם</span>
   }
-  return <Score a={item.actual_score_a} b={item.actual_score_b} className="w-10 shrink-0 justify-center text-xs font-semibold text-ink/60" />
+  return <Score a={item.actual_score_a} b={item.actual_score_b} className="w-8 shrink-0 justify-center text-[11px] font-semibold text-ink/60 sm:w-10 sm:text-xs" />
 }
 
 /** Score with the home value (first child) on the right, matching RTL team order. */
@@ -342,7 +342,7 @@ function PickBadge({ pick }: { pick: '1' | 'X' | '2' }) {
 function PointsTag({ status, points }: { status: GroupItem['status']; points: number }) {
   const text = status === 'pending' ? '—' : status === 'correct' ? `+${points}` : '0'
   return (
-    <span className={cn('min-w-[2.5rem] rounded-lg border px-2 py-0.5 text-center text-xs font-bold', statusClasses(status))}>
+    <span className={cn('min-w-[1.75rem] rounded-lg border px-1.5 py-0.5 text-center text-xs font-bold sm:min-w-[2.5rem] sm:px-2', statusClasses(status))}>
       <span dir="ltr">{text}</span>
     </span>
   )
