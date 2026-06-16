@@ -241,6 +241,34 @@ for mv in match_voters.values():
     for k in mv:
         mv[k].sort()
 
+# ---- crowd split for special bets + champion (top 3 answers each) ----
+def top3(counter, total):
+    return [{"value": v, "count": c, "pct": round(100 * c / total) if total else 0}
+            for v, c in counter.most_common(3)]
+
+SPECIAL_KEYS = ["top_scorer", "best_player", "top_assists", "most_goals_group_stage_team",
+                "most_conceded_group_stage_team", "most_goals_tournament_team",
+                "most_conceded_tournament_team", "most_cards_team", "least_cards_team",
+                "total_red_cards", "total_extra_time", "total_penalties"]
+specials_stats = {}
+for key in SPECIAL_KEYS:
+    cnt = Counter()
+    for s in specials:
+        v = s.get(key)
+        if v is None or v == "":
+            continue
+        cnt[str(v)] += 1
+    tot = sum(cnt.values())
+    specials_stats[key] = {"total": tot, "top": top3(cnt, tot)}
+
+champ_cnt = Counter()
+for t in teampreds:
+    w = (t.get("winner") or [None])[0]
+    if w:
+        champ_cnt[w] += 1
+champ_tot = sum(champ_cnt.values())
+champion_stats = {"total": champ_tot, "top": top3(champ_cnt, champ_tot)}
+
 synced = datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds")
 PUB.mkdir(parents=True, exist_ok=True)
 (PUB / "players").mkdir(exist_ok=True)
@@ -254,6 +282,8 @@ json.dump({"synced_at": synced, "matches": match_stats},
 (PUB / "match_voters").mkdir(exist_ok=True)
 for mid, mv in match_voters.items():
     json.dump(mv, open(PUB / "match_voters" / f"{mid}.json", "w", encoding="utf-8"), ensure_ascii=False)
+json.dump({"synced_at": synced, "total_players": len(players), "specials": specials_stats, "champion": champion_stats},
+          open(PUB / "special_stats.json", "w", encoding="utf-8"), ensure_ascii=False, indent=2)
 json.dump({"synced_at": synced, "tournament_stage": "group", "scoring_version": "stopgap-1",
            "matches_resolved": len(results)},
           open(PUB / "meta.json", "w", encoding="utf-8"), ensure_ascii=False, indent=2)

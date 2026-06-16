@@ -3,16 +3,19 @@ import { Link, useParams } from 'react-router-dom'
 import { useLocalStorage } from 'usehooks-ts'
 import type {
   AdvGroupPick,
+  CrowdStat,
   GroupItem,
   MatchPickStats,
   PlayerFile,
+  SpecialStatsFile,
   ViewMode,
 } from '../types'
-import { fetchMatchStats, fetchPlayer } from '../lib/data'
+import { fetchMatchStats, fetchPlayer, fetchSpecialStats } from '../lib/data'
 import { cn } from '../lib/cn'
 import { findNextMatchId, liveStatus } from '../lib/matchTime'
 import { useFlashScroll } from '../lib/useFlashScroll'
 import { VotersDialog } from '../components/VotersDialog'
+import { StatTooltip } from '../components/StatTooltip'
 import {
   SPECIAL_LABELS,
   STAGE_LABELS,
@@ -26,15 +29,17 @@ export function PlayerPage() {
   const { id } = useParams<{ id: string }>()
   const [player, setPlayer] = useState<PlayerFile>()
   const [stats, setStats] = useState<Record<string, MatchPickStats>>()
+  const [specialStats, setSpecialStats] = useState<SpecialStatsFile>()
   const [mode, setMode] = useLocalStorage<ViewMode>('player-view-mode', 'detailed')
   const [error, setError] = useState<string>()
 
   useEffect(() => {
     if (!id) return
-    Promise.all([fetchPlayer(id), fetchMatchStats()])
-      .then(([p, s]) => {
+    Promise.all([fetchPlayer(id), fetchMatchStats(), fetchSpecialStats()])
+      .then(([p, s, ss]) => {
         setPlayer(p)
         setStats(s.matches)
+        setSpecialStats(ss)
       })
       .catch(() => setError('שגיאה בטעינת השחקן'))
   }, [id])
@@ -50,7 +55,7 @@ export function PlayerPage() {
         </Link>
         {renderSummaryIfNeeded(player)}
       </div>
-      {renderBodyIfNeeded(player, stats, mode, setMode, error)}
+      {renderBodyIfNeeded(player, stats, specialStats, mode, setMode, error)}
     </div>
   )
 }
@@ -63,6 +68,7 @@ function renderSummaryIfNeeded(player: PlayerFile | undefined) {
 function renderBodyIfNeeded(
   player: PlayerFile | undefined,
   stats: Record<string, MatchPickStats> | undefined,
+  specialStats: SpecialStatsFile | undefined,
   mode: ViewMode,
   setMode: (m: ViewMode) => void,
   error: string | undefined,
@@ -73,8 +79,8 @@ function renderBodyIfNeeded(
     <>
       <GroupStageSection items={player.group_stage} stats={stats} mode={mode} setMode={setMode} />
       <AdvancementSection player={player} />
-      <ChampionSection player={player} />
-      <SpecialsSection player={player} />
+      <ChampionSection player={player} championStat={specialStats?.champion} />
+      <SpecialsSection player={player} specialStats={specialStats?.specials} />
     </>
   )
 }
@@ -498,13 +504,14 @@ function GroupStandingPicks({ items }: { items: AdvGroupPick[] }) {
   )
 }
 
-function ChampionSection({ player }: { player: PlayerFile }) {
+function ChampionSection({ player, championStat }: { player: PlayerFile; championStat?: CrowdStat }) {
   const c = player.champion
   return (
     <Section title="אלופת העולם">
       <div className="flex items-center gap-2 px-2 py-2">
         <span aria-hidden className="text-xl">🏆</span>
         <span className="flex-1 font-semibold text-ink">{c.team_he ?? '—'}</span>
+        <StatTooltip stat={championStat} />
         {renderChampionPotentialIfNeeded(c.points_if_correct)}
         <Chip label={c.status === 'pending' ? 'ממתין' : `+${c.points}`} status={c.status} />
       </div>
@@ -517,7 +524,7 @@ function renderChampionPotentialIfNeeded(pts?: number) {
   return <span className="text-xs text-ink/40">שווי: {pts} נק׳</span>
 }
 
-function SpecialsSection({ player }: { player: PlayerFile }) {
+function SpecialsSection({ player, specialStats }: { player: PlayerFile; specialStats?: Record<string, CrowdStat> }) {
   return (
     <Section title="הימורים מיוחדים">
       <ul className="divide-y divide-ink/5">
@@ -525,6 +532,7 @@ function SpecialsSection({ player }: { player: PlayerFile }) {
           <li key={s.key} className="flex items-center gap-2 px-2 py-2.5">
             <span className="flex-1 text-sm text-ink/70">{SPECIAL_LABELS[s.key] ?? s.key}</span>
             <span className="text-sm font-semibold text-ink">{String(s.value ?? '—')}</span>
+            <StatTooltip stat={specialStats?.[s.key]} />
             <Chip label="ממתין" status={s.status} />
           </li>
         ))}

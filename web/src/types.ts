@@ -88,6 +88,26 @@ export interface MatchStatsFile {
 
 export type ViewMode = 'standard' | 'detailed'
 
+/** One of the top choices for a bet, with how many picked it. */
+export interface StatChoice {
+  value: string
+  count: number
+  pct: number
+}
+
+/** Crowd split for a single bet: total respondents + the top choices. */
+export interface CrowdStat {
+  total: number
+  top: StatChoice[]
+}
+
+export interface SpecialStatsFile {
+  synced_at: string
+  total_players: number
+  specials: Record<string, CrowdStat>
+  champion: CrowdStat
+}
+
 /** Per-match lists of player names who picked each outcome. */
 export interface MatchVoters {
   '1': string[]
