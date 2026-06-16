@@ -45,6 +45,7 @@ The World Cup 2026 (June-July 2026) falls entirely within Israel Daylight Time
 | Israel time (IDT) | UTC | cron |
 | --- | --- | --- |
 | ~06:07 | 03:07 | `7 3 * * *` |
+| ~11:07 | 08:07 | `7 8 * * *` |
 | ~22:37 | 19:37 | `37 19 * * *` |
 
 The morning run is set an hour early (06:07 rather than ~07:00) to absorb

@@ -229,6 +229,18 @@ for mid, cnt in match_picks.items():
         "total": total,
     }
 
+# ---- per-match voter lists (who picked 1/X/2), one file per match, lazy-loaded by the crowd dialog ----
+players_by_id = {p["id"]: p["name"] for p in players}
+match_voters = {}
+for p in preds:
+    mv = match_voters.setdefault(p["match_id"], {"1": [], "X": [], "2": []})
+    nm = players_by_id.get(p["player_id"])
+    if nm:
+        mv[p["pick_1x2"]].append(nm)
+for mv in match_voters.values():
+    for k in mv:
+        mv[k].sort()
+
 synced = datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds")
 PUB.mkdir(parents=True, exist_ok=True)
 (PUB / "players").mkdir(exist_ok=True)
@@ -239,6 +251,9 @@ for pid, pf in player_files.items():
     json.dump(pf, open(PUB / "players" / f"{pid}.json", "w", encoding="utf-8"), ensure_ascii=False, indent=2)
 json.dump({"synced_at": synced, "matches": match_stats},
           open(PUB / "match_stats.json", "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+(PUB / "match_voters").mkdir(exist_ok=True)
+for mid, mv in match_voters.items():
+    json.dump(mv, open(PUB / "match_voters" / f"{mid}.json", "w", encoding="utf-8"), ensure_ascii=False)
 json.dump({"synced_at": synced, "tournament_stage": "group", "scoring_version": "stopgap-1",
            "matches_resolved": len(results)},
           open(PUB / "meta.json", "w", encoding="utf-8"), ensure_ascii=False, indent=2)

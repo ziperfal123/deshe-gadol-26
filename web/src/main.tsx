@@ -5,6 +5,7 @@ import './index.css'
 import { StandingsPage } from './pages/StandingsPage'
 import { PlayerPage } from './pages/PlayerPage'
 import { AnnouncementDialog } from './components/AnnouncementDialog'
+import { ScrollToTopButton } from './components/ScrollToTopButton'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -14,6 +15,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/" element={<StandingsPage />} />
         <Route path="/player/:id" element={<PlayerPage />} />
       </Routes>
+      <ScrollToTopButton />
     </HashRouter>
   </StrictMode>,
 )

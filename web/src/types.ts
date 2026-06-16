@@ -88,6 +88,13 @@ export interface MatchStatsFile {
 
 export type ViewMode = 'standard' | 'detailed'
 
+/** Per-match lists of player names who picked each outcome. */
+export interface MatchVoters {
+  '1': string[]
+  X: string[]
+  '2': string[]
+}
+
 export interface PlayerFile {
   player_id: string
   name: string

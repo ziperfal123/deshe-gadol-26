@@ -26,10 +26,17 @@ export default {
           from: { opacity: '0', transform: 'translateY(10px) scale(0.96)' },
           to: { opacity: '1', transform: 'translateY(0) scale(1)' },
         },
+        flash: {
+          '0%': { boxShadow: '0 0 0 0 rgba(45,140,210,0), 0 0 0 0 rgba(45,140,210,0)' },
+          '12%': { boxShadow: '0 0 0 6px rgba(45,140,210,0.95), 0 0 22px 6px rgba(45,140,210,0.55)' },
+          '70%': { boxShadow: '0 0 0 6px rgba(45,140,210,0.85), 0 0 18px 4px rgba(45,140,210,0.45)' },
+          '100%': { boxShadow: '0 0 0 12px rgba(45,140,210,0), 0 0 0 0 rgba(45,140,210,0)' },
+        },
       },
       animation: {
         'fade-in': 'fade-in 200ms ease-out',
         'pop-in': 'pop-in 260ms cubic-bezier(0.22, 1, 0.36, 1)',
+        flash: 'flash 1.3s ease-out',
       },
     },
   },

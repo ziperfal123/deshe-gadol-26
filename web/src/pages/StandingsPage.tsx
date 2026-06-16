@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import type { Standings, StandingsRow } from '../types'
 import { fetchStandings } from '../lib/data'
+import { useFlashScroll } from '../lib/useFlashScroll'
+import { cn } from '../lib/cn'
 import { Header } from '../components/Header'
 
 /** Home screen: the full standings table, click a row to open a player. */
@@ -9,6 +11,7 @@ export function StandingsPage() {
   const [data, setData] = useState<Standings>()
   const [error, setError] = useState<string>()
   const [query, setQuery] = useState('')
+  const { flashScrollTo } = useFlashScroll('player')
   const navigate = useNavigate()
 
   useEffect(() => {
@@ -18,26 +21,32 @@ export function StandingsPage() {
   }, [])
 
   const onRowClick = (id: string) => navigate(`/player/${id}`)
+  const lastId = data?.standings.at(-1)?.player_id
 
   return (
     <div className="mx-auto max-w-3xl px-4 pb-16">
       <Header syncedAt={data?.synced_at} />
-      {renderBodyIfNeeded(data, error, query, setQuery, onRowClick)}
+      {renderBodyIfNeeded({ data, error, query, setQuery, onRowClick, lastId, flashScrollTo })}
     </div>
   )
 }
 
-function renderBodyIfNeeded(
-  data: Standings | undefined,
-  error: string | undefined,
-  query: string,
-  setQuery: (q: string) => void,
-  onRowClick: (id: string) => void,
-) {
+interface BodyProps {
+  data: Standings | undefined
+  error: string | undefined
+  query: string
+  setQuery: (q: string) => void
+  onRowClick: (id: string) => void
+  lastId: string | undefined
+  flashScrollTo: (id: string | undefined) => void
+}
+
+function renderBodyIfNeeded({ data, error, query, setQuery, onRowClick, lastId, flashScrollTo }: BodyProps) {
   if (error) return <p className="mt-10 text-center text-clay">{error}</p>
   if (!data) return <p className="mt-10 text-center text-ink/40">טוען…</p>
 
   const filtered = data.standings.filter((r) => r.name.includes(query.trim()))
+  const filtering = query.trim() !== ''
 
   return (
     <>
@@ -48,6 +57,7 @@ function renderBodyIfNeeded(
           placeholder="חיפוש שחקן…"
           className="w-full rounded-2xl border border-ink/15 bg-transparent px-4 py-2.5 text-sm outline-none placeholder:text-ink/40 focus:border-sage focus:ring-2 focus:ring-sage/30"
         />
+        {renderLastPlayerButtonIfNeeded(lastId, filtering, () => flashScrollTo(lastId))}
       </div>
       <ul className="mt-3 space-y-2">
         {filtered.map((row) => (
@@ -56,6 +66,24 @@ function renderBodyIfNeeded(
         {renderEmptyIfNeeded(filtered.length)}
       </ul>
     </>
+  )
+}
+
+function renderLastPlayerButtonIfNeeded(lastId: string | undefined, disabled: boolean, onClick: () => void) {
+  if (!lastId) return <></>
+  return (
+    <div className="mt-2 flex justify-end">
+      <button
+        onClick={onClick}
+        disabled={disabled}
+        className={cn(
+          'inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-sm font-medium text-clay/80 transition',
+          disabled ? 'cursor-not-allowed opacity-40' : 'hover:bg-clay/10',
+        )}
+      >
+        למה אחרונים תמיד בסוף? <span aria-hidden>⬇</span>
+      </button>
+    </div>
   )
 }
 
@@ -72,7 +100,7 @@ interface RowProps {
 function StandingRow({ row, onClick }: RowProps) {
   const isTop3 = row.rank <= 3
   return (
-    <li>
+    <li id={`player-${row.player_id}`} className="scroll-mt-24">
       <button
         onClick={() => onClick(row.player_id)}
         className="flex w-full items-center gap-3 rounded-2xl border border-ink/5 bg-white px-3 py-3 text-right shadow-soft transition hover:-translate-y-0.5 hover:border-sage/40 hover:shadow-lg"

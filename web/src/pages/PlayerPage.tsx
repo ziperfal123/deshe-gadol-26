@@ -11,6 +11,8 @@ import type {
 import { fetchMatchStats, fetchPlayer } from '../lib/data'
 import { cn } from '../lib/cn'
 import { findNextMatchId, liveStatus } from '../lib/matchTime'
+import { useFlashScroll } from '../lib/useFlashScroll'
+import { VotersDialog } from '../components/VotersDialog'
 import {
   SPECIAL_LABELS,
   STAGE_LABELS,
@@ -24,7 +26,7 @@ export function PlayerPage() {
   const { id } = useParams<{ id: string }>()
   const [player, setPlayer] = useState<PlayerFile>()
   const [stats, setStats] = useState<Record<string, MatchPickStats>>()
-  const [mode, setMode] = useLocalStorage<ViewMode>('player-view-mode', 'standard')
+  const [mode, setMode] = useLocalStorage<ViewMode>('player-view-mode', 'detailed')
   const [error, setError] = useState<string>()
 
   useEffect(() => {
@@ -40,8 +42,11 @@ export function PlayerPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 pb-16">
       <div className="sticky top-0 z-20 -mx-4 rounded-b-3xl border-b border-ink/10 bg-sand/95 px-4 pb-3 pt-4 shadow-header backdrop-blur">
-        <Link to="/" className="text-sm font-medium text-leaf hover:underline">
-          → חזרה לטבלה
+        <Link
+          to="/"
+          className="inline-flex items-center gap-1 rounded-full bg-leaf/15 px-3.5 py-1.5 text-sm font-bold text-leaf shadow-soft transition hover:bg-leaf/25"
+        >
+          <span aria-hidden>→</span> חזרה לטבלה
         </Link>
         {renderSummaryIfNeeded(player)}
       </div>
@@ -169,13 +174,10 @@ function GroupStageSection({ items, stats, mode, setMode }: GroupSectionProps) {
   const nextId = findNextMatchId(items, now)
   const target = items.find((it) => it.match_id === nextId)
   const nextIsLive = target ? liveStatus(target.kickoff, now) === 'live' : false
-  const onGoToNext = () => {
-    if (!nextId) return
-    document.getElementById(`match-${nextId}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' })
-  }
+  const { flashScrollTo } = useFlashScroll('match')
   return (
     <Section title="שלב הבתים · ניחושי 1X2" action={<ViewToggle mode={mode} setMode={setMode} />} bare={detailed}>
-      {renderNextGameButtonIfNeeded(nextId, nextIsLive, onGoToNext)}
+      {renderNextGameButtonIfNeeded(nextId, nextIsLive, () => flashScrollTo(nextId))}
       {detailed ? (
         <div className="space-y-3">
           {items.map((it) => (
@@ -251,7 +253,7 @@ function ViewToggle({ mode, setMode }: { mode: ViewMode; setMode: (m: ViewMode) 
 function GroupRow({ item }: { item: GroupItem }) {
   const played = item.actual_score_a !== null && item.actual_score_b !== null
   return (
-    <li id={`match-${item.match_id}`} className="flex scroll-mt-44 items-center gap-2 px-2 py-3">
+    <li id={`match-${item.match_id}`} className="flex scroll-mt-44 items-center gap-2 rounded-xl px-2 py-3">
       <span className="w-4 shrink-0 text-center text-xs font-bold text-ink/30">{item.group}</span>
       <div className="flex min-w-0 flex-1 items-center gap-2">
         <span className="min-w-0 truncate text-sm font-medium text-ink" title={item.home_he ?? ''}>
@@ -313,6 +315,7 @@ function PointsTag({ status, points }: { status: GroupItem['status']; points: nu
 /** Wide card (detailed view): crowd split + the player's pick highlighted. */
 function DetailedGroupCard({ item, stats }: { item: GroupItem; stats?: MatchPickStats }) {
   const played = item.actual_score_a !== null && item.actual_score_b !== null
+  const [openPick, setOpenPick] = useState<'1' | 'X' | '2'>()
   // option order [1, X, 2] → in RTL the home win (1) sits on the right.
   const options: ('1' | 'X' | '2')[] = ['1', 'X', '2']
   return (
@@ -325,24 +328,65 @@ function DetailedGroupCard({ item, stats }: { item: GroupItem; stats?: MatchPick
       </div>
       <div className="grid grid-cols-3 gap-2">
         {options.map((key) => (
-          <SplitBox key={key} pick={key} pct={stats?.pct[key] ?? 0} selected={item.pick_1x2 === key} />
+          <SplitBox
+            key={key}
+            pick={key}
+            pct={stats?.pct[key] ?? 0}
+            selected={item.pick_1x2 === key}
+            onClick={() => setOpenPick(key)}
+          />
         ))}
       </div>
       <CrowdLine item={item} stats={stats} />
       {renderDetailedResultIfNeeded(played, item)}
+      {renderVotersDialogIfNeeded(openPick, item, () => setOpenPick(undefined))}
     </div>
   )
 }
 
-function SplitBox({ pick, pct, selected }: { pick: '1' | 'X' | '2'; pct: number; selected: boolean }) {
+function renderVotersDialogIfNeeded(
+  pick: '1' | 'X' | '2' | undefined,
+  item: GroupItem,
+  onClose: () => void,
+) {
+  if (!pick) return <></>
   return (
-    <div className={cn('rounded-xl p-2 text-center', selected ? 'border-2 border-sky bg-sky/20' : 'border border-ink/10 bg-sand')}>
+    <VotersDialog
+      matchId={item.match_id}
+      pick={pick}
+      homeHe={item.home_he}
+      awayHe={item.away_he}
+      onClose={onClose}
+    />
+  )
+}
+
+function SplitBox({
+  pick,
+  pct,
+  selected,
+  onClick,
+}: {
+  pick: '1' | 'X' | '2'
+  pct: number
+  selected: boolean
+  onClick: () => void
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className={cn(
+        'rounded-xl p-2 text-center transition hover:brightness-95 active:scale-[0.98]',
+        selected ? 'border-2 border-sky bg-sky/20' : 'border border-ink/10 bg-sand',
+      )}
+    >
       <div className={cn('text-lg font-extrabold', selected ? 'text-ink' : 'text-ink/70')}>{pickLabel(pick)}</div>
       <div className={cn('text-xs font-semibold', selected ? 'text-ink/70' : 'text-ink/45')}>{pct}%</div>
       <div className="mt-1.5 h-2 overflow-hidden rounded-full bg-ink/15">
         <div className={cn('h-full rounded-full', selected ? 'bg-sky' : 'bg-ink/40')} style={{ width: `${pct}%` }} />
       </div>
-    </div>
+    </button>
   )
 }
 

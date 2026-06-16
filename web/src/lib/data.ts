@@ -1,4 +1,4 @@
-import type { MatchStatsFile, PlayerFile, Standings } from '../types'
+import type { MatchStatsFile, MatchVoters, PlayerFile, Standings } from '../types'
 
 const base = import.meta.env.BASE_URL
 
@@ -20,5 +20,12 @@ export async function fetchPlayer(id: string): Promise<PlayerFile> {
 export async function fetchMatchStats(): Promise<MatchStatsFile> {
   const res = await fetch(`${base}data/match_stats.json`)
   if (!res.ok) throw new Error('failed to load match stats')
+  return res.json()
+}
+
+/** Fetch the per-match voter lists (who picked each outcome). Loaded on demand. */
+export async function fetchMatchVoters(matchId: string): Promise<MatchVoters> {
+  const res = await fetch(`${base}data/match_voters/${matchId}.json`)
+  if (!res.ok) throw new Error('failed to load match voters')
   return res.json()
 }
