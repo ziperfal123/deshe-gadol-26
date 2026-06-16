@@ -14,12 +14,12 @@ export function ScrollToTopButton() {
     <button
       onClick={onClick}
       aria-label="חזרה למעלה"
-      className="fixed bottom-5 left-4 z-40 inline-flex items-center gap-1.5 rounded-full bg-leaf p-3 font-bold text-white shadow-soft transition hover:brightness-95 sm:px-4 sm:py-2.5"
+      className="fixed bottom-5 left-4 z-40 inline-flex items-center gap-1.5 rounded-full bg-leaf p-4 font-bold text-white shadow-soft transition hover:brightness-95 sm:px-5 sm:py-3"
     >
-      <svg viewBox="0 0 24 24" className="h-4 w-4 shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+      <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M6 14l6-6 6 6" />
       </svg>
-      <span className="hidden text-sm sm:inline">למעלה</span>
+      <span className="hidden text-base sm:inline">למעלה</span>
     </button>
   )
 }
