@@ -1,4 +1,4 @@
-import type { MatchStatsFile, MatchVoters, PlayerFile, SpecialStatsFile, Standings } from '../types'
+import type { GroupsFile, MatchStatsFile, MatchVoters, PlayerFile, SpecialStatsFile, Standings } from '../types'
 
 const base = import.meta.env.BASE_URL
 
@@ -34,5 +34,12 @@ export async function fetchMatchVoters(matchId: string): Promise<MatchVoters> {
 export async function fetchSpecialStats(): Promise<SpecialStatsFile> {
   const res = await fetch(`${base}data/special_stats.json`)
   if (!res.ok) throw new Error('failed to load special stats')
+  return res.json()
+}
+
+/** Fetch the group rosters (4 teams per group). */
+export async function fetchGroups(): Promise<GroupsFile> {
+  const res = await fetch(`${base}data/groups.json`)
+  if (!res.ok) throw new Error('failed to load groups')
   return res.json()
 }

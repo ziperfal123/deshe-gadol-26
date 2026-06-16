@@ -1,0 +1,220 @@
+{
+  "groups": {
+    "A": [
+      {
+        "code": "CZE",
+        "name_he": "צ׳כיה"
+      },
+      {
+        "code": "KOR",
+        "name_he": "דרום קוריאה"
+      },
+      {
+        "code": "MEX",
+        "name_he": "מקסיקו"
+      },
+      {
+        "code": "RSA",
+        "name_he": "דרום אפריקה"
+      }
+    ],
+    "B": [
+      {
+        "code": "BIH",
+        "name_he": "בוסניה והרצגובינה"
+      },
+      {
+        "code": "CAN",
+        "name_he": "קנדה"
+      },
+      {
+        "code": "QAT",
+        "name_he": "קטאר"
+      },
+      {
+        "code": "SUI",
+        "name_he": "שווייץ"
+      }
+    ],
+    "C": [
+      {
+        "code": "BRA",
+        "name_he": "ברזיל"
+      },
+      {
+        "code": "HAI",
+        "name_he": "האיטי"
+      },
+      {
+        "code": "MAR",
+        "name_he": "מרוקו"
+      },
+      {
+        "code": "SCO",
+        "name_he": "סקוטלנד"
+      }
+    ],
+    "D": [
+      {
+        "code": "AUS",
+        "name_he": "אוסטרליה"
+      },
+      {
+        "code": "PAR",
+        "name_he": "פרגוואי"
+      },
+      {
+        "code": "TUR",
+        "name_he": "טורקיה"
+      },
+      {
+        "code": "USA",
+        "name_he": "ארצות הברית"
+      }
+    ],
+    "E": [
+      {
+        "code": "CIV",
+        "name_he": "חוף השנהב"
+      },
+      {
+        "code": "CUW",
+        "name_he": "קוראסאו"
+      },
+      {
+        "code": "ECU",
+        "name_he": "אקוודור"
+      },
+      {
+        "code": "GER",
+        "name_he": "גרמניה"
+      }
+    ],
+    "F": [
+      {
+        "code": "JPN",
+        "name_he": "יפן"
+      },
+      {
+        "code": "NED",
+        "name_he": "הולנד"
+      },
+      {
+        "code": "SWE",
+        "name_he": "שוודיה"
+      },
+      {
+        "code": "TUN",
+        "name_he": "תוניסיה"
+      }
+    ],
+    "G": [
+      {
+        "code": "BEL",
+        "name_he": "בלגיה"
+      },
+      {
+        "code": "EGY",
+        "name_he": "מצרים"
+      },
+      {
+        "code": "IRN",
+        "name_he": "איראן"
+      },
+      {
+        "code": "NZL",
+        "name_he": "ניו זילנד"
+      }
+    ],
+    "H": [
+      {
+        "code": "CPV",
+        "name_he": "כף ורדה"
+      },
+      {
+        "code": "ESP",
+        "name_he": "ספרד"
+      },
+      {
+        "code": "KSA",
+        "name_he": "ערב הסעודית"
+      },
+      {
+        "code": "URU",
+        "name_he": "אורוגוואי"
+      }
+    ],
+    "I": [
+      {
+        "code": "FRA",
+        "name_he": "צרפת"
+      },
+      {
+        "code": "IRQ",
+        "name_he": "עיראק"
+      },
+      {
+        "code": "NOR",
+        "name_he": "נורבגיה"
+      },
+      {
+        "code": "SEN",
+        "name_he": "סנגל"
+      }
+    ],
+    "J": [
+      {
+        "code": "ALG",
+        "name_he": "אלג'יריה"
+      },
+      {
+        "code": "ARG",
+        "name_he": "ארגנטינה"
+      },
+      {
+        "code": "AUT",
+        "name_he": "אוסטריה"
+      },
+      {
+        "code": "JOR",
+        "name_he": "ירדן"
+      }
+    ],
+    "K": [
+      {
+        "code": "COD",
+        "name_he": "קונגו הדמוקרטית"
+      },
+      {
+        "code": "COL",
+        "name_he": "קולומביה"
+      },
+      {
+        "code": "POR",
+        "name_he": "פורטוגל"
+      },
+      {
+        "code": "UZB",
+        "name_he": "אוזבקיסטן"
+      }
+    ],
+    "L": [
+      {
+        "code": "CRO",
+        "name_he": "קרואטיה"
+      },
+      {
+        "code": "ENG",
+        "name_he": "אנגליה"
+      },
+      {
+        "code": "GHA",
+        "name_he": "גאנה"
+      },
+      {
+        "code": "PAN",
+        "name_he": "פנמה"
+      }
+    ]
+  }
+}

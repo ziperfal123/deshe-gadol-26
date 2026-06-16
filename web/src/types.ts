@@ -88,6 +88,15 @@ export interface MatchStatsFile {
 
 export type ViewMode = 'standard' | 'detailed'
 
+export interface GroupTeam {
+  code: string
+  name_he: string
+}
+
+export interface GroupsFile {
+  groups: Record<string, GroupTeam[]>
+}
+
 /** One of the top choices for a bet, with how many picked it. */
 export interface StatChoice {
   value: string

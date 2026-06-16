@@ -284,6 +284,17 @@ for mid, mv in match_voters.items():
     json.dump(mv, open(PUB / "match_voters" / f"{mid}.json", "w", encoding="utf-8"), ensure_ascii=False)
 json.dump({"synced_at": synced, "total_players": len(players), "specials": specials_stats, "champion": champion_stats},
           open(PUB / "special_stats.json", "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+# group rosters (4 teams each), sorted by code so the order does NOT imply standings position
+groups_out = {}
+for t in teams:
+    g = t.get("group")
+    if not g:
+        continue
+    groups_out.setdefault(g, []).append({"code": t["code"], "name_he": t.get("name_he")})
+for g in groups_out:
+    groups_out[g].sort(key=lambda x: x["code"])
+json.dump({"groups": {k: groups_out[k] for k in sorted(groups_out)}},
+          open(PUB / "groups.json", "w", encoding="utf-8"), ensure_ascii=False, indent=2)
 json.dump({"synced_at": synced, "tournament_stage": "group", "scoring_version": "stopgap-1",
            "matches_resolved": len(results)},
           open(PUB / "meta.json", "w", encoding="utf-8"), ensure_ascii=False, indent=2)

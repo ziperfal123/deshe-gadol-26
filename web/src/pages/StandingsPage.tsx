@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useEventListener } from 'usehooks-ts'
 import type { Standings, StandingsRow } from '../types'
 import { fetchStandings } from '../lib/data'
 import { useFlashScroll } from '../lib/useFlashScroll'
@@ -11,8 +12,11 @@ export function StandingsPage() {
   const [data, setData] = useState<Standings>()
   const [error, setError] = useState<string>()
   const [query, setQuery] = useState('')
+  const [scrolled, setScrolled] = useState(false)
   const { flashScrollTo } = useFlashScroll('player')
   const navigate = useNavigate()
+
+  useEventListener('scroll', () => setScrolled(window.scrollY > 250))
 
   useEffect(() => {
     fetchStandings()
@@ -26,7 +30,7 @@ export function StandingsPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 pb-16">
       <Header syncedAt={data?.synced_at} />
-      {renderBodyIfNeeded({ data, error, query, setQuery, onRowClick, lastId, flashScrollTo })}
+      {renderBodyIfNeeded({ data, error, query, setQuery, onRowClick, lastId, scrolled, flashScrollTo })}
     </div>
   )
 }
@@ -38,10 +42,11 @@ interface BodyProps {
   setQuery: (q: string) => void
   onRowClick: (id: string) => void
   lastId: string | undefined
+  scrolled: boolean
   flashScrollTo: (id: string | undefined) => void
 }
 
-function renderBodyIfNeeded({ data, error, query, setQuery, onRowClick, lastId, flashScrollTo }: BodyProps) {
+function renderBodyIfNeeded({ data, error, query, setQuery, onRowClick, lastId, scrolled, flashScrollTo }: BodyProps) {
   if (error) return <p className="mt-10 text-center text-clay">{error}</p>
   if (!data) return <p className="mt-10 text-center text-ink/40">טוען…</p>
 
@@ -57,7 +62,7 @@ function renderBodyIfNeeded({ data, error, query, setQuery, onRowClick, lastId, 
           placeholder="חיפוש שחקן…"
           className="w-full rounded-2xl border border-ink/15 bg-transparent px-4 py-2.5 text-sm outline-none placeholder:text-ink/40 focus:border-sage focus:ring-2 focus:ring-sage/30"
         />
-        {renderLastPlayerButtonIfNeeded(lastId, filtering, () => flashScrollTo(lastId))}
+        {renderLastPlayerButtonIfNeeded(lastId, scrolled, filtering, () => flashScrollTo(lastId))}
       </div>
       <ul className="mt-3 space-y-2">
         {filtered.map((row) => (
@@ -69,19 +74,40 @@ function renderBodyIfNeeded({ data, error, query, setQuery, onRowClick, lastId, 
   )
 }
 
-function renderLastPlayerButtonIfNeeded(lastId: string | undefined, disabled: boolean, onClick: () => void) {
+function renderLastPlayerButtonIfNeeded(
+  lastId: string | undefined,
+  scrolled: boolean,
+  filtering: boolean,
+  onLast: () => void,
+) {
   if (!lastId) return <></>
+  // Once scrolled, the same button flips to "back to top".
+  const onTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
+  const disabled = !scrolled && filtering
   return (
     <div className="mt-2 flex justify-end">
       <button
-        onClick={onClick}
+        onClick={scrolled ? onTop : onLast}
         disabled={disabled}
         className={cn(
-          'inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-sm font-medium text-clay/80 transition',
-          disabled ? 'cursor-not-allowed opacity-40' : 'hover:bg-clay/10',
+          'inline-flex items-center gap-1 rounded-full text-sm transition',
+          scrolled
+            ? 'bg-leaf px-3.5 py-1.5 font-bold text-white shadow-soft hover:brightness-95'
+            : cn(
+                'px-2 py-0.5 font-medium text-clay/80',
+                disabled ? 'cursor-not-allowed opacity-40' : 'hover:bg-clay/10',
+              ),
         )}
       >
-        למה אחרונים תמיד בסוף? <span aria-hidden>⬇</span>
+        {scrolled ? (
+          <>
+            קח אותי חזרה למעלה <span aria-hidden>⬆</span>
+          </>
+        ) : (
+          <>
+            למה אחרונים תמיד בסוף? <span aria-hidden>⬇</span>
+          </>
+        )}
       </button>
     </div>
   )

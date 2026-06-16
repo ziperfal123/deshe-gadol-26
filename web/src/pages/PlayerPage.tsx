@@ -5,17 +5,20 @@ import type {
   AdvGroupPick,
   CrowdStat,
   GroupItem,
+  GroupTeam,
   MatchPickStats,
   PlayerFile,
   SpecialStatsFile,
   ViewMode,
 } from '../types'
-import { fetchMatchStats, fetchPlayer, fetchSpecialStats } from '../lib/data'
+import { fetchGroups, fetchMatchStats, fetchPlayer, fetchSpecialStats } from '../lib/data'
 import { cn } from '../lib/cn'
+import { teamFlag, withFlag } from '../lib/flags'
 import { findNextMatchId, liveStatus } from '../lib/matchTime'
 import { useFlashScroll } from '../lib/useFlashScroll'
 import { VotersDialog } from '../components/VotersDialog'
 import { StatTooltip } from '../components/StatTooltip'
+import { GroupTooltip } from '../components/GroupTooltip'
 import {
   SPECIAL_LABELS,
   STAGE_LABELS,
@@ -30,16 +33,18 @@ export function PlayerPage() {
   const [player, setPlayer] = useState<PlayerFile>()
   const [stats, setStats] = useState<Record<string, MatchPickStats>>()
   const [specialStats, setSpecialStats] = useState<SpecialStatsFile>()
+  const [groups, setGroups] = useState<Record<string, GroupTeam[]>>()
   const [mode, setMode] = useLocalStorage<ViewMode>('player-view-mode', 'detailed')
   const [error, setError] = useState<string>()
 
   useEffect(() => {
     if (!id) return
-    Promise.all([fetchPlayer(id), fetchMatchStats(), fetchSpecialStats()])
-      .then(([p, s, ss]) => {
+    Promise.all([fetchPlayer(id), fetchMatchStats(), fetchSpecialStats(), fetchGroups()])
+      .then(([p, s, ss, g]) => {
         setPlayer(p)
         setStats(s.matches)
         setSpecialStats(ss)
+        setGroups(g.groups)
       })
       .catch(() => setError('שגיאה בטעינת השחקן'))
   }, [id])
@@ -55,7 +60,7 @@ export function PlayerPage() {
         </Link>
         {renderSummaryIfNeeded(player)}
       </div>
-      {renderBodyIfNeeded(player, stats, specialStats, mode, setMode, error)}
+      {renderBodyIfNeeded(player, stats, specialStats, groups, mode, setMode, error)}
     </div>
   )
 }
@@ -69,6 +74,7 @@ function renderBodyIfNeeded(
   player: PlayerFile | undefined,
   stats: Record<string, MatchPickStats> | undefined,
   specialStats: SpecialStatsFile | undefined,
+  groups: Record<string, GroupTeam[]> | undefined,
   mode: ViewMode,
   setMode: (m: ViewMode) => void,
   error: string | undefined,
@@ -77,7 +83,7 @@ function renderBodyIfNeeded(
   if (!player) return <p className="mt-10 text-center text-ink/40">טוען…</p>
   return (
     <>
-      <GroupStageSection items={player.group_stage} stats={stats} mode={mode} setMode={setMode} />
+      <GroupStageSection items={player.group_stage} stats={stats} groups={groups} mode={mode} setMode={setMode} />
       <AdvancementSection player={player} />
       <ChampionSection player={player} championStat={specialStats?.champion} />
       <SpecialsSection player={player} specialStats={specialStats?.specials} />
@@ -110,15 +116,17 @@ function Section({
   title,
   action,
   bare,
+  id,
   children,
 }: {
   title: string
   action?: React.ReactNode
   bare?: boolean
+  id?: string
   children: React.ReactNode
 }) {
   return (
-    <section className="mt-6">
+    <section id={id} className={cn('mt-6', id && 'scroll-mt-44')}>
       <div className="mb-2 flex items-center justify-between gap-2 px-1">
         <h2 className="text-base font-bold text-ink/80">{title}</h2>
         {action}
@@ -142,27 +150,41 @@ function Versus({ big }: { big?: boolean }) {
   )
 }
 
+/** A team's flag emoji + name. */
+function TeamLabel({ name, code, className }: { name: string | null; code: string | null; className?: string }) {
+  return (
+    <span className={cn('flex min-w-0 items-center gap-1', className)} title={name ?? ''}>
+      <span aria-hidden className="shrink-0">{teamFlag(code)}</span>
+      <span className="truncate">{name}</span>
+    </span>
+  )
+}
+
 /**
- * Two team names with a versus badge. `spread` pushes them to opposite edges
- * (detailed card header); without it they cluster tight on the right.
+ * Two team names (with flags) and a versus badge. `spread` pushes them to
+ * opposite edges (detailed card header); without it they cluster tight.
  */
 function MatchTeams({
   home,
   away,
+  homeCode,
+  awayCode,
   strong,
   spread,
 }: {
   home: string | null
   away: string | null
+  homeCode: string | null
+  awayCode: string | null
   strong?: boolean
   spread?: boolean
 }) {
-  const nameCls = cn('truncate text-ink', strong ? 'text-sm font-bold' : 'text-sm font-medium', spread && 'flex-1')
+  const nameCls = cn('text-ink', strong ? 'text-sm font-bold' : 'text-sm font-medium', spread && 'flex-1')
   return (
     <div className="flex flex-1 items-center gap-2">
-      <span className={nameCls}>{home}</span>
+      <TeamLabel name={home} code={homeCode} className={nameCls} />
       <Versus big={strong} />
-      <span className={cn(nameCls, spread && 'text-left')}>{away}</span>
+      <TeamLabel name={away} code={awayCode} className={cn(nameCls, spread && 'justify-end')} />
     </div>
   )
 }
@@ -170,11 +192,12 @@ function MatchTeams({
 interface GroupSectionProps {
   items: GroupItem[]
   stats?: Record<string, MatchPickStats>
+  groups?: Record<string, GroupTeam[]>
   mode: ViewMode
   setMode: (m: ViewMode) => void
 }
 
-function GroupStageSection({ items, stats, mode, setMode }: GroupSectionProps) {
+function GroupStageSection({ items, stats, groups, mode, setMode }: GroupSectionProps) {
   const detailed = mode === 'detailed'
   const now = new Date()
   const nextId = findNextMatchId(items, now)
@@ -183,17 +206,25 @@ function GroupStageSection({ items, stats, mode, setMode }: GroupSectionProps) {
   const { flashScrollTo } = useFlashScroll('match')
   return (
     <Section title="שלב הבתים · ניחושי 1X2" action={<ViewToggle mode={mode} setMode={setMode} />} bare={detailed}>
-      {renderNextGameButtonIfNeeded(nextId, nextIsLive, () => flashScrollTo(nextId))}
+      <div className="mb-3 flex flex-wrap items-center justify-center gap-2">
+        {renderNextGameButtonIfNeeded(nextId, nextIsLive, () => flashScrollTo(nextId))}
+        <button
+          onClick={() => document.getElementById('advancement')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+          className="inline-flex items-center gap-1.5 rounded-full bg-sun/60 px-4 py-1.5 text-xs font-bold text-ink transition hover:bg-sun/80"
+        >
+          להימורים המתקדמים <span aria-hidden>⬇</span>
+        </button>
+      </div>
       {detailed ? (
         <div className="space-y-3">
           {items.map((it) => (
-            <DetailedGroupCard key={it.match_id} item={it} stats={stats?.[it.match_id]} />
+            <DetailedGroupCard key={it.match_id} item={it} stats={stats?.[it.match_id]} groupTeams={it.group ? groups?.[it.group] : undefined} />
           ))}
         </div>
       ) : (
         <ul className="divide-y divide-ink/5">
           {items.map((it) => (
-            <GroupRow key={it.match_id} item={it} />
+            <GroupRow key={it.match_id} item={it} groupTeams={it.group ? groups?.[it.group] : undefined} />
           ))}
         </ul>
       )}
@@ -204,15 +235,13 @@ function GroupStageSection({ items, stats, mode, setMode }: GroupSectionProps) {
 function renderNextGameButtonIfNeeded(nextId: string | undefined, live: boolean, onClick: () => void) {
   if (!nextId) return <></>
   return (
-    <div className="mb-3 flex justify-center">
-      <button
-        onClick={onClick}
-        className="inline-flex items-center gap-2 rounded-full bg-leaf/10 px-4 py-1.5 text-xs font-bold text-leaf transition hover:bg-leaf/20"
-      >
-        {live ? <LiveDot /> : <span aria-hidden>⬇</span>}
-        {live ? 'למשחק החי' : 'למשחק הבא'}
-      </button>
-    </div>
+    <button
+      onClick={onClick}
+      className="inline-flex items-center gap-2 rounded-full bg-sky/25 px-4 py-1.5 text-xs font-bold text-ink transition hover:bg-sky/40"
+    >
+      {live ? <LiveDot /> : <span aria-hidden>⬇</span>}
+      {live ? 'למשחק החי' : 'למשחק הבא'}
+    </button>
   )
 }
 
@@ -256,19 +285,20 @@ function ViewToggle({ mode, setMode }: { mode: ViewMode; setMode: (m: ViewMode) 
  * across rows and only truncate when there is genuinely no room. The result /
  * pick / points cluster on the left, separated by a divider for breathing room.
  */
-function GroupRow({ item }: { item: GroupItem }) {
+function GroupRow({ item, groupTeams }: { item: GroupItem; groupTeams?: GroupTeam[] }) {
   const played = item.actual_score_a !== null && item.actual_score_b !== null
   return (
     <li id={`match-${item.match_id}`} className="flex scroll-mt-44 items-center gap-2 rounded-xl px-2 py-3">
-      <span className="w-4 shrink-0 text-center text-xs font-bold text-ink/30">{item.group}</span>
+      <GroupTooltip
+        group={item.group}
+        teams={groupTeams}
+        label={item.group ?? ''}
+        triggerClassName="w-4 shrink-0 text-center text-xs font-bold text-ink/30"
+      />
       <div className="flex min-w-0 flex-1 items-center gap-2">
-        <span className="min-w-0 truncate text-sm font-medium text-ink" title={item.home_he ?? ''}>
-          {item.home_he}
-        </span>
+        <TeamLabel name={item.home_he} code={item.home_code} className="text-sm font-medium text-ink" />
         <Versus />
-        <span className="min-w-0 truncate text-sm font-medium text-ink" title={item.away_he ?? ''}>
-          {item.away_he}
-        </span>
+        <TeamLabel name={item.away_he} code={item.away_code} className="text-sm font-medium text-ink" />
       </div>
       <div className="flex shrink-0 items-center gap-3 ps-1">
         <PickBadge pick={item.pick_1x2} />
@@ -319,7 +349,7 @@ function PointsTag({ status, points }: { status: GroupItem['status']; points: nu
 }
 
 /** Wide card (detailed view): crowd split + the player's pick highlighted. */
-function DetailedGroupCard({ item, stats }: { item: GroupItem; stats?: MatchPickStats }) {
+function DetailedGroupCard({ item, stats, groupTeams }: { item: GroupItem; stats?: MatchPickStats; groupTeams?: GroupTeam[] }) {
   const played = item.actual_score_a !== null && item.actual_score_b !== null
   const [openPick, setOpenPick] = useState<'1' | 'X' | '2'>()
   // option order [1, X, 2] → in RTL the home win (1) sits on the right.
@@ -327,10 +357,13 @@ function DetailedGroupCard({ item, stats }: { item: GroupItem; stats?: MatchPick
   return (
     <div id={`match-${item.match_id}`} className="scroll-mt-44 rounded-2xl border border-ink/10 bg-white p-4 shadow-soft">
       <div className="mb-3 flex items-center gap-2">
-        <span className="rounded-full bg-ink/5 px-2 py-0.5 text-[10px] font-bold text-ink/40">
-          בית {item.group}
-        </span>
-        <MatchTeams home={item.home_he} away={item.away_he} strong spread />
+        <GroupTooltip
+          group={item.group}
+          teams={groupTeams}
+          label={`בית ${item.group}`}
+          triggerClassName="rounded-full bg-ink/5 px-2 py-0.5 text-[10px] font-bold text-ink/40"
+        />
+        <MatchTeams home={item.home_he} away={item.away_he} homeCode={item.home_code} awayCode={item.away_code} strong spread />
       </div>
       <div className="grid grid-cols-3 gap-2">
         {options.map((key) => (
@@ -462,7 +495,7 @@ function AdvancementSection({ player }: { player: PlayerFile }) {
   const adv = player.advancement
   const stages = ['round_of_16', 'quarter_final', 'semi_final', 'final'] as const
   return (
-    <Section title="העפלה ושלבי הנוקאאוט">
+    <Section title="העפלה ושלבי הנוקאאוט" id="advancement">
       <div className="px-2 py-2">
         <SubTitle>ניחושי דירוג בבתים</SubTitle>
         <GroupStandingPicks items={adv.group_stage} />
@@ -472,7 +505,7 @@ function AdvancementSection({ player }: { player: PlayerFile }) {
           <SubTitle>{STAGE_LABELS[s]}</SubTitle>
           <div className="flex flex-wrap gap-1.5">
             {adv[s].map((p, i) => (
-              <Chip key={i} label={p.team_he} status={p.status} />
+              <Chip key={i} label={withFlag(p.team_code, p.team_he)} status={p.status} />
             ))}
           </div>
         </div>
@@ -495,7 +528,7 @@ function GroupStandingPicks({ items }: { items: AdvGroupPick[] }) {
             {items
               .filter((g) => g.position === pos)
               .map((g, i) => (
-                <Chip key={i} label={g.team_he} status={g.status} />
+                <Chip key={i} label={withFlag(g.team_code, g.team_he)} status={g.status} />
               ))}
           </div>
         </div>
@@ -510,7 +543,7 @@ function ChampionSection({ player, championStat }: { player: PlayerFile; champio
     <Section title="אלופת העולם">
       <div className="flex items-center gap-2 px-2 py-2">
         <span aria-hidden className="text-xl">🏆</span>
-        <span className="flex-1 font-semibold text-ink">{c.team_he ?? '—'}</span>
+        <span className="flex-1 font-semibold text-ink">{c.team_he ? withFlag(c.team_code, c.team_he) : '—'}</span>
         <StatTooltip stat={championStat} />
         {renderChampionPotentialIfNeeded(c.points_if_correct)}
         <Chip label={c.status === 'pending' ? 'ממתין' : `+${c.points}`} status={c.status} />
