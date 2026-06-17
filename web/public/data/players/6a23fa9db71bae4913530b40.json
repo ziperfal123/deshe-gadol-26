@@ -1,8 +1,8 @@
 {
   "player_id": "6a23fa9db71bae4913530b40",
   "name": "אריאל זיני",
-  "total_points": 8,
-  "correct_group": 4,
+  "total_points": 14,
+  "correct_group": 7,
   "group_stage": [
     {
       "match_id": "69d75963fc9731931f39c2cf",
@@ -288,10 +288,10 @@
       "pick_1x2": "1",
       "my_score_a": 1,
       "my_score_b": 0,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
-      "points": 0
+      "actual_score_a": 3,
+      "actual_score_b": 1,
+      "status": "correct",
+      "points": 2
     },
     {
       "match_id": "69d75963fc9731931f39c300",
@@ -305,10 +305,10 @@
       "pick_1x2": "2",
       "my_score_a": 0,
       "my_score_b": 1,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
-      "points": 0
+      "actual_score_a": 1,
+      "actual_score_b": 4,
+      "status": "correct",
+      "points": 2
     },
     {
       "match_id": "69d75963fc9731931f39c305",
@@ -322,10 +322,10 @@
       "pick_1x2": "1",
       "my_score_a": 1,
       "my_score_b": 0,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
-      "points": 0
+      "actual_score_a": 3,
+      "actual_score_b": 0,
+      "status": "correct",
+      "points": 2
     },
     {
       "match_id": "69d75963fc9731931f39c306",
@@ -339,9 +339,9 @@
       "pick_1x2": "2",
       "my_score_a": 0,
       "my_score_b": 1,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
+      "actual_score_a": 3,
+      "actual_score_b": 1,
+      "status": "wrong",
       "points": 0
     },
     {
@@ -1729,7 +1729,7 @@
     },
     {
       "key": "best_player",
-      "value": "לאמין יאמל",
+      "value": "למין ימאל",
       "points_if_correct": 20,
       "status": "pending",
       "points": 0
@@ -1805,5 +1805,5 @@
       "points": 0
     }
   ],
-  "synced_at": "2026-06-16T12:31:01+00:00"
+  "synced_at": "2026-06-17T16:01:28+00:00"
 }

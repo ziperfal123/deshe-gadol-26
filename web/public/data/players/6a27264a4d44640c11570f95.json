@@ -1,8 +1,8 @@
 {
   "player_id": "6a27264a4d44640c11570f95",
   "name": "אביב ינישבסקי 2",
-  "total_points": 14,
-  "correct_group": 7,
+  "total_points": 22,
+  "correct_group": 11,
   "group_stage": [
     {
       "match_id": "69d75963fc9731931f39c2cf",
@@ -288,10 +288,10 @@
       "pick_1x2": "1",
       "my_score_a": 1,
       "my_score_b": 0,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
-      "points": 0
+      "actual_score_a": 3,
+      "actual_score_b": 1,
+      "status": "correct",
+      "points": 2
     },
     {
       "match_id": "69d75963fc9731931f39c300",
@@ -305,10 +305,10 @@
       "pick_1x2": "2",
       "my_score_a": 0,
       "my_score_b": 1,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
-      "points": 0
+      "actual_score_a": 1,
+      "actual_score_b": 4,
+      "status": "correct",
+      "points": 2
     },
     {
       "match_id": "69d75963fc9731931f39c305",
@@ -322,10 +322,10 @@
       "pick_1x2": "1",
       "my_score_a": 1,
       "my_score_b": 0,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
-      "points": 0
+      "actual_score_a": 3,
+      "actual_score_b": 0,
+      "status": "correct",
+      "points": 2
     },
     {
       "match_id": "69d75963fc9731931f39c306",
@@ -339,10 +339,10 @@
       "pick_1x2": "1",
       "my_score_a": 1,
       "my_score_b": 0,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
-      "points": 0
+      "actual_score_a": 3,
+      "actual_score_b": 1,
+      "status": "correct",
+      "points": 2
     },
     {
       "match_id": "69d75963fc9731931f39c30b",
@@ -1805,5 +1805,5 @@
       "points": 0
     }
   ],
-  "synced_at": "2026-06-16T12:31:01+00:00"
+  "synced_at": "2026-06-17T16:01:28+00:00"
 }
