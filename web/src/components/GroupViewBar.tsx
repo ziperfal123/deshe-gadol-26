@@ -13,8 +13,11 @@ interface GroupViewBarProps {
  * not clipped by the horizontal scroll. */
 export function GroupViewBar({ groups, activeView, onSelect, onCreate }: GroupViewBarProps) {
   return (
-    <div className="mt-3 flex items-center gap-2">
+    <div className="mt-3 flex flex-wrap items-center gap-2">
       <Pill label="כל המשתתפים" active={activeView === 'all'} onClick={() => onSelect('all')} />
+      {groups.map((g) => (
+        <Pill key={g.id} label={g.name} active={activeView === g.id} onClick={() => onSelect(g.id)} />
+      ))}
       <div className="group relative shrink-0">
         <button
           onClick={onCreate}
@@ -22,14 +25,9 @@ export function GroupViewBar({ groups, activeView, onSelect, onCreate }: GroupVi
         >
           ➕ קבוצה
         </button>
-        <div className="invisible absolute bottom-full right-0 z-30 mb-2 w-56 rounded-2xl border border-ink/10 bg-white p-3 text-right text-xs leading-relaxed text-ink/70 opacity-0 shadow-soft transition group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100">
+        <div className="invisible absolute bottom-full left-0 z-30 mb-2 w-56 rounded-2xl border border-ink/10 bg-white p-3 text-right text-xs leading-relaxed text-ink/70 opacity-0 shadow-soft transition group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100">
           טבלה משלכם, רק עם החברים שתבחרו. נשמרת אצלכם בלבד. 👀
         </div>
-      </div>
-      <div className="flex flex-1 gap-2 overflow-x-auto pb-1">
-        {groups.map((g) => (
-          <Pill key={g.id} label={g.name} active={activeView === g.id} onClick={() => onSelect(g.id)} />
-        ))}
       </div>
     </div>
   )
