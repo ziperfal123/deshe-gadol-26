@@ -18,10 +18,14 @@ export function StatsPage() {
   }, [])
 
   return (
-    <div className="mx-auto max-w-3xl px-4 pb-16">
-      <Header syncedAt={stats?.synced_at} />
-      <NavTabs />
-      {renderBodyIfNeeded(stats, error)}
+    <div>
+      <div className="sticky top-0 z-20 w-full border-b border-ink/10 bg-sand/95 shadow-header backdrop-blur">
+        <div className="mx-auto max-w-3xl px-4 pb-3">
+          <Header syncedAt={stats?.synced_at} />
+          <NavTabs />
+        </div>
+      </div>
+      <div className="mx-auto max-w-3xl px-4 pb-16 pt-3">{renderBodyIfNeeded(stats, error)}</div>
     </div>
   )
 }

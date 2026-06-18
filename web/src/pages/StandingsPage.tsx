@@ -59,19 +59,26 @@ export function StandingsPage() {
   }
 
   return (
-    <div className="mx-auto max-w-3xl px-4 pb-16">
-      <Header syncedAt={data?.synced_at} />
-      <NavTabs />
-      {data && (
-        <GroupViewBar
-          groups={groups}
-          activeView={activeView}
-          onSelect={setActiveView}
-          onCreate={() => setEditor({ open: true })}
-        />
-      )}
-      {renderActiveGroupToolbarIfNeeded(activeGroup, () => setEditor({ open: true, editing: activeGroup }))}
-      {renderBodyIfNeeded({ data, error, rows, query, setQuery, onRowClick, scrolled, flashScrollTo })}
+    <div>
+      <div className="sticky top-0 z-20 w-full border-b border-ink/10 bg-sand/95 shadow-header backdrop-blur">
+        <div className="mx-auto max-w-3xl px-4 pb-3">
+          <Header syncedAt={data?.synced_at} />
+          <NavTabs />
+          {data && (
+            <GroupViewBar
+              groups={groups}
+              activeView={activeView}
+              onSelect={setActiveView}
+              onCreate={() => setEditor({ open: true })}
+            />
+          )}
+          {renderActiveGroupToolbarIfNeeded(activeGroup, () => setEditor({ open: true, editing: activeGroup }))}
+          {renderSearchIfNeeded(data, query, setQuery, rows, scrolled, flashScrollTo)}
+        </div>
+      </div>
+      <div className="mx-auto max-w-3xl px-4 pb-16 pt-3">
+        {renderListIfNeeded(data, error, rows, query, onRowClick)}
+      </div>
       {renderEditorIfNeeded(editor, data, onSaveGroup, onDeleteGroup, () => setEditor({ open: false }))}
     </div>
   )
@@ -110,43 +117,47 @@ function renderEditorIfNeeded(
   )
 }
 
-interface BodyProps {
-  data: Standings | undefined
-  error: string | undefined
-  rows: StandingsRow[]
-  query: string
-  setQuery: (q: string) => void
-  onRowClick: (id: string) => void
-  scrolled: boolean
-  flashScrollTo: (id: string | undefined) => void
+function renderSearchIfNeeded(
+  data: Standings | undefined,
+  query: string,
+  setQuery: (q: string) => void,
+  rows: StandingsRow[],
+  scrolled: boolean,
+  flashScrollTo: (id: string | undefined) => void,
+) {
+  if (!data) return <></>
+  const lastId = rows.at(-1)?.player_id
+  const filtering = query.trim() !== ''
+  return (
+    <div className="mt-3">
+      <input
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+        placeholder="חיפוש שחקן…"
+        className="w-full rounded-2xl border border-ink/15 bg-transparent px-4 py-2.5 text-sm outline-none placeholder:text-ink/40 focus:border-sage focus:ring-2 focus:ring-sage/30"
+      />
+      {renderLastPlayerButtonIfNeeded(lastId, scrolled, filtering, () => flashScrollTo(lastId))}
+    </div>
+  )
 }
 
-function renderBodyIfNeeded({ data, error, rows, query, setQuery, onRowClick, scrolled, flashScrollTo }: BodyProps) {
+function renderListIfNeeded(
+  data: Standings | undefined,
+  error: string | undefined,
+  rows: StandingsRow[],
+  query: string,
+  onRowClick: (id: string) => void,
+) {
   if (error) return <p className="mt-10 text-center text-clay">{error}</p>
   if (!data) return <p className="mt-10 text-center text-ink/40">טוען…</p>
-
   const filtered = rows.filter((r) => r.name.includes(query.trim()))
-  const filtering = query.trim() !== ''
-  const lastId = rows.at(-1)?.player_id
-
   return (
-    <>
-      <div className="sticky top-0 z-10 -mx-4 mt-2 rounded-b-3xl border-b border-ink/10 bg-sand/90 px-4 pb-3 pt-3 shadow-header backdrop-blur">
-        <input
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder="חיפוש שחקן…"
-          className="w-full rounded-2xl border border-ink/15 bg-transparent px-4 py-2.5 text-sm outline-none placeholder:text-ink/40 focus:border-sage focus:ring-2 focus:ring-sage/30"
-        />
-        {renderLastPlayerButtonIfNeeded(lastId, scrolled, filtering, () => flashScrollTo(lastId))}
-      </div>
-      <ul className="mt-3 space-y-2">
-        {filtered.map((row) => (
-          <StandingRow key={row.player_id} row={row} onClick={onRowClick} />
-        ))}
-        {renderEmptyIfNeeded(filtered.length)}
-      </ul>
-    </>
+    <ul className="mt-3 space-y-2">
+      {filtered.map((row) => (
+        <StandingRow key={row.player_id} row={row} onClick={onRowClick} />
+      ))}
+      {renderEmptyIfNeeded(filtered.length)}
+    </ul>
   )
 }
 

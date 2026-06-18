@@ -14,10 +14,15 @@ export function RulesPage() {
   }, [])
 
   return (
-    <div className="mx-auto max-w-3xl px-4 pb-16">
-      <Header />
-      <NavTabs />
-      <p className="mt-4 text-center text-xs text-ink/45">חוקי הניקוד של הדשא הגדול</p>
+    <div>
+      <div className="sticky top-0 z-20 w-full border-b border-ink/10 bg-sand/95 shadow-header backdrop-blur">
+        <div className="mx-auto max-w-3xl px-4 pb-3">
+          <Header />
+          <NavTabs />
+        </div>
+      </div>
+      <div className="mx-auto max-w-3xl px-4 pb-16 pt-3">
+      <p className="text-center text-xs text-ink/45">חוקי הניקוד של הדשא הגדול</p>
 
       <Card title="שלב הבתים" emoji="⚽">
         <RuleRow label="ניחוש תוצאה נכון (1 / X / 2)" pts={2} />
@@ -69,6 +74,7 @@ export function RulesPage() {
           ))}
         </ol>
       </Card>
+      </div>
     </div>
   )
 }
