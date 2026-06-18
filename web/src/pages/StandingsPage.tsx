@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useEventListener, useLocalStorage } from 'usehooks-ts'
 import type { CustomGroup, Standings, StandingsRow } from '../types'
-import { fetchStandings } from '../lib/data'
+import { fetchStandings, peekStandings } from '../lib/data'
 import { useFlashScroll } from '../lib/useFlashScroll'
 import { rankStandings } from '../lib/ranking'
 import { cn } from '../lib/cn'
@@ -13,7 +13,7 @@ import { GroupEditorDialog } from '../components/GroupEditorDialog'
 
 /** Home screen: the standings table (all players or a custom group view). */
 export function StandingsPage() {
-  const [data, setData] = useState<Standings>()
+  const [data, setData] = useState<Standings | undefined>(peekStandings)
   const [error, setError] = useState<string>()
   const [query, setQuery] = useState('')
   const [scrolled, setScrolled] = useState(false)

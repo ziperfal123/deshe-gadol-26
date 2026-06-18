@@ -36,6 +36,7 @@ export function PlayerPage() {
   const [groups, setGroups] = useState<Record<string, GroupTeam[]>>()
   const [mode, setMode] = useLocalStorage<ViewMode>('player-view-mode', 'detailed')
   const [error, setError] = useState<string>()
+  const { flashScrollTo } = useFlashScroll('match')
 
   useEffect(() => {
     if (!id) return
@@ -59,6 +60,7 @@ export function PlayerPage() {
           <span aria-hidden>→</span> חזרה לטבלה
         </Link>
         {renderSummaryIfNeeded(player)}
+        {renderJumpButtonsIfNeeded(player, flashScrollTo)}
       </div>
       {renderBodyIfNeeded(player, stats, specialStats, groups, mode, setMode, error)}
     </div>
@@ -68,6 +70,26 @@ export function PlayerPage() {
 function renderSummaryIfNeeded(player: PlayerFile | undefined) {
   if (!player) return <></>
   return <PlayerSummary player={player} />
+}
+
+/** Jump buttons (next/live game, advancement) , sticky under the player name. */
+function renderJumpButtonsIfNeeded(player: PlayerFile | undefined, flashScrollTo: (id: string | undefined) => void) {
+  if (!player) return <></>
+  const now = new Date()
+  const nextId = findNextMatchId(player.group_stage, now)
+  const target = player.group_stage.find((it) => it.match_id === nextId)
+  const nextIsLive = target ? liveStatus(target.kickoff, now) === 'live' : false
+  return (
+    <div className="mt-3 flex flex-wrap items-center justify-center gap-2">
+      {renderNextGameButtonIfNeeded(nextId, nextIsLive, () => flashScrollTo(nextId))}
+      <button
+        onClick={() => document.getElementById('advancement')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+        className="inline-flex items-center gap-1.5 rounded-full bg-sun/60 px-4 py-1.5 text-xs font-bold text-ink transition hover:bg-sun/80"
+      >
+        <StepsIcon /> להימורים המתקדמים
+      </button>
+    </div>
+  )
 }
 
 function renderBodyIfNeeded(
@@ -126,7 +148,7 @@ function Section({
   children: React.ReactNode
 }) {
   return (
-    <section id={id} className={cn('mt-6', id && 'scroll-mt-44')}>
+    <section id={id} className={cn('mt-6', id && 'scroll-mt-64')}>
       <div className="mb-2 flex items-center justify-between gap-2 px-1">
         <h2 className="text-base font-bold text-ink/80">{title}</h2>
         {action}
@@ -135,6 +157,30 @@ function Section({
         <div className="rounded-3xl border border-ink/5 bg-white p-2 shadow-soft">{children}</div>
       )}
     </section>
+  )
+}
+
+/** Neutral "jump to" (locate) icon , the target may be above or below the sticky button. */
+function JumpIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+      <circle cx="12" cy="12" r="7" />
+      <line x1="12" y1="2" x2="12" y2="5" />
+      <line x1="12" y1="19" x2="12" y2="22" />
+      <line x1="2" y1="12" x2="5" y2="12" />
+      <line x1="19" y1="12" x2="22" y2="12" />
+    </svg>
+  )
+}
+
+/** Ascending bars , "advancing through the stages". */
+function StepsIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round">
+      <line x1="5" y1="20" x2="5" y2="15" />
+      <line x1="12" y1="20" x2="12" y2="10" />
+      <line x1="19" y1="20" x2="19" y2="5" />
+    </svg>
   )
 }
 
@@ -199,22 +245,8 @@ interface GroupSectionProps {
 
 function GroupStageSection({ items, stats, groups, mode, setMode }: GroupSectionProps) {
   const detailed = mode === 'detailed'
-  const now = new Date()
-  const nextId = findNextMatchId(items, now)
-  const target = items.find((it) => it.match_id === nextId)
-  const nextIsLive = target ? liveStatus(target.kickoff, now) === 'live' : false
-  const { flashScrollTo } = useFlashScroll('match')
   return (
     <Section title="שלב הבתים · ניחושי 1X2" action={<ViewToggle mode={mode} setMode={setMode} />} bare={detailed}>
-      <div className="mb-3 flex flex-wrap items-center justify-center gap-2">
-        {renderNextGameButtonIfNeeded(nextId, nextIsLive, () => flashScrollTo(nextId))}
-        <button
-          onClick={() => document.getElementById('advancement')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
-          className="inline-flex items-center gap-1.5 rounded-full bg-sun/60 px-4 py-1.5 text-xs font-bold text-ink transition hover:bg-sun/80"
-        >
-          להימורים המתקדמים <span aria-hidden>⬇</span>
-        </button>
-      </div>
       {detailed ? (
         <div className="space-y-3">
           {items.map((it) => (
@@ -239,7 +271,7 @@ function renderNextGameButtonIfNeeded(nextId: string | undefined, live: boolean,
       onClick={onClick}
       className="inline-flex items-center gap-2 rounded-full bg-sky/25 px-4 py-1.5 text-xs font-bold text-ink transition hover:bg-sky/40"
     >
-      {live ? <LiveDot /> : <span aria-hidden>⬇</span>}
+      {live ? <LiveDot /> : <JumpIcon />}
       {live ? 'למשחק החי' : 'למשחק הבא'}
     </button>
   )
@@ -288,7 +320,7 @@ function ViewToggle({ mode, setMode }: { mode: ViewMode; setMode: (m: ViewMode) 
 function GroupRow({ item, groupTeams }: { item: GroupItem; groupTeams?: GroupTeam[] }) {
   const played = item.actual_score_a !== null && item.actual_score_b !== null
   return (
-    <li id={`match-${item.match_id}`} className="flex scroll-mt-44 items-center gap-1.5 rounded-xl px-2 py-3 sm:gap-2">
+    <li id={`match-${item.match_id}`} className="flex scroll-mt-64 items-center gap-1.5 rounded-xl px-2 py-3 sm:gap-2">
       <GroupTooltip
         group={item.group}
         teams={groupTeams}
@@ -355,7 +387,7 @@ function DetailedGroupCard({ item, stats, groupTeams }: { item: GroupItem; stats
   // option order [1, X, 2] → in RTL the home win (1) sits on the right.
   const options: ('1' | 'X' | '2')[] = ['1', 'X', '2']
   return (
-    <div id={`match-${item.match_id}`} className="scroll-mt-44 rounded-2xl border border-ink/10 bg-white p-4 shadow-soft">
+    <div id={`match-${item.match_id}`} className="scroll-mt-64 rounded-2xl border border-ink/10 bg-white p-4 shadow-soft">
       <div className="mb-3 flex items-center gap-2">
         <GroupTooltip
           group={item.group}

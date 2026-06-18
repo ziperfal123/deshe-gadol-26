@@ -1,8 +1,8 @@
 {
   "player_id": "6a172660da8096c3ffbd4857",
   "name": "דולב יצחקי",
-  "total_points": 24,
-  "correct_group": 12,
+  "total_points": 28,
+  "correct_group": 14,
   "group_stage": [
     {
       "match_id": "69d75963fc9731931f39c2cf",
@@ -356,9 +356,9 @@
       "pick_1x2": "1",
       "my_score_a": 1,
       "my_score_b": 0,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
+      "actual_score_a": 1,
+      "actual_score_b": 1,
+      "status": "wrong",
       "points": 0
     },
     {
@@ -373,10 +373,10 @@
       "pick_1x2": "1",
       "my_score_a": 1,
       "my_score_b": 0,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
-      "points": 0
+      "actual_score_a": 4,
+      "actual_score_b": 2,
+      "status": "correct",
+      "points": 2
     },
     {
       "match_id": "69d75963fc9731931f39c312",
@@ -390,10 +390,10 @@
       "pick_1x2": "1",
       "my_score_a": 1,
       "my_score_b": 0,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
-      "points": 0
+      "actual_score_a": 1,
+      "actual_score_b": 0,
+      "status": "correct",
+      "points": 2
     },
     {
       "match_id": "69d75963fc9731931f39c30c",
@@ -1805,5 +1805,5 @@
       "points": 0
     }
   ],
-  "synced_at": "2026-06-17T16:01:28+00:00"
+  "synced_at": "2026-06-18T03:50:19+00:00"
 }

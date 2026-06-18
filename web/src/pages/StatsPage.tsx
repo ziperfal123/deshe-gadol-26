@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import type { Distribution, GroupHighlight, StatChoice, StatsFile } from '../types'
-import { fetchStats } from '../lib/data'
+import { fetchStats, peekStats } from '../lib/data'
 import { teamFlag } from '../lib/flags'
 import { SPECIAL_LABELS, STAGE_LABELS, pickLabel } from '../lib/format'
 import { Header } from '../components/Header'
@@ -10,7 +10,7 @@ const KNOCKOUT_STAGES = ['round_of_16', 'quarter_final', 'semi_final', 'final'] 
 
 /** Aggregate statistics across every player's guesses. */
 export function StatsPage() {
-  const [stats, setStats] = useState<StatsFile>()
+  const [stats, setStats] = useState<StatsFile | undefined>(peekStats)
   const [error, setError] = useState(false)
 
   useEffect(() => {
@@ -144,8 +144,12 @@ function HighlightList({ rows }: { rows: GroupHighlight[] }) {
     <ul className="space-y-2">
       {rows.map((r, i) => (
         <li key={i} className="flex items-center gap-2 rounded-xl bg-sand/60 px-3 py-2 text-sm">
-          <span className="min-w-0 flex-1 truncate text-ink">
-            {teamFlag(r.home_code)} {r.home_he} <span className="text-ink/30">vs</span> {teamFlag(r.away_code)} {r.away_he}
+          <span className="flex min-w-0 flex-1 items-center gap-1.5 text-ink">
+            <span className="truncate">{r.home_he}</span>
+            <span aria-hidden className="shrink-0">{teamFlag(r.home_code)}</span>
+            <span className="shrink-0 text-ink/30">vs</span>
+            <span aria-hidden className="shrink-0">{teamFlag(r.away_code)}</span>
+            <span className="truncate">{r.away_he}</span>
           </span>
           <span className="flex shrink-0 items-center gap-1 text-xs font-bold text-ink/60">
             <span className="flex h-5 w-5 items-center justify-center rounded bg-sky/20">{r.dominant_pick ? pickLabel(r.dominant_pick) : '—'}</span>

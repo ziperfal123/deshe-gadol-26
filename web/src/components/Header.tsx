@@ -20,8 +20,12 @@ export function Header({ syncedAt }: HeaderProps) {
 }
 
 function renderSyncIfNeeded(syncedAt?: string) {
-  if (!syncedAt) return <></>
+  // Always render the line (with a non-breaking placeholder when there's no
+  // timestamp) so the header keeps a constant height across pages and the tabs
+  // below it don't jump when navigating.
   return (
-    <p className="mt-2 text-xs text-ink/50">עודכן לאחרונה: {formatSync(syncedAt)}</p>
+    <p className="mt-2 h-4 text-xs text-ink/50">
+      {syncedAt ? `עודכן לאחרונה: ${formatSync(syncedAt)}` : ' '}
+    </p>
   )
 }

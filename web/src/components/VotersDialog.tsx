@@ -39,8 +39,10 @@ export function VotersDialog({ matchId, pick, homeHe, awayHe, onClose }: VotersD
       >
         <div className="flex items-start gap-2 p-5 pb-3">
           <div className="min-w-0 flex-1">
-            <h2 className="truncate font-extrabold text-ink">
-              {homeHe} <span className="text-ink/40">נגד</span> {awayHe}
+            <h2 className="flex items-center gap-2 font-extrabold text-ink">
+              <span className="min-w-0 truncate">{homeHe}</span>
+              <span className="shrink-0 text-sm font-bold tracking-wide text-ink/45">VS</span>
+              <span className="min-w-0 truncate">{awayHe}</span>
             </h2>
             <p className="mt-0.5 text-xs font-medium text-leaf">
               ניחשו {outcomeLabel}

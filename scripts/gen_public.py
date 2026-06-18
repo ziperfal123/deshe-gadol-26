@@ -362,6 +362,14 @@ json.dump({"groups": {k: groups_out[k] for k in sorted(groups_out)}},
 json.dump({"synced_at": synced, "total_players": n_players, "champion": stats_champion,
            "specials": stats_specials, "advancement": stats_advancement, "group": stats_group},
           open(PUB / "stats.json", "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+# champion scoring table for the rules page (team -> points), sorted favorite→surprise
+champ_points = sorted(
+    [{"code": c, "name_he": team_he.get(c, c), "points": p} for c, p in champ["points"].items()],
+    key=lambda x: (x["points"], x["name_he"]),
+)
+pts_vals = [t["points"] for t in champ_points]
+json.dump({"range": [min(pts_vals), max(pts_vals)], "teams": champ_points},
+          open(PUB / "champion_points.json", "w", encoding="utf-8"), ensure_ascii=False, indent=2)
 json.dump({"synced_at": synced, "tournament_stage": "group", "scoring_version": "stopgap-1",
            "matches_resolved": len(results)},
           open(PUB / "meta.json", "w", encoding="utf-8"), ensure_ascii=False, indent=2)

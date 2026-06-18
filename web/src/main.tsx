@@ -5,6 +5,7 @@ import './index.css'
 import { StandingsPage } from './pages/StandingsPage'
 import { PlayerPage } from './pages/PlayerPage'
 import { StatsPage } from './pages/StatsPage'
+import { RulesPage } from './pages/RulesPage'
 // AnnouncementDialog is intentionally not rendered for now (kept for future use).
 // import { AnnouncementDialog } from './components/AnnouncementDialog'
 import { ScrollToTopButton } from './components/ScrollToTopButton'
@@ -16,6 +17,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/" element={<StandingsPage />} />
         <Route path="/player/:id" element={<PlayerPage />} />
         <Route path="/stats" element={<StatsPage />} />
+        <Route path="/rules" element={<RulesPage />} />
       </Routes>
       <ScrollToTopButton />
     </HashRouter>

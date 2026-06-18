@@ -128,6 +128,11 @@ export interface GroupHighlight {
   dominant_pick: '1' | 'X' | '2' | null
 }
 
+export interface ChampionPointsFile {
+  range: [number, number]
+  teams: { code: string; name_he: string; points: number }[]
+}
+
 export interface StatsFile {
   synced_at: string
   total_players: number

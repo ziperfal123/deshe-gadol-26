@@ -1,0 +1,248 @@
+{
+  "range": [
+    20,
+    60
+  ],
+  "teams": [
+    {
+      "code": "FRA",
+      "name_he": "צרפת",
+      "points": 20
+    },
+    {
+      "code": "ESP",
+      "name_he": "ספרד",
+      "points": 22
+    },
+    {
+      "code": "BRA",
+      "name_he": "ברזיל",
+      "points": 24
+    },
+    {
+      "code": "ARG",
+      "name_he": "ארגנטינה",
+      "points": 26
+    },
+    {
+      "code": "GER",
+      "name_he": "גרמניה",
+      "points": 28
+    },
+    {
+      "code": "POR",
+      "name_he": "פורטוגל",
+      "points": 28
+    },
+    {
+      "code": "ENG",
+      "name_he": "אנגליה",
+      "points": 30
+    },
+    {
+      "code": "BEL",
+      "name_he": "בלגיה",
+      "points": 34
+    },
+    {
+      "code": "NED",
+      "name_he": "הולנד",
+      "points": 34
+    },
+    {
+      "code": "NOR",
+      "name_he": "נורבגיה",
+      "points": 34
+    },
+    {
+      "code": "URU",
+      "name_he": "אורוגוואי",
+      "points": 38
+    },
+    {
+      "code": "MEX",
+      "name_he": "מקסיקו",
+      "points": 38
+    },
+    {
+      "code": "MAR",
+      "name_he": "מרוקו",
+      "points": 38
+    },
+    {
+      "code": "COL",
+      "name_he": "קולומביה",
+      "points": 38
+    },
+    {
+      "code": "USA",
+      "name_he": "ארצות הברית",
+      "points": 40
+    },
+    {
+      "code": "TUR",
+      "name_he": "טורקיה",
+      "points": 42
+    },
+    {
+      "code": "SEN",
+      "name_he": "סנגל",
+      "points": 42
+    },
+    {
+      "code": "CRO",
+      "name_he": "קרואטיה",
+      "points": 42
+    },
+    {
+      "code": "SUI",
+      "name_he": "שווייץ",
+      "points": 42
+    },
+    {
+      "code": "AUT",
+      "name_he": "אוסטריה",
+      "points": 44
+    },
+    {
+      "code": "ECU",
+      "name_he": "אקוודור",
+      "points": 44
+    },
+    {
+      "code": "JPN",
+      "name_he": "יפן",
+      "points": 44
+    },
+    {
+      "code": "SWE",
+      "name_he": "שוודיה",
+      "points": 44
+    },
+    {
+      "code": "GHA",
+      "name_he": "גאנה",
+      "points": 46
+    },
+    {
+      "code": "CIV",
+      "name_he": "חוף השנהב",
+      "points": 46
+    },
+    {
+      "code": "EGY",
+      "name_he": "מצרים",
+      "points": 46
+    },
+    {
+      "code": "SCO",
+      "name_he": "סקוטלנד",
+      "points": 46
+    },
+    {
+      "code": "PAR",
+      "name_he": "פרגוואי",
+      "points": 46
+    },
+    {
+      "code": "CZE",
+      "name_he": "צ׳כיה",
+      "points": 46
+    },
+    {
+      "code": "CAN",
+      "name_he": "קנדה",
+      "points": 46
+    },
+    {
+      "code": "ALG",
+      "name_he": "אלג'יריה",
+      "points": 48
+    },
+    {
+      "code": "KOR",
+      "name_he": "דרום קוריאה",
+      "points": 48
+    },
+    {
+      "code": "AUS",
+      "name_he": "אוסטרליה",
+      "points": 50
+    },
+    {
+      "code": "BIH",
+      "name_he": "בוסניה והרצגובינה",
+      "points": 52
+    },
+    {
+      "code": "TUN",
+      "name_he": "תוניסיה",
+      "points": 52
+    },
+    {
+      "code": "IRN",
+      "name_he": "איראן",
+      "points": 54
+    },
+    {
+      "code": "KSA",
+      "name_he": "ערב הסעודית",
+      "points": 54
+    },
+    {
+      "code": "QAT",
+      "name_he": "קטאר",
+      "points": 54
+    },
+    {
+      "code": "RSA",
+      "name_he": "דרום אפריקה",
+      "points": 56
+    },
+    {
+      "code": "COD",
+      "name_he": "קונגו הדמוקרטית",
+      "points": 56
+    },
+    {
+      "code": "NZL",
+      "name_he": "ניו זילנד",
+      "points": 58
+    },
+    {
+      "code": "UZB",
+      "name_he": "אוזבקיסטן",
+      "points": 60
+    },
+    {
+      "code": "HAI",
+      "name_he": "האיטי",
+      "points": 60
+    },
+    {
+      "code": "JOR",
+      "name_he": "ירדן",
+      "points": 60
+    },
+    {
+      "code": "CPV",
+      "name_he": "כף ורדה",
+      "points": 60
+    },
+    {
+      "code": "IRQ",
+      "name_he": "עיראק",
+      "points": 60
+    },
+    {
+      "code": "PAN",
+      "name_he": "פנמה",
+      "points": 60
+    },
+    {
+      "code": "CUW",
+      "name_he": "קוראסאו",
+      "points": 60
+    }
+  ]
+}

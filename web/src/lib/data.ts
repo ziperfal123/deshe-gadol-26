@@ -1,52 +1,48 @@
-import type { GroupsFile, MatchStatsFile, MatchVoters, PlayerFile, SpecialStatsFile, Standings, StatsFile } from '../types'
+import type { ChampionPointsFile, GroupsFile, MatchStatsFile, MatchVoters, PlayerFile, SpecialStatsFile, Standings, StatsFile } from '../types'
 
 const base = import.meta.env.BASE_URL
 
-/** Fetch the computed standings written by the recompute job. */
-export async function fetchStandings(): Promise<Standings> {
-  const res = await fetch(`${base}data/standings.json`)
-  if (!res.ok) throw new Error('failed to load standings')
-  return res.json()
+// In-memory cache so navigating back to a page doesn't refetch and re-flash the
+// loading state. `peek` lets a page initialise its state synchronously from the
+// cache (no "loading" flicker on revisit).
+const cache = new Map<string, unknown>()
+
+async function getJson<T>(path: string): Promise<T> {
+  if (cache.has(path)) return cache.get(path) as T
+  const res = await fetch(`${base}${path}`)
+  if (!res.ok) throw new Error(`failed to load ${path}`)
+  const data = (await res.json()) as T
+  cache.set(path, data)
+  return data
 }
+
+function peek<T>(path: string): T | undefined {
+  return cache.get(path) as T | undefined
+}
+
+/** Fetch the computed standings written by the recompute job. */
+export const fetchStandings = () => getJson<Standings>('data/standings.json')
+export const peekStandings = () => peek<Standings>('data/standings.json')
 
 /** Fetch a single player's full prediction breakdown. */
-export async function fetchPlayer(id: string): Promise<PlayerFile> {
-  const res = await fetch(`${base}data/players/${id}.json`)
-  if (!res.ok) throw new Error('failed to load player')
-  return res.json()
-}
+export const fetchPlayer = (id: string) => getJson<PlayerFile>(`data/players/${id}.json`)
 
 /** Fetch the global crowd split (how all players guessed each match). */
-export async function fetchMatchStats(): Promise<MatchStatsFile> {
-  const res = await fetch(`${base}data/match_stats.json`)
-  if (!res.ok) throw new Error('failed to load match stats')
-  return res.json()
-}
+export const fetchMatchStats = () => getJson<MatchStatsFile>('data/match_stats.json')
 
 /** Fetch the per-match voter lists (who picked each outcome). Loaded on demand. */
-export async function fetchMatchVoters(matchId: string): Promise<MatchVoters> {
-  const res = await fetch(`${base}data/match_voters/${matchId}.json`)
-  if (!res.ok) throw new Error('failed to load match voters')
-  return res.json()
-}
+export const fetchMatchVoters = (matchId: string) => getJson<MatchVoters>(`data/match_voters/${matchId}.json`)
 
 /** Fetch the crowd split for special bets + champion (top choices each). */
-export async function fetchSpecialStats(): Promise<SpecialStatsFile> {
-  const res = await fetch(`${base}data/special_stats.json`)
-  if (!res.ok) throw new Error('failed to load special stats')
-  return res.json()
-}
+export const fetchSpecialStats = () => getJson<SpecialStatsFile>('data/special_stats.json')
 
 /** Fetch the group rosters (4 teams per group). */
-export async function fetchGroups(): Promise<GroupsFile> {
-  const res = await fetch(`${base}data/groups.json`)
-  if (!res.ok) throw new Error('failed to load groups')
-  return res.json()
-}
+export const fetchGroups = () => getJson<GroupsFile>('data/groups.json')
 
 /** Fetch the full aggregate statistics across all guesses. */
-export async function fetchStats(): Promise<StatsFile> {
-  const res = await fetch(`${base}data/stats.json`)
-  if (!res.ok) throw new Error('failed to load stats')
-  return res.json()
-}
+export const fetchStats = () => getJson<StatsFile>('data/stats.json')
+export const peekStats = () => peek<StatsFile>('data/stats.json')
+
+/** Fetch the champion scoring table (team → points). */
+export const fetchChampionPoints = () => getJson<ChampionPointsFile>('data/champion_points.json')
+export const peekChampionPoints = () => peek<ChampionPointsFile>('data/champion_points.json')
