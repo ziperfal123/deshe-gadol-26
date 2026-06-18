@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useEventListener, useLocalStorage } from 'usehooks-ts'
 import type { CustomGroup, Standings, StandingsRow } from '../types'
@@ -23,7 +23,29 @@ export function StandingsPage() {
   const { flashScrollTo } = useFlashScroll('player')
   const navigate = useNavigate()
 
+  // The header is sticky only on desktop; the filter bar is sticky on both, so
+  // on desktop it must sit just below the header (measured height as its top).
+  const headerRef = useRef<HTMLDivElement>(null)
+  const [headerH, setHeaderH] = useState(0)
+  const [isDesktop, setIsDesktop] = useState(false)
+
   useEventListener('scroll', () => setScrolled(window.scrollY > 250))
+
+  useEffect(() => {
+    const el = headerRef.current
+    const measure = () => {
+      setIsDesktop(window.innerWidth >= 640)
+      if (el) setHeaderH(el.offsetHeight)
+    }
+    measure()
+    const ro = el ? new ResizeObserver(measure) : undefined
+    ro?.observe(el!)
+    window.addEventListener('resize', measure)
+    return () => {
+      ro?.disconnect()
+      window.removeEventListener('resize', measure)
+    }
+  }, [data, groups, activeView])
 
   useEffect(() => {
     fetchStandings()
@@ -60,8 +82,8 @@ export function StandingsPage() {
 
   return (
     <div>
-      <div className="sticky top-0 z-20 w-full border-b border-ink/10 bg-sand/95 shadow-header backdrop-blur">
-        <div className="mx-auto max-w-3xl px-4 pb-3">
+      <div ref={headerRef} className="sm:sticky sm:top-0 sm:z-20 sm:w-full sm:bg-sand/95 sm:backdrop-blur">
+        <div className="mx-auto max-w-3xl px-4 pb-2 sm:pb-3">
           <Header syncedAt={data?.synced_at} />
           <NavTabs />
           {data && (
@@ -73,9 +95,18 @@ export function StandingsPage() {
             />
           )}
           {renderActiveGroupToolbarIfNeeded(activeGroup, () => setEditor({ open: true, editing: activeGroup }))}
-          {renderSearchIfNeeded(data, query, setQuery, rows, scrolled, flashScrollTo)}
         </div>
       </div>
+      {data && (
+        <div
+          className="sticky z-10 w-full border-b border-ink/10 bg-sand/95 shadow-header backdrop-blur"
+          style={{ top: isDesktop ? headerH : 0 }}
+        >
+          <div className="mx-auto max-w-3xl px-4 py-3">
+            {renderSearchIfNeeded(data, query, setQuery, rows, scrolled, flashScrollTo)}
+          </div>
+        </div>
+      )}
       <div className="mx-auto max-w-3xl px-4 pb-16 pt-3">
         {renderListIfNeeded(data, error, rows, query, onRowClick)}
       </div>
@@ -129,7 +160,7 @@ function renderSearchIfNeeded(
   const lastId = rows.at(-1)?.player_id
   const filtering = query.trim() !== ''
   return (
-    <div className="mt-3">
+    <>
       <input
         value={query}
         onChange={(e) => setQuery(e.target.value)}
@@ -137,7 +168,7 @@ function renderSearchIfNeeded(
         className="w-full rounded-2xl border border-ink/15 bg-transparent px-4 py-2.5 text-sm outline-none placeholder:text-ink/40 focus:border-sage focus:ring-2 focus:ring-sage/30"
       />
       {renderLastPlayerButtonIfNeeded(lastId, scrolled, filtering, () => flashScrollTo(lastId))}
-    </div>
+    </>
   )
 }
 
