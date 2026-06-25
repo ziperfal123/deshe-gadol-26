@@ -1615,7 +1615,7 @@
     "most_conceded_tournament_team": "עיראק",
     "most_cards_team": "ברזיל",
     "least_cards_team": "דרום קוריאה",
-    "total_red_cards": -10,
+    "total_red_cards": 10,
     "total_extra_time": 4,
     "total_penalties": 2
   },
@@ -2217,7 +2217,7 @@
     "least_cards_team": "יפן",
     "total_red_cards": 8,
     "total_extra_time": 7,
-    "total_penalties": -38
+    "total_penalties": 38
   },
   {
     "player_id": "6a2af4e536a8f1b6009afbc5",
