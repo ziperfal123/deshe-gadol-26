@@ -8,12 +8,72 @@ export interface StandingsRow {
   correct_group: number
   /** true when this row shares its score with others (tie-break is a placeholder for now). */
   tied?: boolean
+  /** projected mode only: provisional superlative points and the SSOT total. */
+  extra_points?: number
+  official_total?: number
 }
 
 export interface Standings {
   synced_at: string
   players_played: number
   standings: StandingsRow[]
+}
+
+export type ScoreMode = 'official' | 'projected'
+
+export interface ProjectedRow {
+  rank: number
+  player_id: string
+  name: string
+  official_total: number
+  projected_total: number
+  correct_group: number
+  extra_points: number
+  tied?: boolean
+}
+
+export interface ProjectedStandings {
+  synced_at: string
+  players_played: number
+  included_fields: string[]
+  api_state: string
+  standings: ProjectedRow[]
+}
+
+export interface LeaderEntry {
+  name?: string
+  code?: string
+  name_he?: string
+}
+
+export interface LeaderField {
+  kind: 'player' | 'team'
+  points: number
+  live: boolean
+  value: number | null
+  leaders: LeaderEntry[]
+  state?: string
+}
+
+export interface LeadersFile {
+  synced_at: string
+  fields: Record<string, LeaderField>
+}
+
+export interface ProjectedField {
+  key: string
+  value: string | number | undefined
+  points_if_correct: number
+  leader: boolean
+  points: number
+  status: 'leading' | 'trailing' | 'pending'
+}
+
+export interface ProjectedBreakdown {
+  official_total: number
+  projected_total: number
+  extra_points: number
+  fields: ProjectedField[]
 }
 
 /** A user-defined view: a named subset of players, stored in localStorage. */
@@ -172,4 +232,5 @@ export interface PlayerFile {
   advancement: Advancement
   champion: ChampionPick
   specials: SpecialPick[]
+  projected?: ProjectedBreakdown
 }

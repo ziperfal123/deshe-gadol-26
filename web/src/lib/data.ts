@@ -1,4 +1,4 @@
-import type { ChampionPointsFile, GroupsFile, MatchStatsFile, MatchVoters, PlayerFile, SpecialStatsFile, Standings, StatsFile } from '../types'
+import type { ChampionPointsFile, GroupsFile, LeadersFile, MatchStatsFile, MatchVoters, PlayerFile, ProjectedStandings, SpecialStatsFile, Standings, StatsFile } from '../types'
 
 const base = import.meta.env.BASE_URL
 
@@ -23,6 +23,14 @@ function peek<T>(path: string): T | undefined {
 /** Fetch the computed standings written by the recompute job. */
 export const fetchStandings = () => getJson<Standings>('data/standings.json')
 export const peekStandings = () => peek<Standings>('data/standings.json')
+
+/** Fetch the PROJECTED standings (official + provisional superlative points). */
+export const fetchProjectedStandings = () => getJson<ProjectedStandings>('data/standings_projected.json')
+export const peekProjectedStandings = () => peek<ProjectedStandings>('data/standings_projected.json')
+
+/** Fetch the current live leaders per superlative field (for "מוביל כעת"). */
+export const fetchLeaders = () => getJson<LeadersFile>('data/leaders.json')
+export const peekLeaders = () => peek<LeadersFile>('data/leaders.json')
 
 /** Fetch a single player's full prediction breakdown. */
 export const fetchPlayer = (id: string) => getJson<PlayerFile>(`data/players/${id}.json`)

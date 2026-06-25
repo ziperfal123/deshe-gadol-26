@@ -130,6 +130,183 @@ for m in matches:
 print(f"source={source}: {len(matches)} matches, {len(match_dt)} mapped, "
       f"{unmapped} unmapped, {len(results)} finished")
 
+# ============================================================================
+# EXTENDED SCORING — live "leaders" for the stat-derivable superlative bets.
+# These feed the PROJECTED view only (provisional, recomputed every sync).
+# See docs/05_extended_scoring.md.
+#   live & verified now (openfootball): top_scorer + 4 team goals bets
+#   key-guarded (API-Football, APIFOOTBALL_KEY): top_assists + 2 card bets
+# Anything without data stays "pending" and awards 0 — never a wrong point.
+# ============================================================================
+import unicodedata
+
+def _norm(s):
+    """Accent-fold + lowercase, so 'Vinícius Júnior' == feed 'Vinicius Junior'."""
+    if not s:
+        return ""
+    s = unicodedata.normalize("NFD", str(s))
+    return "".join(c for c in s if unicodedata.category(c) != "Mn").lower().strip()
+
+try:
+    PLAYER_ALIAS = load("player_alias.json").get("players", {})  # Hebrew pick -> Latin
+except FileNotFoundError:
+    PLAYER_ALIAS = {}
+
+def fetch_of_full():
+    """openfootball whole-tournament file — needed for goal events + all scores
+    (group AND knockout), regardless of which feed scored the group 1X2."""
+    try:
+        with urllib.request.urlopen(OF_URL, timeout=25) as r:
+            return json.load(r).get("matches", [])
+    except Exception as e:
+        print("WARN: openfootball (leaders) fetch failed:", e)
+        return []
+
+of_full = fetch_of_full()
+
+def _leaders(counter, min_value=1):
+    """Set of keys sharing the max count (ties → all share). Empty until min_value."""
+    if not counter:
+        return set(), 0
+    top = max(counter.values())
+    if top < min_value:
+        return set(), top
+    return {k for k, v in counter.items() if v == top}, top
+
+# ---- top scorer: count real goals (exclude own goals; in-game pens count, shootouts aren't goal events) ----
+goal_counts = Counter()
+scorer_display = {}   # normalized -> a human display name
+for m in of_full:
+    for side in ("goals1", "goals2"):
+        for g in (m.get(side) or []):
+            nm = g.get("name")
+            if not nm or g.get("og") or g.get("owngoal"):
+                continue
+            k = _norm(nm)
+            goal_counts[k] += 1
+            scorer_display.setdefault(k, nm)
+scorer_leaders, scorer_max = _leaders(goal_counts)
+
+# ---- team goals for/against, group scope vs whole-tournament scope ----
+gf_grp, ga_grp, gf_tot, ga_tot = Counter(), Counter(), Counter(), Counter()
+for m in of_full:
+    ft = (m.get("score") or {}).get("ft")
+    if not ft:
+        continue
+    hc = code_by_en.get((m.get("team1") or "").lower())
+    ac = code_by_en.get((m.get("team2") or "").lower())
+    if not hc or not ac:
+        continue
+    a, b = ft
+    gf_tot[hc] += a; ga_tot[hc] += b; gf_tot[ac] += b; ga_tot[ac] += a
+    if m.get("group"):
+        gf_grp[hc] += a; ga_grp[hc] += b; gf_grp[ac] += b; ga_grp[ac] += a
+mg_grp_leaders, mg_grp_val = _leaders(gf_grp)
+mc_grp_leaders, mc_grp_val = _leaders(ga_grp)
+mg_tot_leaders, mg_tot_val = _leaders(gf_tot)
+mc_tot_leaders, mc_tot_val = _leaders(ga_tot)
+
+# ---- assists + team cards: API-Football (free tier), key-guarded ----
+# Without the key (or on any error) these stay empty/pending and award 0 pts.
+assist_leaders, assist_display, assist_max = set(), {}, 0
+cards_most_leaders, cards_least_leaders = set(), set()
+cards_most_val = cards_least_val = None
+api_state = "pending_no_key"
+API_KEY = os.environ.get("APIFOOTBALL_KEY")
+API_LEAGUE = os.environ.get("APIFOOTBALL_WC_LEAGUE")      # WC2026 league id (resolve once)
+API_SEASON = os.environ.get("APIFOOTBALL_WC_SEASON", "2026")
+API_BASE = "https://v3.football.api-sports.io"
+
+def _af_get(path, params):
+    url = f"{API_BASE}/{path}?" + "&".join(f"{k}={v}" for k, v in params.items())
+    req = urllib.request.Request(url, headers={"x-apisports-key": API_KEY})
+    with urllib.request.urlopen(req, timeout=25) as r:
+        return json.load(r)
+
+if API_KEY and API_LEAGUE:
+    try:
+        # assists: one call, player-level leaderboard
+        d = _af_get("players/topassists", {"league": API_LEAGUE, "season": API_SEASON})
+        rows_af = d.get("response", [])
+        best = 0
+        tmp = Counter()
+        for it in rows_af:
+            nm = (it.get("player") or {}).get("name")
+            st = (it.get("statistics") or [{}])[0]
+            a = ((st.get("goals") or {}).get("assists")) or 0
+            if nm and a:
+                tmp[_norm(nm)] = a
+                assist_display.setdefault(_norm(nm), nm)
+        assist_leaders, assist_max = _leaders(tmp)
+        # team cards (yellow+red, whole tournament): aggregate finished-fixture events, cached.
+        cache_path = PUB / "_af_cache.json"
+        cache = json.load(open(cache_path)) if cache_path.exists() else {"fixtures": {}}
+        fx = _af_get("fixtures", {"league": API_LEAGUE, "season": API_SEASON, "status": "FT"})
+        team_cards = Counter()
+        seen_team = set()
+        for f in fx.get("response", []):
+            fid = str((f.get("fixture") or {}).get("id"))
+            for side in ("home", "away"):
+                t = ((f.get("teams") or {}).get(side) or {}).get("name")
+                c = code_by_en.get((t or "").lower())
+                if c:
+                    seen_team.add(c)
+            if fid in cache["fixtures"]:
+                ev = cache["fixtures"][fid]
+            else:
+                e = _af_get("fixtures/events", {"fixture": fid})
+                ev = [{"team": code_by_en.get(((x.get("team") or {}).get("name") or "").lower())}
+                      for x in e.get("response", []) if (x.get("type") == "Card")]
+                cache["fixtures"][fid] = ev
+            for x in ev:
+                if x.get("team"):
+                    team_cards[x["team"]] += 1
+        json.dump(cache, open(cache_path, "w"), ensure_ascii=False)
+        # most cards = max; fewest = min among teams that have actually played
+        if team_cards:
+            cards_most_leaders, cards_most_val = _leaders(team_cards)
+            played_teams = seen_team or set(team_cards)
+            mn = min(team_cards.get(c, 0) for c in played_teams)
+            cards_least_leaders = {c for c in played_teams if team_cards.get(c, 0) == mn}
+            cards_least_val = mn
+        api_state = "live"
+    except Exception as e:
+        print("WARN: API-Football leaders failed (cards/assists stay pending):", e)
+        api_state = "error"
+else:
+    print("API-Football key/league not set — assists + cards stay pending.")
+
+# ---- field config: leader set + how a player's pick is matched ----
+def _match_player(value, leader_set):
+    lat = PLAYER_ALIAS.get((value or "").strip())
+    return bool(lat) and _norm(lat) in leader_set
+def _match_team(value, leader_set):
+    return code_by_he.get((value or "").strip()) in leader_set
+
+SUPER_FIELDS = [
+    ("top_scorer",                   20, scorer_leaders,     _match_player, bool(of_full)),
+    ("top_assists",                  15, assist_leaders,     _match_player, api_state == "live"),
+    ("most_goals_group_stage_team",  10, mg_grp_leaders,     _match_team,   bool(of_full)),
+    ("most_conceded_group_stage_team",10, mc_grp_leaders,    _match_team,   bool(of_full)),
+    ("most_goals_tournament_team",   10, mg_tot_leaders,     _match_team,   bool(of_full)),
+    ("most_conceded_tournament_team",10, mc_tot_leaders,     _match_team,   bool(of_full)),
+    ("most_cards_team",              10, cards_most_leaders, _match_team,   api_state == "live"),
+    ("least_cards_team",             10, cards_least_leaders,_match_team,   api_state == "live"),
+]
+
+def projected_for(sp):
+    """Provisional superlative points for one player's special picks."""
+    out, gained = [], 0
+    for key, pts, leader_set, matcher, live in SUPER_FIELDS:
+        val = sp.get(key)
+        is_leader = bool(val) and live and matcher(val, leader_set)
+        if is_leader:
+            gained += pts
+        out.append({"key": key, "value": val, "points_if_correct": pts,
+                    "leader": is_leader, "points": pts if is_leader else 0,
+                    "status": ("leading" if is_leader else ("pending" if not live else "trailing"))})
+    return out, gained
+
 # ---- score group stage per player ----
 preds_by_player = {}
 for p in preds:
@@ -147,6 +324,7 @@ champ_pick_tot = sum(champ_pick_cnt.values())
 
 GROUP_PTS = 2
 rows = []
+proj_rows = []
 player_files = {}
 
 for pl in players:
@@ -206,12 +384,21 @@ for pl in players:
     specials_out = [{"key": k, "value": sp.get(k), "points_if_correct": v, "status": "pending", "points": 0}
                     for k, v in SPEC_PTS.items()]
 
+    # projected: official total + provisional superlative points (recomputed each sync)
+    proj_fields, proj_gain = projected_for(sp)
+    projected_total = total + proj_gain
+
     player_files[pid] = {
         "player_id": pid, "name": pl["name"], "total_points": total, "correct_group": correct,
         "group_stage": group_items, "advancement": advancement,
         "champion": champion, "specials": specials_out,
+        "projected": {"official_total": total, "projected_total": projected_total,
+                      "extra_points": proj_gain, "fields": proj_fields},
     }
     rows.append({"player_id": pid, "name": pl["name"], "total_points": total, "correct_group": correct})
+    proj_rows.append({"player_id": pid, "name": pl["name"], "official_total": total,
+                      "projected_total": projected_total, "correct_group": correct,
+                      "extra_points": proj_gain})
 
 # rank: DENSE ranking — equal scores share a position, ranks ascend 1,2,3 with
 # NO gaps (so 4-way tie for 1st is 1,1,1,1 then 2, not 1,1,1,1,5). Sort by
@@ -226,6 +413,59 @@ for r in rows:
         prev = key
     r["rank"] = rank
     r["tied"] = score_counts[key] > 1
+
+# ---- projected ranking: by projected_total, then official_total, then name (dense, same as official) ----
+proj_rows.sort(key=lambda r: (-r["projected_total"], -r["official_total"], r["name"]))
+proj_counts = Counter((r["projected_total"], r["official_total"]) for r in proj_rows)
+prank, pprev = 0, None
+for r in proj_rows:
+    key = (r["projected_total"], r["official_total"])
+    if key != pprev:
+        prank += 1
+        pprev = key
+    r["rank"] = prank
+    r["tied"] = proj_counts[key] > 1
+
+# ---- current leaders per superlative field (for the "מוביל כעת" chips) ----
+def _team_names(codes):
+    return [{"code": c, "name_he": team_he.get(c, c)} for c in sorted(codes)]
+# invert the alias so a feed (Latin) leader name shows in Hebrew, matching how
+# picks appear elsewhere. On collisions keep the most-picked Hebrew spelling.
+_pick_freq = Counter()
+for _s in specials:
+    for _f in ("top_scorer", "top_assists", "best_player"):
+        _v = (_s.get(_f) or "").strip()
+        if _v:
+            _pick_freq[_v] += 1
+latin_to_he = {}
+for _he, _lat in PLAYER_ALIAS.items():
+    _k = _norm(_lat)
+    if _k not in latin_to_he or _pick_freq[_he] > _pick_freq[latin_to_he[_k]]:
+        latin_to_he[_k] = _he
+def _player_names(norm_set, display):
+    return [{"name": display.get(k, k), "name_he": latin_to_he.get(k)} for k in sorted(norm_set)]
+
+leaders_out = {
+    "top_scorer": {"kind": "player", "points": 20, "live": bool(of_full),
+                   "value": scorer_max, "leaders": _player_names(scorer_leaders, scorer_display)},
+    "top_assists": {"kind": "player", "points": 15, "live": api_state == "live",
+                    "value": assist_max, "leaders": _player_names(assist_leaders, assist_display),
+                    "state": api_state},
+    "most_goals_group_stage_team": {"kind": "team", "points": 10, "live": bool(of_full),
+                                    "value": mg_grp_val, "leaders": _team_names(mg_grp_leaders)},
+    "most_conceded_group_stage_team": {"kind": "team", "points": 10, "live": bool(of_full),
+                                       "value": mc_grp_val, "leaders": _team_names(mc_grp_leaders)},
+    "most_goals_tournament_team": {"kind": "team", "points": 10, "live": bool(of_full),
+                                   "value": mg_tot_val, "leaders": _team_names(mg_tot_leaders)},
+    "most_conceded_tournament_team": {"kind": "team", "points": 10, "live": bool(of_full),
+                                      "value": mc_tot_val, "leaders": _team_names(mc_tot_leaders)},
+    "most_cards_team": {"kind": "team", "points": 10, "live": api_state == "live",
+                        "value": cards_most_val, "leaders": _team_names(cards_most_leaders),
+                        "state": api_state},
+    "least_cards_team": {"kind": "team", "points": 10, "live": api_state == "live",
+                         "value": cards_least_val, "leaders": _team_names(cards_least_leaders),
+                         "state": api_state},
+}
 
 # ---- crowd split per match: how all players guessed each game (1/X/2) ----
 match_picks = {}
@@ -338,6 +578,13 @@ PUB.mkdir(parents=True, exist_ok=True)
 (PUB / "players").mkdir(exist_ok=True)
 json.dump({"synced_at": synced, "players_played": len(results), "standings": rows},
           open(PUB / "standings.json", "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+# projected standings (official + provisional superlative points) + current leaders
+PROJECTED_FIELDS = [k for (k, *_ ) in SUPER_FIELDS]
+json.dump({"synced_at": synced, "players_played": len(results),
+           "included_fields": PROJECTED_FIELDS, "api_state": api_state, "standings": proj_rows},
+          open(PUB / "standings_projected.json", "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+json.dump({"synced_at": synced, "fields": leaders_out},
+          open(PUB / "leaders.json", "w", encoding="utf-8"), ensure_ascii=False, indent=2)
 for pid, pf in player_files.items():
     pf["synced_at"] = synced
     json.dump(pf, open(PUB / "players" / f"{pid}.json", "w", encoding="utf-8"), ensure_ascii=False, indent=2)

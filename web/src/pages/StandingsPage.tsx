@@ -1,19 +1,45 @@
 import { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useEventListener, useLocalStorage } from 'usehooks-ts'
-import type { CustomGroup, Standings, StandingsRow } from '../types'
-import { fetchStandings, peekStandings } from '../lib/data'
+import type { CustomGroup, LeadersFile, ProjectedStandings, ScoreMode, Standings, StandingsRow } from '../types'
+import {
+  fetchLeaders,
+  fetchProjectedStandings,
+  fetchStandings,
+  peekLeaders,
+  peekProjectedStandings,
+  peekStandings,
+} from '../lib/data'
 import { useFlashScroll } from '../lib/useFlashScroll'
 import { rankStandings } from '../lib/ranking'
 import { cn } from '../lib/cn'
 import { Header } from '../components/Header'
 import { NavTabs } from '../components/NavTabs'
+import { ScoreModeTabs } from '../components/ScoreModeTabs'
+import { ProjectedBanner } from '../components/ProjectedBanner'
 import { GroupViewBar } from '../components/GroupViewBar'
 import { GroupEditorDialog } from '../components/GroupEditorDialog'
+
+/** Map a projected-standings row to the shared StandingsRow shape (projected_total as the displayed score). */
+function projectedToRows(p: ProjectedStandings): StandingsRow[] {
+  return p.standings.map((r) => ({
+    rank: r.rank,
+    player_id: r.player_id,
+    name: r.name,
+    total_points: r.projected_total,
+    correct_group: r.correct_group,
+    tied: r.tied,
+    extra_points: r.extra_points,
+    official_total: r.official_total,
+  }))
+}
 
 /** Home screen: the standings table (all players or a custom group view). */
 export function StandingsPage() {
   const [data, setData] = useState<Standings | undefined>(peekStandings)
+  const [mode, setMode] = useLocalStorage<ScoreMode>('score-mode', 'official')
+  const [proj, setProj] = useState<ProjectedStandings | undefined>(peekProjectedStandings)
+  const [leaders, setLeaders] = useState<LeadersFile | undefined>(peekLeaders)
   const [error, setError] = useState<string>()
   const [query, setQuery] = useState('')
   const [scrolled, setScrolled] = useState(false)
@@ -53,14 +79,23 @@ export function StandingsPage() {
       .catch(() => setError('שגיאה בטעינת הטבלה'))
   }, [])
 
+  // Projected data (+ live leaders) is loaded lazily the first time it's needed.
+  useEffect(() => {
+    if (mode !== 'projected' || proj) return
+    fetchProjectedStandings().then(setProj).catch(() => setError('שגיאה בטעינת הטבלה'))
+    fetchLeaders().then(setLeaders).catch(() => undefined)
+  }, [mode, proj])
+
   const onRowClick = (id: string) => navigate(`/player/${id}`)
   const activeGroup = groups.find((g) => g.id === activeView)
+  const projected = mode === 'projected'
+  // Base list for the active mode (official SSOT or projected total).
+  const baseStandings: StandingsRow[] = projected ? (proj ? projectedToRows(proj) : []) : data?.standings ?? []
+  const ready = projected ? !!proj : !!data
   // Custom group views are re-ranked within the chosen subset.
-  const rows = data
-    ? activeGroup
-      ? rankStandings(data.standings.filter((r) => activeGroup.playerIds.includes(r.player_id)))
-      : data.standings
-    : []
+  const rows = activeGroup
+    ? rankStandings(baseStandings.filter((r) => activeGroup.playerIds.includes(r.player_id)))
+    : baseStandings
 
   const onSaveGroup = (g: CustomGroup) => {
     setGroups((prev) => {
@@ -84,8 +119,9 @@ export function StandingsPage() {
     <div>
       <div ref={headerRef} className="sm:sticky sm:top-0 sm:z-20 sm:w-full sm:bg-sand/95 sm:backdrop-blur">
         <div className="mx-auto max-w-3xl px-4 pb-2 sm:pb-3">
-          <Header syncedAt={data?.synced_at} />
+          <Header syncedAt={(projected ? proj?.synced_at : undefined) ?? data?.synced_at} />
           <NavTabs />
+          <ScoreModeTabs mode={mode} onChange={setMode} />
           {data && (
             <GroupViewBar
               groups={groups}
@@ -108,7 +144,8 @@ export function StandingsPage() {
         </div>
       )}
       <div className="mx-auto max-w-3xl px-4 pb-16 pt-3">
-        {renderListIfNeeded(data, error, rows, query, onRowClick)}
+        {projected && <ProjectedBanner leaders={leaders} />}
+        {renderListIfNeeded(ready, error, rows, query, projected, onRowClick)}
       </div>
       {renderEditorIfNeeded(editor, data, onSaveGroup, onDeleteGroup, () => setEditor({ open: false }))}
     </div>
@@ -173,19 +210,20 @@ function renderSearchIfNeeded(
 }
 
 function renderListIfNeeded(
-  data: Standings | undefined,
+  ready: boolean,
   error: string | undefined,
   rows: StandingsRow[],
   query: string,
+  projected: boolean,
   onRowClick: (id: string) => void,
 ) {
   if (error) return <p className="mt-10 text-center text-clay">{error}</p>
-  if (!data) return <p className="mt-10 text-center text-ink/40">טוען…</p>
+  if (!ready) return <p className="mt-10 text-center text-ink/40">טוען…</p>
   const filtered = rows.filter((r) => r.name.includes(query.trim()))
   return (
     <ul className="mt-3 space-y-2">
       {filtered.map((row) => (
-        <StandingRow key={row.player_id} row={row} onClick={onRowClick} />
+        <StandingRow key={row.player_id} row={row} projected={projected} onClick={onRowClick} />
       ))}
       {renderEmptyIfNeeded(filtered.length)}
     </ul>
@@ -235,11 +273,13 @@ function renderEmptyIfNeeded(count: number) {
 
 interface RowProps {
   row: StandingsRow
+  projected: boolean
   onClick: (id: string) => void
 }
 
-function StandingRow({ row, onClick }: RowProps) {
+function StandingRow({ row, projected, onClick }: RowProps) {
   const isTop3 = row.rank <= 3
+  const extra = row.extra_points ?? 0
   return (
     <li id={`player-${row.player_id}`} className="scroll-mt-24">
       <button
@@ -248,7 +288,14 @@ function StandingRow({ row, onClick }: RowProps) {
       >
         <RankBadge rank={row.rank} isTop3={isTop3} />
         <span className="flex-1 truncate font-semibold text-ink">{row.name}</span>
-        <span className="text-xs text-ink/45">{row.correct_group} פגיעות</span>
+        {projected ? (
+          <span className="text-xs text-ink/45">
+            רשמי {row.official_total ?? row.total_points}
+            {extra > 0 && <span className="font-bold text-leaf"> +{extra}</span>}
+          </span>
+        ) : (
+          <span className="text-xs text-ink/45">{row.correct_group} פגיעות</span>
+        )}
         <span className="min-w-[3.5rem] rounded-xl bg-sun/40 px-3 py-1 text-center font-bold text-ink">
           {row.total_points}
         </span>

@@ -55,6 +55,21 @@ deshe-gadol-26/
 - **Specials:** top scorer 20, best player 20, top assists 15; most/most-conceded team group-stage 10 each; most/most-conceded team tournament 10 each; most-cards & fewest-cards team 10 each; total red cards 8; total extra-times 5; penalty-shootout matches 5. Player-name ties (scorer/assists) → all pickers get full points. Numeric bets scored by **exact match**, resolved at tournament end.
 - **Tie-breakers (rank order):** champion → correct finalists → semis → quarters → R16 → first-knockout-round (32 advancers) → group-stage results.
 
+## 5b. Extended scoring — superlative special-bets + Official/Projected views (see `docs/05`)
+
+Auto-score 8 stat-derivable superlatives and show them in a **separate Projected view**, keeping the current standings as the **Official SSOT**.
+
+- **Auto-scored (8):** top scorer (20), top assists (15), most/most-conceded team — group (10 each), most/most-conceded team — tournament (10 each), most-cards & fewest-cards team (10 each). Tie → **all** pickers of any tied leader get full points.
+- **Sources:** team goals-for/against from the existing results feed (no extra fetch); top scorer from goal events (openfootball verified, or ESPN scoring plays); **assists + team cards from API-Football free tier** (`X-Apisports-Key`, secret `APIFOOTBALL_KEY`, 100 req/day — cache settled fixtures, stay under budget).
+- **Name matching:** `data/seed/player_alias.json` (Hebrew pick → canonical Latin); accent-normalize both sides. Teams via `teams.json`.
+- **NOT auto:** `best_player` (subjective award) and the exact-number bets (`total_red_cards`/`total_extra_time`/`total_penalties`) stay manual / end-of-tournament.
+- **Views:** Tab "ניקוד רשמי" (Official, `standings.json`) = only determined facts; Tab "ניקוד משוער (חי)" (Projected, new `standings_projected.json` + `leaders.json`) = Official + provisional superlative points, banner "לא סופי". Each tab explicitly lists its included fields. Default = Official.
+
+**Implemented (✅).** Engine: `scripts/gen_public.py` computes leaders + projected scoring and writes `data/public/standings_projected.json`, `data/public/leaders.json`, and a `projected` block in each `players/<id>.json`. Web: `ScoreModeTabs` toggle on the standings page + `ProjectedBanner` (disclaimer, included-fields list, live leaders); projected rows show `projected_total` with a `+N` and the official total. The 5 openfootball-derived fields are **live & verified** (e.g. top scorer Messi → +20 to his pickers). The 3 API-Football fields (assists, most/fewest cards) are wired but **pending until secrets are set** and award 0 meanwhile (never a wrong point).
+  - To enable them: set repo secrets/env `APIFOOTBALL_KEY`, `APIFOOTBALL_WC_LEAGUE` (resolve WC2026 league id once), optional `APIFOOTBALL_WC_SEASON` (default 2026). Then live-test the assists + team-card aggregation before trusting it (untested against the live API). Card aggregation caches per-fixture events in `data/public/_af_cache.json` to stay within 100 req/day.
+  - **Player page** also surfaces it: a "ניקוד משוער" stat in the summary and per-special-bet status (`מוביל · +N` / `לא מוביל כרגע` / `ממתין`).
+  - **Test:** `scripts/test_projected.py` (run after `gen_public.py`) independently re-derives every player's provisional points from the outputs + seed and asserts the invariants (totals reconcile, ties credit all pickers, pending fields award 0). Currently 153 players / 1224 field-assertions pass.
+
 ## 6. Results & manual data
 
 - **Group scores → automatic.** Primary: **ESPN** unofficial JSON (keyless, near-live): `https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=YYYYMMDD` (one UTC day per call; iterate the date window). **Join on `competitor.team.abbreviation`, which equals our FIFA `code` for all 48 teams** (no name mapping needed); `homeAway:"home"` = our home = side A (verified 72/72 direct key match); `status.type.state == "post"` = finished. Fallbacks: **openfootball** raw JSON (`https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup.json`, keyless, hand-updated ~1×/day, join via `teams.json` name_en aliases) then **football-data.org** free key (`X-Auth-Token`, 10 req/min, WC = comp `WC`).

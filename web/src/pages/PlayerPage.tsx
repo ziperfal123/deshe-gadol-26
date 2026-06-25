@@ -114,13 +114,24 @@ function renderBodyIfNeeded(
 }
 
 function PlayerSummary({ player }: { player: PlayerFile }) {
+  const proj = player.projected
+  const showProjected = proj && proj.extra_points > 0
   return (
     <div className="mt-3 rounded-3xl bg-gradient-to-bl from-leaf to-sage p-5 text-white shadow-soft">
       <h1 className="text-2xl font-extrabold">{player.name}</h1>
       <div className="mt-3 flex gap-3">
         <Stat label="נקודות" value={player.total_points} />
-        <Stat label="פגיעות בבתים" value={player.correct_group} />
+        {showProjected ? (
+          <Stat label="ניקוד משוער" value={proj.projected_total} />
+        ) : (
+          <Stat label="פגיעות בבתים" value={player.correct_group} />
+        )}
       </div>
+      {showProjected && (
+        <p className="mt-2 text-center text-[11px] font-medium text-white/80">
+          ניקוד משוער כולל ‎+{proj.extra_points} מהימורים מיוחדים (לא סופי)
+        </p>
+      )}
     </div>
   )
 }
@@ -603,17 +614,30 @@ function renderChampionCrowdIfNeeded(c: PlayerFile['champion']) {
 }
 
 function SpecialsSection({ player, specialStats }: { player: PlayerFile; specialStats?: Record<string, CrowdStat> }) {
+  // Projected status per field (leading now / not leading / pending), for the live superlative bets.
+  const projByKey = Object.fromEntries((player.projected?.fields ?? []).map((f) => [f.key, f]))
   return (
     <Section title="הימורים מיוחדים">
       <ul className="divide-y divide-ink/5">
-        {player.specials.map((s) => (
-          <li key={s.key} className="flex items-center gap-2 px-2 py-2.5">
-            <span className="flex-1 text-sm text-ink/70">{SPECIAL_LABELS[s.key] ?? s.key}</span>
-            <span className="text-sm font-semibold text-ink">{String(s.value ?? '—')}</span>
-            <StatTooltip stat={specialStats?.[s.key]} />
-            <Chip label="ממתין" status={s.status} />
-          </li>
-        ))}
+        {player.specials.map((s) => {
+          const pf = projByKey[s.key]
+          let label = 'ממתין'
+          let status: GroupItem['status'] = 'pending'
+          if (pf?.leader) {
+            label = `מוביל · +${pf.points}`
+            status = 'correct'
+          } else if (pf && pf.status === 'trailing') {
+            label = 'לא מוביל כרגע'
+          }
+          return (
+            <li key={s.key} className="flex items-center gap-2 px-2 py-2.5">
+              <span className="flex-1 text-sm text-ink/70">{SPECIAL_LABELS[s.key] ?? s.key}</span>
+              <span className="text-sm font-semibold text-ink">{String(s.value ?? '—')}</span>
+              <StatTooltip stat={specialStats?.[s.key]} />
+              <Chip label={label} status={status} />
+            </li>
+          )
+        })}
       </ul>
     </Section>
   )

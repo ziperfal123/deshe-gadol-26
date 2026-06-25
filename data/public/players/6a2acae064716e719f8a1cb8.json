@@ -1,8 +1,8 @@
 {
   "player_id": "6a2acae064716e719f8a1cb8",
   "name": "דני צחורי 1",
-  "total_points": 26,
-  "correct_group": 13,
+  "total_points": 74,
+  "correct_group": 37,
   "group_stage": [
     {
       "match_id": "69d75963fc9731931f39c2cf",
@@ -407,10 +407,10 @@
       "pick_1x2": "2",
       "my_score_a": 0,
       "my_score_b": 1,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
-      "points": 0
+      "actual_score_a": 1,
+      "actual_score_b": 3,
+      "status": "correct",
+      "points": 2
     },
     {
       "match_id": "69d75963fc9731931f39c2d2",
@@ -424,9 +424,9 @@
       "pick_1x2": "1",
       "my_score_a": 1,
       "my_score_b": 0,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
+      "actual_score_a": 1,
+      "actual_score_b": 1,
+      "status": "wrong",
       "points": 0
     },
     {
@@ -441,10 +441,10 @@
       "pick_1x2": "1",
       "my_score_a": 1,
       "my_score_b": 0,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
-      "points": 0
+      "actual_score_a": 4,
+      "actual_score_b": 1,
+      "status": "correct",
+      "points": 2
     },
     {
       "match_id": "69d75963fc9731931f39c2d7",
@@ -458,10 +458,10 @@
       "pick_1x2": "1",
       "my_score_a": 1,
       "my_score_b": 0,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
-      "points": 0
+      "actual_score_a": 6,
+      "actual_score_b": 0,
+      "status": "correct",
+      "points": 2
     },
     {
       "match_id": "69d75963fc9731931f39c2d1",
@@ -475,10 +475,10 @@
       "pick_1x2": "1",
       "my_score_a": 1,
       "my_score_b": 0,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
-      "points": 0
+      "actual_score_a": 1,
+      "actual_score_b": 0,
+      "status": "correct",
+      "points": 2
     },
     {
       "match_id": "69d75963fc9731931f39c2e3",
@@ -492,10 +492,10 @@
       "pick_1x2": "1",
       "my_score_a": 1,
       "my_score_b": 0,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
-      "points": 0
+      "actual_score_a": 2,
+      "actual_score_b": 0,
+      "status": "correct",
+      "points": 2
     },
     {
       "match_id": "69d75963fc9731931f39c2de",
@@ -509,10 +509,10 @@
       "pick_1x2": "2",
       "my_score_a": 0,
       "my_score_b": 1,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
-      "points": 0
+      "actual_score_a": 0,
+      "actual_score_b": 1,
+      "status": "correct",
+      "points": 2
     },
     {
       "match_id": "69d75963fc9731931f39c2dd",
@@ -526,10 +526,10 @@
       "pick_1x2": "1",
       "my_score_a": 1,
       "my_score_b": 0,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
-      "points": 0
+      "actual_score_a": 3,
+      "actual_score_b": 0,
+      "status": "correct",
+      "points": 2
     },
     {
       "match_id": "69d75963fc9731931f39c2e4",
@@ -543,9 +543,9 @@
       "pick_1x2": "1",
       "my_score_a": 1,
       "my_score_b": 0,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
+      "actual_score_a": 0,
+      "actual_score_b": 1,
+      "status": "wrong",
       "points": 0
     },
     {
@@ -560,10 +560,10 @@
       "pick_1x2": "1",
       "my_score_a": 1,
       "my_score_b": 0,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
-      "points": 0
+      "actual_score_a": 5,
+      "actual_score_b": 1,
+      "status": "correct",
+      "points": 2
     },
     {
       "match_id": "69d75963fc9731931f39c2e9",
@@ -577,10 +577,10 @@
       "pick_1x2": "1",
       "my_score_a": 1,
       "my_score_b": 0,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
-      "points": 0
+      "actual_score_a": 2,
+      "actual_score_b": 1,
+      "status": "correct",
+      "points": 2
     },
     {
       "match_id": "69d75963fc9731931f39c2ea",
@@ -594,9 +594,9 @@
       "pick_1x2": "1",
       "my_score_a": 1,
       "my_score_b": 0,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
+      "actual_score_a": 0,
+      "actual_score_b": 0,
+      "status": "wrong",
       "points": 0
     },
     {
@@ -611,10 +611,10 @@
       "pick_1x2": "2",
       "my_score_a": 0,
       "my_score_b": 1,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
-      "points": 0
+      "actual_score_a": 0,
+      "actual_score_b": 4,
+      "status": "correct",
+      "points": 2
     },
     {
       "match_id": "69d75963fc9731931f39c2fb",
@@ -628,10 +628,10 @@
       "pick_1x2": "1",
       "my_score_a": 1,
       "my_score_b": 0,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
-      "points": 0
+      "actual_score_a": 4,
+      "actual_score_b": 0,
+      "status": "correct",
+      "points": 2
     },
     {
       "match_id": "69d75963fc9731931f39c2f5",
@@ -645,9 +645,9 @@
       "pick_1x2": "1",
       "my_score_a": 1,
       "my_score_b": 0,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
+      "actual_score_a": 0,
+      "actual_score_b": 0,
+      "status": "wrong",
       "points": 0
     },
     {
@@ -662,9 +662,9 @@
       "pick_1x2": "1",
       "my_score_a": 1,
       "my_score_b": 0,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
+      "actual_score_a": 2,
+      "actual_score_b": 2,
+      "status": "wrong",
       "points": 0
     },
     {
@@ -679,10 +679,10 @@
       "pick_1x2": "2",
       "my_score_a": 0,
       "my_score_b": 1,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
-      "points": 0
+      "actual_score_a": 1,
+      "actual_score_b": 3,
+      "status": "correct",
+      "points": 2
     },
     {
       "match_id": "69d75963fc9731931f39c307",
@@ -696,10 +696,10 @@
       "pick_1x2": "1",
       "my_score_a": 1,
       "my_score_b": 0,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
-      "points": 0
+      "actual_score_a": 2,
+      "actual_score_b": 0,
+      "status": "correct",
+      "points": 2
     },
     {
       "match_id": "69d75963fc9731931f39c301",
@@ -713,10 +713,10 @@
       "pick_1x2": "1",
       "my_score_a": 1,
       "my_score_b": 0,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
-      "points": 0
+      "actual_score_a": 3,
+      "actual_score_b": 0,
+      "status": "correct",
+      "points": 2
     },
     {
       "match_id": "69d75963fc9731931f39c302",
@@ -730,10 +730,10 @@
       "pick_1x2": "1",
       "my_score_a": 1,
       "my_score_b": 0,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
-      "points": 0
+      "actual_score_a": 3,
+      "actual_score_b": 2,
+      "status": "correct",
+      "points": 2
     },
     {
       "match_id": "69d75963fc9731931f39c308",
@@ -747,10 +747,10 @@
       "pick_1x2": "2",
       "my_score_a": 0,
       "my_score_b": 1,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
-      "points": 0
+      "actual_score_a": 1,
+      "actual_score_b": 2,
+      "status": "correct",
+      "points": 2
     },
     {
       "match_id": "69d75963fc9731931f39c30d",
@@ -764,10 +764,10 @@
       "pick_1x2": "1",
       "my_score_a": 1,
       "my_score_b": 0,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
-      "points": 0
+      "actual_score_a": 5,
+      "actual_score_b": 0,
+      "status": "correct",
+      "points": 2
     },
     {
       "match_id": "69d75963fc9731931f39c313",
@@ -781,9 +781,9 @@
       "pick_1x2": "1",
       "my_score_a": 1,
       "my_score_b": 0,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
+      "actual_score_a": 0,
+      "actual_score_b": 0,
+      "status": "wrong",
       "points": 0
     },
     {
@@ -798,10 +798,10 @@
       "pick_1x2": "2",
       "my_score_a": 0,
       "my_score_b": 1,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
-      "points": 0
+      "actual_score_a": 0,
+      "actual_score_b": 1,
+      "status": "correct",
+      "points": 2
     },
     {
       "match_id": "69d75963fc9731931f39c30e",
@@ -815,10 +815,10 @@
       "pick_1x2": "1",
       "my_score_a": 1,
       "my_score_b": 0,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
-      "points": 0
+      "actual_score_a": 1,
+      "actual_score_b": 0,
+      "status": "correct",
+      "points": 2
     },
     {
       "match_id": "69d75963fc9731931f39c2d9",
@@ -832,10 +832,10 @@
       "pick_1x2": "1",
       "my_score_a": 1,
       "my_score_b": 0,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
-      "points": 0
+      "actual_score_a": 2,
+      "actual_score_b": 1,
+      "status": "correct",
+      "points": 2
     },
     {
       "match_id": "69d75963fc9731931f39c2da",
@@ -849,10 +849,10 @@
       "pick_1x2": "1",
       "my_score_a": 1,
       "my_score_b": 0,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
-      "points": 0
+      "actual_score_a": 3,
+      "actual_score_b": 1,
+      "status": "correct",
+      "points": 2
     },
     {
       "match_id": "69d75963fc9731931f39c2df",
@@ -866,10 +866,10 @@
       "pick_1x2": "2",
       "my_score_a": 0,
       "my_score_b": 1,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
-      "points": 0
+      "actual_score_a": 0,
+      "actual_score_b": 3,
+      "status": "correct",
+      "points": 2
     },
     {
       "match_id": "69d75963fc9731931f39c2e0",
@@ -883,10 +883,10 @@
       "pick_1x2": "1",
       "my_score_a": 1,
       "my_score_b": 0,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
-      "points": 0
+      "actual_score_a": 4,
+      "actual_score_b": 2,
+      "status": "correct",
+      "points": 2
     },
     {
       "match_id": "69d75963fc9731931f39c2d3",
@@ -900,10 +900,10 @@
       "pick_1x2": "2",
       "my_score_a": 0,
       "my_score_b": 1,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
-      "points": 0
+      "actual_score_a": 0,
+      "actual_score_b": 3,
+      "status": "correct",
+      "points": 2
     },
     {
       "match_id": "69d75963fc9731931f39c2d4",
@@ -917,9 +917,9 @@
       "pick_1x2": "2",
       "my_score_a": 0,
       "my_score_b": 1,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
+      "actual_score_a": 1,
+      "actual_score_b": 0,
+      "status": "wrong",
       "points": 0
     },
     {
@@ -1805,5 +1805,76 @@
       "points": 0
     }
   ],
-  "synced_at": "2026-06-18T03:50:19+00:00"
+  "projected": {
+    "official_total": 74,
+    "projected_total": 74,
+    "extra_points": 0,
+    "fields": [
+      {
+        "key": "top_scorer",
+        "value": "ארלינג האלנד",
+        "points_if_correct": 20,
+        "leader": false,
+        "points": 0,
+        "status": "trailing"
+      },
+      {
+        "key": "top_assists",
+        "value": "מרטין אודגור",
+        "points_if_correct": 15,
+        "leader": false,
+        "points": 0,
+        "status": "pending"
+      },
+      {
+        "key": "most_goals_group_stage_team",
+        "value": "צרפת",
+        "points_if_correct": 10,
+        "leader": false,
+        "points": 0,
+        "status": "trailing"
+      },
+      {
+        "key": "most_conceded_group_stage_team",
+        "value": "קוראסאו",
+        "points_if_correct": 10,
+        "leader": false,
+        "points": 0,
+        "status": "trailing"
+      },
+      {
+        "key": "most_goals_tournament_team",
+        "value": "ברזיל",
+        "points_if_correct": 10,
+        "leader": false,
+        "points": 0,
+        "status": "trailing"
+      },
+      {
+        "key": "most_conceded_tournament_team",
+        "value": "קוראסאו",
+        "points_if_correct": 10,
+        "leader": false,
+        "points": 0,
+        "status": "trailing"
+      },
+      {
+        "key": "most_cards_team",
+        "value": "עיראק",
+        "points_if_correct": 10,
+        "leader": false,
+        "points": 0,
+        "status": "pending"
+      },
+      {
+        "key": "least_cards_team",
+        "value": "ארצות הברית",
+        "points_if_correct": 10,
+        "leader": false,
+        "points": 0,
+        "status": "pending"
+      }
+    ]
+  },
+  "synced_at": "2026-06-25T17:12:31+00:00"
 }

@@ -1,0 +1,89 @@
+{
+  "synced_at": "2026-06-25T17:12:31+00:00",
+  "fields": {
+    "top_scorer": {
+      "kind": "player",
+      "points": 20,
+      "live": true,
+      "value": 5,
+      "leaders": [
+        {
+          "name": "Lionel Messi",
+          "name_he": "ליאו מסי"
+        }
+      ]
+    },
+    "top_assists": {
+      "kind": "player",
+      "points": 15,
+      "live": false,
+      "value": 0,
+      "leaders": [],
+      "state": "pending_no_key"
+    },
+    "most_goals_group_stage_team": {
+      "kind": "team",
+      "points": 10,
+      "live": true,
+      "value": 9,
+      "leaders": [
+        {
+          "code": "GER",
+          "name_he": "גרמניה"
+        }
+      ]
+    },
+    "most_conceded_group_stage_team": {
+      "kind": "team",
+      "points": 10,
+      "live": true,
+      "value": 10,
+      "leaders": [
+        {
+          "code": "QAT",
+          "name_he": "קטאר"
+        }
+      ]
+    },
+    "most_goals_tournament_team": {
+      "kind": "team",
+      "points": 10,
+      "live": true,
+      "value": 9,
+      "leaders": [
+        {
+          "code": "GER",
+          "name_he": "גרמניה"
+        }
+      ]
+    },
+    "most_conceded_tournament_team": {
+      "kind": "team",
+      "points": 10,
+      "live": true,
+      "value": 10,
+      "leaders": [
+        {
+          "code": "QAT",
+          "name_he": "קטאר"
+        }
+      ]
+    },
+    "most_cards_team": {
+      "kind": "team",
+      "points": 10,
+      "live": false,
+      "value": null,
+      "leaders": [],
+      "state": "pending_no_key"
+    },
+    "least_cards_team": {
+      "kind": "team",
+      "points": 10,
+      "live": false,
+      "value": null,
+      "leaders": [],
+      "state": "pending_no_key"
+    }
+  }
+}
