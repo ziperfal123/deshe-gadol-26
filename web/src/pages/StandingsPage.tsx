@@ -139,12 +139,12 @@ export function StandingsPage() {
           style={{ top: isDesktop ? headerH : 0 }}
         >
           <div className="mx-auto max-w-3xl px-4 py-3">
+            {projected && <ProjectedBanner leaders={leaders} />}
             {renderSearchIfNeeded(data, query, setQuery, rows, scrolled, flashScrollTo)}
           </div>
         </div>
       )}
       <div className="mx-auto max-w-3xl px-4 pb-16 pt-3">
-        {projected && <ProjectedBanner leaders={leaders} />}
         {renderListIfNeeded(ready, error, rows, query, projected, onRowClick)}
       </div>
       {renderEditorIfNeeded(editor, data, onSaveGroup, onDeleteGroup, () => setEditor({ open: false }))}
