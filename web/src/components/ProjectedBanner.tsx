@@ -29,9 +29,20 @@ function leaderText(field: LeadersFile['fields'][string] | undefined): string {
  * Projected-mode call-out: keeps users aware they're viewing provisional points,
  * lists the included fields and each one's current live leader.
  * - default (mobile): a compact horizontal box that sits in the sticky header area.
- * - `vertical` (desktop sidebar): a roomy single-column box pinned beside the table.
+ * - `vertical` (desktop sidebar): a single-column box pinned beside the table. By
+ *   default each field is stacked (label over value); when `compact` (short screens)
+ *   each field collapses to one line so the box stays short and clears the header.
  */
-export function ProjectedBanner({ leaders, vertical = false }: { leaders?: LeadersFile; vertical?: boolean }) {
+export function ProjectedBanner({
+  leaders,
+  vertical = false,
+  compact = false,
+}: {
+  leaders?: LeadersFile
+  vertical?: boolean
+  compact?: boolean
+}) {
+  const stacked = vertical && !compact // label-over-value layout (tall)
   return (
     <div
       className={cn(
@@ -43,13 +54,13 @@ export function ProjectedBanner({ leaders, vertical = false }: { leaders?: Leade
         className={cn(
           'bg-gradient-to-l from-clay to-sun font-extrabold text-ink',
           vertical
-            ? 'flex flex-col px-4 py-3 text-center'
+            ? cn('flex flex-col px-4 text-center', compact ? 'py-2' : 'py-3')
             : 'flex items-center justify-center gap-1.5 px-3 py-1.5 text-center text-[12px] sm:text-[13px]',
         )}
       >
         {vertical ? (
           <>
-            <span className="text-[16px]">
+            <span className={compact ? 'text-[14px]' : 'text-[16px]'}>
               <span aria-hidden>⚡</span> ניקוד משוער
             </span>
             <span className="mt-0.5 text-[11px] font-bold opacity-90">לא סופי · מתעדכן בכל סנכרון</span>
@@ -62,8 +73,8 @@ export function ProjectedBanner({ leaders, vertical = false }: { leaders?: Leade
           </>
         )}
       </div>
-      <div className={cn('bg-sun/10', vertical ? 'px-4 py-4' : 'px-3 py-2')}>
-        <ul className={cn('grid', vertical ? 'grid-cols-1 gap-y-3' : 'grid-cols-2 gap-x-4 gap-y-1')}>
+      <div className={cn('bg-sun/10', vertical ? cn('px-3', compact ? 'py-2' : 'py-4') : 'px-3 py-2')}>
+        <ul className={cn('grid', vertical ? (compact ? 'grid-cols-1 gap-y-1.5' : 'grid-cols-1 gap-y-4') : 'grid-cols-2 gap-x-4 gap-y-1')}>
           {FIELDS.map(({ key, label }) => {
             const f = leaders?.fields[key]
             const pending = f && !f.live
@@ -71,12 +82,22 @@ export function ProjectedBanner({ leaders, vertical = false }: { leaders?: Leade
               <li
                 key={key}
                 className={cn(
-                  'flex min-w-0 items-baseline gap-1.5 leading-tight',
-                  vertical ? 'justify-between text-[13px]' : 'justify-center text-[10px] sm:text-[11px]',
+                  'min-w-0 leading-tight',
+                  stacked ? 'flex flex-col items-center gap-0.5 text-center' : 'flex items-baseline justify-center gap-1.5',
+                  !vertical && 'text-[10px] sm:text-[11px]',
+                  vertical && compact && 'text-[12px]',
                 )}
               >
-                <span className="shrink-0 text-ink/55">{label}:</span>
-                <span className={cn('min-w-0 truncate', pending ? 'font-medium text-ink/55' : 'font-semibold text-ink')}>
+                <span className={cn('text-ink/55', stacked ? 'text-[11px]' : 'shrink-0')}>
+                  {label}
+                  {stacked ? '' : ':'}
+                </span>
+                <span
+                  className={cn(
+                    pending ? 'font-medium text-ink/55' : 'font-semibold text-ink',
+                    stacked ? 'text-[13px] break-words' : 'min-w-0 truncate',
+                  )}
+                >
                   {leaderText(f)}
                 </span>
               </li>

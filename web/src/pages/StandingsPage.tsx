@@ -54,6 +54,14 @@ export function StandingsPage() {
   const headerRef = useRef<HTMLDivElement>(null)
   const [headerH, setHeaderH] = useState(0)
   const [isDesktop, setIsDesktop] = useState(false)
+  // When the space below the header is too short for the tall stacked sidebar,
+  // collapse its fields to single lines so the box clears the header.
+  const [tightSidebar, setTightSidebar] = useState(false)
+  // The projected sidebar's measured top: centered below the header when it fits,
+  // otherwise pinned just under the header so it never overlaps it.
+  const sidebarRef = useRef<HTMLElement>(null)
+  const [sidebarTop, setSidebarTop] = useState(0)
+  const projected = mode === 'projected'
 
   useEventListener('scroll', () => setScrolled(window.scrollY > 250))
 
@@ -61,7 +69,14 @@ export function StandingsPage() {
     const el = headerRef.current
     const measure = () => {
       setIsDesktop(window.innerWidth >= 640)
-      if (el) setHeaderH(el.offsetHeight)
+      const hH = el?.offsetHeight ?? 0
+      if (el) setHeaderH(hH)
+      const avail = window.innerHeight - hH
+      // ~620px is the room the tall stacked sidebar needs; below that, collapse to one-line fields.
+      setTightSidebar(avail < 620)
+      const boxH = sidebarRef.current?.offsetHeight ?? 0
+      // center the box below the header when there's room, else pin it just below (never overlap).
+      setSidebarTop(boxH > 0 && boxH < avail - 16 ? hH + (avail - boxH) / 2 : hH + 8)
     }
     measure()
     const ro = el ? new ResizeObserver(measure) : undefined
@@ -71,7 +86,7 @@ export function StandingsPage() {
       ro?.disconnect()
       window.removeEventListener('resize', measure)
     }
-  }, [data, groups, activeView])
+  }, [data, groups, activeView, projected, tightSidebar, leaders])
 
   useEffect(() => {
     fetchStandings()
@@ -88,7 +103,6 @@ export function StandingsPage() {
 
   const onRowClick = (id: string) => navigate(`/player/${id}`)
   const activeGroup = groups.find((g) => g.id === activeView)
-  const projected = mode === 'projected'
   // Base list for the active mode (official SSOT or projected total).
   const baseStandings: StandingsRow[] = projected ? (proj ? projectedToRows(proj) : []) : data?.standings ?? []
   const ready = projected ? !!proj : !!data
@@ -154,10 +168,11 @@ export function StandingsPage() {
           header flow, so the header height no longer changes between modes. */}
       {projected && (
         <aside
-          className="fixed left-[calc(75vw_+_12rem)] z-10 hidden w-52 -translate-x-1/2 -translate-y-1/2 xl:block 2xl:w-60"
-          style={{ top: `calc((100vh + ${headerH}px) / 2 - 4rem)` }}
+          ref={sidebarRef}
+          className="fixed left-[calc(75vw_+_12rem)] z-10 hidden w-52 -translate-x-1/2 xl:block 2xl:w-60"
+          style={{ top: sidebarTop }}
         >
-          <ProjectedBanner leaders={leaders} vertical />
+          <ProjectedBanner leaders={leaders} vertical compact={tightSidebar} />
         </aside>
       )}
       <div className="mx-auto max-w-3xl px-4 pb-16 pt-3">
