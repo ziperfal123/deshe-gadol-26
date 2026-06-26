@@ -2,7 +2,7 @@ import type { LeadersFile } from '../types'
 import { cn } from '../lib/cn'
 
 // Short labels (the full ones live in SPECIAL_LABELS) — compact enough for the
-// sticky 2-column grid on mobile without squeezing the leader value.
+// sticky grid without squeezing the leader value.
 const FIELDS: { key: string; label: string }[] = [
   { key: 'top_scorer', label: 'מלך השערים' },
   { key: 'top_assists', label: 'מלך הבישולים' },
@@ -26,25 +26,55 @@ function leaderText(field: LeadersFile['fields'][string] | undefined): string {
 }
 
 /**
- * Shown only in Projected mode (sticky under the header): a warm gradient bar that
- * keeps users aware they're viewing provisional points, plus the included fields
- * and each one's current live leader. Compact + responsive for mobile.
+ * Projected-mode call-out: keeps users aware they're viewing provisional points,
+ * lists the included fields and each one's current live leader.
+ * - default (mobile): a compact horizontal box that sits in the sticky header area.
+ * - `vertical` (desktop sidebar): a roomy single-column box pinned beside the table.
  */
-export function ProjectedBanner({ leaders }: { leaders?: LeadersFile }) {
+export function ProjectedBanner({ leaders, vertical = false }: { leaders?: LeadersFile; vertical?: boolean }) {
   return (
-    <div className="mb-2 mx-auto max-w-md overflow-hidden rounded-2xl border border-clay/40 shadow-soft">
-      <div className="flex items-center justify-center gap-1.5 bg-gradient-to-l from-clay to-sun px-3 py-1.5 text-center text-[12px] font-extrabold text-ink sm:text-[13px]">
-        <span aria-hidden>⚡</span>
-        ניקוד משוער · לא סופי
-        <span className="hidden sm:inline"> · מתעדכן בכל סנכרון</span>
+    <div
+      className={cn(
+        'overflow-hidden rounded-2xl border border-clay/40 shadow-soft',
+        vertical ? '' : 'mb-2 mx-auto max-w-md',
+      )}
+    >
+      <div
+        className={cn(
+          'bg-gradient-to-l from-clay to-sun font-extrabold text-ink',
+          vertical
+            ? 'flex flex-col px-4 py-3 text-center'
+            : 'flex items-center justify-center gap-1.5 px-3 py-1.5 text-center text-[12px] sm:text-[13px]',
+        )}
+      >
+        {vertical ? (
+          <>
+            <span className="text-[16px]">
+              <span aria-hidden>⚡</span> ניקוד משוער
+            </span>
+            <span className="mt-0.5 text-[11px] font-bold opacity-90">לא סופי · מתעדכן בכל סנכרון</span>
+          </>
+        ) : (
+          <>
+            <span aria-hidden>⚡</span>
+            ניקוד משוער · לא סופי
+            <span className="hidden sm:inline"> · מתעדכן בכל סנכרון</span>
+          </>
+        )}
       </div>
-      <div className="bg-sun/10 px-3 py-2">
-        <ul className="grid grid-cols-2 gap-x-4 gap-y-1">
+      <div className={cn('bg-sun/10', vertical ? 'px-4 py-4' : 'px-3 py-2')}>
+        <ul className={cn('grid', vertical ? 'grid-cols-1 gap-y-3' : 'grid-cols-2 gap-x-4 gap-y-1')}>
           {FIELDS.map(({ key, label }) => {
             const f = leaders?.fields[key]
             const pending = f && !f.live
             return (
-              <li key={key} className="flex min-w-0 items-baseline justify-center gap-1.5 text-[10px] leading-tight sm:text-[11px]">
+              <li
+                key={key}
+                className={cn(
+                  'flex min-w-0 items-baseline gap-1.5 leading-tight',
+                  vertical ? 'justify-between text-[13px]' : 'justify-center text-[10px] sm:text-[11px]',
+                )}
+              >
                 <span className="shrink-0 text-ink/55">{label}:</span>
                 <span className={cn('min-w-0 truncate', pending ? 'font-medium text-ink/55' : 'font-semibold text-ink')}>
                   {leaderText(f)}

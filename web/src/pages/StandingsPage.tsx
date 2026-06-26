@@ -139,10 +139,26 @@ export function StandingsPage() {
           style={{ top: isDesktop ? headerH : 0 }}
         >
           <div className="mx-auto max-w-3xl px-4 py-3">
-            {projected && <ProjectedBanner leaders={leaders} />}
+            {/* mobile/tablet: in-flow banner; desktop (xl): moved to the fixed gutter sidebar below */}
+            {projected && (
+              <div className="xl:hidden">
+                <ProjectedBanner leaders={leaders} />
+              </div>
+            )}
             {renderSearchIfNeeded(data, query, setQuery, rows, scrolled, flashScrollTo)}
           </div>
         </div>
+      )}
+      {/* desktop (xl+) only: vertical call-out pinned in the RIGHT gutter beside the centered table,
+          vertically centered in the table area (below the header). position:fixed keeps it out of the
+          header flow, so the header height no longer changes between modes. */}
+      {projected && (
+        <aside
+          className="fixed left-[calc(75vw_+_12rem)] z-10 hidden w-52 -translate-x-1/2 -translate-y-1/2 xl:block 2xl:w-60"
+          style={{ top: `calc((100vh + ${headerH}px) / 2 - 4rem)` }}
+        >
+          <ProjectedBanner leaders={leaders} vertical />
+        </aside>
       )}
       <div className="mx-auto max-w-3xl px-4 pb-16 pt-3">
         {renderListIfNeeded(ready, error, rows, query, projected, onRowClick)}
