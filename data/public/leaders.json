@@ -1,11 +1,11 @@
 {
-  "synced_at": "2026-06-25T17:12:31+00:00",
+  "synced_at": "2026-06-28T05:31:01+00:00",
   "fields": {
     "top_scorer": {
       "kind": "player",
       "points": 20,
       "live": true,
-      "value": 5,
+      "value": 6,
       "leaders": [
         {
           "name": "Lionel Messi",
@@ -25,11 +25,19 @@
       "kind": "team",
       "points": 10,
       "live": true,
-      "value": 9,
+      "value": 10,
       "leaders": [
+        {
+          "code": "FRA",
+          "name_he": "צרפת"
+        },
         {
           "code": "GER",
           "name_he": "גרמניה"
+        },
+        {
+          "code": "NED",
+          "name_he": "הולנד"
         }
       ]
     },
@@ -37,11 +45,15 @@
       "kind": "team",
       "points": 10,
       "live": true,
-      "value": 10,
+      "value": 12,
       "leaders": [
         {
-          "code": "QAT",
-          "name_he": "קטאר"
+          "code": "IRQ",
+          "name_he": "עיראק"
+        },
+        {
+          "code": "TUN",
+          "name_he": "תוניסיה"
         }
       ]
     },
@@ -49,11 +61,19 @@
       "kind": "team",
       "points": 10,
       "live": true,
-      "value": 9,
+      "value": 10,
       "leaders": [
+        {
+          "code": "FRA",
+          "name_he": "צרפת"
+        },
         {
           "code": "GER",
           "name_he": "גרמניה"
+        },
+        {
+          "code": "NED",
+          "name_he": "הולנד"
         }
       ]
     },
@@ -61,11 +81,15 @@
       "kind": "team",
       "points": 10,
       "live": true,
-      "value": 10,
+      "value": 12,
       "leaders": [
         {
-          "code": "QAT",
-          "name_he": "קטאר"
+          "code": "IRQ",
+          "name_he": "עיראק"
+        },
+        {
+          "code": "TUN",
+          "name_he": "תוניסיה"
         }
       ]
     },

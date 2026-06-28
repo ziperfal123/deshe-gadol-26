@@ -1,0 +1,521 @@
+{
+  "source": "ESPN standings (site.api.espn.com .../fifa.world/standings) — same results feed the app scores group games with, so it stays consistent. FIFA official site renders standings via a client widget with no openly-fetchable data endpoint; ESPN matches our scored results.",
+  "generated_at": "2026-06-28T05:29:20+00:00",
+  "rule": "32 advance: top 2 per group + 8 best third-placed. position = final group rank (1/2/3). Scoring: +2 if a picked team qualified (any position), +1 bonus if the predicted in-group position equals the actual rank.",
+  "qualified": {
+    "ALG": 3,
+    "ARG": 1,
+    "AUS": 2,
+    "AUT": 2,
+    "BEL": 1,
+    "BIH": 3,
+    "BRA": 1,
+    "CAN": 2,
+    "CIV": 2,
+    "COD": 3,
+    "COL": 1,
+    "CPV": 2,
+    "CRO": 2,
+    "ECU": 3,
+    "EGY": 2,
+    "ENG": 1,
+    "ESP": 1,
+    "FRA": 1,
+    "GER": 1,
+    "GHA": 3,
+    "JPN": 2,
+    "MAR": 2,
+    "MEX": 1,
+    "NED": 1,
+    "NOR": 2,
+    "PAR": 3,
+    "POR": 2,
+    "RSA": 2,
+    "SEN": 3,
+    "SUI": 1,
+    "SWE": 3,
+    "USA": 1
+  },
+  "groups": {
+    "A": {
+      "teams": [
+        {
+          "code": "MEX",
+          "name_he": "מקסיקו",
+          "rank": 1,
+          "advanced": true,
+          "points": 9,
+          "gd": 6,
+          "gf": 6
+        },
+        {
+          "code": "RSA",
+          "name_he": "דרום אפריקה",
+          "rank": 2,
+          "advanced": true,
+          "points": 4,
+          "gd": -1,
+          "gf": 2
+        },
+        {
+          "code": "KOR",
+          "name_he": "דרום קוריאה",
+          "rank": 3,
+          "advanced": false,
+          "points": 3,
+          "gd": -1,
+          "gf": 2
+        },
+        {
+          "code": "CZE",
+          "name_he": "צ׳כיה",
+          "rank": 4,
+          "advanced": false,
+          "points": 1,
+          "gd": -4,
+          "gf": 2
+        }
+      ]
+    },
+    "B": {
+      "teams": [
+        {
+          "code": "SUI",
+          "name_he": "שווייץ",
+          "rank": 1,
+          "advanced": true,
+          "points": 7,
+          "gd": 4,
+          "gf": 7
+        },
+        {
+          "code": "CAN",
+          "name_he": "קנדה",
+          "rank": 2,
+          "advanced": true,
+          "points": 4,
+          "gd": 5,
+          "gf": 8
+        },
+        {
+          "code": "BIH",
+          "name_he": "בוסניה והרצגובינה",
+          "rank": 3,
+          "advanced": true,
+          "points": 4,
+          "gd": -1,
+          "gf": 5
+        },
+        {
+          "code": "QAT",
+          "name_he": "קטאר",
+          "rank": 4,
+          "advanced": false,
+          "points": 1,
+          "gd": -8,
+          "gf": 2
+        }
+      ]
+    },
+    "C": {
+      "teams": [
+        {
+          "code": "BRA",
+          "name_he": "ברזיל",
+          "rank": 1,
+          "advanced": true,
+          "points": 7,
+          "gd": 6,
+          "gf": 7
+        },
+        {
+          "code": "MAR",
+          "name_he": "מרוקו",
+          "rank": 2,
+          "advanced": true,
+          "points": 7,
+          "gd": 3,
+          "gf": 6
+        },
+        {
+          "code": "SCO",
+          "name_he": "סקוטלנד",
+          "rank": 3,
+          "advanced": false,
+          "points": 3,
+          "gd": -3,
+          "gf": 1
+        },
+        {
+          "code": "HAI",
+          "name_he": "האיטי",
+          "rank": 4,
+          "advanced": false,
+          "points": 0,
+          "gd": -6,
+          "gf": 2
+        }
+      ]
+    },
+    "D": {
+      "teams": [
+        {
+          "code": "USA",
+          "name_he": "ארצות הברית",
+          "rank": 1,
+          "advanced": true,
+          "points": 6,
+          "gd": 4,
+          "gf": 8
+        },
+        {
+          "code": "AUS",
+          "name_he": "אוסטרליה",
+          "rank": 2,
+          "advanced": true,
+          "points": 4,
+          "gd": 0,
+          "gf": 2
+        },
+        {
+          "code": "PAR",
+          "name_he": "פרגוואי",
+          "rank": 3,
+          "advanced": true,
+          "points": 4,
+          "gd": -2,
+          "gf": 2
+        },
+        {
+          "code": "TUR",
+          "name_he": "טורקיה",
+          "rank": 4,
+          "advanced": false,
+          "points": 3,
+          "gd": -2,
+          "gf": 3
+        }
+      ]
+    },
+    "E": {
+      "teams": [
+        {
+          "code": "GER",
+          "name_he": "גרמניה",
+          "rank": 1,
+          "advanced": true,
+          "points": 6,
+          "gd": 6,
+          "gf": 10
+        },
+        {
+          "code": "CIV",
+          "name_he": "חוף השנהב",
+          "rank": 2,
+          "advanced": true,
+          "points": 6,
+          "gd": 2,
+          "gf": 4
+        },
+        {
+          "code": "ECU",
+          "name_he": "אקוודור",
+          "rank": 3,
+          "advanced": true,
+          "points": 4,
+          "gd": 0,
+          "gf": 2
+        },
+        {
+          "code": "CUW",
+          "name_he": "קוראסאו",
+          "rank": 4,
+          "advanced": false,
+          "points": 1,
+          "gd": -8,
+          "gf": 1
+        }
+      ]
+    },
+    "F": {
+      "teams": [
+        {
+          "code": "NED",
+          "name_he": "הולנד",
+          "rank": 1,
+          "advanced": true,
+          "points": 7,
+          "gd": 6,
+          "gf": 10
+        },
+        {
+          "code": "JPN",
+          "name_he": "יפן",
+          "rank": 2,
+          "advanced": true,
+          "points": 5,
+          "gd": 4,
+          "gf": 7
+        },
+        {
+          "code": "SWE",
+          "name_he": "שוודיה",
+          "rank": 3,
+          "advanced": true,
+          "points": 4,
+          "gd": 0,
+          "gf": 7
+        },
+        {
+          "code": "TUN",
+          "name_he": "תוניסיה",
+          "rank": 4,
+          "advanced": false,
+          "points": 0,
+          "gd": -10,
+          "gf": 2
+        }
+      ]
+    },
+    "G": {
+      "teams": [
+        {
+          "code": "BEL",
+          "name_he": "בלגיה",
+          "rank": 1,
+          "advanced": true,
+          "points": 5,
+          "gd": 4,
+          "gf": 6
+        },
+        {
+          "code": "EGY",
+          "name_he": "מצרים",
+          "rank": 2,
+          "advanced": true,
+          "points": 5,
+          "gd": 2,
+          "gf": 5
+        },
+        {
+          "code": "IRN",
+          "name_he": "איראן",
+          "rank": 3,
+          "advanced": false,
+          "points": 3,
+          "gd": 0,
+          "gf": 3
+        },
+        {
+          "code": "NZL",
+          "name_he": "ניו זילנד",
+          "rank": 4,
+          "advanced": false,
+          "points": 1,
+          "gd": -6,
+          "gf": 4
+        }
+      ]
+    },
+    "H": {
+      "teams": [
+        {
+          "code": "ESP",
+          "name_he": "ספרד",
+          "rank": 1,
+          "advanced": true,
+          "points": 7,
+          "gd": 5,
+          "gf": 5
+        },
+        {
+          "code": "CPV",
+          "name_he": "כף ורדה",
+          "rank": 2,
+          "advanced": true,
+          "points": 3,
+          "gd": 0,
+          "gf": 2
+        },
+        {
+          "code": "URU",
+          "name_he": "אורוגוואי",
+          "rank": 3,
+          "advanced": false,
+          "points": 2,
+          "gd": -1,
+          "gf": 3
+        },
+        {
+          "code": "KSA",
+          "name_he": "ערב הסעודית",
+          "rank": 4,
+          "advanced": false,
+          "points": 2,
+          "gd": -4,
+          "gf": 1
+        }
+      ]
+    },
+    "I": {
+      "teams": [
+        {
+          "code": "FRA",
+          "name_he": "צרפת",
+          "rank": 1,
+          "advanced": true,
+          "points": 9,
+          "gd": 8,
+          "gf": 10
+        },
+        {
+          "code": "NOR",
+          "name_he": "נורבגיה",
+          "rank": 2,
+          "advanced": true,
+          "points": 6,
+          "gd": 1,
+          "gf": 8
+        },
+        {
+          "code": "SEN",
+          "name_he": "סנגל",
+          "rank": 3,
+          "advanced": true,
+          "points": 3,
+          "gd": 2,
+          "gf": 8
+        },
+        {
+          "code": "IRQ",
+          "name_he": "עיראק",
+          "rank": 4,
+          "advanced": false,
+          "points": 0,
+          "gd": -11,
+          "gf": 1
+        }
+      ]
+    },
+    "J": {
+      "teams": [
+        {
+          "code": "ARG",
+          "name_he": "ארגנטינה",
+          "rank": 1,
+          "advanced": true,
+          "points": 9,
+          "gd": 7,
+          "gf": 8
+        },
+        {
+          "code": "AUT",
+          "name_he": "אוסטריה",
+          "rank": 2,
+          "advanced": true,
+          "points": 4,
+          "gd": 0,
+          "gf": 6
+        },
+        {
+          "code": "ALG",
+          "name_he": "אלג'יריה",
+          "rank": 3,
+          "advanced": true,
+          "points": 4,
+          "gd": -2,
+          "gf": 5
+        },
+        {
+          "code": "JOR",
+          "name_he": "ירדן",
+          "rank": 4,
+          "advanced": false,
+          "points": 0,
+          "gd": -5,
+          "gf": 3
+        }
+      ]
+    },
+    "K": {
+      "teams": [
+        {
+          "code": "COL",
+          "name_he": "קולומביה",
+          "rank": 1,
+          "advanced": true,
+          "points": 7,
+          "gd": 3,
+          "gf": 4
+        },
+        {
+          "code": "POR",
+          "name_he": "פורטוגל",
+          "rank": 2,
+          "advanced": true,
+          "points": 5,
+          "gd": 5,
+          "gf": 6
+        },
+        {
+          "code": "COD",
+          "name_he": "קונגו הדמוקרטית",
+          "rank": 3,
+          "advanced": true,
+          "points": 4,
+          "gd": 1,
+          "gf": 4
+        },
+        {
+          "code": "UZB",
+          "name_he": "אוזבקיסטן",
+          "rank": 4,
+          "advanced": false,
+          "points": 0,
+          "gd": -9,
+          "gf": 2
+        }
+      ]
+    },
+    "L": {
+      "teams": [
+        {
+          "code": "ENG",
+          "name_he": "אנגליה",
+          "rank": 1,
+          "advanced": true,
+          "points": 7,
+          "gd": 4,
+          "gf": 6
+        },
+        {
+          "code": "CRO",
+          "name_he": "קרואטיה",
+          "rank": 2,
+          "advanced": true,
+          "points": 6,
+          "gd": 0,
+          "gf": 5
+        },
+        {
+          "code": "GHA",
+          "name_he": "גאנה",
+          "rank": 3,
+          "advanced": true,
+          "points": 4,
+          "gd": 0,
+          "gf": 2
+        },
+        {
+          "code": "PAN",
+          "name_he": "פנמה",
+          "rank": 4,
+          "advanced": false,
+          "points": 0,
+          "gd": -4,
+          "gf": 0
+        }
+      ]
+    }
+  }
+}

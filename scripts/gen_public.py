@@ -23,6 +23,12 @@ specials = load("special_predictions.json")
 teams = load("teams.json")
 mm = load("match_map.json")
 champ = load("champion_odds.json")
+try:
+    qual = load("qualification.json")
+    qualified_pos = dict(qual.get("qualified", {}))  # team code -> actual group rank (1/2/3)
+    qual_resolved = True
+except FileNotFoundError:
+    qualified_pos, qual_resolved = {}, False
 
 teams = teams if isinstance(teams, list) else teams["teams"]
 
@@ -357,11 +363,33 @@ for pl in players:
 
     tp = tp_by_player.get(pid, {})
     def he2code(n): return code_by_he.get(n)
-    advancement = {
-        "group_stage": [{"team_he": g["team"], "team_code": he2code(g["team"]), "group": g.get("group"),
-                          "position": g.get("position"), "status": "pending", "points": 0}
-                         for g in tp.get("group_stage", [])],
-    }
+    # ---- score group-stage qualification picks: +2 qualified (any place) + 1 bonus for exact position ----
+    gs_items = []
+    qual_pts = qual_correct = qual_bonus = 0
+    for g in tp.get("group_stage", []):
+        code = he2code(g["team"])
+        predicted = g.get("position")
+        actual = qualified_pos.get(code)          # None if the team did NOT qualify
+        qualified = actual is not None
+        if not qual_resolved:
+            status, pts, bonus = "pending", 0, False
+        elif qualified:
+            bonus = predicted == actual
+            pts = 2 + (1 if bonus else 0)
+            status, qual_correct = "correct", qual_correct + 1
+            qual_pts += pts
+            if bonus:
+                qual_bonus += 1
+        else:
+            status, pts, bonus = "wrong", 0, False
+        gs_items.append({"team_he": g["team"], "team_code": code, "group": g.get("group"),
+                          "position": predicted, "actual_position": actual, "qualified": qualified,
+                          "bonus": bonus, "status": status, "points": pts})
+    total += qual_pts
+    qualification_summary = {"points": qual_pts, "qualified_correct": qual_correct,
+                             "bonus_correct": qual_bonus, "total_picks": len(gs_items),
+                             "resolved": qual_resolved}
+    advancement = {"group_stage": gs_items}
     for stage, pts_each in [("round_of_16", 5), ("quarter_final", 10), ("semi_final", 15), ("final", 20)]:
         advancement[stage] = [{"team_he": team_he.get(he2code(n), n), "team_code": he2code(n),
                                 "points_if_correct": pts_each, "status": "pending", "points": 0}
@@ -391,6 +419,7 @@ for pl in players:
     player_files[pid] = {
         "player_id": pid, "name": pl["name"], "total_points": total, "correct_group": correct,
         "group_stage": group_items, "advancement": advancement,
+        "qualification": qualification_summary,
         "champion": champion, "specials": specials_out,
         "projected": {"official_total": total, "projected_total": projected_total,
                       "extra_points": proj_gain, "fields": proj_fields},

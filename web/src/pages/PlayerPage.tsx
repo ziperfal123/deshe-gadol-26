@@ -541,6 +541,7 @@ function AdvancementSection({ player }: { player: PlayerFile }) {
     <Section title="העפלה ושלבי הנוקאאוט" id="advancement">
       <div className="px-2 py-2">
         <SubTitle>ניחושי דירוג בבתים</SubTitle>
+        <QualificationSummaryBar q={player.qualification} />
         <GroupStandingPicks items={adv.group_stage} />
       </div>
       {stages.map((s) => (
@@ -559,6 +560,22 @@ function AdvancementSection({ player }: { player: PlayerFile }) {
 
 const POSITION_LABELS: Record<number, string> = { 1: 'מקום 1', 2: 'מקום 2', 3: 'מקום 3' }
 
+/** Lean breakdown of qualification points: teams advanced (+2 each) and exact-position bonuses (+1). */
+function QualificationSummaryBar({ q }: { q?: PlayerFile['qualification'] }) {
+  if (!q || !q.resolved) return <></>
+  return (
+    <div className="mb-2.5 flex flex-wrap items-center gap-x-3 gap-y-1 rounded-xl bg-leaf/5 px-2.5 py-1.5 text-[11px] text-ink/60">
+      <span>
+        <b className="text-leaf">{q.qualified_correct}</b> עלו (+2)
+      </span>
+      <span>
+        <b className="text-leaf">{q.bonus_correct}</b> בונוס מיקום (+1)
+      </span>
+      <span className="font-bold text-ink">סה״כ {q.points} נק׳</span>
+    </div>
+  )
+}
+
 /** Group-stage advancement picks, split into labeled sub-groups by predicted position. */
 function GroupStandingPicks({ items }: { items: AdvGroupPick[] }) {
   const positions = [1, 2, 3].filter((pos) => items.some((g) => g.position === pos))
@@ -571,12 +588,31 @@ function GroupStandingPicks({ items }: { items: AdvGroupPick[] }) {
             {items
               .filter((g) => g.position === pos)
               .map((g, i) => (
-                <Chip key={i} label={withFlag(g.team_code, g.team_he)} status={g.status} />
+                <QualChip key={i} pick={g} />
               ))}
           </div>
         </div>
       ))}
     </div>
+  )
+}
+
+/**
+ * A group-stage qualification pick: green when the team qualified, red when it didn't,
+ * with a floating "+1" badge when the predicted position was also exactly right (the bonus).
+ */
+function QualChip({ pick }: { pick: AdvGroupPick }) {
+  return (
+    <span className="relative inline-flex">
+      <span className={cn('rounded-full border px-2.5 py-1 text-xs font-medium', statusClasses(pick.status))}>
+        {withFlag(pick.team_code, pick.team_he)}
+      </span>
+      {pick.bonus && (
+        <span className="absolute -top-2 -end-1.5 rounded-full bg-leaf px-1 text-[9px] font-extrabold leading-tight text-white shadow-soft">
+          +1
+        </span>
+      )}
+    </span>
   )
 }
 

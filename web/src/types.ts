@@ -106,8 +106,21 @@ export interface AdvGroupPick {
   team_code?: string
   group?: string
   position?: number
+  /** actual final rank in the group (1/2/3), or null if the team didn't qualify. */
+  actual_position?: number | null
+  qualified?: boolean
+  /** true when the predicted position exactly matches the actual rank (the +1 bonus). */
+  bonus?: boolean
   status: PredStatus
   points: number
+}
+
+export interface QualificationSummary {
+  points: number
+  qualified_correct: number
+  bonus_correct: number
+  total_picks: number
+  resolved: boolean
 }
 
 export interface AdvStagePick {
@@ -230,6 +243,7 @@ export interface PlayerFile {
   synced_at: string
   group_stage: GroupItem[]
   advancement: Advancement
+  qualification?: QualificationSummary
   champion: ChampionPick
   specials: SpecialPick[]
   projected?: ProjectedBreakdown

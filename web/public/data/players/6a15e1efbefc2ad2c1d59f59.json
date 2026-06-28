@@ -1,8 +1,8 @@
 {
   "player_id": "6a15e1efbefc2ad2c1d59f59",
   "name": "חנן ברגר 1",
-  "total_points": 54,
-  "correct_group": 27,
+  "total_points": 135,
+  "correct_group": 36,
   "group_stage": [
     {
       "match_id": "69d75963fc9731931f39c2cf",
@@ -934,9 +934,9 @@
       "pick_1x2": "2",
       "my_score_a": 0,
       "my_score_b": 1,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
+      "actual_score_a": 2,
+      "actual_score_b": 1,
+      "status": "wrong",
       "points": 0
     },
     {
@@ -951,10 +951,10 @@
       "pick_1x2": "2",
       "my_score_a": 0,
       "my_score_b": 1,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
-      "points": 0
+      "actual_score_a": 0,
+      "actual_score_b": 2,
+      "status": "correct",
+      "points": 2
     },
     {
       "match_id": "69d75963fc9731931f39c2f1",
@@ -968,9 +968,9 @@
       "pick_1x2": "X",
       "my_score_a": 0,
       "my_score_b": 0,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
+      "actual_score_a": 1,
+      "actual_score_b": 3,
+      "status": "wrong",
       "points": 0
     },
     {
@@ -985,10 +985,10 @@
       "pick_1x2": "X",
       "my_score_a": 0,
       "my_score_b": 0,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
-      "points": 0
+      "actual_score_a": 1,
+      "actual_score_b": 1,
+      "status": "correct",
+      "points": 2
     },
     {
       "match_id": "69d75963fc9731931f39c2e5",
@@ -1002,10 +1002,10 @@
       "pick_1x2": "1",
       "my_score_a": 1,
       "my_score_b": 0,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
-      "points": 0
+      "actual_score_a": 3,
+      "actual_score_b": 2,
+      "status": "correct",
+      "points": 2
     },
     {
       "match_id": "69d75963fc9731931f39c2e6",
@@ -1019,10 +1019,10 @@
       "pick_1x2": "X",
       "my_score_a": 0,
       "my_score_b": 0,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
-      "points": 0
+      "actual_score_a": 0,
+      "actual_score_b": 0,
+      "status": "correct",
+      "points": 2
     },
     {
       "match_id": "69d75963fc9731931f39c303",
@@ -1036,9 +1036,9 @@
       "pick_1x2": "X",
       "my_score_a": 0,
       "my_score_b": 0,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
+      "actual_score_a": 1,
+      "actual_score_b": 4,
+      "status": "wrong",
       "points": 0
     },
     {
@@ -1053,10 +1053,10 @@
       "pick_1x2": "1",
       "my_score_a": 1,
       "my_score_b": 0,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
-      "points": 0
+      "actual_score_a": 5,
+      "actual_score_b": 0,
+      "status": "correct",
+      "points": 2
     },
     {
       "match_id": "69d75963fc9731931f39c2fd",
@@ -1070,9 +1070,9 @@
       "pick_1x2": "1",
       "my_score_a": 1,
       "my_score_b": 0,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
+      "actual_score_a": 0,
+      "actual_score_b": 1,
+      "status": "wrong",
       "points": 0
     },
     {
@@ -1087,9 +1087,9 @@
       "pick_1x2": "1",
       "my_score_a": 1,
       "my_score_b": 0,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
+      "actual_score_a": 0,
+      "actual_score_b": 0,
+      "status": "wrong",
       "points": 0
     },
     {
@@ -1104,10 +1104,10 @@
       "pick_1x2": "2",
       "my_score_a": 0,
       "my_score_b": 1,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
-      "points": 0
+      "actual_score_a": 1,
+      "actual_score_b": 5,
+      "status": "correct",
+      "points": 2
     },
     {
       "match_id": "69d75963fc9731931f39c2f8",
@@ -1121,9 +1121,9 @@
       "pick_1x2": "1",
       "my_score_a": 1,
       "my_score_b": 0,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
+      "actual_score_a": 1,
+      "actual_score_b": 1,
+      "status": "wrong",
       "points": 0
     },
     {
@@ -1138,9 +1138,9 @@
       "pick_1x2": "1",
       "my_score_a": 1,
       "my_score_b": 0,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
+      "actual_score_a": 0,
+      "actual_score_b": 2,
+      "status": "wrong",
       "points": 0
     },
     {
@@ -1155,10 +1155,10 @@
       "pick_1x2": "1",
       "my_score_a": 1,
       "my_score_b": 0,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
-      "points": 0
+      "actual_score_a": 2,
+      "actual_score_b": 1,
+      "status": "correct",
+      "points": 2
     },
     {
       "match_id": "69d75963fc9731931f39c30f",
@@ -1172,9 +1172,9 @@
       "pick_1x2": "2",
       "my_score_a": 0,
       "my_score_b": 1,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
+      "actual_score_a": 0,
+      "actual_score_b": 0,
+      "status": "wrong",
       "points": 0
     },
     {
@@ -1189,10 +1189,10 @@
       "pick_1x2": "1",
       "my_score_a": 1,
       "my_score_b": 0,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
-      "points": 0
+      "actual_score_a": 3,
+      "actual_score_b": 1,
+      "status": "correct",
+      "points": 2
     },
     {
       "match_id": "69d75963fc9731931f39c309",
@@ -1206,9 +1206,9 @@
       "pick_1x2": "1",
       "my_score_a": 1,
       "my_score_b": 0,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
+      "actual_score_a": 1,
+      "actual_score_b": 3,
+      "status": "wrong",
       "points": 0
     },
     {
@@ -1223,10 +1223,10 @@
       "pick_1x2": "X",
       "my_score_a": 0,
       "my_score_b": 0,
-      "actual_score_a": null,
-      "actual_score_b": null,
-      "status": "pending",
-      "points": 0
+      "actual_score_a": 3,
+      "actual_score_b": 3,
+      "status": "correct",
+      "points": 2
     }
   ],
   "advancement": {
@@ -1236,15 +1236,21 @@
         "team_code": "BIH",
         "group": "B",
         "position": 3,
-        "status": "pending",
-        "points": 0
+        "actual_position": 3,
+        "qualified": true,
+        "bonus": true,
+        "status": "correct",
+        "points": 3
       },
       {
         "team_he": "דרום קוריאה",
         "team_code": "KOR",
         "group": "A",
         "position": 3,
-        "status": "pending",
+        "actual_position": null,
+        "qualified": false,
+        "bonus": false,
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1252,7 +1258,10 @@
         "team_code": "IRN",
         "group": "G",
         "position": 3,
-        "status": "pending",
+        "actual_position": null,
+        "qualified": false,
+        "bonus": false,
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1260,23 +1269,32 @@
         "team_code": "JPN",
         "group": "F",
         "position": 3,
-        "status": "pending",
-        "points": 0
+        "actual_position": 2,
+        "qualified": true,
+        "bonus": false,
+        "status": "correct",
+        "points": 2
       },
       {
         "team_he": "אוסטרליה",
         "team_code": "AUS",
         "group": "D",
         "position": 3,
-        "status": "pending",
-        "points": 0
+        "actual_position": 2,
+        "qualified": true,
+        "bonus": false,
+        "status": "correct",
+        "points": 2
       },
       {
         "team_he": "סקוטלנד",
         "team_code": "SCO",
         "group": "C",
         "position": 3,
-        "status": "pending",
+        "actual_position": null,
+        "qualified": false,
+        "bonus": false,
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1284,7 +1302,10 @@
         "team_code": "KSA",
         "group": "H",
         "position": 3,
-        "status": "pending",
+        "actual_position": null,
+        "qualified": false,
+        "bonus": false,
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1292,31 +1313,43 @@
         "team_code": "ECU",
         "group": "E",
         "position": 3,
-        "status": "pending",
-        "points": 0
+        "actual_position": 3,
+        "qualified": true,
+        "bonus": true,
+        "status": "correct",
+        "points": 3
       },
       {
         "team_he": "מרוקו",
         "team_code": "MAR",
         "group": "C",
         "position": 2,
-        "status": "pending",
-        "points": 0
+        "actual_position": 2,
+        "qualified": true,
+        "bonus": true,
+        "status": "correct",
+        "points": 3
       },
       {
         "team_he": "מצרים",
         "team_code": "EGY",
         "group": "G",
         "position": 2,
-        "status": "pending",
-        "points": 0
+        "actual_position": 2,
+        "qualified": true,
+        "bonus": true,
+        "status": "correct",
+        "points": 3
       },
       {
         "team_he": "אורוגוואי",
         "team_code": "URU",
         "group": "H",
         "position": 1,
-        "status": "pending",
+        "actual_position": null,
+        "qualified": false,
+        "bonus": false,
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1324,111 +1357,153 @@
         "team_code": "CPV",
         "group": "H",
         "position": 2,
-        "status": "pending",
-        "points": 0
+        "actual_position": 2,
+        "qualified": true,
+        "bonus": true,
+        "status": "correct",
+        "points": 3
       },
       {
         "team_he": "חוף השנהב",
         "team_code": "CIV",
         "group": "E",
         "position": 2,
-        "status": "pending",
-        "points": 0
+        "actual_position": 2,
+        "qualified": true,
+        "bonus": true,
+        "status": "correct",
+        "points": 3
       },
       {
         "team_he": "גרמניה",
         "team_code": "GER",
         "group": "E",
         "position": 1,
-        "status": "pending",
-        "points": 0
+        "actual_position": 1,
+        "qualified": true,
+        "bonus": true,
+        "status": "correct",
+        "points": 3
       },
       {
         "team_he": "אוסטריה",
         "team_code": "AUT",
         "group": "J",
         "position": 2,
-        "status": "pending",
-        "points": 0
+        "actual_position": 2,
+        "qualified": true,
+        "bonus": true,
+        "status": "correct",
+        "points": 3
       },
       {
         "team_he": "קרואטיה",
         "team_code": "CRO",
         "group": "L",
         "position": 1,
-        "status": "pending",
-        "points": 0
+        "actual_position": 2,
+        "qualified": true,
+        "bonus": false,
+        "status": "correct",
+        "points": 2
       },
       {
         "team_he": "פורטוגל",
         "team_code": "POR",
         "group": "K",
         "position": 1,
-        "status": "pending",
-        "points": 0
+        "actual_position": 2,
+        "qualified": true,
+        "bonus": false,
+        "status": "correct",
+        "points": 2
       },
       {
         "team_he": "צרפת",
         "team_code": "FRA",
         "group": "I",
         "position": 1,
-        "status": "pending",
-        "points": 0
+        "actual_position": 1,
+        "qualified": true,
+        "bonus": true,
+        "status": "correct",
+        "points": 3
       },
       {
         "team_he": "קולומביה",
         "team_code": "COL",
         "group": "K",
         "position": 2,
-        "status": "pending",
-        "points": 0
+        "actual_position": 1,
+        "qualified": true,
+        "bonus": false,
+        "status": "correct",
+        "points": 2
       },
       {
         "team_he": "בלגיה",
         "team_code": "BEL",
         "group": "G",
         "position": 1,
-        "status": "pending",
-        "points": 0
+        "actual_position": 1,
+        "qualified": true,
+        "bonus": true,
+        "status": "correct",
+        "points": 3
       },
       {
         "team_he": "נורבגיה",
         "team_code": "NOR",
         "group": "I",
         "position": 2,
-        "status": "pending",
-        "points": 0
+        "actual_position": 2,
+        "qualified": true,
+        "bonus": true,
+        "status": "correct",
+        "points": 3
       },
       {
         "team_he": "אלג'יריה",
         "team_code": "ALG",
         "group": "J",
         "position": 1,
-        "status": "pending",
-        "points": 0
+        "actual_position": 3,
+        "qualified": true,
+        "bonus": false,
+        "status": "correct",
+        "points": 2
       },
       {
         "team_he": "גאנה",
         "team_code": "GHA",
         "group": "L",
         "position": 2,
-        "status": "pending",
-        "points": 0
+        "actual_position": 3,
+        "qualified": true,
+        "bonus": false,
+        "status": "correct",
+        "points": 2
       },
       {
         "team_he": "שוודיה",
         "team_code": "SWE",
         "group": "F",
         "position": 2,
-        "status": "pending",
-        "points": 0
+        "actual_position": 3,
+        "qualified": true,
+        "bonus": false,
+        "status": "correct",
+        "points": 2
       },
       {
         "team_he": "תוניסיה",
         "team_code": "TUN",
         "group": "F",
         "position": 1,
-        "status": "pending",
+        "actual_position": null,
+        "qualified": false,
+        "bonus": false,
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1436,15 +1511,21 @@
         "team_code": "USA",
         "group": "D",
         "position": 2,
-        "status": "pending",
-        "points": 0
+        "actual_position": 1,
+        "qualified": true,
+        "bonus": false,
+        "status": "correct",
+        "points": 2
       },
       {
         "team_he": "טורקיה",
         "team_code": "TUR",
         "group": "D",
         "position": 1,
-        "status": "pending",
+        "actual_position": null,
+        "qualified": false,
+        "bonus": false,
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1452,7 +1533,10 @@
         "team_code": "CZE",
         "group": "A",
         "position": 2,
-        "status": "pending",
+        "actual_position": null,
+        "qualified": false,
+        "bonus": false,
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1460,32 +1544,44 @@
         "team_code": "SUI",
         "group": "B",
         "position": 1,
-        "status": "pending",
-        "points": 0
+        "actual_position": 1,
+        "qualified": true,
+        "bonus": true,
+        "status": "correct",
+        "points": 3
       },
       {
         "team_he": "קנדה",
         "team_code": "CAN",
         "group": "B",
         "position": 2,
-        "status": "pending",
-        "points": 0
+        "actual_position": 2,
+        "qualified": true,
+        "bonus": true,
+        "status": "correct",
+        "points": 3
       },
       {
         "team_he": "ברזיל",
         "team_code": "BRA",
         "group": "C",
         "position": 1,
-        "status": "pending",
-        "points": 0
+        "actual_position": 1,
+        "qualified": true,
+        "bonus": true,
+        "status": "correct",
+        "points": 3
       },
       {
         "team_he": "מקסיקו",
         "team_code": "MEX",
         "group": "A",
         "position": 1,
-        "status": "pending",
-        "points": 0
+        "actual_position": 1,
+        "qualified": true,
+        "bonus": true,
+        "status": "correct",
+        "points": 3
       }
     ],
     "round_of_16": [
@@ -1707,6 +1803,13 @@
       }
     ]
   },
+  "qualification": {
+    "points": 63,
+    "qualified_correct": 24,
+    "bonus_correct": 15,
+    "total_picks": 32,
+    "resolved": true
+  },
   "champion": {
     "team_he": "ברזיל",
     "team_code": "BRA",
@@ -1806,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 54,
-    "projected_total": 54,
+    "official_total": 135,
+    "projected_total": 135,
     "extra_points": 0,
     "fields": [
       {
@@ -1876,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-06-25T17:12:31+00:00"
+  "synced_at": "2026-06-28T05:31:01+00:00"
 }
