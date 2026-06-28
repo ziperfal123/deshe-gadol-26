@@ -1,6 +1,8 @@
 {
   "note": "Hebrew picked player name -> canonical Latin name, for top_scorer/top_assists/best_player matching. Engine should accent-normalize both sides before comparing to feed names (openfootball goal events / API-Football). best_player is resolved manually (subjective award).",
   "players": {
+    "ברונו גימראיש": "Bruno Guimarães",
+    "אלכסנדר איסק": "Alexander Isak",
     "קיליאן אמבפה": "Kylian Mbappé",
     "הארי קיין": "Harry Kane",
     "ארלינג האלנד": "Erling Haaland",

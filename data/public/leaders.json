@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-06-28T05:49:34+00:00",
+  "synced_at": "2026-06-28T05:57:16+00:00",
   "fields": {
     "top_scorer": {
       "kind": "player",
@@ -17,10 +17,23 @@
     "top_assists": {
       "kind": "player",
       "points": 15,
-      "live": false,
-      "value": 0,
-      "leaders": [],
-      "source": "computed"
+      "live": true,
+      "value": 3,
+      "leaders": [
+        {
+          "name": "alexander isak",
+          "name_he": "אלכסנדר איסק"
+        },
+        {
+          "name": "bruno guimaraes",
+          "name_he": "ברונו גימראיש"
+        },
+        {
+          "name": "michael olise",
+          "name_he": "מייקל אוליסה"
+        }
+      ],
+      "source": "override"
     },
     "most_goals_group_stage_team": {
       "kind": "team",
@@ -41,7 +54,7 @@
           "name_he": "הולנד"
         }
       ],
-      "source": "override"
+      "source": "computed"
     },
     "most_conceded_group_stage_team": {
       "kind": "team",
@@ -58,7 +71,7 @@
           "name_he": "תוניסיה"
         }
       ],
-      "source": "override"
+      "source": "computed"
     },
     "most_goals_tournament_team": {
       "kind": "team",

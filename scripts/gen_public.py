@@ -313,13 +313,15 @@ live = {"top_scorer": bool(of_full), "top_assists": api_state == "live",
         "most_cards_team": api_state == "live", "least_cards_team": api_state == "live"}
 overridden = set()
 for key, o in SPECIAL_OVERRIDES.items():
+    if live.get(key):  # FRESH feed/API data exists -> prefer it; hardcoded is only a fallback
+        continue
     if key in TEAM_FIELDS and o.get("teams") is not None:
         lead_set[key] = set(o["teams"]); lead_val[key] = o.get("value"); live[key] = True; overridden.add(key)
     elif key not in TEAM_FIELDS and o.get("players") is not None:
         lead_set[key] = {_norm(PLAYER_ALIAS.get(n, n)) for n in o["players"]}
         lead_val[key] = o.get("value"); live[key] = True; overridden.add(key)
 if overridden:
-    print("special overrides applied (single source of truth):", sorted(overridden))
+    print("hardcoded fallback used (no fresh data):", sorted(overridden))
 
 def _match_player(value, leader_set):
     lat = PLAYER_ALIAS.get((value or "").strip())

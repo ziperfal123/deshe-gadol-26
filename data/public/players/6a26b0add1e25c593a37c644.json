@@ -1910,8 +1910,8 @@
   ],
   "projected": {
     "official_total": 151,
-    "projected_total": 181,
-    "extra_points": 30,
+    "projected_total": 196,
+    "extra_points": 45,
     "fields": [
       {
         "key": "top_scorer",
@@ -1925,9 +1925,9 @@
         "key": "top_assists",
         "value": "מייקל אוליסה",
         "points_if_correct": 15,
-        "leader": false,
-        "points": 0,
-        "status": "pending"
+        "leader": true,
+        "points": 15,
+        "status": "leading"
       },
       {
         "key": "most_goals_group_stage_team",
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-06-28T05:49:34+00:00"
+  "synced_at": "2026-06-28T05:57:16+00:00"
 }

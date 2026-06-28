@@ -1,6 +1,10 @@
 {
-  "note": "Hardcoded authoritative answers for special-bet superlatives. When a field appears here it is the SINGLE SOURCE OF TRUTH and overrides the API/computed leader. Fields NOT listed keep the current behavior (computed from the feed, or 'לא זמין' if no data). Ties: list every leader; all pickers of any listed entry are scored. Team fields use FIFA codes (see teams.json); a leader's `value` is the metric (goals/cards) shown in the UI.",
+  "note": "Hardcoded FALLBACK answers for special-bet superlatives. Priority: the live feed/API is preferred when available (it's fresher); a field here is used ONLY when that field has no live data (e.g. cards/assists with no API key). If a field has neither, it shows 'לא זמין'. Ties: list every leader; all pickers of any listed entry are scored. Team fields use FIFA codes (see teams.json); player fields use canonical Hebrew names (player_alias.json). `value` is the metric (goals/cards/assists) shown in the UI.",
   "fields": {
+    "top_assists": {
+      "players": ["מייקל אוליסה", "ברונו גימראיש", "אלכסנדר איסק"],
+      "value": 3
+    },
     "most_goals_group_stage_team": {
       "teams": ["GER", "NED", "FRA"],
       "teams_he": ["גרמניה", "הולנד", "צרפת"],
