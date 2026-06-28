@@ -17,6 +17,7 @@ import { Header } from '../components/Header'
 import { NavTabs } from '../components/NavTabs'
 import { ScoreModeTabs } from '../components/ScoreModeTabs'
 import { ProjectedBanner } from '../components/ProjectedBanner'
+import { ProjectedDialog } from '../components/ProjectedDialog'
 import { GroupViewBar } from '../components/GroupViewBar'
 import { GroupEditorDialog } from '../components/GroupEditorDialog'
 
@@ -62,6 +63,7 @@ export function StandingsPage() {
   const sidebarRef = useRef<HTMLElement>(null)
   const [sidebarTop, setSidebarTop] = useState(0)
   const projected = mode === 'projected'
+  const [projDialog, setProjDialog] = useState(false)
 
   useEventListener('scroll', () => setScrolled(window.scrollY > 250))
 
@@ -153,11 +155,16 @@ export function StandingsPage() {
           style={{ top: isDesktop ? headerH : 0 }}
         >
           <div className="mx-auto max-w-3xl px-4 py-3">
-            {/* mobile/tablet: in-flow banner; desktop (xl): moved to the fixed gutter sidebar below */}
+            {/* mobile/tablet: tappable in-flow banner (opens the expanded dialog); desktop (xl): fixed gutter sidebar below */}
             {projected && (
-              <div className="xl:hidden">
+              <button
+                type="button"
+                onClick={() => setProjDialog(true)}
+                aria-label="הצג ניקוד משוער מורחב"
+                className="block w-full text-right transition active:scale-[0.99] xl:hidden"
+              >
                 <ProjectedBanner leaders={leaders} />
-              </div>
+              </button>
             )}
             {renderSearchIfNeeded(data, query, setQuery, rows, scrolled, flashScrollTo)}
           </div>
@@ -178,6 +185,7 @@ export function StandingsPage() {
       <div className="mx-auto max-w-3xl px-4 pb-16 pt-3">
         {renderListIfNeeded(ready, error, rows, query, projected, onRowClick)}
       </div>
+      {projected && projDialog && <ProjectedDialog leaders={leaders} onClose={() => setProjDialog(false)} />}
       {renderEditorIfNeeded(editor, data, onSaveGroup, onDeleteGroup, () => setEditor({ open: false }))}
     </div>
   )

@@ -46,7 +46,7 @@ export function ProjectedBanner({
   return (
     <div
       className={cn(
-        'overflow-hidden rounded-2xl border border-clay/40 shadow-soft',
+        'overflow-hidden rounded-2xl border border-clay/40 bg-sand shadow-soft',
         vertical ? '' : 'mb-2 mx-auto max-w-md',
       )}
     >
