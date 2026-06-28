@@ -282,35 +282,64 @@ if API_KEY and API_LEAGUE:
 else:
     print("API-Football key/league not set — assists + cards stay pending.")
 
-# ---- field config: leader set + how a player's pick is matched ----
+# ---- hardcoded overrides: any field listed here is the SINGLE SOURCE OF TRUTH ----
+# (team fields give FIFA codes; player fields give canonical Hebrew names). Fields
+# not overridden keep their computed/API leaders (or stay 'not available').
+try:
+    SPECIAL_OVERRIDES = load("special_overrides.json").get("fields", {})
+except FileNotFoundError:
+    SPECIAL_OVERRIDES = {}
+
+TEAM_FIELDS = {"most_goals_group_stage_team", "most_conceded_group_stage_team",
+               "most_goals_tournament_team", "most_conceded_tournament_team",
+               "most_cards_team", "least_cards_team"}
+POINTS = {"top_scorer": 20, "top_assists": 15, "most_goals_group_stage_team": 10,
+          "most_conceded_group_stage_team": 10, "most_goals_tournament_team": 10,
+          "most_conceded_tournament_team": 10, "most_cards_team": 10, "least_cards_team": 10}
+FIELD_ORDER = list(POINTS)
+
+# default (computed / API) leaders per field; overrides replace these below.
+lead_set = {"top_scorer": scorer_leaders, "top_assists": assist_leaders,
+            "most_goals_group_stage_team": mg_grp_leaders, "most_conceded_group_stage_team": mc_grp_leaders,
+            "most_goals_tournament_team": mg_tot_leaders, "most_conceded_tournament_team": mc_tot_leaders,
+            "most_cards_team": cards_most_leaders, "least_cards_team": cards_least_leaders}
+lead_val = {"top_scorer": scorer_max, "top_assists": assist_max,
+            "most_goals_group_stage_team": mg_grp_val, "most_conceded_group_stage_team": mc_grp_val,
+            "most_goals_tournament_team": mg_tot_val, "most_conceded_tournament_team": mc_tot_val,
+            "most_cards_team": cards_most_val, "least_cards_team": cards_least_val}
+live = {"top_scorer": bool(of_full), "top_assists": api_state == "live",
+        "most_goals_group_stage_team": bool(of_full), "most_conceded_group_stage_team": bool(of_full),
+        "most_goals_tournament_team": bool(of_full), "most_conceded_tournament_team": bool(of_full),
+        "most_cards_team": api_state == "live", "least_cards_team": api_state == "live"}
+overridden = set()
+for key, o in SPECIAL_OVERRIDES.items():
+    if key in TEAM_FIELDS and o.get("teams") is not None:
+        lead_set[key] = set(o["teams"]); lead_val[key] = o.get("value"); live[key] = True; overridden.add(key)
+    elif key not in TEAM_FIELDS and o.get("players") is not None:
+        lead_set[key] = {_norm(PLAYER_ALIAS.get(n, n)) for n in o["players"]}
+        lead_val[key] = o.get("value"); live[key] = True; overridden.add(key)
+if overridden:
+    print("special overrides applied (single source of truth):", sorted(overridden))
+
 def _match_player(value, leader_set):
     lat = PLAYER_ALIAS.get((value or "").strip())
     return bool(lat) and _norm(lat) in leader_set
 def _match_team(value, leader_set):
     return code_by_he.get((value or "").strip()) in leader_set
-
-SUPER_FIELDS = [
-    ("top_scorer",                   20, scorer_leaders,     _match_player, bool(of_full)),
-    ("top_assists",                  15, assist_leaders,     _match_player, api_state == "live"),
-    ("most_goals_group_stage_team",  10, mg_grp_leaders,     _match_team,   bool(of_full)),
-    ("most_conceded_group_stage_team",10, mc_grp_leaders,    _match_team,   bool(of_full)),
-    ("most_goals_tournament_team",   10, mg_tot_leaders,     _match_team,   bool(of_full)),
-    ("most_conceded_tournament_team",10, mc_tot_leaders,     _match_team,   bool(of_full)),
-    ("most_cards_team",              10, cards_most_leaders, _match_team,   api_state == "live"),
-    ("least_cards_team",             10, cards_least_leaders,_match_team,   api_state == "live"),
-]
+def _matcher(key):
+    return _match_team if key in TEAM_FIELDS else _match_player
 
 def projected_for(sp):
-    """Provisional superlative points for one player's special picks."""
+    """Provisional superlative points for one player's special picks (override > computed)."""
     out, gained = [], 0
-    for key, pts, leader_set, matcher, live in SUPER_FIELDS:
-        val = sp.get(key)
-        is_leader = bool(val) and live and matcher(val, leader_set)
+    for key in FIELD_ORDER:
+        val, pts = sp.get(key), POINTS[key]
+        is_leader = bool(val) and live[key] and _matcher(key)(val, lead_set[key])
         if is_leader:
             gained += pts
         out.append({"key": key, "value": val, "points_if_correct": pts,
                     "leader": is_leader, "points": pts if is_leader else 0,
-                    "status": ("leading" if is_leader else ("pending" if not live else "trailing"))})
+                    "status": ("leading" if is_leader else ("pending" if not live[key] else "trailing"))})
     return out, gained
 
 # ---- score group stage per player ----
@@ -474,27 +503,15 @@ for _he, _lat in PLAYER_ALIAS.items():
 def _player_names(norm_set, display):
     return [{"name": display.get(k, k), "name_he": latin_to_he.get(k)} for k in sorted(norm_set)]
 
-leaders_out = {
-    "top_scorer": {"kind": "player", "points": 20, "live": bool(of_full),
-                   "value": scorer_max, "leaders": _player_names(scorer_leaders, scorer_display)},
-    "top_assists": {"kind": "player", "points": 15, "live": api_state == "live",
-                    "value": assist_max, "leaders": _player_names(assist_leaders, assist_display),
-                    "state": api_state},
-    "most_goals_group_stage_team": {"kind": "team", "points": 10, "live": bool(of_full),
-                                    "value": mg_grp_val, "leaders": _team_names(mg_grp_leaders)},
-    "most_conceded_group_stage_team": {"kind": "team", "points": 10, "live": bool(of_full),
-                                       "value": mc_grp_val, "leaders": _team_names(mc_grp_leaders)},
-    "most_goals_tournament_team": {"kind": "team", "points": 10, "live": bool(of_full),
-                                   "value": mg_tot_val, "leaders": _team_names(mg_tot_leaders)},
-    "most_conceded_tournament_team": {"kind": "team", "points": 10, "live": bool(of_full),
-                                      "value": mc_tot_val, "leaders": _team_names(mc_tot_leaders)},
-    "most_cards_team": {"kind": "team", "points": 10, "live": api_state == "live",
-                        "value": cards_most_val, "leaders": _team_names(cards_most_leaders),
-                        "state": api_state},
-    "least_cards_team": {"kind": "team", "points": 10, "live": api_state == "live",
-                         "value": cards_least_val, "leaders": _team_names(cards_least_leaders),
-                         "state": api_state},
-}
+_player_display = {"top_scorer": scorer_display, "top_assists": assist_display}
+leaders_out = {}
+for key in FIELD_ORDER:
+    is_team = key in TEAM_FIELDS
+    names = _team_names(lead_set[key]) if is_team else _player_names(lead_set[key], _player_display.get(key, {}))
+    entry = {"kind": "team" if is_team else "player", "points": POINTS[key],
+             "live": live[key], "value": lead_val[key], "leaders": names,
+             "source": "override" if key in overridden else "computed"}
+    leaders_out[key] = entry
 
 # ---- crowd split per match: how all players guessed each game (1/X/2) ----
 match_picks = {}
@@ -608,7 +625,7 @@ PUB.mkdir(parents=True, exist_ok=True)
 json.dump({"synced_at": synced, "players_played": len(results), "standings": rows},
           open(PUB / "standings.json", "w", encoding="utf-8"), ensure_ascii=False, indent=2)
 # projected standings (official + provisional superlative points) + current leaders
-PROJECTED_FIELDS = [k for (k, *_ ) in SUPER_FIELDS]
+PROJECTED_FIELDS = list(FIELD_ORDER)
 json.dump({"synced_at": synced, "players_played": len(results),
            "included_fields": PROJECTED_FIELDS, "api_state": api_state, "standings": proj_rows},
           open(PUB / "standings_projected.json", "w", encoding="utf-8"), ensure_ascii=False, indent=2)

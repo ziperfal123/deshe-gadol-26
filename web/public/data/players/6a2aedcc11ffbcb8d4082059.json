@@ -1910,8 +1910,8 @@
   ],
   "projected": {
     "official_total": 165,
-    "projected_total": 175,
-    "extra_points": 10,
+    "projected_total": 195,
+    "extra_points": 30,
     "fields": [
       {
         "key": "top_scorer",
@@ -1965,19 +1965,19 @@
         "key": "most_cards_team",
         "value": "פרגוואי",
         "points_if_correct": 10,
-        "leader": false,
-        "points": 0,
-        "status": "pending"
+        "leader": true,
+        "points": 10,
+        "status": "leading"
       },
       {
         "key": "least_cards_team",
         "value": "יפן",
         "points_if_correct": 10,
-        "leader": false,
-        "points": 0,
-        "status": "pending"
+        "leader": true,
+        "points": 10,
+        "status": "leading"
       }
     ]
   },
-  "synced_at": "2026-06-28T05:31:01+00:00"
+  "synced_at": "2026-06-28T05:49:34+00:00"
 }

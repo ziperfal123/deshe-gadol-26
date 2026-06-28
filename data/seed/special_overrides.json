@@ -1,0 +1,25 @@
+{
+  "note": "Hardcoded authoritative answers for special-bet superlatives. When a field appears here it is the SINGLE SOURCE OF TRUTH and overrides the API/computed leader. Fields NOT listed keep the current behavior (computed from the feed, or 'לא זמין' if no data). Ties: list every leader; all pickers of any listed entry are scored. Team fields use FIFA codes (see teams.json); a leader's `value` is the metric (goals/cards) shown in the UI.",
+  "fields": {
+    "most_goals_group_stage_team": {
+      "teams": ["GER", "NED", "FRA"],
+      "teams_he": ["גרמניה", "הולנד", "צרפת"],
+      "value": 10
+    },
+    "most_conceded_group_stage_team": {
+      "teams": ["TUN", "IRQ"],
+      "teams_he": ["תוניסיה", "עיראק"],
+      "value": 12
+    },
+    "most_cards_team": {
+      "teams": ["PAR"],
+      "teams_he": ["פרגוואי"],
+      "value": 8
+    },
+    "least_cards_team": {
+      "teams": ["CZE", "GER", "JPN", "TUN", "FRA", "NOR", "ALG"],
+      "teams_he": ["צ׳כיה", "גרמניה", "יפן", "תוניסיה", "צרפת", "נורבגיה", "אלג'יריה"],
+      "value": null
+    }
+  }
+}

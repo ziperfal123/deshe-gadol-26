@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-06-28T05:31:01+00:00",
+  "synced_at": "2026-06-28T05:49:34+00:00",
   "fields": {
     "top_scorer": {
       "kind": "player",
@@ -11,7 +11,8 @@
           "name": "Lionel Messi",
           "name_he": "ליאו מסי"
         }
-      ]
+      ],
+      "source": "computed"
     },
     "top_assists": {
       "kind": "player",
@@ -19,7 +20,7 @@
       "live": false,
       "value": 0,
       "leaders": [],
-      "state": "pending_no_key"
+      "source": "computed"
     },
     "most_goals_group_stage_team": {
       "kind": "team",
@@ -39,7 +40,8 @@
           "code": "NED",
           "name_he": "הולנד"
         }
-      ]
+      ],
+      "source": "override"
     },
     "most_conceded_group_stage_team": {
       "kind": "team",
@@ -55,7 +57,8 @@
           "code": "TUN",
           "name_he": "תוניסיה"
         }
-      ]
+      ],
+      "source": "override"
     },
     "most_goals_tournament_team": {
       "kind": "team",
@@ -75,7 +78,8 @@
           "code": "NED",
           "name_he": "הולנד"
         }
-      ]
+      ],
+      "source": "computed"
     },
     "most_conceded_tournament_team": {
       "kind": "team",
@@ -91,23 +95,58 @@
           "code": "TUN",
           "name_he": "תוניסיה"
         }
-      ]
+      ],
+      "source": "computed"
     },
     "most_cards_team": {
       "kind": "team",
       "points": 10,
-      "live": false,
-      "value": null,
-      "leaders": [],
-      "state": "pending_no_key"
+      "live": true,
+      "value": 8,
+      "leaders": [
+        {
+          "code": "PAR",
+          "name_he": "פרגוואי"
+        }
+      ],
+      "source": "override"
     },
     "least_cards_team": {
       "kind": "team",
       "points": 10,
-      "live": false,
+      "live": true,
       "value": null,
-      "leaders": [],
-      "state": "pending_no_key"
+      "leaders": [
+        {
+          "code": "ALG",
+          "name_he": "אלג'יריה"
+        },
+        {
+          "code": "CZE",
+          "name_he": "צ׳כיה"
+        },
+        {
+          "code": "FRA",
+          "name_he": "צרפת"
+        },
+        {
+          "code": "GER",
+          "name_he": "גרמניה"
+        },
+        {
+          "code": "JPN",
+          "name_he": "יפן"
+        },
+        {
+          "code": "NOR",
+          "name_he": "נורבגיה"
+        },
+        {
+          "code": "TUN",
+          "name_he": "תוניסיה"
+        }
+      ],
+      "source": "override"
     }
   }
 }

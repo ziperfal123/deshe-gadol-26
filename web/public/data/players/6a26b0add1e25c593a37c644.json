@@ -1910,8 +1910,8 @@
   ],
   "projected": {
     "official_total": 151,
-    "projected_total": 171,
-    "extra_points": 20,
+    "projected_total": 181,
+    "extra_points": 30,
     "fields": [
       {
         "key": "top_scorer",
@@ -1967,17 +1967,17 @@
         "points_if_correct": 10,
         "leader": false,
         "points": 0,
-        "status": "pending"
+        "status": "trailing"
       },
       {
         "key": "least_cards_team",
         "value": "נורבגיה",
         "points_if_correct": 10,
-        "leader": false,
-        "points": 0,
-        "status": "pending"
+        "leader": true,
+        "points": 10,
+        "status": "leading"
       }
     ]
   },
-  "synced_at": "2026-06-28T05:31:01+00:00"
+  "synced_at": "2026-06-28T05:49:34+00:00"
 }
