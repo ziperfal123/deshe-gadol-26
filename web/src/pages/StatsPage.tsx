@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import type { Distribution, GroupHighlight, StatChoice, StatsFile } from '../types'
 import { fetchStats, peekStats } from '../lib/data'
 import { teamFlag } from '../lib/flags'
@@ -38,6 +38,7 @@ function renderBodyIfNeeded(stats: StatsFile | undefined, error: boolean) {
       <p className="mt-4 text-center text-xs text-ink/45">פילוח כל הניחושים · {stats.total_players} משתתפים</p>
       <ChampionCard champion={stats.champion} />
       <KnockoutCard advancement={stats.advancement} />
+      <TeamLookupCard advancement={stats.advancement} champion={stats.champion} totalPlayers={stats.total_players} />
       <SpecialsCard specials={stats.specials} />
       <GroupCard group={stats.group} />
     </>
@@ -138,6 +139,102 @@ function GroupCard({ group }: { group: StatsFile['group'] }) {
           <HighlightList rows={group.most_split} />
         </div>
       </div>
+    </Card>
+  )
+}
+
+const TEAM_STAGE_LABELS: [string, string][] = [
+  ['round_of_16', 'שמינית'],
+  ['quarter_final', 'רבע'],
+  ['semi_final', 'חצי'],
+  ['final', 'גמר'],
+  ['champion', 'אלוף'],
+]
+
+function TeamLookupCard({
+  advancement,
+  champion,
+  totalPlayers,
+}: {
+  advancement: Record<string, Distribution>
+  champion: Distribution
+  totalPlayers: number
+}) {
+  const [selected, setSelected] = useState<string | undefined>(undefined)
+
+  const allTeams = useMemo(() => {
+    const map = new Map<string, { code: string; name: string }>()
+    const allDists = [
+      ...Object.values(advancement).flatMap((d) => d.dist),
+      ...champion.dist,
+    ]
+    for (const item of allDists) {
+      if (item.code && !map.has(item.code)) map.set(item.code, { code: item.code, name: item.value })
+    }
+    return [...map.values()].sort((a, b) => a.name.localeCompare(b.name, 'he'))
+  }, [advancement, champion])
+
+  const stageMap = useMemo(() => {
+    const result: Record<string, Record<string, { count: number; pct: number }>> = {}
+    for (const [stage, dist] of Object.entries(advancement)) {
+      for (const item of dist.dist) {
+        if (!item.code) continue
+        if (!result[item.code]) result[item.code] = {}
+        result[item.code][stage] = { count: item.count, pct: item.pct }
+      }
+    }
+    for (const item of champion.dist) {
+      if (!item.code) continue
+      if (!result[item.code]) result[item.code] = {}
+      result[item.code]['champion'] = { count: item.count, pct: item.pct }
+    }
+    return result
+  }, [advancement, champion])
+
+  const teamData = selected ? stageMap[selected] : undefined
+
+  return (
+    <Card title="פילוח לפי נבחרת" emoji="🔍">
+      <p className="mb-3 text-xs text-ink/40">בחר נבחרת כדי לראות כמה משתתפים בחרו אותה לכל שלב</p>
+      <div className="flex flex-wrap gap-2">
+        {allTeams.map((t) => (
+          <button
+            key={t.code}
+            onClick={() => setSelected(selected === t.code ? undefined : t.code)}
+            className={`flex items-center gap-1 rounded-full border px-2.5 py-1 text-xs font-medium transition-colors ${
+              selected === t.code
+                ? 'border-sage bg-sage text-white'
+                : 'border-ink/10 bg-sand/60 text-ink hover:border-sage/50'
+            }`}
+          >
+            <span>{teamFlag(t.code)}</span>
+            <span>{t.name}</span>
+          </button>
+        ))}
+      </div>
+
+      {selected && teamData && (
+        <div className="mt-4 rounded-2xl border border-ink/5 bg-sand/50 p-3">
+          <div className="mb-2 text-sm font-bold text-ink">
+            {teamFlag(selected)} {allTeams.find((t) => t.code === selected)?.name}
+          </div>
+          <div className="grid grid-cols-5 gap-2">
+            {TEAM_STAGE_LABELS.map(([stage, label]) => {
+              const data = teamData[stage]
+              const count = data?.count ?? 0
+              const pct = data?.pct ?? 0
+              return (
+                <div key={stage} className="flex flex-col items-center gap-1 rounded-xl bg-white p-2 text-center shadow-soft">
+                  <span className="text-xs text-ink/40">{label}</span>
+                  <span className="text-base font-bold text-ink">{count}</span>
+                  <span className="text-xs font-semibold text-sage">{pct}%</span>
+                </div>
+              )
+            })}
+          </div>
+          <p className="mt-2 text-center text-xs text-ink/30">מתוך {totalPlayers} משתתפים</p>
+        </div>
+      )}
     </Card>
   )
 }
