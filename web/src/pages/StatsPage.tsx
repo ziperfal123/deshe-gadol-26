@@ -149,7 +149,7 @@ const TEAM_STAGE_LABELS: [string, string][] = [
   ['quarter_final', 'רבע'],
   ['semi_final', 'חצי'],
   ['final', 'גמר'],
-  ['champion', 'אלוף'],
+  ['winner', 'אלוף'],
 ]
 
 function TeamLookupCard({
@@ -188,7 +188,7 @@ function TeamLookupCard({
     for (const item of champion.dist) {
       if (!item.code) continue
       if (!result[item.code]) result[item.code] = {}
-      result[item.code]['champion'] = { count: item.count, pct: item.pct }
+      result[item.code]['winner'] = { count: item.count, pct: item.pct }
     }
     return result
   }, [advancement, champion])

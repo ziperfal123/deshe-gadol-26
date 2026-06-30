@@ -22,6 +22,8 @@ export const STAGE_LABELS: Record<string, string> = {
   quarter_final: 'רבע גמר',
   semi_final: 'חצי גמר',
   final: 'גמר',
+  champion: 'אלוף',
+  winner: 'אלוף',
 }
 
 /** Render a 1/X/2 pick as a short Hebrew-friendly token. */
