@@ -1,7 +1,7 @@
 {
   "player_id": "6a11f804bed41f45ec3f7820",
   "name": "תומר אזולאי",
-  "total_points": 211,
+  "total_points": 146,
   "correct_group": 34,
   "group_stage": [
     {
@@ -1589,8 +1589,8 @@
         "team_he": "נורבגיה",
         "team_code": "NOR",
         "points_if_correct": 5,
-        "status": "correct",
-        "points": 5
+        "status": "pending",
+        "points": 0
       },
       {
         "team_he": "מרוקו",
@@ -1603,36 +1603,36 @@
         "team_he": "אנגליה",
         "team_code": "ENG",
         "points_if_correct": 5,
-        "status": "correct",
-        "points": 5
+        "status": "pending",
+        "points": 0
       },
       {
         "team_he": "פורטוגל",
         "team_code": "POR",
         "points_if_correct": 5,
-        "status": "correct",
-        "points": 5
+        "status": "pending",
+        "points": 0
       },
       {
         "team_he": "שווייץ",
         "team_code": "SUI",
         "points_if_correct": 5,
-        "status": "correct",
-        "points": 5
+        "status": "pending",
+        "points": 0
       },
       {
         "team_he": "אלג'יריה",
         "team_code": "ALG",
         "points_if_correct": 5,
-        "status": "correct",
-        "points": 5
+        "status": "pending",
+        "points": 0
       },
       {
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 5,
-        "status": "correct",
-        "points": 5
+        "status": "pending",
+        "points": 0
       },
       {
         "team_he": "ברזיל",
@@ -1645,22 +1645,22 @@
         "team_he": "שוודיה",
         "team_code": "SWE",
         "points_if_correct": 5,
-        "status": "correct",
-        "points": 5
+        "status": "pending",
+        "points": 0
       },
       {
         "team_he": "ארצות הברית",
         "team_code": "USA",
         "points_if_correct": 5,
-        "status": "correct",
-        "points": 5
+        "status": "pending",
+        "points": 0
       },
       {
         "team_he": "הולנד",
         "team_code": "NED",
         "points_if_correct": 5,
-        "status": "correct",
-        "points": 5
+        "status": "wrong",
+        "points": 0
       },
       {
         "team_he": "טורקיה",
@@ -1673,29 +1673,29 @@
         "team_he": "גרמניה",
         "team_code": "GER",
         "points_if_correct": 5,
-        "status": "correct",
-        "points": 5
+        "status": "wrong",
+        "points": 0
       },
       {
         "team_he": "צרפת",
         "team_code": "FRA",
         "points_if_correct": 5,
-        "status": "correct",
-        "points": 5
+        "status": "pending",
+        "points": 0
       },
       {
         "team_he": "בלגיה",
         "team_code": "BEL",
         "points_if_correct": 5,
-        "status": "correct",
-        "points": 5
+        "status": "pending",
+        "points": 0
       },
       {
         "team_he": "ספרד",
         "team_code": "ESP",
         "points_if_correct": 5,
-        "status": "correct",
-        "points": 5
+        "status": "pending",
+        "points": 0
       }
     ],
     "quarter_final": [
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 211,
-    "projected_total": 221,
+    "official_total": 146,
+    "projected_total": 156,
     "extra_points": 10,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-06-30T06:26:02+00:00"
+  "synced_at": "2026-06-30T08:45:16+00:00"
 }

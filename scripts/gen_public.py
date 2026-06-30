@@ -32,16 +32,23 @@ except FileNotFoundError:
 
 try:
     ko = load("knockout_results.json")
-    qf_confirmed = set(ko.get("quarter_final", {}).get("confirmed", []))
-    qf_eliminated = set(ko.get("quarter_final", {}).get("eliminated_from_r16", []))
-    sf_confirmed = set(ko.get("semi_final", {}).get("confirmed", []))
-    sf_eliminated = set(ko.get("semi_final", {}).get("eliminated_from_qf", []))
-    fi_confirmed = set(ko.get("final", {}).get("confirmed", []))
-    fi_eliminated = set(ko.get("final", {}).get("eliminated_from_sf", []))
-    ko_winner = ko.get("winner")
+    # r32: first knockout round. winners = reached שמינית (score round_of_16 picks)
+    r32_winners = set(ko.get("r32", {}).get("winners", []))
+    r32_losers  = set(ko.get("r32", {}).get("losers",  []))
+    # r16: שמינית גמר. winners = reached רבע (score quarter_final picks)
+    r16_winners = set(ko.get("r16", {}).get("winners", []))
+    r16_losers  = set(ko.get("r16", {}).get("losers",  []))
+    # qf: רבע גמר. winners = reached חצי (score semi_final picks)
+    qf_winners  = set(ko.get("qf",  {}).get("winners", []))
+    qf_losers   = set(ko.get("qf",  {}).get("losers",  []))
+    # sf: חצי גמר. winners = reached גמר (score final picks)
+    sf_winners  = set(ko.get("sf",  {}).get("winners", []))
+    sf_losers   = set(ko.get("sf",  {}).get("losers",  []))
+    ko_winner   = ko.get("winner")
     ko_runner_up = ko.get("runner_up")
 except FileNotFoundError:
-    qf_confirmed = qf_eliminated = sf_confirmed = sf_eliminated = fi_confirmed = fi_eliminated = set()
+    r32_winners = r32_losers = r16_winners = r16_losers = set()
+    qf_winners  = qf_losers  = sf_winners  = sf_losers  = set()
     ko_winner = ko_runner_up = None
 
 teams = teams if isinstance(teams, list) else teams["teams"]
@@ -380,31 +387,32 @@ player_files = {}
 
 
 def _ko_status(stage, code, pts_each):
-    not_qualified = qual_resolved and code not in qualified_pos
+    not_in_bracket = qual_resolved and code not in qualified_pos
+
     if stage == "round_of_16":
-        if not qual_resolved:
-            return "pending", 0
-        if code in qualified_pos:
-            return "correct", pts_each
-        return "wrong", 0
+        # Correct = won R32 and reached שמינית גמר
+        if not_in_bracket or code in r32_losers: return "wrong", 0
+        if code in r32_winners: return "correct", pts_each
+        return "pending", 0
+
     if stage == "quarter_final":
-        if not_qualified or code in qf_eliminated:
-            return "wrong", 0
-        if code in qf_confirmed:
-            return "correct", pts_each
+        # Correct = won שמינית גמר and reached רבע גמר
+        if not_in_bracket or code in r32_losers or code in r16_losers: return "wrong", 0
+        if code in r16_winners: return "correct", pts_each
         return "pending", 0
+
     if stage == "semi_final":
-        if not_qualified or code in qf_eliminated or code in sf_eliminated:
-            return "wrong", 0
-        if code in sf_confirmed:
-            return "correct", pts_each
+        # Correct = won רבע גמר and reached חצי גמר
+        if not_in_bracket or code in r32_losers or code in r16_losers or code in qf_losers: return "wrong", 0
+        if code in qf_winners: return "correct", pts_each
         return "pending", 0
+
     if stage == "final":
-        if not_qualified or code in qf_eliminated or code in sf_eliminated or code in fi_eliminated:
-            return "wrong", 0
-        if code in fi_confirmed:
-            return "correct", pts_each
+        # Correct = won חצי גמר and reached גמר
+        if not_in_bracket or code in r32_losers or code in r16_losers or code in qf_losers or code in sf_losers: return "wrong", 0
+        if code in sf_winners: return "correct", pts_each
         return "pending", 0
+
     return "pending", 0
 
 

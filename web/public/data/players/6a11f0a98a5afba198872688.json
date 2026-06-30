@@ -1,7 +1,7 @@
 {
   "player_id": "6a11f0a98a5afba198872688",
   "name": "נמרוד אקרמן",
-  "total_points": 212,
+  "total_points": 147,
   "correct_group": 36,
   "group_stage": [
     {
@@ -1589,15 +1589,15 @@
         "team_he": "ספרד",
         "team_code": "ESP",
         "points_if_correct": 5,
-        "status": "correct",
-        "points": 5
+        "status": "pending",
+        "points": 0
       },
       {
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 5,
-        "status": "correct",
-        "points": 5
+        "status": "pending",
+        "points": 0
       },
       {
         "team_he": "ברזיל",
@@ -1610,15 +1610,15 @@
         "team_he": "נורבגיה",
         "team_code": "NOR",
         "points_if_correct": 5,
-        "status": "correct",
-        "points": 5
+        "status": "pending",
+        "points": 0
       },
       {
         "team_he": "הולנד",
         "team_code": "NED",
         "points_if_correct": 5,
-        "status": "correct",
-        "points": 5
+        "status": "wrong",
+        "points": 0
       },
       {
         "team_he": "מרוקו",
@@ -1638,15 +1638,15 @@
         "team_he": "פורטוגל",
         "team_code": "POR",
         "points_if_correct": 5,
-        "status": "correct",
-        "points": 5
+        "status": "pending",
+        "points": 0
       },
       {
         "team_he": "אנגליה",
         "team_code": "ENG",
         "points_if_correct": 5,
-        "status": "correct",
-        "points": 5
+        "status": "pending",
+        "points": 0
       },
       {
         "team_he": "קטאר",
@@ -1659,29 +1659,29 @@
         "team_he": "בלגיה",
         "team_code": "BEL",
         "points_if_correct": 5,
-        "status": "correct",
-        "points": 5
+        "status": "pending",
+        "points": 0
       },
       {
         "team_he": "קרואטיה",
         "team_code": "CRO",
         "points_if_correct": 5,
-        "status": "correct",
-        "points": 5
+        "status": "pending",
+        "points": 0
       },
       {
         "team_he": "גרמניה",
         "team_code": "GER",
         "points_if_correct": 5,
-        "status": "correct",
-        "points": 5
+        "status": "wrong",
+        "points": 0
       },
       {
         "team_he": "צרפת",
         "team_code": "FRA",
         "points_if_correct": 5,
-        "status": "correct",
-        "points": 5
+        "status": "pending",
+        "points": 0
       },
       {
         "team_he": "אורוגוואי",
@@ -1694,8 +1694,8 @@
         "team_he": "סנגל",
         "team_code": "SEN",
         "points_if_correct": 5,
-        "status": "correct",
-        "points": 5
+        "status": "pending",
+        "points": 0
       }
     ],
     "quarter_final": [
@@ -1703,8 +1703,8 @@
         "team_he": "ברזיל",
         "team_code": "BRA",
         "points_if_correct": 10,
-        "status": "correct",
-        "points": 10
+        "status": "pending",
+        "points": 0
       },
       {
         "team_he": "ספרד",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 212,
-    "projected_total": 222,
+    "official_total": 147,
+    "projected_total": 157,
     "extra_points": 10,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-06-30T06:26:02+00:00"
+  "synced_at": "2026-06-30T08:45:16+00:00"
 }

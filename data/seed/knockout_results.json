@@ -1,16 +1,26 @@
 {
-  "_comment": "Confirmed knockout advancement. Add teams as results come in.",
-  "quarter_final": {
-    "confirmed": ["MAR", "BRA", "PAR"],
-    "eliminated_from_r16": ["NED", "JPN", "GER"]
+  "_comment": "Knockout bracket results. 'winners' = advanced past this round. 'losers' = eliminated at this round.",
+  "_rounds": {
+    "r32": "First knockout round (32→16). Winners reach שמינית גמר. These score 'round_of_16' picks.",
+    "r16": "Round of 16 / שמינית גמר (16→8). Winners reach רבע גמר. These score 'quarter_final' picks.",
+    "qf": "Quarter-finals / רבע גמר (8→4). Winners reach חצי גמר. These score 'semi_final' picks.",
+    "sf": "Semi-finals / חצי גמר (4→2). Winners reach גמר. These score 'final' picks."
   },
-  "semi_final": {
-    "confirmed": [],
-    "eliminated_from_qf": []
+  "r32": {
+    "winners": ["MAR", "BRA", "PAR", "CAN"],
+    "losers": ["NED", "JPN", "GER", "RSA"]
   },
-  "final": {
-    "confirmed": [],
-    "eliminated_from_sf": []
+  "r16": {
+    "winners": [],
+    "losers": []
+  },
+  "qf": {
+    "winners": [],
+    "losers": []
+  },
+  "sf": {
+    "winners": [],
+    "losers": []
   },
   "winner": null,
   "runner_up": null

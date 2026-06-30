@@ -1,7 +1,7 @@
 {
   "player_id": "6a2a5615b7a1f536044a352e",
   "name": "שגיא גרינצייג ששל",
-  "total_points": 252,
+  "total_points": 172,
   "correct_group": 46,
   "group_stage": [
     {
@@ -1589,50 +1589,50 @@
         "team_he": "בלגיה",
         "team_code": "BEL",
         "points_if_correct": 5,
-        "status": "correct",
-        "points": 5
+        "status": "pending",
+        "points": 0
       },
       {
         "team_he": "ספרד",
         "team_code": "ESP",
         "points_if_correct": 5,
-        "status": "correct",
-        "points": 5
+        "status": "pending",
+        "points": 0
       },
       {
         "team_he": "צרפת",
         "team_code": "FRA",
         "points_if_correct": 5,
-        "status": "correct",
-        "points": 5
+        "status": "pending",
+        "points": 0
       },
       {
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 5,
-        "status": "correct",
-        "points": 5
+        "status": "pending",
+        "points": 0
       },
       {
         "team_he": "פורטוגל",
         "team_code": "POR",
         "points_if_correct": 5,
-        "status": "correct",
-        "points": 5
+        "status": "pending",
+        "points": 0
       },
       {
         "team_he": "אנגליה",
         "team_code": "ENG",
         "points_if_correct": 5,
-        "status": "correct",
-        "points": 5
+        "status": "pending",
+        "points": 0
       },
       {
         "team_he": "שווייץ",
         "team_code": "SUI",
         "points_if_correct": 5,
-        "status": "correct",
-        "points": 5
+        "status": "pending",
+        "points": 0
       },
       {
         "team_he": "ברזיל",
@@ -1645,29 +1645,29 @@
         "team_he": "ארצות הברית",
         "team_code": "USA",
         "points_if_correct": 5,
-        "status": "correct",
-        "points": 5
+        "status": "pending",
+        "points": 0
       },
       {
         "team_he": "שוודיה",
         "team_code": "SWE",
         "points_if_correct": 5,
-        "status": "correct",
-        "points": 5
+        "status": "pending",
+        "points": 0
       },
       {
         "team_he": "נורבגיה",
         "team_code": "NOR",
         "points_if_correct": 5,
-        "status": "correct",
-        "points": 5
+        "status": "pending",
+        "points": 0
       },
       {
         "team_he": "קולומביה",
         "team_code": "COL",
         "points_if_correct": 5,
-        "status": "correct",
-        "points": 5
+        "status": "pending",
+        "points": 0
       },
       {
         "team_he": "אורוגוואי",
@@ -1680,22 +1680,22 @@
         "team_he": "מקסיקו",
         "team_code": "MEX",
         "points_if_correct": 5,
-        "status": "correct",
-        "points": 5
+        "status": "pending",
+        "points": 0
       },
       {
         "team_he": "גרמניה",
         "team_code": "GER",
         "points_if_correct": 5,
-        "status": "correct",
-        "points": 5
+        "status": "wrong",
+        "points": 0
       },
       {
         "team_he": "הולנד",
         "team_code": "NED",
         "points_if_correct": 5,
-        "status": "correct",
-        "points": 5
+        "status": "wrong",
+        "points": 0
       }
     ],
     "quarter_final": [
@@ -1745,8 +1745,8 @@
         "team_he": "ברזיל",
         "team_code": "BRA",
         "points_if_correct": 10,
-        "status": "correct",
-        "points": 10
+        "status": "pending",
+        "points": 0
       },
       {
         "team_he": "גרמניה",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 252,
-    "projected_total": 252,
+    "official_total": 172,
+    "projected_total": 172,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-06-30T06:26:02+00:00"
+  "synced_at": "2026-06-30T08:45:16+00:00"
 }
