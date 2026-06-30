@@ -5,6 +5,7 @@ import { teamFlag } from '../lib/flags'
 import { SPECIAL_LABELS, STAGE_LABELS, pickLabel } from '../lib/format'
 import { Header } from '../components/Header'
 import { NavTabs } from '../components/NavTabs'
+import { TeamVotersDialog } from '../components/TeamVotersDialog'
 
 const KNOCKOUT_STAGES = ['round_of_16', 'quarter_final', 'semi_final', 'final'] as const
 
@@ -161,6 +162,7 @@ function TeamLookupCard({
   totalPlayers: number
 }) {
   const [selected, setSelected] = useState<string | undefined>(undefined)
+  const [dialog, setDialog] = useState<{ stage: string; teamCode: string; teamHe: string } | undefined>(undefined)
 
   const allTeams = useMemo(() => {
     const map = new Map<string, { code: string; name: string }>()
@@ -223,17 +225,30 @@ function TeamLookupCard({
               const data = teamData[stage]
               const count = data?.count ?? 0
               const pct = data?.pct ?? 0
+              const teamHe = allTeams.find((t) => t.code === selected)?.name ?? ''
               return (
-                <div key={stage} className="flex flex-col items-center gap-1 rounded-xl bg-white p-2 text-center shadow-soft">
+                <button
+                  key={stage}
+                  onClick={() => count > 0 && selected && setDialog({ stage, teamCode: selected, teamHe })}
+                  className={`flex flex-col items-center gap-1 rounded-xl bg-white p-2 text-center shadow-soft transition-opacity ${count > 0 ? 'cursor-pointer hover:opacity-75' : 'cursor-default'}`}
+                >
                   <span className="text-xs text-ink/40">{label}</span>
                   <span className="text-base font-bold text-ink">{count}</span>
                   <span className="text-xs font-semibold text-sage">{pct}%</span>
-                </div>
+                </button>
               )
             })}
           </div>
           <p className="mt-2 text-center text-xs text-ink/30">מתוך {totalPlayers} משתתפים</p>
         </div>
+      )}
+      {dialog && (
+        <TeamVotersDialog
+          stage={dialog.stage}
+          teamCode={dialog.teamCode}
+          teamHe={dialog.teamHe}
+          onClose={() => setDialog(undefined)}
+        />
       )}
     </Card>
   )
