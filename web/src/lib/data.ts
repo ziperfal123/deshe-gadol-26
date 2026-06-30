@@ -1,4 +1,4 @@
-import type { ChampionPointsFile, GroupsFile, LeadersFile, MatchStatsFile, MatchVoters, PlayerFile, ProjectedStandings, SpecialStatsFile, Standings, StatsFile } from '../types'
+import type { ChampionPointsFile, GroupsFile, LeadersFile, MatchStatsFile, MatchVoters, PlayerFile, ProjectedStandings, SpecialStatsFile, Standings, StatsFile, TeamVoters } from '../types'
 
 const base = import.meta.env.BASE_URL
 
@@ -50,6 +50,9 @@ export const fetchGroups = () => getJson<GroupsFile>('data/groups.json')
 /** Fetch the full aggregate statistics across all guesses. */
 export const fetchStats = () => getJson<StatsFile>('data/stats.json')
 export const peekStats = () => peek<StatsFile>('data/stats.json')
+
+/** Fetch all knockout-stage team voters (who picked each team per stage). */
+export const fetchTeamVoters = () => getJson<TeamVoters>('data/team_voters.json')
 
 /** Fetch the champion scoring table (team → points). */
 export const fetchChampionPoints = () => getJson<ChampionPointsFile>('data/champion_points.json')

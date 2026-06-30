@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-06-28T05:57:16+00:00",
+  "synced_at": "2026-06-30T06:26:02+00:00",
   "fields": {
     "top_scorer": {
       "kind": "player",
@@ -77,12 +77,8 @@
       "kind": "team",
       "points": 10,
       "live": true,
-      "value": 10,
+      "value": 11,
       "leaders": [
-        {
-          "code": "FRA",
-          "name_he": "צרפת"
-        },
         {
           "code": "GER",
           "name_he": "גרמניה"

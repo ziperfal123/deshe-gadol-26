@@ -1,0 +1,17 @@
+{
+  "_comment": "Confirmed knockout advancement. Add teams as results come in.",
+  "quarter_final": {
+    "confirmed": ["MAR", "BRA", "PAR"],
+    "eliminated_from_r16": ["NED", "JPN", "GER"]
+  },
+  "semi_final": {
+    "confirmed": [],
+    "eliminated_from_qf": []
+  },
+  "final": {
+    "confirmed": [],
+    "eliminated_from_sf": []
+  },
+  "winner": null,
+  "runner_up": null
+}

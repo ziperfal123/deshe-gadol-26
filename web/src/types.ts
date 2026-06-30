@@ -1,5 +1,8 @@
 export type PredStatus = 'correct' | 'wrong' | 'pending'
 
+/** Per-stage voters: { round_of_16: { MAR: [names], ... }, ... } */
+export type TeamVoters = Record<string, Record<string, string[]>>
+
 export interface StandingsRow {
   rank: number
   player_id: string

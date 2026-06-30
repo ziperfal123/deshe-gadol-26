@@ -17,6 +17,7 @@ import { teamFlag, withFlag } from '../lib/flags'
 import { findNextMatchId, liveStatus } from '../lib/matchTime'
 import { useFlashScroll } from '../lib/useFlashScroll'
 import { VotersDialog } from '../components/VotersDialog'
+import { TeamVotersDialog } from '../components/TeamVotersDialog'
 import { StatTooltip } from '../components/StatTooltip'
 import { GroupTooltip } from '../components/GroupTooltip'
 import {
@@ -537,6 +538,8 @@ function renderDetailedResultIfNeeded(played: boolean, item: GroupItem) {
 function AdvancementSection({ player }: { player: PlayerFile }) {
   const adv = player.advancement
   const stages = ['round_of_16', 'quarter_final', 'semi_final', 'final'] as const
+  const [dialog, setDialog] = useState<{ stage: string; teamCode: string; teamHe: string } | undefined>(undefined)
+
   return (
     <Section title="העפלה ושלבי הנוקאאוט" id="advancement">
       <div className="px-2 py-2">
@@ -560,12 +563,27 @@ function AdvancementSection({ player }: { player: PlayerFile }) {
             </div>
             <div className="flex flex-wrap gap-1.5">
               {items.map((t, i) => (
-                <KnockoutChip key={i} team_code={t.team_code} team_he={t.team_he} status={t.status} points={t.points} />
+                <KnockoutChip
+                  key={i}
+                  team_code={t.team_code}
+                  team_he={t.team_he}
+                  status={t.status}
+                  points={t.points}
+                  onClick={() => setDialog({ stage: s, teamCode: t.team_code ?? '', teamHe: t.team_he })}
+                />
               ))}
             </div>
           </div>
         )
       })}
+      {dialog && (
+        <TeamVotersDialog
+          stage={dialog.stage}
+          teamCode={dialog.teamCode}
+          teamHe={dialog.teamHe}
+          onClose={() => setDialog(undefined)}
+        />
+      )}
     </Section>
   )
 }
@@ -706,15 +724,17 @@ function KnockoutChip({
   team_he,
   status,
   points,
+  onClick,
 }: {
   team_code: string | undefined
   team_he: string
   status: GroupItem['status']
   points: number
+  onClick: () => void
 }) {
   return (
-    <span className="relative inline-flex">
-      <span className={cn('rounded-full border px-2.5 py-1 text-xs font-medium', statusClasses(status))}>
+    <button onClick={onClick} className="relative inline-flex cursor-pointer">
+      <span className={cn('rounded-full border px-2.5 py-1 text-xs font-medium transition-opacity hover:opacity-75', statusClasses(status))}>
         {withFlag(team_code, team_he)}
       </span>
       {status === 'correct' && (
@@ -722,6 +742,6 @@ function KnockoutChip({
           +{points}
         </span>
       )}
-    </span>
+    </button>
   )
 }

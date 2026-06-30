@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-06-28T05:57:16+00:00",
+  "synced_at": "2026-06-30T06:26:02+00:00",
   "total_players": 153,
   "champion": {
     "total": 153,
@@ -979,6 +979,168 @@
           "count": 98,
           "pct": 64,
           "code": "MEX"
+        },
+        {
+          "value": "טורקיה",
+          "count": 88,
+          "pct": 58,
+          "code": "TUR"
+        },
+        {
+          "value": "קרואטיה",
+          "count": 87,
+          "pct": 57,
+          "code": "CRO"
+        },
+        {
+          "value": "שווייץ",
+          "count": 85,
+          "pct": 56,
+          "code": "SUI"
+        },
+        {
+          "value": "מרוקו",
+          "count": 80,
+          "pct": 52,
+          "code": "MAR"
+        },
+        {
+          "value": "קולומביה",
+          "count": 74,
+          "pct": 48,
+          "code": "COL"
+        },
+        {
+          "value": "אורוגוואי",
+          "count": 65,
+          "pct": 42,
+          "code": "URU"
+        },
+        {
+          "value": "יפן",
+          "count": 45,
+          "pct": 29,
+          "code": "JPN"
+        },
+        {
+          "value": "סנגל",
+          "count": 39,
+          "pct": 25,
+          "code": "SEN"
+        },
+        {
+          "value": "קנדה",
+          "count": 38,
+          "pct": 25,
+          "code": "CAN"
+        },
+        {
+          "value": "צ׳כיה",
+          "count": 37,
+          "pct": 24,
+          "code": "CZE"
+        },
+        {
+          "value": "דרום קוריאה",
+          "count": 32,
+          "pct": 21,
+          "code": "KOR"
+        },
+        {
+          "value": "שוודיה",
+          "count": 28,
+          "pct": 18,
+          "code": "SWE"
+        },
+        {
+          "value": "מצרים",
+          "count": 18,
+          "pct": 12,
+          "code": "EGY"
+        },
+        {
+          "value": "חוף השנהב",
+          "count": 13,
+          "pct": 8,
+          "code": "CIV"
+        },
+        {
+          "value": "אקוודור",
+          "count": 13,
+          "pct": 8,
+          "code": "ECU"
+        },
+        {
+          "value": "אוסטריה",
+          "count": 13,
+          "pct": 8,
+          "code": "AUT"
+        },
+        {
+          "value": "סקוטלנד",
+          "count": 10,
+          "pct": 7,
+          "code": "SCO"
+        },
+        {
+          "value": "פרגוואי",
+          "count": 6,
+          "pct": 4,
+          "code": "PAR"
+        },
+        {
+          "value": "גאנה",
+          "count": 5,
+          "pct": 3,
+          "code": "GHA"
+        },
+        {
+          "value": "דרום אפריקה",
+          "count": 4,
+          "pct": 3,
+          "code": "RSA"
+        },
+        {
+          "value": "בוסניה והרצגובינה",
+          "count": 4,
+          "pct": 3,
+          "code": "BIH"
+        },
+        {
+          "value": "ערב הסעודית",
+          "count": 3,
+          "pct": 2,
+          "code": "KSA"
+        },
+        {
+          "value": "אלג'יריה",
+          "count": 3,
+          "pct": 2,
+          "code": "ALG"
+        },
+        {
+          "value": "אוסטרליה",
+          "count": 3,
+          "pct": 2,
+          "code": "AUS"
+        },
+        {
+          "value": "איראן",
+          "count": 1,
+          "pct": 1,
+          "code": "IRN"
+        },
+        {
+          "value": "קטאר",
+          "count": 1,
+          "pct": 1,
+          "code": "QAT"
+        },
+        {
+          "value": "אוזבקיסטן",
+          "count": 1,
+          "pct": 1,
+          "code": "UZB"
         }
       ]
     },
@@ -1056,6 +1218,96 @@
           "count": 24,
           "pct": 16,
           "code": "MAR"
+        },
+        {
+          "value": "ארצות הברית",
+          "count": 20,
+          "pct": 13,
+          "code": "USA"
+        },
+        {
+          "value": "קרואטיה",
+          "count": 17,
+          "pct": 11,
+          "code": "CRO"
+        },
+        {
+          "value": "קולומביה",
+          "count": 14,
+          "pct": 9,
+          "code": "COL"
+        },
+        {
+          "value": "אורוגוואי",
+          "count": 13,
+          "pct": 8,
+          "code": "URU"
+        },
+        {
+          "value": "יפן",
+          "count": 11,
+          "pct": 7,
+          "code": "JPN"
+        },
+        {
+          "value": "מקסיקו",
+          "count": 11,
+          "pct": 7,
+          "code": "MEX"
+        },
+        {
+          "value": "שוודיה",
+          "count": 4,
+          "pct": 3,
+          "code": "SWE"
+        },
+        {
+          "value": "שווייץ",
+          "count": 3,
+          "pct": 2,
+          "code": "SUI"
+        },
+        {
+          "value": "סנגל",
+          "count": 2,
+          "pct": 1,
+          "code": "SEN"
+        },
+        {
+          "value": "דרום קוריאה",
+          "count": 2,
+          "pct": 1,
+          "code": "KOR"
+        },
+        {
+          "value": "גאנה",
+          "count": 1,
+          "pct": 1,
+          "code": "GHA"
+        },
+        {
+          "value": "מצרים",
+          "count": 1,
+          "pct": 1,
+          "code": "EGY"
+        },
+        {
+          "value": "פרגוואי",
+          "count": 1,
+          "pct": 1,
+          "code": "PAR"
+        },
+        {
+          "value": "קנדה",
+          "count": 1,
+          "pct": 1,
+          "code": "CAN"
+        },
+        {
+          "value": "צ׳כיה",
+          "count": 1,
+          "pct": 1,
+          "code": "CZE"
         }
       ]
     },
@@ -1133,6 +1385,42 @@
           "count": 3,
           "pct": 2,
           "code": "COL"
+        },
+        {
+          "value": "בלגיה",
+          "count": 2,
+          "pct": 1,
+          "code": "BEL"
+        },
+        {
+          "value": "סנגל",
+          "count": 1,
+          "pct": 1,
+          "code": "SEN"
+        },
+        {
+          "value": "יפן",
+          "count": 1,
+          "pct": 1,
+          "code": "JPN"
+        },
+        {
+          "value": "טורקיה",
+          "count": 1,
+          "pct": 1,
+          "code": "TUR"
+        },
+        {
+          "value": "מרוקו",
+          "count": 1,
+          "pct": 1,
+          "code": "MAR"
+        },
+        {
+          "value": "קרואטיה",
+          "count": 1,
+          "pct": 1,
+          "code": "CRO"
         }
       ]
     },
@@ -1210,6 +1498,12 @@
           "count": 1,
           "pct": 1,
           "code": "BEL"
+        },
+        {
+          "value": "קרואטיה",
+          "count": 1,
+          "pct": 1,
+          "code": "CRO"
         }
       ]
     }

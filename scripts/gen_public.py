@@ -30,6 +30,20 @@ try:
 except FileNotFoundError:
     qualified_pos, qual_resolved = {}, False
 
+try:
+    ko = load("knockout_results.json")
+    qf_confirmed = set(ko.get("quarter_final", {}).get("confirmed", []))
+    qf_eliminated = set(ko.get("quarter_final", {}).get("eliminated_from_r16", []))
+    sf_confirmed = set(ko.get("semi_final", {}).get("confirmed", []))
+    sf_eliminated = set(ko.get("semi_final", {}).get("eliminated_from_qf", []))
+    fi_confirmed = set(ko.get("final", {}).get("confirmed", []))
+    fi_eliminated = set(ko.get("final", {}).get("eliminated_from_sf", []))
+    ko_winner = ko.get("winner")
+    ko_runner_up = ko.get("runner_up")
+except FileNotFoundError:
+    qf_confirmed = qf_eliminated = sf_confirmed = sf_eliminated = fi_confirmed = fi_eliminated = set()
+    ko_winner = ko_runner_up = None
+
 teams = teams if isinstance(teams, list) else teams["teams"]
 
 # ---- name -> code maps ----
@@ -364,6 +378,36 @@ rows = []
 proj_rows = []
 player_files = {}
 
+
+def _ko_status(stage, code, pts_each):
+    not_qualified = qual_resolved and code not in qualified_pos
+    if stage == "round_of_16":
+        if not qual_resolved:
+            return "pending", 0
+        if code in qualified_pos:
+            return "correct", pts_each
+        return "wrong", 0
+    if stage == "quarter_final":
+        if not_qualified or code in qf_eliminated:
+            return "wrong", 0
+        if code in qf_confirmed:
+            return "correct", pts_each
+        return "pending", 0
+    if stage == "semi_final":
+        if not_qualified or code in qf_eliminated or code in sf_eliminated:
+            return "wrong", 0
+        if code in sf_confirmed:
+            return "correct", pts_each
+        return "pending", 0
+    if stage == "final":
+        if not_qualified or code in qf_eliminated or code in sf_eliminated or code in fi_eliminated:
+            return "wrong", 0
+        if code in fi_confirmed:
+            return "correct", pts_each
+        return "pending", 0
+    return "pending", 0
+
+
 for pl in players:
     pid = pl["id"]
     total = 0
@@ -421,10 +465,19 @@ for pl in players:
                              "bonus_correct": qual_bonus, "total_picks": len(gs_items),
                              "resolved": qual_resolved}
     advancement = {"group_stage": gs_items}
+    knockout_pts = 0
     for stage, pts_each in [("round_of_16", 5), ("quarter_final", 10), ("semi_final", 15), ("final", 20)]:
-        advancement[stage] = [{"team_he": team_he.get(he2code(n), n), "team_code": he2code(n),
-                                "points_if_correct": pts_each, "status": "pending", "points": 0}
-                               for n in tp.get(stage, [])]
+        items = []
+        for n in tp.get(stage, []):
+            code = he2code(n)
+            name = team_he.get(code, n)
+            status, pts = _ko_status(stage, code, pts_each)
+            if status == "correct":
+                knockout_pts += pts
+            items.append({"team_he": name, "team_code": code,
+                          "points_if_correct": pts_each, "status": status, "points": pts})
+        advancement[stage] = items
+    total += knockout_pts
     winner_he = (tp.get("winner") or [None])[0]
     wc = he2code(winner_he) if winner_he else None
     champ_count = champ_pick_cnt.get(winner_he, 0) if winner_he else 0
@@ -603,7 +656,7 @@ for stage in ["round_of_16", "quarter_final", "semi_final", "final"]:
         for team in (t.get(stage) or []):
             cnt[team] += 1
     # denominator = all players, so pct = "% of players who picked this team to reach this stage"
-    stats_advancement[stage] = {"total": n_players, "dist": dist(cnt, n_players, 12, with_code=True)}
+    stats_advancement[stage] = {"total": n_players, "dist": dist(cnt, n_players, with_code=True)}
 
 # group-stage highlights: most one-sided and most split matches (by dominant 1/X/2 share)
 group_rows = []
@@ -668,6 +721,22 @@ json.dump({"range": [min(pts_vals), max(pts_vals)], "teams": champ_points},
 json.dump({"synced_at": synced, "tournament_stage": "group", "scoring_version": "stopgap-1",
            "matches_resolved": len(results)},
           open(PUB / "meta.json", "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+
+# team voters: per knockout stage + winner, per team — sorted list of player names
+name_by_id = {pl["id"]: pl["name"] for pl in players}
+team_voters = {}
+for stage in ["round_of_16", "quarter_final", "semi_final", "final", "winner"]:
+    stage_voters: dict = {}
+    for t in teampreds:
+        picks = t.get(stage) or []
+        pname = name_by_id.get(t["player_id"], t["player_id"])
+        for team_he_name in picks:
+            code = code_by_he.get(team_he_name, team_he_name)
+            stage_voters.setdefault(code, []).append(pname)
+    for code in stage_voters:
+        stage_voters[code].sort()
+    team_voters[stage] = stage_voters
+json.dump(team_voters, open(PUB / "team_voters.json", "w", encoding="utf-8"), ensure_ascii=False, indent=2)
 
 print("wrote standings + %d player files. top 5:" % len(player_files))
 for r in rows[:5]: print(f"  #{r['rank']} {r['name']} — {r['total_points']}pt ({r['correct_group']} correct)")
