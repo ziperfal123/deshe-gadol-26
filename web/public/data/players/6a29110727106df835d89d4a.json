@@ -1,7 +1,7 @@
 {
   "player_id": "6a29110727106df835d89d4a",
   "name": "איל להב",
-  "total_points": 141,
+  "total_points": 221,
   "correct_group": 34,
   "group_stage": [
     {
@@ -1572,113 +1572,113 @@
         "team_he": "שווייץ",
         "team_code": "SUI",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "הולנד",
         "team_code": "NED",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "ברזיל",
         "team_code": "BRA",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "קרואטיה",
         "team_code": "CRO",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "צ׳כיה",
         "team_code": "CZE",
         "points_if_correct": 5,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
         "team_he": "פורטוגל",
         "team_code": "POR",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "אנגליה",
         "team_code": "ENG",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "מקסיקו",
         "team_code": "MEX",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "ספרד",
         "team_code": "ESP",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "סנגל",
         "team_code": "SEN",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "טורקיה",
         "team_code": "TUR",
         "points_if_correct": 5,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
         "team_he": "בלגיה",
         "team_code": "BEL",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "צרפת",
         "team_code": "FRA",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "ארצות הברית",
         "team_code": "USA",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "נורבגיה",
         "team_code": "NOR",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       }
     ],
     "quarter_final": [
@@ -1686,7 +1686,7 @@
         "team_he": "הולנד",
         "team_code": "NED",
         "points_if_correct": 10,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1714,8 +1714,8 @@
         "team_he": "ברזיל",
         "team_code": "BRA",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "צרפת",
@@ -1892,8 +1892,8 @@
     }
   ],
   "projected": {
-    "official_total": 141,
-    "projected_total": 151,
+    "official_total": 221,
+    "projected_total": 231,
     "extra_points": 10,
     "fields": [
       {
@@ -1962,5 +1962,5 @@
       }
     ]
   },
-  "synced_at": "2026-06-30T05:44:19+00:00"
+  "synced_at": "2026-06-30T06:02:44+00:00"
 }

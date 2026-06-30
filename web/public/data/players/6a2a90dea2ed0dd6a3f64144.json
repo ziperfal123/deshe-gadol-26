@@ -1,7 +1,7 @@
 {
   "player_id": "6a2a90dea2ed0dd6a3f64144",
   "name": "דורון אייזיק",
-  "total_points": 168,
+  "total_points": 263,
   "correct_group": 48,
   "group_stage": [
     {
@@ -1589,113 +1589,113 @@
         "team_he": "הולנד",
         "team_code": "NED",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "בלגיה",
         "team_code": "BEL",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "ספרד",
         "team_code": "ESP",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "יפן",
         "team_code": "JPN",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "ארצות הברית",
         "team_code": "USA",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "שוודיה",
         "team_code": "SWE",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "ברזיל",
         "team_code": "BRA",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "מרוקו",
         "team_code": "MAR",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "טורקיה",
         "team_code": "TUR",
         "points_if_correct": 5,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
         "team_he": "אקוודור",
         "team_code": "ECU",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "גרמניה",
         "team_code": "GER",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "צרפת",
         "team_code": "FRA",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "פורטוגל",
         "team_code": "POR",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "אנגליה",
         "team_code": "ENG",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "מקסיקו",
         "team_code": "MEX",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       }
     ],
     "quarter_final": [
@@ -1710,8 +1710,8 @@
         "team_he": "ברזיל",
         "team_code": "BRA",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "ארגנטינה",
@@ -1745,14 +1745,14 @@
         "team_he": "מרוקו",
         "team_code": "MAR",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "גרמניה",
         "team_code": "GER",
         "points_if_correct": 10,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       }
     ],
@@ -1782,7 +1782,7 @@
         "team_he": "גרמניה",
         "team_code": "GER",
         "points_if_correct": 15,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       }
     ],
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 168,
-    "projected_total": 168,
+    "official_total": 263,
+    "projected_total": 263,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-06-30T05:44:19+00:00"
+  "synced_at": "2026-06-30T06:02:44+00:00"
 }

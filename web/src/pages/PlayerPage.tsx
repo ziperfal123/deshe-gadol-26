@@ -544,16 +544,28 @@ function AdvancementSection({ player }: { player: PlayerFile }) {
         <QualificationSummaryBar q={player.qualification} />
         <GroupStandingPicks items={adv.group_stage} />
       </div>
-      {stages.map((s) => (
-        <div key={s} className="border-t border-ink/10 px-2 py-3">
-          <SubTitle>{STAGE_LABELS[s]}</SubTitle>
-          <div className="flex flex-wrap gap-1.5">
-            {adv[s].map((p, i) => (
-              <Chip key={i} label={withFlag(p.team_code, p.team_he)} status={p.status} />
-            ))}
+      {stages.map((s) => {
+        const items = adv[s]
+        const stagePoints = items.reduce((acc, t) => acc + t.points, 0)
+        const hasResolved = items.some((t) => t.status !== 'pending')
+        return (
+          <div key={s} className="border-t border-ink/10 px-2 py-3">
+            <div className="mb-2 flex items-center gap-2">
+              <SubTitle>{STAGE_LABELS[s]}</SubTitle>
+              {hasResolved && stagePoints > 0 && (
+                <span className="mb-2 rounded-full bg-leaf/15 px-2 py-0.5 text-[11px] font-bold text-leaf">
+                  +{stagePoints} נק׳
+                </span>
+              )}
+            </div>
+            <div className="flex flex-wrap gap-1.5">
+              {items.map((t, i) => (
+                <KnockoutChip key={i} team_code={t.team_code} team_he={t.team_he} status={t.status} points={t.points} />
+              ))}
+            </div>
           </div>
-        </div>
-      ))}
+        )
+      })}
     </Section>
   )
 }
@@ -686,5 +698,30 @@ function SubTitle({ children }: { children: React.ReactNode }) {
 function Chip({ label, status }: { label: string; status: GroupItem['status'] }) {
   return (
     <span className={cn('rounded-full border px-2.5 py-1 text-xs font-medium', statusClasses(status))}>{label}</span>
+  )
+}
+
+function KnockoutChip({
+  team_code,
+  team_he,
+  status,
+  points,
+}: {
+  team_code: string | undefined
+  team_he: string
+  status: GroupItem['status']
+  points: number
+}) {
+  return (
+    <span className="relative inline-flex">
+      <span className={cn('rounded-full border px-2.5 py-1 text-xs font-medium', statusClasses(status))}>
+        {withFlag(team_code, team_he)}
+      </span>
+      {status === 'correct' && (
+        <span className="absolute -top-2 -end-1.5 rounded-full bg-leaf px-1 text-[9px] font-extrabold leading-tight text-white shadow-soft">
+          +{points}
+        </span>
+      )}
+    </span>
   )
 }
