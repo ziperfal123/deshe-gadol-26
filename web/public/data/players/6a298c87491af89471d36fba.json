@@ -1,7 +1,7 @@
 {
   "player_id": "6a298c87491af89471d36fba",
   "name": "אורי עוזר",
-  "total_points": 176,
+  "total_points": 181,
   "correct_group": 45,
   "group_stage": [
     {
@@ -1659,8 +1659,8 @@
         "team_he": "צרפת",
         "team_code": "FRA",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "טורקיה",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 176,
-    "projected_total": 186,
+    "official_total": 181,
+    "projected_total": 191,
     "extra_points": 10,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T04:20:55+00:00"
+  "synced_at": "2026-07-01T04:26:13+00:00"
 }

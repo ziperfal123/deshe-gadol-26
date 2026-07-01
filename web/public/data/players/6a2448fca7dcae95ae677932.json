@@ -1,7 +1,7 @@
 {
   "player_id": "6a2448fca7dcae95ae677932",
   "name": "גיא משעלי",
-  "total_points": 177,
+  "total_points": 182,
   "correct_group": 46,
   "group_stage": [
     {
@@ -1624,8 +1624,8 @@
         "team_he": "צרפת",
         "team_code": "FRA",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "קרואטיה",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 177,
-    "projected_total": 207,
+    "official_total": 182,
+    "projected_total": 212,
     "extra_points": 30,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T04:20:55+00:00"
+  "synced_at": "2026-07-01T04:26:13+00:00"
 }

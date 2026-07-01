@@ -1,7 +1,7 @@
 {
   "player_id": "6a11f0a98a5afba198872688",
   "name": "נמרוד אקרמן",
-  "total_points": 157,
+  "total_points": 162,
   "correct_group": 36,
   "group_stage": [
     {
@@ -1680,8 +1680,8 @@
         "team_he": "צרפת",
         "team_code": "FRA",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "אורוגוואי",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 157,
-    "projected_total": 167,
+    "official_total": 162,
+    "projected_total": 172,
     "extra_points": 10,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T04:20:55+00:00"
+  "synced_at": "2026-07-01T04:26:13+00:00"
 }

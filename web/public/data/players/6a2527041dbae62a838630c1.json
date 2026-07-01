@@ -1,7 +1,7 @@
 {
   "player_id": "6a2527041dbae62a838630c1",
   "name": "ליפז אובנטל",
-  "total_points": 135,
+  "total_points": 140,
   "correct_group": 29,
   "group_stage": [
     {
@@ -1603,7 +1603,7 @@
         "team_he": "שוודיה",
         "team_code": "SWE",
         "points_if_correct": 5,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1638,8 +1638,8 @@
         "team_he": "צרפת",
         "team_code": "FRA",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "בלגיה",
@@ -1738,7 +1738,7 @@
         "team_he": "שוודיה",
         "team_code": "SWE",
         "points_if_correct": 10,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 135,
-    "projected_total": 135,
+    "official_total": 140,
+    "projected_total": 140,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T04:20:55+00:00"
+  "synced_at": "2026-07-01T04:26:13+00:00"
 }

@@ -1,7 +1,7 @@
 {
   "player_id": "6a28f7a8ae6f34ecb2ae0033",
   "name": "שקד ענבון",
-  "total_points": 179,
+  "total_points": 184,
   "correct_group": 47,
   "group_stage": [
     {
@@ -1603,8 +1603,8 @@
         "team_he": "צרפת",
         "team_code": "FRA",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "פורטוגל",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 179,
-    "projected_total": 199,
+    "official_total": 184,
+    "projected_total": 204,
     "extra_points": 20,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T04:20:55+00:00"
+  "synced_at": "2026-07-01T04:26:13+00:00"
 }

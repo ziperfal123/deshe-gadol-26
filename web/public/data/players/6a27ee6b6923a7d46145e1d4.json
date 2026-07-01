@@ -1,7 +1,7 @@
 {
   "player_id": "6a27ee6b6923a7d46145e1d4",
   "name": "יותם אליהו",
-  "total_points": 170,
+  "total_points": 175,
   "correct_group": 44,
   "group_stage": [
     {
@@ -1673,8 +1673,8 @@
         "team_he": "צרפת",
         "team_code": "FRA",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "נורבגיה",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 170,
-    "projected_total": 205,
+    "official_total": 175,
+    "projected_total": 210,
     "extra_points": 35,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T04:20:55+00:00"
+  "synced_at": "2026-07-01T04:26:13+00:00"
 }

@@ -1,7 +1,7 @@
 {
   "player_id": "6a2b014fc3812af93af33c7e",
   "name": "צור אילון",
-  "total_points": 174,
+  "total_points": 179,
   "correct_group": 44,
   "group_stage": [
     {
@@ -1624,8 +1624,8 @@
         "team_he": "צרפת",
         "team_code": "FRA",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "ארגנטינה",
@@ -1687,7 +1687,7 @@
         "team_he": "שוודיה",
         "team_code": "SWE",
         "points_if_correct": 5,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 174,
-    "projected_total": 199,
+    "official_total": 179,
+    "projected_total": 204,
     "extra_points": 25,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T04:20:55+00:00"
+  "synced_at": "2026-07-01T04:26:13+00:00"
 }

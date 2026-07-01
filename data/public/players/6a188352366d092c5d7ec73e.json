@@ -1,7 +1,7 @@
 {
   "player_id": "6a188352366d092c5d7ec73e",
   "name": "תום שלו 2",
-  "total_points": 167,
+  "total_points": 172,
   "correct_group": 42,
   "group_stage": [
     {
@@ -1610,15 +1610,15 @@
         "team_he": "שוודיה",
         "team_code": "SWE",
         "points_if_correct": 5,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
         "team_he": "צרפת",
         "team_code": "FRA",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "ברזיל",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 167,
-    "projected_total": 167,
+    "official_total": 172,
+    "projected_total": 172,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T04:20:55+00:00"
+  "synced_at": "2026-07-01T04:26:13+00:00"
 }

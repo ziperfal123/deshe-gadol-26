@@ -1,7 +1,7 @@
 {
   "player_id": "6a2520cf620513ccef7bae85",
   "name": "ניב זכריה",
-  "total_points": 154,
+  "total_points": 159,
   "correct_group": 39,
   "group_stage": [
     {
@@ -1645,8 +1645,8 @@
         "team_he": "צרפת",
         "team_code": "FRA",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "בלגיה",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 154,
-    "projected_total": 154,
+    "official_total": 159,
+    "projected_total": 159,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T04:20:55+00:00"
+  "synced_at": "2026-07-01T04:26:13+00:00"
 }
