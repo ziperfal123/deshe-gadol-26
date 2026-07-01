@@ -333,16 +333,20 @@ live = {"top_scorer": bool(of_full), "top_assists": api_state == "live",
         "most_goals_tournament_team": bool(of_full), "most_conceded_tournament_team": bool(of_full),
         "most_cards_team": api_state == "live", "least_cards_team": api_state == "live"}
 overridden = set()
+final_fields = set()  # fields with confirmed official results
 for key, o in SPECIAL_OVERRIDES.items():
-    if live.get(key):  # FRESH feed/API data exists -> prefer it; hardcoded is only a fallback
+    is_final = o.get("final", False)
+    if live.get(key) and not is_final:  # FRESH feed/API data exists -> prefer it (unless final)
         continue
     if key in TEAM_FIELDS and o.get("teams") is not None:
         lead_set[key] = set(o["teams"]); lead_val[key] = o.get("value"); live[key] = True; overridden.add(key)
+        if is_final: final_fields.add(key)
     elif key not in TEAM_FIELDS and o.get("players") is not None:
         lead_set[key] = {_norm(PLAYER_ALIAS.get(n, n)) for n in o["players"]}
         lead_val[key] = o.get("value"); live[key] = True; overridden.add(key)
+        if is_final: final_fields.add(key)
 if overridden:
-    print("hardcoded fallback used (no fresh data):", sorted(overridden))
+    print("hardcoded override used:", sorted(overridden), "| final:", sorted(final_fields))
 
 def _match_player(value, leader_set):
     lat = PLAYER_ALIAS.get((value or "").strip())
@@ -501,8 +505,19 @@ for pl in players:
                 "most_conceded_group_stage_team":10,"most_goals_tournament_team":10,
                 "most_conceded_tournament_team":10,"most_cards_team":10,"least_cards_team":10,
                 "total_red_cards":8,"total_extra_time":5,"total_penalties":5}
-    specials_out = [{"key": k, "value": sp.get(k), "points_if_correct": v, "status": "pending", "points": 0}
-                    for k, v in SPEC_PTS.items()]
+    specials_out = []
+    spec_pts_earned = 0
+    for k, v in SPEC_PTS.items():
+        val = sp.get(k)
+        if k in final_fields and val is not None:
+            is_correct = _matcher(k)(val, lead_set[k])
+            status = "correct" if is_correct else "wrong"
+            pts = v if is_correct else 0
+            spec_pts_earned += pts
+        else:
+            status, pts = "pending", 0
+        specials_out.append({"key": k, "value": val, "points_if_correct": v, "status": status, "points": pts})
+    total += spec_pts_earned
 
     # projected: official total + provisional superlative points (recomputed each sync)
     proj_fields, proj_gain = projected_for(sp)

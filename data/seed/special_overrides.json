@@ -8,12 +8,14 @@
     "most_goals_group_stage_team": {
       "teams": ["GER", "NED", "FRA"],
       "teams_he": ["גרמניה", "הולנד", "צרפת"],
-      "value": 10
+      "value": 10,
+      "final": true
     },
     "most_conceded_group_stage_team": {
       "teams": ["TUN", "IRQ"],
       "teams_he": ["תוניסיה", "עיראק"],
-      "value": 12
+      "value": 12,
+      "final": true
     },
     "most_cards_team": {
       "teams": ["PAR"],

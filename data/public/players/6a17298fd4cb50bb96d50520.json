@@ -1,7 +1,7 @@
 {
   "player_id": "6a17298fd4cb50bb96d50520",
   "name": "אריאל טורנוא",
-  "total_points": 169,
+  "total_points": 179,
   "correct_group": 42,
   "group_stage": [
     {
@@ -1848,14 +1848,14 @@
       "key": "most_goals_group_stage_team",
       "value": "צרפת",
       "points_if_correct": 10,
-      "status": "pending",
-      "points": 0
+      "status": "correct",
+      "points": 10
     },
     {
       "key": "most_conceded_group_stage_team",
       "value": "איראן",
       "points_if_correct": 10,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
@@ -1909,9 +1909,9 @@
     }
   ],
   "projected": {
-    "official_total": 169,
-    "projected_total": 204,
-    "extra_points": 35,
+    "official_total": 179,
+    "projected_total": 224,
+    "extra_points": 45,
     "fields": [
       {
         "key": "top_scorer",
@@ -1949,9 +1949,9 @@
         "key": "most_goals_tournament_team",
         "value": "צרפת",
         "points_if_correct": 10,
-        "leader": false,
-        "points": 0,
-        "status": "trailing"
+        "leader": true,
+        "points": 10,
+        "status": "leading"
       },
       {
         "key": "most_conceded_tournament_team",
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-06-30T08:45:16+00:00"
+  "synced_at": "2026-07-01T04:05:46+00:00"
 }

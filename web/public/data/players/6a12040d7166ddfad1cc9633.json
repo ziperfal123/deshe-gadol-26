@@ -1848,14 +1848,14 @@
       "key": "most_goals_group_stage_team",
       "value": "ברזיל",
       "points_if_correct": 10,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
       "key": "most_conceded_group_stage_team",
       "value": "קונגו הדמוקרטית",
       "points_if_correct": 10,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
@@ -1910,8 +1910,8 @@
   ],
   "projected": {
     "official_total": 147,
-    "projected_total": 147,
-    "extra_points": 0,
+    "projected_total": 157,
+    "extra_points": 10,
     "fields": [
       {
         "key": "top_scorer",
@@ -1949,9 +1949,9 @@
         "key": "most_goals_tournament_team",
         "value": "צרפת",
         "points_if_correct": 10,
-        "leader": false,
-        "points": 0,
-        "status": "trailing"
+        "leader": true,
+        "points": 10,
+        "status": "leading"
       },
       {
         "key": "most_conceded_tournament_team",
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-06-30T08:45:16+00:00"
+  "synced_at": "2026-07-01T04:05:46+00:00"
 }

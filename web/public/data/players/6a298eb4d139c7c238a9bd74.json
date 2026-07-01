@@ -1,7 +1,7 @@
 {
   "player_id": "6a298eb4d139c7c238a9bd74",
   "name": "יואב צימרמן 3",
-  "total_points": 179,
+  "total_points": 189,
   "correct_group": 48,
   "group_stage": [
     {
@@ -1848,14 +1848,14 @@
       "key": "most_goals_group_stage_team",
       "value": "גרמניה",
       "points_if_correct": 10,
-      "status": "pending",
-      "points": 0
+      "status": "correct",
+      "points": 10
     },
     {
       "key": "most_conceded_group_stage_team",
       "value": "ירדן",
       "points_if_correct": 10,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
@@ -1909,17 +1909,17 @@
     }
   ],
   "projected": {
-    "official_total": 179,
-    "projected_total": 189,
-    "extra_points": 10,
+    "official_total": 189,
+    "projected_total": 219,
+    "extra_points": 30,
     "fields": [
       {
         "key": "top_scorer",
         "value": "קיליאן אמבפה",
         "points_if_correct": 20,
-        "leader": false,
-        "points": 0,
-        "status": "trailing"
+        "leader": true,
+        "points": 20,
+        "status": "leading"
       },
       {
         "key": "top_assists",
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-06-30T08:45:16+00:00"
+  "synced_at": "2026-07-01T04:05:46+00:00"
 }

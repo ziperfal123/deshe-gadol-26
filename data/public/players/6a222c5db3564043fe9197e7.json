@@ -1,7 +1,7 @@
 {
   "player_id": "6a222c5db3564043fe9197e7",
   "name": "עידו זהר",
-  "total_points": 166,
+  "total_points": 176,
   "correct_group": 45,
   "group_stage": [
     {
@@ -1848,15 +1848,15 @@
       "key": "most_goals_group_stage_team",
       "value": "נורבגיה",
       "points_if_correct": 10,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
       "key": "most_conceded_group_stage_team",
       "value": "עיראק",
       "points_if_correct": 10,
-      "status": "pending",
-      "points": 0
+      "status": "correct",
+      "points": 10
     },
     {
       "key": "most_goals_tournament_team",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 166,
-    "projected_total": 196,
+    "official_total": 176,
+    "projected_total": 206,
     "extra_points": 30,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-06-30T08:45:16+00:00"
+  "synced_at": "2026-07-01T04:05:46+00:00"
 }

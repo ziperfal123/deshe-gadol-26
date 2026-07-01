@@ -1,7 +1,7 @@
 {
   "player_id": "6a1ab17e3469e8123376c33f",
   "name": "אופיר פז",
-  "total_points": 161,
+  "total_points": 171,
   "correct_group": 43,
   "group_stage": [
     {
@@ -1848,14 +1848,14 @@
       "key": "most_goals_group_stage_team",
       "value": "גרמניה",
       "points_if_correct": 10,
-      "status": "pending",
-      "points": 0
+      "status": "correct",
+      "points": 10
     },
     {
       "key": "most_conceded_group_stage_team",
       "value": "דרום אפריקה",
       "points_if_correct": 10,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 161,
-    "projected_total": 181,
+    "official_total": 171,
+    "projected_total": 191,
     "extra_points": 20,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-06-30T08:45:16+00:00"
+  "synced_at": "2026-07-01T04:05:46+00:00"
 }

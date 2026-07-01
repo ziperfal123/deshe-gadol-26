@@ -1,7 +1,7 @@
 {
   "player_id": "6a159b9313a98ac6670dd3b3",
   "name": "דניאל טורנוא 1",
-  "total_points": 176,
+  "total_points": 186,
   "correct_group": 45,
   "group_stage": [
     {
@@ -1848,14 +1848,14 @@
       "key": "most_goals_group_stage_team",
       "value": "צרפת",
       "points_if_correct": 10,
-      "status": "pending",
-      "points": 0
+      "status": "correct",
+      "points": 10
     },
     {
       "key": "most_conceded_group_stage_team",
       "value": "איראן",
       "points_if_correct": 10,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
@@ -1909,9 +1909,9 @@
     }
   ],
   "projected": {
-    "official_total": 176,
-    "projected_total": 186,
-    "extra_points": 10,
+    "official_total": 186,
+    "projected_total": 206,
+    "extra_points": 20,
     "fields": [
       {
         "key": "top_scorer",
@@ -1949,9 +1949,9 @@
         "key": "most_goals_tournament_team",
         "value": "צרפת",
         "points_if_correct": 10,
-        "leader": false,
-        "points": 0,
-        "status": "trailing"
+        "leader": true,
+        "points": 10,
+        "status": "leading"
       },
       {
         "key": "most_conceded_tournament_team",
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-06-30T08:45:16+00:00"
+  "synced_at": "2026-07-01T04:05:46+00:00"
 }

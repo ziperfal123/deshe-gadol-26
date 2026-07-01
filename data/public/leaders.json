@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-06-30T08:45:16+00:00",
+  "synced_at": "2026-07-01T04:05:46+00:00",
   "fields": {
     "top_scorer": {
       "kind": "player",
@@ -7,6 +7,10 @@
       "live": true,
       "value": 6,
       "leaders": [
+        {
+          "name": "Kylian Mbappé",
+          "name_he": "קיליאן אמבפה"
+        },
         {
           "name": "Lionel Messi",
           "name_he": "ליאו מסי"
@@ -54,7 +58,7 @@
           "name_he": "הולנד"
         }
       ],
-      "source": "computed"
+      "source": "override"
     },
     "most_conceded_group_stage_team": {
       "kind": "team",
@@ -71,21 +75,17 @@
           "name_he": "תוניסיה"
         }
       ],
-      "source": "computed"
+      "source": "override"
     },
     "most_goals_tournament_team": {
       "kind": "team",
       "points": 10,
       "live": true,
-      "value": 11,
+      "value": 13,
       "leaders": [
         {
-          "code": "GER",
-          "name_he": "גרמניה"
-        },
-        {
-          "code": "NED",
-          "name_he": "הולנד"
+          "code": "FRA",
+          "name_he": "צרפת"
         }
       ],
       "source": "computed"

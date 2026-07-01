@@ -1,7 +1,7 @@
 {
   "player_id": "6a155a81ba00798cf5c42d19",
   "name": "רותם בן אור",
-  "total_points": 149,
+  "total_points": 159,
   "correct_group": 40,
   "group_stage": [
     {
@@ -1848,15 +1848,15 @@
       "key": "most_goals_group_stage_team",
       "value": "פורטוגל",
       "points_if_correct": 10,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
       "key": "most_conceded_group_stage_team",
       "value": "עיראק",
       "points_if_correct": 10,
-      "status": "pending",
-      "points": 0
+      "status": "correct",
+      "points": 10
     },
     {
       "key": "most_goals_tournament_team",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 149,
-    "projected_total": 169,
+    "official_total": 159,
+    "projected_total": 179,
     "extra_points": 20,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-06-30T08:45:16+00:00"
+  "synced_at": "2026-07-01T04:05:46+00:00"
 }

@@ -1,7 +1,7 @@
 {
   "player_id": "6a11e1d333d959e7d4e0bcce",
   "name": "מירון לוי",
-  "total_points": 170,
+  "total_points": 180,
   "correct_group": 43,
   "group_stage": [
     {
@@ -1848,15 +1848,15 @@
       "key": "most_goals_group_stage_team",
       "value": "ספרד",
       "points_if_correct": 10,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
       "key": "most_conceded_group_stage_team",
       "value": "עיראק",
       "points_if_correct": 10,
-      "status": "pending",
-      "points": 0
+      "status": "correct",
+      "points": 10
     },
     {
       "key": "most_goals_tournament_team",
@@ -1909,9 +1909,9 @@
     }
   ],
   "projected": {
-    "official_total": 170,
+    "official_total": 180,
     "projected_total": 190,
-    "extra_points": 20,
+    "extra_points": 10,
     "fields": [
       {
         "key": "top_scorer",
@@ -1949,9 +1949,9 @@
         "key": "most_goals_tournament_team",
         "value": "גרמניה",
         "points_if_correct": 10,
-        "leader": true,
-        "points": 10,
-        "status": "leading"
+        "leader": false,
+        "points": 0,
+        "status": "trailing"
       },
       {
         "key": "most_conceded_tournament_team",
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-06-30T08:45:16+00:00"
+  "synced_at": "2026-07-01T04:05:46+00:00"
 }
