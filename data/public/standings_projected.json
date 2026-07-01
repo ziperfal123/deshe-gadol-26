@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-07-01T04:34:43+00:00",
+  "synced_at": "2026-07-01T05:00:29+00:00",
   "players_played": 72,
   "included_fields": [
     "top_scorer",
@@ -14,103 +14,43 @@
   "api_state": "pending_no_key",
   "standings": [
     {
-      "player_id": "6a292ccec9205bc3d3c65f03",
-      "name": "סיון עוואד",
-      "official_total": 203,
-      "projected_total": 263,
-      "correct_group": 45,
-      "extra_points": 60,
-      "rank": 1,
-      "tied": false
-    },
-    {
-      "player_id": "6a198b517f5b8a30e7a174b8",
-      "name": "אבי אובנטל",
-      "official_total": 207,
-      "projected_total": 257,
-      "correct_group": 44,
-      "extra_points": 50,
-      "rank": 2,
-      "tied": false
-    },
-    {
       "player_id": "6a2ade049818b4e605b2c7c0",
       "name": "יניב סיפרפאל",
       "official_total": 187,
       "projected_total": 252,
       "correct_group": 46,
       "extra_points": 65,
-      "rank": 3,
+      "rank": 1,
+      "tied": false
+    },
+    {
+      "player_id": "6a292ccec9205bc3d3c65f03",
+      "name": "סיון עוואד",
+      "official_total": 203,
+      "projected_total": 243,
+      "correct_group": 45,
+      "extra_points": 40,
+      "rank": 2,
       "tied": false
     },
     {
       "player_id": "6a23ddfc18503a6b210b6c0d",
       "name": "שקד טבצ׳ניק",
       "official_total": 196,
-      "projected_total": 251,
+      "projected_total": 241,
       "correct_group": 48,
-      "extra_points": 55,
-      "rank": 4,
-      "tied": false
-    },
-    {
-      "player_id": "6a1c57c8878905a3957a78a7",
-      "name": "ליאם הופסינק",
-      "official_total": 194,
-      "projected_total": 244,
-      "correct_group": 44,
-      "extra_points": 50,
-      "rank": 5,
-      "tied": false
-    },
-    {
-      "player_id": "6a27ee3f567d0a5bc3529def",
-      "name": "מעיין דיקר",
-      "official_total": 192,
-      "projected_total": 242,
-      "correct_group": 46,
-      "extra_points": 50,
-      "rank": 6,
-      "tied": false
-    },
-    {
-      "player_id": "6a2a843142c92cf3bd07258b",
-      "name": "בועז הורוביץ",
-      "official_total": 199,
-      "projected_total": 239,
-      "correct_group": 49,
-      "extra_points": 40,
-      "rank": 7,
-      "tied": false
-    },
-    {
-      "player_id": "6a27264a4d44640c11570f95",
-      "name": "אביב ינישבסקי 2",
-      "official_total": 193,
-      "projected_total": 238,
-      "correct_group": 46,
       "extra_points": 45,
-      "rank": 8,
+      "rank": 3,
       "tied": false
     },
     {
-      "player_id": "6a1f026e3c209c59ad568239",
-      "name": "אייל גרוס",
-      "official_total": 196,
-      "projected_total": 236,
-      "correct_group": 45,
-      "extra_points": 40,
-      "rank": 9,
-      "tied": false
-    },
-    {
-      "player_id": "6a2a3ed1f957d86281ba3a9c",
-      "name": "אייל שגב",
-      "official_total": 186,
-      "projected_total": 236,
+      "player_id": "6a198b517f5b8a30e7a174b8",
+      "name": "אבי אובנטל",
+      "official_total": 207,
+      "projected_total": 237,
       "correct_group": 44,
-      "extra_points": 50,
-      "rank": 10,
+      "extra_points": 30,
+      "rank": 4,
       "tied": false
     },
     {
@@ -120,6 +60,66 @@
       "projected_total": 235,
       "correct_group": 47,
       "extra_points": 45,
+      "rank": 5,
+      "tied": false
+    },
+    {
+      "player_id": "6a27ee3f567d0a5bc3529def",
+      "name": "מעיין דיקר",
+      "official_total": 192,
+      "projected_total": 232,
+      "correct_group": 46,
+      "extra_points": 40,
+      "rank": 6,
+      "tied": false
+    },
+    {
+      "player_id": "6a2a843142c92cf3bd07258b",
+      "name": "בועז הורוביץ",
+      "official_total": 199,
+      "projected_total": 229,
+      "correct_group": 49,
+      "extra_points": 30,
+      "rank": 7,
+      "tied": false
+    },
+    {
+      "player_id": "6a27264a4d44640c11570f95",
+      "name": "אביב ינישבסקי 2",
+      "official_total": 193,
+      "projected_total": 228,
+      "correct_group": 46,
+      "extra_points": 35,
+      "rank": 8,
+      "tied": false
+    },
+    {
+      "player_id": "6a1f026e3c209c59ad568239",
+      "name": "אייל גרוס",
+      "official_total": 196,
+      "projected_total": 226,
+      "correct_group": 45,
+      "extra_points": 30,
+      "rank": 9,
+      "tied": false
+    },
+    {
+      "player_id": "6a2a3ed1f957d86281ba3a9c",
+      "name": "אייל שגב",
+      "official_total": 186,
+      "projected_total": 226,
+      "correct_group": 44,
+      "extra_points": 40,
+      "rank": 10,
+      "tied": false
+    },
+    {
+      "player_id": "6a1c57c8878905a3957a78a7",
+      "name": "ליאם הופסינק",
+      "official_total": 194,
+      "projected_total": 224,
+      "correct_group": 44,
+      "extra_points": 30,
       "rank": 11,
       "tied": false
     },
@@ -127,81 +127,11 @@
       "player_id": "6a1c582fe0c3fe25d6042c7e",
       "name": "ירדן עוואד",
       "official_total": 193,
-      "projected_total": 233,
+      "projected_total": 223,
       "correct_group": 47,
-      "extra_points": 40,
+      "extra_points": 30,
       "rank": 12,
-      "tied": false
-    },
-    {
-      "player_id": "6a28f5a277d2fba4e2f22769",
-      "name": "עדי זכריה",
-      "official_total": 191,
-      "projected_total": 231,
-      "correct_group": 45,
-      "extra_points": 40,
-      "rank": 13,
-      "tied": false
-    },
-    {
-      "player_id": "6a26b0add1e25c593a37c644",
-      "name": "רז אורן",
-      "official_total": 176,
-      "projected_total": 231,
-      "correct_group": 42,
-      "extra_points": 55,
-      "rank": 14,
-      "tied": false
-    },
-    {
-      "player_id": "6a298eb4d139c7c238a9bd74",
-      "name": "יואב צימרמן 3",
-      "official_total": 199,
-      "projected_total": 229,
-      "correct_group": 48,
-      "extra_points": 30,
-      "rank": 15,
-      "tied": false
-    },
-    {
-      "player_id": "6a17298fd4cb50bb96d50520",
-      "name": "אריאל טורנוא",
-      "official_total": 184,
-      "projected_total": 229,
-      "correct_group": 42,
-      "extra_points": 45,
-      "rank": 16,
-      "tied": false
-    },
-    {
-      "player_id": "6a1eec3b403209f3ccd794df",
-      "name": "שקד קינן",
-      "official_total": 176,
-      "projected_total": 226,
-      "correct_group": 41,
-      "extra_points": 50,
-      "rank": 17,
-      "tied": false
-    },
-    {
-      "player_id": "6a2aedcc11ffbcb8d4082059",
-      "name": "דן פורת",
-      "official_total": 195,
-      "projected_total": 225,
-      "correct_group": 44,
-      "extra_points": 30,
-      "rank": 18,
-      "tied": false
-    },
-    {
-      "player_id": "6a1980a4e2acd861c2951cf2",
-      "name": "מירון לוי 1",
-      "official_total": 185,
-      "projected_total": 225,
-      "correct_group": 44,
-      "extra_points": 40,
-      "rank": 19,
-      "tied": false
+      "tied": true
     },
     {
       "player_id": "6a1c35c0e736fe8b83aa3046",
@@ -210,67 +140,47 @@
       "projected_total": 223,
       "correct_group": 46,
       "extra_points": 30,
-      "rank": 20,
-      "tied": false
+      "rank": 12,
+      "tied": true
     },
     {
-      "player_id": "6a2aa977b0fd1b6e6386fa97",
-      "name": "דביר קורן",
-      "official_total": 188,
-      "projected_total": 223,
+      "player_id": "6a28f5a277d2fba4e2f22769",
+      "name": "עדי זכריה",
+      "official_total": 191,
+      "projected_total": 221,
       "correct_group": 45,
-      "extra_points": 35,
-      "rank": 21,
-      "tied": false
-    },
-    {
-      "player_id": "6a17254829b6bd6c1b7388e5",
-      "name": "תום בן זאב",
-      "official_total": 190,
-      "projected_total": 220,
-      "correct_group": 43,
       "extra_points": 30,
-      "rank": 22,
+      "rank": 13,
       "tied": false
     },
     {
-      "player_id": "6a15e29c0333e317b1d85552",
-      "name": "חנן ברגר 2",
-      "official_total": 179,
-      "projected_total": 219,
-      "correct_group": 41,
-      "extra_points": 40,
-      "rank": 23,
-      "tied": false
-    },
-    {
-      "player_id": "6a29fa9fd27a73010cb66b51",
-      "name": "שי שווגר 1",
-      "official_total": 177,
-      "projected_total": 217,
+      "player_id": "6a26b0add1e25c593a37c644",
+      "name": "רז אורן",
+      "official_total": 176,
+      "projected_total": 221,
       "correct_group": 42,
-      "extra_points": 40,
-      "rank": 24,
+      "extra_points": 45,
+      "rank": 14,
       "tied": false
     },
     {
-      "player_id": "6a159b9313a98ac6670dd3b3",
-      "name": "דניאל טורנוא 1",
-      "official_total": 196,
-      "projected_total": 216,
-      "correct_group": 45,
+      "player_id": "6a298eb4d139c7c238a9bd74",
+      "name": "יואב צימרמן 3",
+      "official_total": 199,
+      "projected_total": 219,
+      "correct_group": 48,
       "extra_points": 20,
-      "rank": 25,
+      "rank": 15,
       "tied": false
     },
     {
-      "player_id": "6a222c5db3564043fe9197e7",
-      "name": "עידו זהר",
-      "official_total": 186,
-      "projected_total": 216,
-      "correct_group": 45,
-      "extra_points": 30,
-      "rank": 26,
+      "player_id": "6a17298fd4cb50bb96d50520",
+      "name": "אריאל טורנוא",
+      "official_total": 184,
+      "projected_total": 219,
+      "correct_group": 42,
+      "extra_points": 35,
+      "rank": 16,
       "tied": false
     },
     {
@@ -280,7 +190,47 @@
       "projected_total": 216,
       "correct_group": 43,
       "extra_points": 40,
-      "rank": 27,
+      "rank": 17,
+      "tied": true
+    },
+    {
+      "player_id": "6a1eec3b403209f3ccd794df",
+      "name": "שקד קינן",
+      "official_total": 176,
+      "projected_total": 216,
+      "correct_group": 41,
+      "extra_points": 40,
+      "rank": 17,
+      "tied": true
+    },
+    {
+      "player_id": "6a2aedcc11ffbcb8d4082059",
+      "name": "דן פורת",
+      "official_total": 195,
+      "projected_total": 215,
+      "correct_group": 44,
+      "extra_points": 20,
+      "rank": 18,
+      "tied": false
+    },
+    {
+      "player_id": "6a1980a4e2acd861c2951cf2",
+      "name": "מירון לוי 1",
+      "official_total": 185,
+      "projected_total": 215,
+      "correct_group": 44,
+      "extra_points": 30,
+      "rank": 19,
+      "tied": false
+    },
+    {
+      "player_id": "6a2aa977b0fd1b6e6386fa97",
+      "name": "דביר קורן",
+      "official_total": 188,
+      "projected_total": 213,
+      "correct_group": 45,
+      "extra_points": 25,
+      "rank": 20,
       "tied": false
     },
     {
@@ -290,17 +240,7 @@
       "projected_total": 213,
       "correct_group": 39,
       "extra_points": 40,
-      "rank": 28,
-      "tied": false
-    },
-    {
-      "player_id": "6a19e08ed7952402294000d4",
-      "name": "אביב שעיר",
-      "official_total": 192,
-      "projected_total": 212,
-      "correct_group": 43,
-      "extra_points": 20,
-      "rank": 29,
+      "rank": 21,
       "tied": false
     },
     {
@@ -310,7 +250,7 @@
       "projected_total": 212,
       "correct_group": 45,
       "extra_points": 30,
-      "rank": 30,
+      "rank": 22,
       "tied": true
     },
     {
@@ -320,17 +260,17 @@
       "projected_total": 212,
       "correct_group": 46,
       "extra_points": 30,
-      "rank": 30,
+      "rank": 22,
       "tied": true
     },
     {
-      "player_id": "6a22b4e6dc65e32aad6b3eed",
-      "name": "שיי גרינברג",
-      "official_total": 191,
-      "projected_total": 211,
-      "correct_group": 46,
+      "player_id": "6a17254829b6bd6c1b7388e5",
+      "name": "תום בן זאב",
+      "official_total": 190,
+      "projected_total": 210,
+      "correct_group": 43,
       "extra_points": 20,
-      "rank": 31,
+      "rank": 23,
       "tied": false
     },
     {
@@ -340,7 +280,7 @@
       "projected_total": 210,
       "correct_group": 44,
       "extra_points": 30,
-      "rank": 32,
+      "rank": 24,
       "tied": false
     },
     {
@@ -350,7 +290,7 @@
       "projected_total": 210,
       "correct_group": 44,
       "extra_points": 35,
-      "rank": 33,
+      "rank": 25,
       "tied": true
     },
     {
@@ -360,37 +300,17 @@
       "projected_total": 210,
       "correct_group": 44,
       "extra_points": 35,
-      "rank": 33,
+      "rank": 25,
       "tied": true
     },
     {
-      "player_id": "6a2b014fc3812af93af33c7e",
-      "name": "צור אילון",
-      "official_total": 184,
+      "player_id": "6a15e29c0333e317b1d85552",
+      "name": "חנן ברגר 2",
+      "official_total": 179,
       "projected_total": 209,
-      "correct_group": 44,
-      "extra_points": 25,
-      "rank": 34,
-      "tied": false
-    },
-    {
-      "player_id": "6a252710deaba8f75bd5e39e",
-      "name": "אופיר אליאס 2",
-      "official_total": 188,
-      "projected_total": 208,
-      "correct_group": 42,
-      "extra_points": 20,
-      "rank": 35,
-      "tied": false
-    },
-    {
-      "player_id": "6a19e617a917204d9d11afe8",
-      "name": "מתן וניצן",
-      "official_total": 187,
-      "projected_total": 207,
-      "correct_group": 44,
-      "extra_points": 20,
-      "rank": 36,
+      "correct_group": 41,
+      "extra_points": 30,
+      "rank": 26,
       "tied": false
     },
     {
@@ -400,7 +320,7 @@
       "projected_total": 207,
       "correct_group": 43,
       "extra_points": 25,
-      "rank": 37,
+      "rank": 27,
       "tied": false
     },
     {
@@ -410,17 +330,37 @@
       "projected_total": 207,
       "correct_group": 46,
       "extra_points": 30,
-      "rank": 38,
+      "rank": 28,
+      "tied": true
+    },
+    {
+      "player_id": "6a29fa9fd27a73010cb66b51",
+      "name": "שי שווגר 1",
+      "official_total": 177,
+      "projected_total": 207,
+      "correct_group": 42,
+      "extra_points": 30,
+      "rank": 28,
+      "tied": true
+    },
+    {
+      "player_id": "6a159b9313a98ac6670dd3b3",
+      "name": "דניאל טורנוא 1",
+      "official_total": 196,
+      "projected_total": 206,
+      "correct_group": 45,
+      "extra_points": 10,
+      "rank": 29,
       "tied": false
     },
     {
-      "player_id": "6a1c828310d8fb1c103b3109",
-      "name": "אריאל פורמן",
+      "player_id": "6a222c5db3564043fe9197e7",
+      "name": "עידו זהר",
       "official_total": 186,
       "projected_total": 206,
-      "correct_group": 44,
+      "correct_group": 45,
       "extra_points": 20,
-      "rank": 39,
+      "rank": 30,
       "tied": false
     },
     {
@@ -430,7 +370,7 @@
       "projected_total": 206,
       "correct_group": 46,
       "extra_points": 30,
-      "rank": 40,
+      "rank": 31,
       "tied": false
     },
     {
@@ -440,7 +380,7 @@
       "projected_total": 205,
       "correct_group": 44,
       "extra_points": 20,
-      "rank": 41,
+      "rank": 32,
       "tied": true
     },
     {
@@ -450,7 +390,7 @@
       "projected_total": 205,
       "correct_group": 48,
       "extra_points": 20,
-      "rank": 41,
+      "rank": 32,
       "tied": true
     },
     {
@@ -460,7 +400,7 @@
       "projected_total": 205,
       "correct_group": 44,
       "extra_points": 30,
-      "rank": 42,
+      "rank": 33,
       "tied": true
     },
     {
@@ -470,18 +410,8 @@
       "projected_total": 205,
       "correct_group": 45,
       "extra_points": 30,
-      "rank": 42,
+      "rank": 33,
       "tied": true
-    },
-    {
-      "player_id": "6a2acae064716e719f8a1cb8",
-      "name": "דני צחורי 1",
-      "official_total": 194,
-      "projected_total": 204,
-      "correct_group": 50,
-      "extra_points": 10,
-      "rank": 43,
-      "tied": false
     },
     {
       "player_id": "6a28f7a8ae6f34ecb2ae0033",
@@ -490,7 +420,7 @@
       "projected_total": 204,
       "correct_group": 47,
       "extra_points": 20,
-      "rank": 44,
+      "rank": 34,
       "tied": false
     },
     {
@@ -500,17 +430,17 @@
       "projected_total": 203,
       "correct_group": 45,
       "extra_points": 20,
-      "rank": 45,
+      "rank": 35,
       "tied": false
     },
     {
-      "player_id": "6a22b8cc928b6a4030cce5a6",
-      "name": "אביב מסיקה",
+      "player_id": "6a19e08ed7952402294000d4",
+      "name": "אביב שעיר",
       "official_total": 192,
       "projected_total": 202,
-      "correct_group": 45,
+      "correct_group": 43,
       "extra_points": 10,
-      "rank": 46,
+      "rank": 36,
       "tied": false
     },
     {
@@ -520,18 +450,8 @@
       "projected_total": 202,
       "correct_group": 46,
       "extra_points": 15,
-      "rank": 47,
+      "rank": 37,
       "tied": false
-    },
-    {
-      "player_id": "6a1465f8cc924ee7dad01f48",
-      "name": "יונתן אטד",
-      "official_total": 182,
-      "projected_total": 202,
-      "correct_group": 42,
-      "extra_points": 20,
-      "rank": 48,
-      "tied": true
     },
     {
       "player_id": "6a1af96892ade6f76f4692d8",
@@ -540,7 +460,7 @@
       "projected_total": 202,
       "correct_group": 43,
       "extra_points": 20,
-      "rank": 48,
+      "rank": 38,
       "tied": true
     },
     {
@@ -550,7 +470,7 @@
       "projected_total": 202,
       "correct_group": 45,
       "extra_points": 20,
-      "rank": 48,
+      "rank": 38,
       "tied": true
     },
     {
@@ -560,37 +480,17 @@
       "projected_total": 202,
       "correct_group": 46,
       "extra_points": 20,
-      "rank": 48,
+      "rank": 38,
       "tied": true
     },
     {
-      "player_id": "6a120606e42996dce6b28d31",
-      "name": "שרון הופסינק",
-      "official_total": 182,
-      "projected_total": 202,
-      "correct_group": 42,
-      "extra_points": 20,
-      "rank": 48,
-      "tied": true
-    },
-    {
-      "player_id": "6a1c1aed8db642004605ba48",
-      "name": "אמיר בראונשטיין",
+      "player_id": "6a22b4e6dc65e32aad6b3eed",
+      "name": "שיי גרינברג",
       "official_total": 191,
       "projected_total": 201,
-      "correct_group": 45,
+      "correct_group": 46,
       "extra_points": 10,
-      "rank": 49,
-      "tied": false
-    },
-    {
-      "player_id": "6a2ad909b29c744b5050a895",
-      "name": "דני צחורי 2",
-      "official_total": 181,
-      "projected_total": 201,
-      "correct_group": 44,
-      "extra_points": 20,
-      "rank": 50,
+      "rank": 39,
       "tied": false
     },
     {
@@ -600,38 +500,8 @@
       "projected_total": 201,
       "correct_group": 44,
       "extra_points": 25,
-      "rank": 51,
+      "rank": 40,
       "tied": false
-    },
-    {
-      "player_id": "6a13d8d2f8f25792a44fe133",
-      "name": "גל רגב",
-      "official_total": 190,
-      "projected_total": 200,
-      "correct_group": 47,
-      "extra_points": 10,
-      "rank": 52,
-      "tied": true
-    },
-    {
-      "player_id": "6a11e1d333d959e7d4e0bcce",
-      "name": "מירון לוי",
-      "official_total": 190,
-      "projected_total": 200,
-      "correct_group": 43,
-      "extra_points": 10,
-      "rank": 52,
-      "tied": true
-    },
-    {
-      "player_id": "6a297e0a0640d2cb4038dbff",
-      "name": "רז אורן 2",
-      "official_total": 190,
-      "projected_total": 200,
-      "correct_group": 44,
-      "extra_points": 10,
-      "rank": 52,
-      "tied": true
     },
     {
       "player_id": "6a1c6499fb58909b6a62b12f",
@@ -640,18 +510,8 @@
       "projected_total": 200,
       "correct_group": 45,
       "extra_points": 20,
-      "rank": 53,
-      "tied": true
-    },
-    {
-      "player_id": "6a2297cd225990fd99c680a0",
-      "name": "הדר שלזינגר 1",
-      "official_total": 180,
-      "projected_total": 200,
-      "correct_group": 38,
-      "extra_points": 20,
-      "rank": 53,
-      "tied": true
+      "rank": 41,
+      "tied": false
     },
     {
       "player_id": "6a11e1297d88cde5e1fee07f",
@@ -660,47 +520,27 @@
       "projected_total": 200,
       "correct_group": 43,
       "extra_points": 30,
-      "rank": 54,
+      "rank": 42,
       "tied": false
     },
     {
-      "player_id": "6a18ab4bc49299dc186958f5",
-      "name": "אלי מסיקה",
-      "official_total": 189,
+      "player_id": "6a2b014fc3812af93af33c7e",
+      "name": "צור אילון",
+      "official_total": 184,
       "projected_total": 199,
       "correct_group": 44,
-      "extra_points": 10,
-      "rank": 55,
-      "tied": true
+      "extra_points": 15,
+      "rank": 43,
+      "tied": false
     },
     {
-      "player_id": "6a1d32465f804fdd3c1f6965",
-      "name": "רועי כהן",
-      "official_total": 189,
-      "projected_total": 199,
-      "correct_group": 44,
-      "extra_points": 10,
-      "rank": 55,
-      "tied": true
-    },
-    {
-      "player_id": "6a26dff9dce0908f8ed5dbb5",
-      "name": "יותם דוכס",
-      "official_total": 179,
-      "projected_total": 199,
+      "player_id": "6a252710deaba8f75bd5e39e",
+      "name": "אופיר אליאס 2",
+      "official_total": 188,
+      "projected_total": 198,
       "correct_group": 42,
-      "extra_points": 20,
-      "rank": 56,
-      "tied": true
-    },
-    {
-      "player_id": "6a1eee315f527315b9fe159e",
-      "name": "מעיין רוט",
-      "official_total": 179,
-      "projected_total": 199,
-      "correct_group": 37,
-      "extra_points": 20,
-      "rank": 56,
+      "extra_points": 10,
+      "rank": 44,
       "tied": true
     },
     {
@@ -710,17 +550,7 @@
       "projected_total": 198,
       "correct_group": 48,
       "extra_points": 10,
-      "rank": 57,
-      "tied": true
-    },
-    {
-      "player_id": "6a12abb00eaf44794e0d5ba1",
-      "name": "רפאל ברגאי",
-      "official_total": 188,
-      "projected_total": 198,
-      "correct_group": 44,
-      "extra_points": 10,
-      "rank": 57,
+      "rank": 44,
       "tied": true
     },
     {
@@ -730,28 +560,18 @@
       "projected_total": 198,
       "correct_group": 45,
       "extra_points": 15,
-      "rank": 58,
+      "rank": 45,
       "tied": false
     },
     {
-      "player_id": "6a27a2d5e1b6f545d112a5ed",
-      "name": "שחר שלו",
+      "player_id": "6a19e617a917204d9d11afe8",
+      "name": "מתן וניצן",
       "official_total": 187,
       "projected_total": 197,
       "correct_group": 44,
       "extra_points": 10,
-      "rank": 59,
+      "rank": 46,
       "tied": false
-    },
-    {
-      "player_id": "6a1dbdebe857afac9335af63",
-      "name": "ravid sapir",
-      "official_total": 177,
-      "projected_total": 197,
-      "correct_group": 39,
-      "extra_points": 20,
-      "rank": 60,
-      "tied": true
     },
     {
       "player_id": "6a2af7cb3bee36dc117a1c70",
@@ -760,7 +580,7 @@
       "projected_total": 197,
       "correct_group": 43,
       "extra_points": 20,
-      "rank": 60,
+      "rank": 47,
       "tied": true
     },
     {
@@ -770,28 +590,8 @@
       "projected_total": 197,
       "correct_group": 43,
       "extra_points": 20,
-      "rank": 60,
+      "rank": 47,
       "tied": true
-    },
-    {
-      "player_id": "6a2530a2e6cf09c4cebd0324",
-      "name": "תום דרזיה",
-      "official_total": 177,
-      "projected_total": 197,
-      "correct_group": 41,
-      "extra_points": 20,
-      "rank": 60,
-      "tied": true
-    },
-    {
-      "player_id": "6a17236e088e26bd2efa5905",
-      "name": "אסף פרץ",
-      "official_total": 167,
-      "projected_total": 197,
-      "correct_group": 35,
-      "extra_points": 30,
-      "rank": 61,
-      "tied": false
     },
     {
       "player_id": "6a298c87491af89471d36fba",
@@ -800,37 +600,17 @@
       "projected_total": 196,
       "correct_group": 45,
       "extra_points": 10,
-      "rank": 62,
-      "tied": false
-    },
-    {
-      "player_id": "6a1ab17e3469e8123376c33f",
-      "name": "אופיר פז",
-      "official_total": 176,
-      "projected_total": 196,
-      "correct_group": 43,
-      "extra_points": 20,
-      "rank": 63,
+      "rank": 48,
       "tied": true
     },
     {
-      "player_id": "6a1dad8ab5a25610f658576c",
-      "name": "אראל לחוביץ",
-      "official_total": 176,
+      "player_id": "6a1c828310d8fb1c103b3109",
+      "name": "אריאל פורמן",
+      "official_total": 186,
       "projected_total": 196,
-      "correct_group": 42,
-      "extra_points": 20,
-      "rank": 63,
-      "tied": true
-    },
-    {
-      "player_id": "6a284883d2e828c22e54f0c3",
-      "name": "מורן בכור 1",
-      "official_total": 166,
-      "projected_total": 196,
-      "correct_group": 41,
-      "extra_points": 30,
-      "rank": 64,
+      "correct_group": 44,
+      "extra_points": 10,
+      "rank": 48,
       "tied": true
     },
     {
@@ -840,8 +620,8 @@
       "projected_total": 196,
       "correct_group": 38,
       "extra_points": 30,
-      "rank": 64,
-      "tied": true
+      "rank": 49,
+      "tied": false
     },
     {
       "player_id": "6a2a6c0f0b5b0934a3371ae7",
@@ -850,7 +630,7 @@
       "projected_total": 195,
       "correct_group": 49,
       "extra_points": 0,
-      "rank": 65,
+      "rank": 50,
       "tied": false
     },
     {
@@ -860,18 +640,18 @@
       "projected_total": 195,
       "correct_group": 47,
       "extra_points": 10,
-      "rank": 66,
-      "tied": true
+      "rank": 51,
+      "tied": false
     },
     {
-      "player_id": "6a172a5e3f686c0b6e4f4f6a",
-      "name": "תום שלו 1",
-      "official_total": 185,
-      "projected_total": 195,
-      "correct_group": 41,
-      "extra_points": 10,
-      "rank": 66,
-      "tied": true
+      "player_id": "6a2acae064716e719f8a1cb8",
+      "name": "דני צחורי 1",
+      "official_total": 194,
+      "projected_total": 194,
+      "correct_group": 50,
+      "extra_points": 0,
+      "rank": 52,
+      "tied": false
     },
     {
       "player_id": "6a243ee7ae8f8ff03cce6644",
@@ -880,18 +660,8 @@
       "projected_total": 194,
       "correct_group": 44,
       "extra_points": 20,
-      "rank": 67,
-      "tied": true
-    },
-    {
-      "player_id": "6a29c0f230ee074cd7542cd4",
-      "name": "נעם בלטיאנסקי",
-      "official_total": 174,
-      "projected_total": 194,
-      "correct_group": 45,
-      "extra_points": 20,
-      "rank": 67,
-      "tied": true
+      "rank": 53,
+      "tied": false
     },
     {
       "player_id": "6a2ad55846973d486be4a7ef",
@@ -900,7 +670,7 @@
       "projected_total": 194,
       "correct_group": 43,
       "extra_points": 25,
-      "rank": 68,
+      "rank": 54,
       "tied": false
     },
     {
@@ -910,7 +680,7 @@
       "projected_total": 193,
       "correct_group": 46,
       "extra_points": 10,
-      "rank": 69,
+      "rank": 55,
       "tied": false
     },
     {
@@ -920,18 +690,38 @@
       "projected_total": 193,
       "correct_group": 41,
       "extra_points": 20,
-      "rank": 70,
+      "rank": 56,
       "tied": false
     },
     {
-      "player_id": "6a1f0872444fcb8820691a93",
-      "name": "שלי זהר",
-      "official_total": 172,
+      "player_id": "6a22b8cc928b6a4030cce5a6",
+      "name": "אביב מסיקה",
+      "official_total": 192,
       "projected_total": 192,
-      "correct_group": 41,
-      "extra_points": 20,
-      "rank": 71,
+      "correct_group": 45,
+      "extra_points": 0,
+      "rank": 57,
       "tied": false
+    },
+    {
+      "player_id": "6a1465f8cc924ee7dad01f48",
+      "name": "יונתן אטד",
+      "official_total": 182,
+      "projected_total": 192,
+      "correct_group": 42,
+      "extra_points": 10,
+      "rank": 58,
+      "tied": true
+    },
+    {
+      "player_id": "6a120606e42996dce6b28d31",
+      "name": "שרון הופסינק",
+      "official_total": 182,
+      "projected_total": 192,
+      "correct_group": 42,
+      "extra_points": 10,
+      "rank": 58,
+      "tied": true
     },
     {
       "player_id": "6a2a983ca3d72aff5330383b",
@@ -940,7 +730,27 @@
       "projected_total": 191,
       "correct_group": 43,
       "extra_points": 0,
-      "rank": 72,
+      "rank": 59,
+      "tied": true
+    },
+    {
+      "player_id": "6a1c1aed8db642004605ba48",
+      "name": "אמיר בראונשטיין",
+      "official_total": 191,
+      "projected_total": 191,
+      "correct_group": 45,
+      "extra_points": 0,
+      "rank": 59,
+      "tied": true
+    },
+    {
+      "player_id": "6a2ad909b29c744b5050a895",
+      "name": "דני צחורי 2",
+      "official_total": 181,
+      "projected_total": 191,
+      "correct_group": 44,
+      "extra_points": 10,
+      "rank": 60,
       "tied": false
     },
     {
@@ -950,28 +760,38 @@
       "projected_total": 191,
       "correct_group": 43,
       "extra_points": 15,
-      "rank": 73,
+      "rank": 61,
       "tied": false
     },
     {
-      "player_id": "6a26e8bd5e1cf2eb004fd6df",
-      "name": "לואיס סקלי",
-      "official_total": 171,
-      "projected_total": 191,
-      "correct_group": 38,
-      "extra_points": 20,
-      "rank": 74,
-      "tied": false
+      "player_id": "6a13d8d2f8f25792a44fe133",
+      "name": "גל רגב",
+      "official_total": 190,
+      "projected_total": 190,
+      "correct_group": 47,
+      "extra_points": 0,
+      "rank": 62,
+      "tied": true
     },
     {
-      "player_id": "6a1aa6855d2f5df5e8254309",
-      "name": "גיא גרוס 10",
-      "official_total": 161,
-      "projected_total": 191,
-      "correct_group": 34,
-      "extra_points": 30,
-      "rank": 75,
-      "tied": false
+      "player_id": "6a11e1d333d959e7d4e0bcce",
+      "name": "מירון לוי",
+      "official_total": 190,
+      "projected_total": 190,
+      "correct_group": 43,
+      "extra_points": 0,
+      "rank": 62,
+      "tied": true
+    },
+    {
+      "player_id": "6a297e0a0640d2cb4038dbff",
+      "name": "רז אורן 2",
+      "official_total": 190,
+      "projected_total": 190,
+      "correct_group": 44,
+      "extra_points": 0,
+      "rank": 62,
+      "tied": true
     },
     {
       "player_id": "6a25005a798139c7f0c7ff25",
@@ -980,8 +800,28 @@
       "projected_total": 190,
       "correct_group": 45,
       "extra_points": 10,
-      "rank": 76,
-      "tied": false
+      "rank": 63,
+      "tied": true
+    },
+    {
+      "player_id": "6a2297cd225990fd99c680a0",
+      "name": "הדר שלזינגר 1",
+      "official_total": 180,
+      "projected_total": 190,
+      "correct_group": 38,
+      "extra_points": 10,
+      "rank": 63,
+      "tied": true
+    },
+    {
+      "player_id": "6a18ab4bc49299dc186958f5",
+      "name": "אלי מסיקה",
+      "official_total": 189,
+      "projected_total": 189,
+      "correct_group": 44,
+      "extra_points": 0,
+      "rank": 64,
+      "tied": true
     },
     {
       "player_id": "6a183b5d35853bf4de5622cb",
@@ -990,7 +830,17 @@
       "projected_total": 189,
       "correct_group": 45,
       "extra_points": 0,
-      "rank": 77,
+      "rank": 64,
+      "tied": true
+    },
+    {
+      "player_id": "6a1d32465f804fdd3c1f6965",
+      "name": "רועי כהן",
+      "official_total": 189,
+      "projected_total": 189,
+      "correct_group": 44,
+      "extra_points": 0,
+      "rank": 64,
       "tied": true
     },
     {
@@ -1000,18 +850,28 @@
       "projected_total": 189,
       "correct_group": 49,
       "extra_points": 0,
-      "rank": 77,
+      "rank": 64,
       "tied": true
     },
     {
-      "player_id": "6a155a81ba00798cf5c42d19",
-      "name": "רותם בן אור",
-      "official_total": 169,
+      "player_id": "6a26dff9dce0908f8ed5dbb5",
+      "name": "יותם דוכס",
+      "official_total": 179,
       "projected_total": 189,
-      "correct_group": 40,
-      "extra_points": 20,
-      "rank": 78,
-      "tied": false
+      "correct_group": 42,
+      "extra_points": 10,
+      "rank": 65,
+      "tied": true
+    },
+    {
+      "player_id": "6a1eee315f527315b9fe159e",
+      "name": "מעיין רוט",
+      "official_total": 179,
+      "projected_total": 189,
+      "correct_group": 37,
+      "extra_points": 10,
+      "rank": 65,
+      "tied": true
     },
     {
       "player_id": "6a2ac48ba8e1d1e90be8ee64",
@@ -1020,7 +880,7 @@
       "projected_total": 188,
       "correct_group": 46,
       "extra_points": 0,
-      "rank": 79,
+      "rank": 66,
       "tied": true
     },
     {
@@ -1030,7 +890,37 @@
       "projected_total": 188,
       "correct_group": 48,
       "extra_points": 0,
-      "rank": 79,
+      "rank": 66,
+      "tied": true
+    },
+    {
+      "player_id": "6a12abb00eaf44794e0d5ba1",
+      "name": "רפאל ברגאי",
+      "official_total": 188,
+      "projected_total": 188,
+      "correct_group": 44,
+      "extra_points": 0,
+      "rank": 66,
+      "tied": true
+    },
+    {
+      "player_id": "6a27a2d5e1b6f545d112a5ed",
+      "name": "שחר שלו",
+      "official_total": 187,
+      "projected_total": 187,
+      "correct_group": 44,
+      "extra_points": 0,
+      "rank": 67,
+      "tied": false
+    },
+    {
+      "player_id": "6a1dbdebe857afac9335af63",
+      "name": "ravid sapir",
+      "official_total": 177,
+      "projected_total": 187,
+      "correct_group": 39,
+      "extra_points": 10,
+      "rank": 68,
       "tied": true
     },
     {
@@ -1040,27 +930,67 @@
       "projected_total": 187,
       "correct_group": 40,
       "extra_points": 10,
-      "rank": 80,
-      "tied": false
+      "rank": 68,
+      "tied": true
     },
     {
-      "player_id": "6a11d3f14751b22674b0999c",
-      "name": "גיא גרוס",
-      "official_total": 167,
+      "player_id": "6a2530a2e6cf09c4cebd0324",
+      "name": "תום דרזיה",
+      "official_total": 177,
       "projected_total": 187,
-      "correct_group": 38,
-      "extra_points": 20,
-      "rank": 81,
-      "tied": false
-    },
-    {
-      "player_id": "6a259e0de00d4a54b4ce2447",
-      "name": "יונתן ברוייר",
-      "official_total": 176,
-      "projected_total": 186,
       "correct_group": 41,
       "extra_points": 10,
-      "rank": 82,
+      "rank": 68,
+      "tied": true
+    },
+    {
+      "player_id": "6a17236e088e26bd2efa5905",
+      "name": "אסף פרץ",
+      "official_total": 167,
+      "projected_total": 187,
+      "correct_group": 35,
+      "extra_points": 20,
+      "rank": 69,
+      "tied": false
+    },
+    {
+      "player_id": "6a1ab17e3469e8123376c33f",
+      "name": "אופיר פז",
+      "official_total": 176,
+      "projected_total": 186,
+      "correct_group": 43,
+      "extra_points": 10,
+      "rank": 70,
+      "tied": true
+    },
+    {
+      "player_id": "6a1dad8ab5a25610f658576c",
+      "name": "אראל לחוביץ",
+      "official_total": 176,
+      "projected_total": 186,
+      "correct_group": 42,
+      "extra_points": 10,
+      "rank": 70,
+      "tied": true
+    },
+    {
+      "player_id": "6a284883d2e828c22e54f0c3",
+      "name": "מורן בכור 1",
+      "official_total": 166,
+      "projected_total": 186,
+      "correct_group": 41,
+      "extra_points": 20,
+      "rank": 71,
+      "tied": false
+    },
+    {
+      "player_id": "6a172a5e3f686c0b6e4f4f6a",
+      "name": "תום שלו 1",
+      "official_total": 185,
+      "projected_total": 185,
+      "correct_group": 41,
+      "extra_points": 0,
+      "rank": 72,
       "tied": false
     },
     {
@@ -1070,7 +1000,7 @@
       "projected_total": 185,
       "correct_group": 42,
       "extra_points": 15,
-      "rank": 83,
+      "rank": 73,
       "tied": false
     },
     {
@@ -1080,7 +1010,7 @@
       "projected_total": 185,
       "correct_group": 42,
       "extra_points": 20,
-      "rank": 84,
+      "rank": 74,
       "tied": false
     },
     {
@@ -1090,7 +1020,7 @@
       "projected_total": 184,
       "correct_group": 40,
       "extra_points": 10,
-      "rank": 85,
+      "rank": 75,
       "tied": true
     },
     {
@@ -1100,7 +1030,17 @@
       "projected_total": 184,
       "correct_group": 42,
       "extra_points": 10,
-      "rank": 85,
+      "rank": 75,
+      "tied": true
+    },
+    {
+      "player_id": "6a29c0f230ee074cd7542cd4",
+      "name": "נעם בלטיאנסקי",
+      "official_total": 174,
+      "projected_total": 184,
+      "correct_group": 45,
+      "extra_points": 10,
+      "rank": 75,
       "tied": true
     },
     {
@@ -1110,7 +1050,7 @@
       "projected_total": 183,
       "correct_group": 41,
       "extra_points": 10,
-      "rank": 86,
+      "rank": 76,
       "tied": true
     },
     {
@@ -1120,7 +1060,7 @@
       "projected_total": 183,
       "correct_group": 45,
       "extra_points": 10,
-      "rank": 86,
+      "rank": 76,
       "tied": true
     },
     {
@@ -1130,7 +1070,7 @@
       "projected_total": 182,
       "correct_group": 42,
       "extra_points": 10,
-      "rank": 87,
+      "rank": 77,
       "tied": true
     },
     {
@@ -1140,7 +1080,7 @@
       "projected_total": 182,
       "correct_group": 41,
       "extra_points": 10,
-      "rank": 87,
+      "rank": 77,
       "tied": true
     },
     {
@@ -1150,28 +1090,38 @@
       "projected_total": 182,
       "correct_group": 42,
       "extra_points": 10,
-      "rank": 87,
+      "rank": 77,
       "tied": true
     },
     {
-      "player_id": "6a2a5e3ccdef689ba1eaf90b",
-      "name": "נתי מאי",
+      "player_id": "6a1f0872444fcb8820691a93",
+      "name": "שלי זהר",
       "official_total": 172,
       "projected_total": 182,
-      "correct_group": 39,
+      "correct_group": 41,
       "extra_points": 10,
-      "rank": 87,
+      "rank": 77,
       "tied": true
     },
     {
-      "player_id": "6a2982501221efbeb999783a",
-      "name": "עומר שגיא",
+      "player_id": "6a26e8bd5e1cf2eb004fd6df",
+      "name": "לואיס סקלי",
       "official_total": 171,
       "projected_total": 181,
-      "correct_group": 35,
+      "correct_group": 38,
       "extra_points": 10,
-      "rank": 88,
+      "rank": 78,
       "tied": false
+    },
+    {
+      "player_id": "6a1aa6855d2f5df5e8254309",
+      "name": "גיא גרוס 10",
+      "official_total": 161,
+      "projected_total": 181,
+      "correct_group": 34,
+      "extra_points": 20,
+      "rank": 79,
+      "tied": true
     },
     {
       "player_id": "6a229789cca7c762ec5e866c",
@@ -1180,8 +1130,8 @@
       "projected_total": 181,
       "correct_group": 40,
       "extra_points": 20,
-      "rank": 89,
-      "tied": false
+      "rank": 79,
+      "tied": true
     },
     {
       "player_id": "6a11dbbc740d7d8220c5550c",
@@ -1190,7 +1140,7 @@
       "projected_total": 180,
       "correct_group": 43,
       "extra_points": 10,
-      "rank": 90,
+      "rank": 80,
       "tied": false
     },
     {
@@ -1200,7 +1150,17 @@
       "projected_total": 180,
       "correct_group": 40,
       "extra_points": 15,
-      "rank": 91,
+      "rank": 81,
+      "tied": false
+    },
+    {
+      "player_id": "6a155a81ba00798cf5c42d19",
+      "name": "רותם בן אור",
+      "official_total": 169,
+      "projected_total": 179,
+      "correct_group": 40,
+      "extra_points": 10,
+      "rank": 82,
       "tied": false
     },
     {
@@ -1210,7 +1170,7 @@
       "projected_total": 178,
       "correct_group": 42,
       "extra_points": 0,
-      "rank": 92,
+      "rank": 83,
       "tied": false
     },
     {
@@ -1220,7 +1180,7 @@
       "projected_total": 178,
       "correct_group": 41,
       "extra_points": 10,
-      "rank": 93,
+      "rank": 84,
       "tied": false
     },
     {
@@ -1230,7 +1190,7 @@
       "projected_total": 177,
       "correct_group": 42,
       "extra_points": 0,
-      "rank": 94,
+      "rank": 85,
       "tied": true
     },
     {
@@ -1240,7 +1200,7 @@
       "projected_total": 177,
       "correct_group": 41,
       "extra_points": 0,
-      "rank": 94,
+      "rank": 85,
       "tied": true
     },
     {
@@ -1250,17 +1210,17 @@
       "projected_total": 177,
       "correct_group": 42,
       "extra_points": 0,
-      "rank": 94,
+      "rank": 85,
       "tied": true
     },
     {
-      "player_id": "6a2ae91cf5ad2dd0c517031c",
-      "name": "צביאל רובין",
+      "player_id": "6a11d3f14751b22674b0999c",
+      "name": "גיא גרוס",
       "official_total": 167,
       "projected_total": 177,
-      "correct_group": 33,
+      "correct_group": 38,
       "extra_points": 10,
-      "rank": 95,
+      "rank": 86,
       "tied": true
     },
     {
@@ -1270,7 +1230,17 @@
       "projected_total": 177,
       "correct_group": 42,
       "extra_points": 10,
-      "rank": 95,
+      "rank": 86,
+      "tied": true
+    },
+    {
+      "player_id": "6a259e0de00d4a54b4ce2447",
+      "name": "יונתן ברוייר",
+      "official_total": 176,
+      "projected_total": 176,
+      "correct_group": 41,
+      "extra_points": 0,
+      "rank": 87,
       "tied": true
     },
     {
@@ -1280,8 +1250,8 @@
       "projected_total": 176,
       "correct_group": 43,
       "extra_points": 0,
-      "rank": 96,
-      "tied": false
+      "rank": 87,
+      "tied": true
     },
     {
       "player_id": "6a1bb66c6995ab1f4de23e6e",
@@ -1290,7 +1260,7 @@
       "projected_total": 175,
       "correct_group": 42,
       "extra_points": 0,
-      "rank": 97,
+      "rank": 88,
       "tied": false
     },
     {
@@ -1300,7 +1270,7 @@
       "projected_total": 175,
       "correct_group": 43,
       "extra_points": 10,
-      "rank": 98,
+      "rank": 89,
       "tied": true
     },
     {
@@ -1310,7 +1280,7 @@
       "projected_total": 175,
       "correct_group": 40,
       "extra_points": 10,
-      "rank": 98,
+      "rank": 89,
       "tied": true
     },
     {
@@ -1320,7 +1290,7 @@
       "projected_total": 174,
       "correct_group": 44,
       "extra_points": 0,
-      "rank": 99,
+      "rank": 90,
       "tied": true
     },
     {
@@ -1330,7 +1300,7 @@
       "projected_total": 174,
       "correct_group": 48,
       "extra_points": 0,
-      "rank": 99,
+      "rank": 90,
       "tied": true
     },
     {
@@ -1340,27 +1310,17 @@
       "projected_total": 173,
       "correct_group": 41,
       "extra_points": 10,
-      "rank": 100,
+      "rank": 91,
       "tied": false
     },
     {
-      "player_id": "6a1ee3abc2de8e553df6b1d6",
-      "name": "אביטל לחוביץ האמיתי",
-      "official_total": 153,
-      "projected_total": 173,
-      "correct_group": 28,
-      "extra_points": 20,
-      "rank": 101,
-      "tied": false
-    },
-    {
-      "player_id": "6a11f0a98a5afba198872688",
-      "name": "נמרוד אקרמן",
-      "official_total": 162,
+      "player_id": "6a2a5e3ccdef689ba1eaf90b",
+      "name": "נתי מאי",
+      "official_total": 172,
       "projected_total": 172,
-      "correct_group": 36,
-      "extra_points": 10,
-      "rank": 102,
+      "correct_group": 39,
+      "extra_points": 0,
+      "rank": 92,
       "tied": false
     },
     {
@@ -1370,18 +1330,18 @@
       "projected_total": 171,
       "correct_group": 40,
       "extra_points": 0,
-      "rank": 103,
-      "tied": false
+      "rank": 93,
+      "tied": true
     },
     {
-      "player_id": "6a23fa9db71bae4913530b40",
-      "name": "אריאל זיני",
-      "official_total": 131,
+      "player_id": "6a2982501221efbeb999783a",
+      "name": "עומר שגיא",
+      "official_total": 171,
       "projected_total": 171,
-      "correct_group": 27,
-      "extra_points": 40,
-      "rank": 104,
-      "tied": false
+      "correct_group": 35,
+      "extra_points": 0,
+      "rank": 93,
+      "tied": true
     },
     {
       "player_id": "6a297aa2654e4d47687fd425",
@@ -1390,7 +1350,7 @@
       "projected_total": 169,
       "correct_group": 40,
       "extra_points": 0,
-      "rank": 105,
+      "rank": 94,
       "tied": true
     },
     {
@@ -1400,7 +1360,7 @@
       "projected_total": 169,
       "correct_group": 41,
       "extra_points": 0,
-      "rank": 105,
+      "rank": 94,
       "tied": true
     },
     {
@@ -1410,7 +1370,7 @@
       "projected_total": 168,
       "correct_group": 34,
       "extra_points": 10,
-      "rank": 106,
+      "rank": 95,
       "tied": false
     },
     {
@@ -1420,7 +1380,17 @@
       "projected_total": 168,
       "correct_group": 33,
       "extra_points": 20,
-      "rank": 107,
+      "rank": 96,
+      "tied": false
+    },
+    {
+      "player_id": "6a2ae91cf5ad2dd0c517031c",
+      "name": "צביאל רובין",
+      "official_total": 167,
+      "projected_total": 167,
+      "correct_group": 33,
+      "extra_points": 0,
+      "rank": 97,
       "tied": false
     },
     {
@@ -1430,7 +1400,7 @@
       "projected_total": 167,
       "correct_group": 39,
       "extra_points": 10,
-      "rank": 108,
+      "rank": 98,
       "tied": true
     },
     {
@@ -1440,7 +1410,7 @@
       "projected_total": 167,
       "correct_group": 34,
       "extra_points": 10,
-      "rank": 108,
+      "rank": 98,
       "tied": true
     },
     {
@@ -1450,7 +1420,7 @@
       "projected_total": 166,
       "correct_group": 44,
       "extra_points": 0,
-      "rank": 109,
+      "rank": 99,
       "tied": false
     },
     {
@@ -1460,7 +1430,7 @@
       "projected_total": 166,
       "correct_group": 34,
       "extra_points": 10,
-      "rank": 110,
+      "rank": 100,
       "tied": false
     },
     {
@@ -1470,7 +1440,27 @@
       "projected_total": 164,
       "correct_group": 39,
       "extra_points": 0,
-      "rank": 111,
+      "rank": 101,
+      "tied": false
+    },
+    {
+      "player_id": "6a1ee3abc2de8e553df6b1d6",
+      "name": "אביטל לחוביץ האמיתי",
+      "official_total": 153,
+      "projected_total": 163,
+      "correct_group": 28,
+      "extra_points": 10,
+      "rank": 102,
+      "tied": false
+    },
+    {
+      "player_id": "6a11f0a98a5afba198872688",
+      "name": "נמרוד אקרמן",
+      "official_total": 162,
+      "projected_total": 162,
+      "correct_group": 36,
+      "extra_points": 0,
+      "rank": 103,
       "tied": false
     },
     {
@@ -1480,7 +1470,7 @@
       "projected_total": 161,
       "correct_group": 31,
       "extra_points": 10,
-      "rank": 112,
+      "rank": 104,
       "tied": true
     },
     {
@@ -1490,8 +1480,18 @@
       "projected_total": 161,
       "correct_group": 34,
       "extra_points": 10,
-      "rank": 112,
+      "rank": 104,
       "tied": true
+    },
+    {
+      "player_id": "6a23fa9db71bae4913530b40",
+      "name": "אריאל זיני",
+      "official_total": 131,
+      "projected_total": 161,
+      "correct_group": 27,
+      "extra_points": 30,
+      "rank": 105,
+      "tied": false
     },
     {
       "player_id": "6a15e1efbefc2ad2c1d59f59",
@@ -1500,7 +1500,7 @@
       "projected_total": 160,
       "correct_group": 36,
       "extra_points": 0,
-      "rank": 113,
+      "rank": 106,
       "tied": false
     },
     {
@@ -1510,7 +1510,7 @@
       "projected_total": 157,
       "correct_group": 39,
       "extra_points": 0,
-      "rank": 114,
+      "rank": 107,
       "tied": false
     },
     {
@@ -1520,7 +1520,7 @@
       "projected_total": 156,
       "correct_group": 37,
       "extra_points": 0,
-      "rank": 115,
+      "rank": 108,
       "tied": false
     },
     {
@@ -1530,7 +1530,7 @@
       "projected_total": 150,
       "correct_group": 36,
       "extra_points": 0,
-      "rank": 116,
+      "rank": 109,
       "tied": false
     },
     {
@@ -1540,7 +1540,7 @@
       "projected_total": 145,
       "correct_group": 29,
       "extra_points": 0,
-      "rank": 117,
+      "rank": 110,
       "tied": false
     }
   ]

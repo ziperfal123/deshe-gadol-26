@@ -1910,8 +1910,8 @@
   ],
   "projected": {
     "official_total": 179,
-    "projected_total": 199,
-    "extra_points": 20,
+    "projected_total": 189,
+    "extra_points": 10,
     "fields": [
       {
         "key": "top_scorer",
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T04:34:43+00:00"
+  "synced_at": "2026-07-01T05:00:29+00:00"
 }

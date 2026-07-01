@@ -363,12 +363,13 @@ def _matcher(key):
     return _match_team if key in TEAM_FIELDS else _match_player
 
 def projected_for(sp):
-    """Provisional superlative points for one player's special picks (override > computed)."""
+    """Provisional superlative points for one player's special picks (override > computed).
+    Final fields are already counted in official total_points, so excluded from projected gain."""
     out, gained = [], 0
     for key in FIELD_ORDER:
         val, pts = sp.get(key), POINTS[key]
         is_leader = bool(val) and live[key] and _matcher(key)(val, lead_set[key])
-        if is_leader:
+        if is_leader and key not in final_fields:
             gained += pts
         out.append({"key": key, "value": val, "points_if_correct": pts,
                     "leader": is_leader, "points": pts if is_leader else 0,
