@@ -689,7 +689,13 @@ function SpecialsSection({ player, specialStats }: { player: PlayerFile; special
           const pf = projByKey[s.key]
           let label = 'ממתין'
           let status: GroupItem['status'] = 'pending'
-          if (pf?.leader) {
+          if (s.status === 'correct') {
+            label = `נכון · +${s.points}`
+            status = 'correct'
+          } else if (s.status === 'wrong') {
+            label = 'לא נכון'
+            status = 'wrong'
+          } else if (pf?.leader) {
             label = `מוביל · +${pf.points}`
             status = 'correct'
           } else if (pf && pf.status === 'trailing') {
