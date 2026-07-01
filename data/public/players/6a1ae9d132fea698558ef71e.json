@@ -1,7 +1,7 @@
 {
   "player_id": "6a1ae9d132fea698558ef71e",
   "name": "אליאל פרץ",
-  "total_points": 176,
+  "total_points": 181,
   "correct_group": 46,
   "group_stage": [
     {
@@ -1617,8 +1617,8 @@
         "team_he": "נורבגיה",
         "team_code": "NOR",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "אורוגוואי",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 176,
-    "projected_total": 206,
+    "official_total": 181,
+    "projected_total": 211,
     "extra_points": 30,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T05:00:29+00:00"
+  "synced_at": "2026-07-01T05:02:28+00:00"
 }

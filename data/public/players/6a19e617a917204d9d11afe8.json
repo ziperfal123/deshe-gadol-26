@@ -1,7 +1,7 @@
 {
   "player_id": "6a19e617a917204d9d11afe8",
   "name": "מתן וניצן",
-  "total_points": 187,
+  "total_points": 192,
   "correct_group": 44,
   "group_stage": [
     {
@@ -1666,8 +1666,8 @@
         "team_he": "נורבגיה",
         "team_code": "NOR",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "קולומביה",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 187,
-    "projected_total": 197,
+    "official_total": 192,
+    "projected_total": 202,
     "extra_points": 10,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T05:00:29+00:00"
+  "synced_at": "2026-07-01T05:02:28+00:00"
 }

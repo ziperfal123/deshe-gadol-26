@@ -1,7 +1,7 @@
 {
   "player_id": "6a1c57c8878905a3957a78a7",
   "name": "ליאם הופסינק",
-  "total_points": 194,
+  "total_points": 199,
   "correct_group": 44,
   "group_stage": [
     {
@@ -1645,8 +1645,8 @@
         "team_he": "נורבגיה",
         "team_code": "NOR",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "מרוקו",
@@ -1909,9 +1909,9 @@
     }
   ],
   "projected": {
-    "official_total": 194,
-    "projected_total": 244,
-    "extra_points": 50,
+    "official_total": 199,
+    "projected_total": 229,
+    "extra_points": 30,
     "fields": [
       {
         "key": "top_scorer",
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T04:34:43+00:00"
+  "synced_at": "2026-07-01T05:02:28+00:00"
 }

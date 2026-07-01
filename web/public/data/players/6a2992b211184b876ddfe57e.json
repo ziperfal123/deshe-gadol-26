@@ -1,7 +1,7 @@
 {
   "player_id": "6a2992b211184b876ddfe57e",
   "name": "עידו ונווה אבולעפיה",
-  "total_points": 173,
+  "total_points": 178,
   "correct_group": 41,
   "group_stage": [
     {
@@ -1596,8 +1596,8 @@
         "team_he": "נורבגיה",
         "team_code": "NOR",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "דרום קוריאה",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 173,
-    "projected_total": 193,
+    "official_total": 178,
+    "projected_total": 198,
     "extra_points": 20,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T04:34:43+00:00"
+  "synced_at": "2026-07-01T05:02:28+00:00"
 }

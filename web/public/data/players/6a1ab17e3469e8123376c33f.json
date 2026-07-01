@@ -1,7 +1,7 @@
 {
   "player_id": "6a1ab17e3469e8123376c33f",
   "name": "אופיר פז",
-  "total_points": 176,
+  "total_points": 181,
   "correct_group": 43,
   "group_stage": [
     {
@@ -1638,8 +1638,8 @@
         "team_he": "נורבגיה",
         "team_code": "NOR",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "אנגליה",
@@ -1909,9 +1909,9 @@
     }
   ],
   "projected": {
-    "official_total": 176,
-    "projected_total": 196,
-    "extra_points": 20,
+    "official_total": 181,
+    "projected_total": 191,
+    "extra_points": 10,
     "fields": [
       {
         "key": "top_scorer",
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T04:34:43+00:00"
+  "synced_at": "2026-07-01T05:02:28+00:00"
 }

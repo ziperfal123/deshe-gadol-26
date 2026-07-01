@@ -1,7 +1,7 @@
 {
   "player_id": "6a12040d7166ddfad1cc9633",
   "name": "נאור אלכתב 2",
-  "total_points": 157,
+  "total_points": 162,
   "correct_group": 34,
   "group_stage": [
     {
@@ -1596,8 +1596,8 @@
         "team_he": "נורבגיה",
         "team_code": "NOR",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "מרוקו",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 157,
-    "projected_total": 167,
+    "official_total": 162,
+    "projected_total": 172,
     "extra_points": 10,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T05:00:29+00:00"
+  "synced_at": "2026-07-01T05:02:28+00:00"
 }

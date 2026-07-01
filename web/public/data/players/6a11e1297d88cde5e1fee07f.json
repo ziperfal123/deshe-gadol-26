@@ -1,7 +1,7 @@
 {
   "player_id": "6a11e1297d88cde5e1fee07f",
   "name": "גבריאל סקלאר",
-  "total_points": 170,
+  "total_points": 175,
   "correct_group": 43,
   "group_stage": [
     {
@@ -1603,8 +1603,8 @@
         "team_he": "נורבגיה",
         "team_code": "NOR",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "איראן",
@@ -1694,7 +1694,7 @@
         "team_he": "חוף השנהב",
         "team_code": "CIV",
         "points_if_correct": 5,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       }
     ],
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 170,
-    "projected_total": 200,
+    "official_total": 175,
+    "projected_total": 205,
     "extra_points": 30,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T04:34:43+00:00"
+  "synced_at": "2026-07-01T05:02:28+00:00"
 }

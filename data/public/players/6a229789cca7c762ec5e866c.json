@@ -1,7 +1,7 @@
 {
   "player_id": "6a229789cca7c762ec5e866c",
   "name": "זוהר אטון",
-  "total_points": 161,
+  "total_points": 166,
   "correct_group": 40,
   "group_stage": [
     {
@@ -1631,8 +1631,8 @@
         "team_he": "נורבגיה",
         "team_code": "NOR",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "צרפת",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 161,
-    "projected_total": 181,
+    "official_total": 166,
+    "projected_total": 186,
     "extra_points": 20,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T05:00:29+00:00"
+  "synced_at": "2026-07-01T05:02:28+00:00"
 }

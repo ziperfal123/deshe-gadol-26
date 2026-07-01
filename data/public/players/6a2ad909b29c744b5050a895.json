@@ -1,7 +1,7 @@
 {
   "player_id": "6a2ad909b29c744b5050a895",
   "name": "דני צחורי 2",
-  "total_points": 181,
+  "total_points": 186,
   "correct_group": 44,
   "group_stage": [
     {
@@ -1645,8 +1645,8 @@
         "team_he": "נורבגיה",
         "team_code": "NOR",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "ארצות הברית",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 181,
-    "projected_total": 191,
+    "official_total": 186,
+    "projected_total": 196,
     "extra_points": 10,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T05:00:29+00:00"
+  "synced_at": "2026-07-01T05:02:28+00:00"
 }

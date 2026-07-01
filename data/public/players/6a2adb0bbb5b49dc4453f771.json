@@ -1,7 +1,7 @@
 {
   "player_id": "6a2adb0bbb5b49dc4453f771",
   "name": "דניאל טורנוא 3",
-  "total_points": 185,
+  "total_points": 190,
   "correct_group": 44,
   "group_stage": [
     {
@@ -1680,8 +1680,8 @@
         "team_he": "נורבגיה",
         "team_code": "NOR",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "פורטוגל",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 185,
-    "projected_total": 205,
+    "official_total": 190,
+    "projected_total": 210,
     "extra_points": 20,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T05:00:29+00:00"
+  "synced_at": "2026-07-01T05:02:28+00:00"
 }

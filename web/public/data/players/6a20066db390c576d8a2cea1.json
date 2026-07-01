@@ -1,7 +1,7 @@
 {
   "player_id": "6a20066db390c576d8a2cea1",
   "name": "סער בוכריס1",
-  "total_points": 175,
+  "total_points": 180,
   "correct_group": 44,
   "group_stage": [
     {
@@ -1694,8 +1694,8 @@
         "team_he": "נורבגיה",
         "team_code": "NOR",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       }
     ],
     "quarter_final": [
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 175,
-    "projected_total": 210,
+    "official_total": 180,
+    "projected_total": 215,
     "extra_points": 35,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T04:34:43+00:00"
+  "synced_at": "2026-07-01T05:02:28+00:00"
 }

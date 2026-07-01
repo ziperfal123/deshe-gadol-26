@@ -1,7 +1,7 @@
 {
   "player_id": "6a1980a4e2acd861c2951cf2",
   "name": "מירון לוי 1",
-  "total_points": 185,
+  "total_points": 190,
   "correct_group": 44,
   "group_stage": [
     {
@@ -1617,8 +1617,8 @@
         "team_he": "נורבגיה",
         "team_code": "NOR",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "גרמניה",
@@ -1666,7 +1666,7 @@
         "team_he": "חוף השנהב",
         "team_code": "CIV",
         "points_if_correct": 5,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 185,
-    "projected_total": 215,
+    "official_total": 190,
+    "projected_total": 220,
     "extra_points": 30,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T05:00:29+00:00"
+  "synced_at": "2026-07-01T05:02:28+00:00"
 }

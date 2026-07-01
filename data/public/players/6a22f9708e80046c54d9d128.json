@@ -1,7 +1,7 @@
 {
   "player_id": "6a22f9708e80046c54d9d128",
   "name": "עומר סלוק",
-  "total_points": 177,
+  "total_points": 182,
   "correct_group": 43,
   "group_stage": [
     {
@@ -1652,8 +1652,8 @@
         "team_he": "נורבגיה",
         "team_code": "NOR",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "ברזיל",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 177,
-    "projected_total": 197,
+    "official_total": 182,
+    "projected_total": 202,
     "extra_points": 20,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T05:00:29+00:00"
+  "synced_at": "2026-07-01T05:02:28+00:00"
 }

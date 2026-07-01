@@ -1,7 +1,7 @@
 {
   "player_id": "6a296565e87160448e847c01",
   "name": "דביר להב",
-  "total_points": 165,
+  "total_points": 170,
   "correct_group": 42,
   "group_stage": [
     {
@@ -1652,8 +1652,8 @@
         "team_he": "נורבגיה",
         "team_code": "NOR",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "יפן",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 165,
-    "projected_total": 185,
+    "official_total": 170,
+    "projected_total": 190,
     "extra_points": 20,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T05:00:29+00:00"
+  "synced_at": "2026-07-01T05:02:28+00:00"
 }

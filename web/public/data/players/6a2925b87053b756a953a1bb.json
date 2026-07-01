@@ -1,7 +1,7 @@
 {
   "player_id": "6a2925b87053b756a953a1bb",
   "name": "עודד מכנס נשמה",
-  "total_points": 156,
+  "total_points": 161,
   "correct_group": 37,
   "group_stage": [
     {
@@ -1666,8 +1666,8 @@
         "team_he": "נורבגיה",
         "team_code": "NOR",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "דרום קוריאה",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 156,
-    "projected_total": 156,
+    "official_total": 161,
+    "projected_total": 161,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T04:34:43+00:00"
+  "synced_at": "2026-07-01T05:02:28+00:00"
 }

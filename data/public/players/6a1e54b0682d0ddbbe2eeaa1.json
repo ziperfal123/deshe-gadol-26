@@ -1,7 +1,7 @@
 {
   "player_id": "6a1e54b0682d0ddbbe2eeaa1",
   "name": "שרון גז",
-  "total_points": 183,
+  "total_points": 188,
   "correct_group": 45,
   "group_stage": [
     {
@@ -1694,8 +1694,8 @@
         "team_he": "נורבגיה",
         "team_code": "NOR",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       }
     ],
     "quarter_final": [
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 183,
-    "projected_total": 203,
+    "official_total": 188,
+    "projected_total": 208,
     "extra_points": 20,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T05:00:29+00:00"
+  "synced_at": "2026-07-01T05:02:28+00:00"
 }

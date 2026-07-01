@@ -1,7 +1,7 @@
 {
   "player_id": "6a15e1efbefc2ad2c1d59f59",
   "name": "חנן ברגר 1",
-  "total_points": 160,
+  "total_points": 165,
   "correct_group": 36,
   "group_stage": [
     {
@@ -1589,8 +1589,8 @@
         "team_he": "נורבגיה",
         "team_code": "NOR",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "ארצות הברית",
@@ -1617,7 +1617,7 @@
         "team_he": "חוף השנהב",
         "team_code": "CIV",
         "points_if_correct": 5,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 160,
-    "projected_total": 160,
+    "official_total": 165,
+    "projected_total": 165,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T05:00:29+00:00"
+  "synced_at": "2026-07-01T05:02:28+00:00"
 }
