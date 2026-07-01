@@ -6,8 +6,6 @@ import { cn } from '../lib/cn'
 const FIELDS: { key: string; label: string }[] = [
   { key: 'top_scorer', label: 'מלך השערים' },
   { key: 'top_assists', label: 'מלך הבישולים' },
-  { key: 'most_goals_group_stage_team', label: 'שערים (בתים)' },
-  { key: 'most_conceded_group_stage_team', label: 'ספיגות (בתים)' },
   { key: 'most_goals_tournament_team', label: 'שערים (טורניר)' },
   { key: 'most_conceded_tournament_team', label: 'ספיגות (טורניר)' },
   { key: 'most_cards_team', label: 'הרבה כרטיסים' },
