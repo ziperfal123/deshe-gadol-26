@@ -333,7 +333,7 @@ function StandingRow({ row, projected, onClick }: RowProps) {
             {extra > 0 && <span className="font-bold text-leaf"> +{extra}</span>}
           </span>
         ) : (
-          <span className="text-xs text-ink/45">{row.correct_group} פגיעות</span>
+          <span />
         )}
         <span className="min-w-[3.5rem] rounded-xl bg-sun/40 px-3 py-1 text-center font-bold text-ink">
           {row.total_points}
