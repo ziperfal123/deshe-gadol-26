@@ -1890,7 +1890,7 @@
       "key": "total_red_cards",
       "value": 4,
       "points_if_correct": 8,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T04:05:46+00:00"
+  "synced_at": "2026-07-01T04:13:27+00:00"
 }

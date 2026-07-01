@@ -333,9 +333,12 @@ live = {"top_scorer": bool(of_full), "top_assists": api_state == "live",
         "most_goals_tournament_team": bool(of_full), "most_conceded_tournament_team": bool(of_full),
         "most_cards_team": api_state == "live", "least_cards_team": api_state == "live"}
 overridden = set()
-final_fields = set()  # fields with confirmed official results
+final_fields = set()  # fields with confirmed official results (everyone scored correct/wrong)
+min_confirmed = {}   # fields where values BELOW this number are definitively wrong
 for key, o in SPECIAL_OVERRIDES.items():
     is_final = o.get("final", False)
+    if "min_confirmed" in o:
+        min_confirmed[key] = o["min_confirmed"]
     if live.get(key) and not is_final:  # FRESH feed/API data exists -> prefer it (unless final)
         continue
     if key in TEAM_FIELDS and o.get("teams") is not None:
@@ -347,6 +350,8 @@ for key, o in SPECIAL_OVERRIDES.items():
         if is_final: final_fields.add(key)
 if overridden:
     print("hardcoded override used:", sorted(overridden), "| final:", sorted(final_fields))
+if min_confirmed:
+    print("min_confirmed fields:", min_confirmed)
 
 def _match_player(value, leader_set):
     lat = PLAYER_ALIAS.get((value or "").strip())
@@ -514,6 +519,12 @@ for pl in players:
             status = "correct" if is_correct else "wrong"
             pts = v if is_correct else 0
             spec_pts_earned += pts
+        elif k in min_confirmed and val is not None:
+            try:
+                status = "wrong" if int(val) < min_confirmed[k] else "pending"
+            except (ValueError, TypeError):
+                status = "pending"
+            pts = 0
         else:
             status, pts = "pending", 0
         specials_out.append({"key": k, "value": val, "points_if_correct": v, "status": status, "points": pts})
