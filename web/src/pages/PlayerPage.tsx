@@ -84,10 +84,10 @@ function renderJumpButtonsIfNeeded(player: PlayerFile | undefined, flashScrollTo
     <div className="mt-3 flex flex-wrap items-center justify-center gap-2">
       {renderNextGameButtonIfNeeded(nextId, nextIsLive, () => flashScrollTo(nextId))}
       <button
-        onClick={() => document.getElementById('advancement')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+        onClick={() => document.getElementById('group-stage')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
         className="inline-flex items-center gap-1.5 rounded-full bg-sun/60 px-4 py-1.5 text-xs font-bold text-ink transition hover:bg-sun/80"
       >
-        <StepsIcon /> להימורים המתקדמים
+        <StepsIcon /> להימורי שלב הבתים
       </button>
     </div>
   )
@@ -258,7 +258,7 @@ interface GroupSectionProps {
 function GroupStageSection({ items, stats, groups, mode, setMode }: GroupSectionProps) {
   const detailed = mode === 'detailed'
   return (
-    <Section title="שלב הבתים · ניחושי 1X2" action={<ViewToggle mode={mode} setMode={setMode} />} bare={detailed}>
+    <Section title="שלב הבתים · ניחושי 1X2" id="group-stage" action={<ViewToggle mode={mode} setMode={setMode} />} bare={detailed}>
       {detailed ? (
         <div className="space-y-3">
           {items.map((it) => (
