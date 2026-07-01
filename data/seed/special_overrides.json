@@ -3,13 +3,11 @@
   "fields": {
     "top_scorer": {
       "players": ["קיליאן אמבפה"],
-      "value": null,
-      "force": true
+      "value": null
     },
     "top_assists": {
       "players": ["מייקל אוליסה"],
-      "value": null,
-      "force": true
+      "value": null
     },
     "most_goals_group_stage_team": {
       "teams": ["GER", "NED", "FRA"],
