@@ -1,37 +1,25 @@
 {
-  "synced_at": "2026-07-01T04:13:27+00:00",
+  "synced_at": "2026-07-01T04:17:41+00:00",
   "fields": {
     "top_scorer": {
       "kind": "player",
       "points": 20,
       "live": true,
-      "value": 6,
+      "value": null,
       "leaders": [
         {
           "name": "Kylian Mbappé",
           "name_he": "קיליאן אמבפה"
-        },
-        {
-          "name": "Lionel Messi",
-          "name_he": "ליאו מסי"
         }
       ],
-      "source": "computed"
+      "source": "override"
     },
     "top_assists": {
       "kind": "player",
       "points": 15,
       "live": true,
-      "value": 3,
+      "value": null,
       "leaders": [
-        {
-          "name": "alexander isak",
-          "name_he": "אלכסנדר איסק"
-        },
-        {
-          "name": "bruno guimaraes",
-          "name_he": "ברונו גימראיש"
-        },
         {
           "name": "michael olise",
           "name_he": "מייקל אוליסה"

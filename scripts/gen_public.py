@@ -337,9 +337,10 @@ final_fields = set()  # fields with confirmed official results (everyone scored 
 min_confirmed = {}   # fields where values BELOW this number are definitively wrong
 for key, o in SPECIAL_OVERRIDES.items():
     is_final = o.get("final", False)
+    is_force = o.get("force", False) or is_final
     if "min_confirmed" in o:
         min_confirmed[key] = o["min_confirmed"]
-    if live.get(key) and not is_final:  # FRESH feed/API data exists -> prefer it (unless final)
+    if live.get(key) and not is_force:  # FRESH feed/API data exists -> prefer it (unless forced/final)
         continue
     if key in TEAM_FIELDS and o.get("teams") is not None:
         lead_set[key] = set(o["teams"]); lead_val[key] = o.get("value"); live[key] = True; overridden.add(key)

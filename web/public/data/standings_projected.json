@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-07-01T04:13:27+00:00",
+  "synced_at": "2026-07-01T04:17:41+00:00",
   "players_played": 72,
   "included_fields": [
     "top_scorer",
@@ -34,23 +34,13 @@
       "tied": false
     },
     {
-      "player_id": "6a23ddfc18503a6b210b6c0d",
-      "name": "שקד טבצ׳ניק",
-      "official_total": 191,
-      "projected_total": 246,
-      "correct_group": 48,
-      "extra_points": 55,
-      "rank": 3,
-      "tied": false
-    },
-    {
       "player_id": "6a2ade049818b4e605b2c7c0",
       "name": "יניב סיפרפאל",
       "official_total": 177,
       "projected_total": 242,
       "correct_group": 46,
       "extra_points": 65,
-      "rank": 4,
+      "rank": 3,
       "tied": false
     },
     {
@@ -60,7 +50,7 @@
       "projected_total": 234,
       "correct_group": 49,
       "extra_points": 40,
-      "rank": 5,
+      "rank": 4,
       "tied": false
     },
     {
@@ -70,7 +60,7 @@
       "projected_total": 234,
       "correct_group": 44,
       "extra_points": 50,
-      "rank": 6,
+      "rank": 5,
       "tied": false
     },
     {
@@ -80,7 +70,7 @@
       "projected_total": 233,
       "correct_group": 46,
       "extra_points": 45,
-      "rank": 7,
+      "rank": 6,
       "tied": false
     },
     {
@@ -90,7 +80,7 @@
       "projected_total": 232,
       "correct_group": 46,
       "extra_points": 50,
-      "rank": 8,
+      "rank": 7,
       "tied": false
     },
     {
@@ -100,7 +90,7 @@
       "projected_total": 231,
       "correct_group": 44,
       "extra_points": 50,
-      "rank": 9,
+      "rank": 8,
       "tied": false
     },
     {
@@ -110,6 +100,16 @@
       "projected_total": 228,
       "correct_group": 47,
       "extra_points": 40,
+      "rank": 9,
+      "tied": false
+    },
+    {
+      "player_id": "6a23ddfc18503a6b210b6c0d",
+      "name": "שקד טבצ׳ניק",
+      "official_total": 191,
+      "projected_total": 226,
+      "correct_group": 48,
+      "extra_points": 35,
       "rank": 10,
       "tied": false
     },
@@ -804,16 +804,6 @@
       "tied": true
     },
     {
-      "player_id": "6a2af7cb3bee36dc117a1c70",
-      "name": "אסקובר ובניו",
-      "official_total": 167,
-      "projected_total": 187,
-      "correct_group": 43,
-      "extra_points": 20,
-      "rank": 65,
-      "tied": true
-    },
-    {
       "player_id": "6a22f9708e80046c54d9d128",
       "name": "עומר סלוק",
       "official_total": 167,
@@ -864,23 +854,13 @@
       "tied": false
     },
     {
-      "player_id": "6a172455bab2e69ce217b4f0",
-      "name": "עומר כץ לא השוער של פ\"ת",
-      "official_total": 156,
-      "projected_total": 186,
-      "correct_group": 38,
-      "extra_points": 30,
-      "rank": 68,
-      "tied": false
-    },
-    {
       "player_id": "6a2a6c0f0b5b0934a3371ae7",
       "name": "עמית ויינגרטן 7",
       "official_total": 185,
       "projected_total": 185,
       "correct_group": 49,
       "extra_points": 0,
-      "rank": 69,
+      "rank": 68,
       "tied": false
     },
     {
@@ -890,7 +870,7 @@
       "projected_total": 185,
       "correct_group": 47,
       "extra_points": 10,
-      "rank": 70,
+      "rank": 69,
       "tied": true
     },
     {
@@ -900,7 +880,7 @@
       "projected_total": 185,
       "correct_group": 41,
       "extra_points": 10,
-      "rank": 70,
+      "rank": 69,
       "tied": true
     },
     {
@@ -910,7 +890,7 @@
       "projected_total": 184,
       "correct_group": 44,
       "extra_points": 20,
-      "rank": 71,
+      "rank": 70,
       "tied": false
     },
     {
@@ -920,7 +900,7 @@
       "projected_total": 184,
       "correct_group": 43,
       "extra_points": 25,
-      "rank": 72,
+      "rank": 71,
       "tied": false
     },
     {
@@ -930,7 +910,7 @@
       "projected_total": 183,
       "correct_group": 46,
       "extra_points": 0,
-      "rank": 73,
+      "rank": 72,
       "tied": false
     },
     {
@@ -940,7 +920,7 @@
       "projected_total": 183,
       "correct_group": 46,
       "extra_points": 10,
-      "rank": 74,
+      "rank": 73,
       "tied": false
     },
     {
@@ -950,7 +930,7 @@
       "projected_total": 183,
       "correct_group": 41,
       "extra_points": 20,
-      "rank": 75,
+      "rank": 74,
       "tied": false
     },
     {
@@ -960,7 +940,7 @@
       "projected_total": 182,
       "correct_group": 38,
       "extra_points": 20,
-      "rank": 76,
+      "rank": 75,
       "tied": false
     },
     {
@@ -970,7 +950,7 @@
       "projected_total": 181,
       "correct_group": 43,
       "extra_points": 0,
-      "rank": 77,
+      "rank": 76,
       "tied": false
     },
     {
@@ -980,7 +960,7 @@
       "projected_total": 181,
       "correct_group": 43,
       "extra_points": 15,
-      "rank": 78,
+      "rank": 77,
       "tied": false
     },
     {
@@ -990,7 +970,7 @@
       "projected_total": 181,
       "correct_group": 34,
       "extra_points": 30,
-      "rank": 79,
+      "rank": 78,
       "tied": false
     },
     {
@@ -1000,7 +980,7 @@
       "projected_total": 180,
       "correct_group": 45,
       "extra_points": 10,
-      "rank": 80,
+      "rank": 79,
       "tied": false
     },
     {
@@ -1010,7 +990,7 @@
       "projected_total": 180,
       "correct_group": 42,
       "extra_points": 20,
-      "rank": 81,
+      "rank": 80,
       "tied": false
     },
     {
@@ -1020,7 +1000,7 @@
       "projected_total": 179,
       "correct_group": 45,
       "extra_points": 0,
-      "rank": 82,
+      "rank": 81,
       "tied": true
     },
     {
@@ -1030,7 +1010,7 @@
       "projected_total": 179,
       "correct_group": 49,
       "extra_points": 0,
-      "rank": 82,
+      "rank": 81,
       "tied": true
     },
     {
@@ -1040,7 +1020,7 @@
       "projected_total": 179,
       "correct_group": 40,
       "extra_points": 10,
-      "rank": 83,
+      "rank": 82,
       "tied": true
     },
     {
@@ -1050,7 +1030,7 @@
       "projected_total": 179,
       "correct_group": 42,
       "extra_points": 10,
-      "rank": 83,
+      "rank": 82,
       "tied": true
     },
     {
@@ -1060,7 +1040,7 @@
       "projected_total": 179,
       "correct_group": 40,
       "extra_points": 20,
-      "rank": 84,
+      "rank": 83,
       "tied": false
     },
     {
@@ -1070,7 +1050,7 @@
       "projected_total": 178,
       "correct_group": 48,
       "extra_points": 0,
-      "rank": 85,
+      "rank": 84,
       "tied": false
     },
     {
@@ -1080,7 +1060,7 @@
       "projected_total": 177,
       "correct_group": 41,
       "extra_points": 10,
-      "rank": 86,
+      "rank": 85,
       "tied": true
     },
     {
@@ -1090,7 +1070,7 @@
       "projected_total": 177,
       "correct_group": 42,
       "extra_points": 10,
-      "rank": 86,
+      "rank": 85,
       "tied": true
     },
     {
@@ -1100,7 +1080,7 @@
       "projected_total": 177,
       "correct_group": 40,
       "extra_points": 10,
-      "rank": 86,
+      "rank": 85,
       "tied": true
     },
     {
@@ -1110,7 +1090,7 @@
       "projected_total": 176,
       "correct_group": 41,
       "extra_points": 10,
-      "rank": 87,
+      "rank": 86,
       "tied": false
     },
     {
@@ -1120,7 +1100,7 @@
       "projected_total": 176,
       "correct_group": 40,
       "extra_points": 20,
-      "rank": 88,
+      "rank": 87,
       "tied": false
     },
     {
@@ -1130,7 +1110,7 @@
       "projected_total": 175,
       "correct_group": 43,
       "extra_points": 10,
-      "rank": 89,
+      "rank": 88,
       "tied": false
     },
     {
@@ -1140,7 +1120,7 @@
       "projected_total": 175,
       "correct_group": 42,
       "extra_points": 15,
-      "rank": 90,
+      "rank": 89,
       "tied": true
     },
     {
@@ -1150,7 +1130,7 @@
       "projected_total": 175,
       "correct_group": 40,
       "extra_points": 15,
-      "rank": 90,
+      "rank": 89,
       "tied": true
     },
     {
@@ -1160,7 +1140,7 @@
       "projected_total": 173,
       "correct_group": 41,
       "extra_points": 10,
-      "rank": 91,
+      "rank": 90,
       "tied": true
     },
     {
@@ -1170,7 +1150,7 @@
       "projected_total": 173,
       "correct_group": 45,
       "extra_points": 10,
-      "rank": 91,
+      "rank": 90,
       "tied": true
     },
     {
@@ -1180,7 +1160,7 @@
       "projected_total": 172,
       "correct_group": 42,
       "extra_points": 10,
-      "rank": 92,
+      "rank": 91,
       "tied": true
     },
     {
@@ -1190,7 +1170,7 @@
       "projected_total": 172,
       "correct_group": 39,
       "extra_points": 10,
-      "rank": 92,
+      "rank": 91,
       "tied": true
     },
     {
@@ -1200,7 +1180,7 @@
       "projected_total": 172,
       "correct_group": 33,
       "extra_points": 10,
-      "rank": 92,
+      "rank": 91,
       "tied": true
     },
     {
@@ -1210,7 +1190,7 @@
       "projected_total": 172,
       "correct_group": 42,
       "extra_points": 10,
-      "rank": 92,
+      "rank": 91,
       "tied": true
     },
     {
@@ -1220,7 +1200,7 @@
       "projected_total": 171,
       "correct_group": 35,
       "extra_points": 10,
-      "rank": 93,
+      "rank": 92,
       "tied": false
     },
     {
@@ -1230,7 +1210,7 @@
       "projected_total": 170,
       "correct_group": 42,
       "extra_points": 0,
-      "rank": 94,
+      "rank": 93,
       "tied": false
     },
     {
@@ -1240,7 +1220,7 @@
       "projected_total": 170,
       "correct_group": 43,
       "extra_points": 10,
-      "rank": 95,
+      "rank": 94,
       "tied": true
     },
     {
@@ -1250,7 +1230,7 @@
       "projected_total": 170,
       "correct_group": 40,
       "extra_points": 10,
-      "rank": 95,
+      "rank": 94,
       "tied": true
     },
     {
@@ -1260,7 +1240,7 @@
       "projected_total": 169,
       "correct_group": 48,
       "extra_points": 0,
-      "rank": 96,
+      "rank": 95,
       "tied": false
     },
     {
@@ -1270,7 +1250,7 @@
       "projected_total": 168,
       "correct_group": 42,
       "extra_points": 0,
-      "rank": 97,
+      "rank": 96,
       "tied": false
     },
     {
@@ -1280,7 +1260,7 @@
       "projected_total": 168,
       "correct_group": 41,
       "extra_points": 10,
-      "rank": 98,
+      "rank": 97,
       "tied": true
     },
     {
@@ -1290,7 +1270,7 @@
       "projected_total": 168,
       "correct_group": 41,
       "extra_points": 10,
-      "rank": 98,
+      "rank": 97,
       "tied": true
     },
     {
@@ -1300,7 +1280,17 @@
       "projected_total": 167,
       "correct_group": 42,
       "extra_points": 0,
-      "rank": 99,
+      "rank": 98,
+      "tied": true
+    },
+    {
+      "player_id": "6a2af7cb3bee36dc117a1c70",
+      "name": "אסקובר ובניו",
+      "official_total": 167,
+      "projected_total": 167,
+      "correct_group": 43,
+      "extra_points": 0,
+      "rank": 98,
       "tied": true
     },
     {
@@ -1310,7 +1300,7 @@
       "projected_total": 167,
       "correct_group": 41,
       "extra_points": 0,
-      "rank": 99,
+      "rank": 98,
       "tied": true
     },
     {
@@ -1320,7 +1310,7 @@
       "projected_total": 167,
       "correct_group": 42,
       "extra_points": 0,
-      "rank": 99,
+      "rank": 98,
       "tied": true
     },
     {
@@ -1330,7 +1320,7 @@
       "projected_total": 167,
       "correct_group": 36,
       "extra_points": 10,
-      "rank": 100,
+      "rank": 99,
       "tied": false
     },
     {
@@ -1340,6 +1330,16 @@
       "projected_total": 166,
       "correct_group": 43,
       "extra_points": 0,
+      "rank": 100,
+      "tied": false
+    },
+    {
+      "player_id": "6a172455bab2e69ce217b4f0",
+      "name": "עומר כץ לא השוער של פ\"ת",
+      "official_total": 156,
+      "projected_total": 166,
+      "correct_group": 38,
+      "extra_points": 10,
       "rank": 101,
       "tied": false
     },
