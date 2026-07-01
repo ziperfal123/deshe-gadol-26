@@ -1,7 +1,7 @@
 {
   "player_id": "6a11d6f3d1035d0d94425c1e",
   "name": "תמיר אורן",
-  "total_points": 145,
+  "total_points": 150,
   "correct_group": 36,
   "group_stage": [
     {
@@ -1680,8 +1680,8 @@
         "team_he": "מקסיקו",
         "team_code": "MEX",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "סנגל",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 145,
-    "projected_total": 145,
+    "official_total": 150,
+    "projected_total": 150,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T04:26:13+00:00"
+  "synced_at": "2026-07-01T04:29:32+00:00"
 }

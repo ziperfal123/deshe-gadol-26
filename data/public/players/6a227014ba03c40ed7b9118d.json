@@ -1,7 +1,7 @@
 {
   "player_id": "6a227014ba03c40ed7b9118d",
   "name": "אלי בכר2",
-  "total_points": 180,
+  "total_points": 185,
   "correct_group": 47,
   "group_stage": [
     {
@@ -1589,8 +1589,8 @@
         "team_he": "מקסיקו",
         "team_code": "MEX",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "שווייץ",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 180,
-    "projected_total": 190,
+    "official_total": 185,
+    "projected_total": 195,
     "extra_points": 10,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T04:26:13+00:00"
+  "synced_at": "2026-07-01T04:29:32+00:00"
 }

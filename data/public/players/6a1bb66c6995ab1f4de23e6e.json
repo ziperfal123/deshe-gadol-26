@@ -1652,7 +1652,7 @@
         "team_he": "אקוודור",
         "team_code": "ECU",
         "points_if_correct": 5,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T04:26:13+00:00"
+  "synced_at": "2026-07-01T04:29:32+00:00"
 }

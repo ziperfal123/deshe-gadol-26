@@ -1,7 +1,7 @@
 {
   "player_id": "6a2530a2e6cf09c4cebd0324",
   "name": "תום דרזיה",
-  "total_points": 172,
+  "total_points": 177,
   "correct_group": 41,
   "group_stage": [
     {
@@ -1666,8 +1666,8 @@
         "team_he": "מקסיקו",
         "team_code": "MEX",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "צרפת",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 172,
-    "projected_total": 192,
+    "official_total": 177,
+    "projected_total": 197,
     "extra_points": 20,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T04:26:13+00:00"
+  "synced_at": "2026-07-01T04:29:32+00:00"
 }

@@ -1,7 +1,7 @@
 {
   "player_id": "6a1ac8d8b441f58352039e31",
   "name": "אורי בראונשטיין 3 (UB)",
-  "total_points": 182,
+  "total_points": 187,
   "correct_group": 46,
   "group_stage": [
     {
@@ -1673,8 +1673,8 @@
         "team_he": "מקסיקו",
         "team_code": "MEX",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "נורבגיה",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 182,
-    "projected_total": 197,
+    "official_total": 187,
+    "projected_total": 202,
     "extra_points": 15,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T04:26:13+00:00"
+  "synced_at": "2026-07-01T04:29:32+00:00"
 }

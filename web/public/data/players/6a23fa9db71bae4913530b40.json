@@ -1,7 +1,7 @@
 {
   "player_id": "6a23fa9db71bae4913530b40",
   "name": "אריאל זיני",
-  "total_points": 126,
+  "total_points": 131,
   "correct_group": 27,
   "group_stage": [
     {
@@ -1617,8 +1617,8 @@
         "team_he": "מקסיקו",
         "team_code": "MEX",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "צ׳כיה",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 126,
-    "projected_total": 166,
+    "official_total": 131,
+    "projected_total": 171,
     "extra_points": 40,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T04:26:13+00:00"
+  "synced_at": "2026-07-01T04:29:32+00:00"
 }

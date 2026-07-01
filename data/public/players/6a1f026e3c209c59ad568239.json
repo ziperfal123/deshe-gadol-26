@@ -1,7 +1,7 @@
 {
   "player_id": "6a1f026e3c209c59ad568239",
   "name": "אייל גרוס",
-  "total_points": 191,
+  "total_points": 196,
   "correct_group": 45,
   "group_stage": [
     {
@@ -1610,8 +1610,8 @@
         "team_he": "מקסיקו",
         "team_code": "MEX",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "קולומביה",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 191,
-    "projected_total": 231,
+    "official_total": 196,
+    "projected_total": 236,
     "extra_points": 40,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T04:26:13+00:00"
+  "synced_at": "2026-07-01T04:29:32+00:00"
 }
