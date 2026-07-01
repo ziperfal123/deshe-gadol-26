@@ -1,11 +1,11 @@
 {
-  "synced_at": "2026-07-01T04:33:06+00:00",
+  "synced_at": "2026-07-01T04:34:43+00:00",
   "fields": {
     "top_scorer": {
       "kind": "player",
       "points": 20,
       "live": true,
-      "value": null,
+      "value": 6,
       "leaders": [
         {
           "name": "Kylian Mbappé",
@@ -16,7 +16,7 @@
           "name_he": "ליאו מסי"
         }
       ],
-      "source": "override"
+      "source": "computed"
     },
     "top_assists": {
       "kind": "player",

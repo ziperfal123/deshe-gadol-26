@@ -3,8 +3,7 @@
   "fields": {
     "top_scorer": {
       "players": ["קיליאן אמבפה", "ליאו מסי"],
-      "value": null,
-      "force": true
+      "value": null
     },
     "top_assists": {
       "players": ["מייקל אוליסה"],
