@@ -106,10 +106,10 @@ function renderBodyIfNeeded(
   if (!player) return <p className="mt-10 text-center text-ink/40">טוען…</p>
   return (
     <>
-      <GroupStageSection items={player.group_stage} stats={stats} groups={groups} mode={mode} setMode={setMode} />
       <AdvancementSection player={player} />
       <ChampionSection player={player} championStat={specialStats?.champion} />
       <SpecialsSection player={player} specialStats={specialStats?.specials} />
+      <GroupStageSection items={player.group_stage} stats={stats} groups={groups} mode={mode} setMode={setMode} />
     </>
   )
 }
