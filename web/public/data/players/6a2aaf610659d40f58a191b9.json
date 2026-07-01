@@ -1,7 +1,7 @@
 {
   "player_id": "6a2aaf610659d40f58a191b9",
   "name": "גל זהר",
-  "total_points": 177,
+  "total_points": 182,
   "correct_group": 46,
   "group_stage": [
     {
@@ -1596,8 +1596,8 @@
         "team_he": "אנגליה",
         "team_code": "ENG",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "דרום קוריאה",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 177,
-    "projected_total": 207,
+    "official_total": 182,
+    "projected_total": 212,
     "extra_points": 30,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T05:02:28+00:00"
+  "synced_at": "2026-07-01T19:08:03+00:00"
 }

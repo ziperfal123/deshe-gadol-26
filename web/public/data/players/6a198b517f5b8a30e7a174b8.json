@@ -1,7 +1,7 @@
 {
   "player_id": "6a198b517f5b8a30e7a174b8",
   "name": "אבי אובנטל",
-  "total_points": 207,
+  "total_points": 212,
   "correct_group": 44,
   "group_stage": [
     {
@@ -1589,8 +1589,8 @@
         "team_he": "אנגליה",
         "team_code": "ENG",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "טורקיה",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 207,
-    "projected_total": 237,
+    "official_total": 212,
+    "projected_total": 242,
     "extra_points": 30,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T05:02:28+00:00"
+  "synced_at": "2026-07-01T19:08:03+00:00"
 }

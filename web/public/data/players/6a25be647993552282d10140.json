@@ -1,7 +1,7 @@
 {
   "player_id": "6a25be647993552282d10140",
   "name": "יובל אקרמן",
-  "total_points": 153,
+  "total_points": 158,
   "correct_group": 33,
   "group_stage": [
     {
@@ -1617,8 +1617,8 @@
         "team_he": "אנגליה",
         "team_code": "ENG",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "ערב הסעודית",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 153,
-    "projected_total": 173,
+    "official_total": 158,
+    "projected_total": 178,
     "extra_points": 20,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T05:02:28+00:00"
+  "synced_at": "2026-07-01T19:08:03+00:00"
 }

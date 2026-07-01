@@ -1,7 +1,7 @@
 {
   "player_id": "6a29110727106df835d89d4a",
   "name": "איל להב",
-  "total_points": 161,
+  "total_points": 166,
   "correct_group": 34,
   "group_stage": [
     {
@@ -1614,8 +1614,8 @@
         "team_he": "אנגליה",
         "team_code": "ENG",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "מקסיקו",
@@ -1892,8 +1892,8 @@
     }
   ],
   "projected": {
-    "official_total": 161,
-    "projected_total": 171,
+    "official_total": 166,
+    "projected_total": 176,
     "extra_points": 10,
     "fields": [
       {
@@ -1962,5 +1962,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T05:02:28+00:00"
+  "synced_at": "2026-07-01T19:08:03+00:00"
 }

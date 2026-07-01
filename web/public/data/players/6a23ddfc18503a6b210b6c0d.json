@@ -1,7 +1,7 @@
 {
   "player_id": "6a23ddfc18503a6b210b6c0d",
   "name": "שקד טבצ׳ניק",
-  "total_points": 201,
+  "total_points": 206,
   "correct_group": 48,
   "group_stage": [
     {
@@ -1694,8 +1694,8 @@
         "team_he": "אנגליה",
         "team_code": "ENG",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       }
     ],
     "quarter_final": [
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 201,
-    "projected_total": 246,
+    "official_total": 206,
+    "projected_total": 251,
     "extra_points": 45,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T05:02:28+00:00"
+  "synced_at": "2026-07-01T19:08:03+00:00"
 }

@@ -1,7 +1,7 @@
 {
   "player_id": "6a2ae91cf5ad2dd0c517031c",
   "name": "צביאל רובין",
-  "total_points": 172,
+  "total_points": 177,
   "correct_group": 33,
   "group_stage": [
     {
@@ -1638,8 +1638,8 @@
         "team_he": "אנגליה",
         "team_code": "ENG",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "קרואטיה",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 172,
-    "projected_total": 172,
+    "official_total": 177,
+    "projected_total": 177,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T05:02:28+00:00"
+  "synced_at": "2026-07-01T19:08:03+00:00"
 }

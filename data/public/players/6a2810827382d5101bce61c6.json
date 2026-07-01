@@ -1,7 +1,7 @@
 {
   "player_id": "6a2810827382d5101bce61c6",
   "name": "יהלי עוזר#",
-  "total_points": 193,
+  "total_points": 198,
   "correct_group": 48,
   "group_stage": [
     {
@@ -1624,8 +1624,8 @@
         "team_he": "אנגליה",
         "team_code": "ENG",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "צרפת",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 193,
-    "projected_total": 203,
+    "official_total": 198,
+    "projected_total": 208,
     "extra_points": 10,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T05:02:28+00:00"
+  "synced_at": "2026-07-01T19:08:03+00:00"
 }

@@ -1,7 +1,7 @@
 {
   "player_id": "6a188352366d092c5d7ec73e",
   "name": "תום שלו 2",
-  "total_points": 182,
+  "total_points": 187,
   "correct_group": 42,
   "group_stage": [
     {
@@ -1652,8 +1652,8 @@
         "team_he": "אנגליה",
         "team_code": "ENG",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "ארגנטינה",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 182,
-    "projected_total": 182,
+    "official_total": 187,
+    "projected_total": 187,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T05:02:28+00:00"
+  "synced_at": "2026-07-01T19:08:03+00:00"
 }
