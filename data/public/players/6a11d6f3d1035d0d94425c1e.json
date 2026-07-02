@@ -1,7 +1,7 @@
 {
   "player_id": "6a11d6f3d1035d0d94425c1e",
   "name": "תמיר אורן",
-  "total_points": 155,
+  "total_points": 165,
   "correct_group": 36,
   "group_stage": [
     {
@@ -1603,8 +1603,8 @@
         "team_he": "ארצות הברית",
         "team_code": "USA",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "אנגליה",
@@ -1624,8 +1624,8 @@
         "team_he": "בלגיה",
         "team_code": "BEL",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "ספרד",
@@ -1687,7 +1687,7 @@
         "team_he": "סנגל",
         "team_code": "SEN",
         "points_if_correct": 5,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 155,
-    "projected_total": 155,
+    "official_total": 165,
+    "projected_total": 165,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T19:08:03+00:00"
+  "synced_at": "2026-07-02T06:22:41+00:00"
 }

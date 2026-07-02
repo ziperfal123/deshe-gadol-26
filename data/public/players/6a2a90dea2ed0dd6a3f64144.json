@@ -1,7 +1,7 @@
 {
   "player_id": "6a2a90dea2ed0dd6a3f64144",
   "name": "דורון אייזיק",
-  "total_points": 193,
+  "total_points": 203,
   "correct_group": 48,
   "group_stage": [
     {
@@ -1596,8 +1596,8 @@
         "team_he": "בלגיה",
         "team_code": "BEL",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "ספרד",
@@ -1617,8 +1617,8 @@
         "team_he": "ארצות הברית",
         "team_code": "USA",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "שוודיה",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 193,
-    "projected_total": 193,
+    "official_total": 203,
+    "projected_total": 203,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T19:08:03+00:00"
+  "synced_at": "2026-07-02T06:22:41+00:00"
 }

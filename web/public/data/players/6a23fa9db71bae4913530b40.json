@@ -1,7 +1,7 @@
 {
   "player_id": "6a23fa9db71bae4913530b40",
   "name": "אריאל זיני",
-  "total_points": 131,
+  "total_points": 136,
   "correct_group": 27,
   "group_stage": [
     {
@@ -1694,8 +1694,8 @@
         "team_he": "בלגיה",
         "team_code": "BEL",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       }
     ],
     "quarter_final": [
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 131,
-    "projected_total": 161,
+    "official_total": 136,
+    "projected_total": 166,
     "extra_points": 30,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T19:08:03+00:00"
+  "synced_at": "2026-07-02T06:22:41+00:00"
 }

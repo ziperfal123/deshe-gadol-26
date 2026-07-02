@@ -1,7 +1,7 @@
 {
   "player_id": "6a1eec3b403209f3ccd794df",
   "name": "שקד קינן",
-  "total_points": 186,
+  "total_points": 196,
   "correct_group": 41,
   "group_stage": [
     {
@@ -1603,8 +1603,8 @@
         "team_he": "בלגיה",
         "team_code": "BEL",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "ברזיל",
@@ -1694,8 +1694,8 @@
         "team_he": "ארצות הברית",
         "team_code": "USA",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       }
     ],
     "quarter_final": [
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 186,
-    "projected_total": 226,
+    "official_total": 196,
+    "projected_total": 236,
     "extra_points": 40,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T19:08:03+00:00"
+  "synced_at": "2026-07-02T06:22:41+00:00"
 }

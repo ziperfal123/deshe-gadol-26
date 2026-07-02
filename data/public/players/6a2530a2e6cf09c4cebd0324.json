@@ -1,7 +1,7 @@
 {
   "player_id": "6a2530a2e6cf09c4cebd0324",
   "name": "תום דרזיה",
-  "total_points": 187,
+  "total_points": 197,
   "correct_group": 41,
   "group_stage": [
     {
@@ -1603,7 +1603,7 @@
         "team_he": "סנגל",
         "team_code": "SEN",
         "points_if_correct": 5,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1645,8 +1645,8 @@
         "team_he": "בלגיה",
         "team_code": "BEL",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "פורטוגל",
@@ -1694,8 +1694,8 @@
         "team_he": "ארצות הברית",
         "team_code": "USA",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       }
     ],
     "quarter_final": [
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 187,
-    "projected_total": 197,
+    "official_total": 197,
+    "projected_total": 207,
     "extra_points": 10,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T19:08:03+00:00"
+  "synced_at": "2026-07-02T06:22:41+00:00"
 }

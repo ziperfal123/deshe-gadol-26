@@ -1,7 +1,7 @@
 {
   "player_id": "6a2adb0bbb5b49dc4453f771",
   "name": "דניאל טורנוא 3",
-  "total_points": 195,
+  "total_points": 200,
   "correct_group": 44,
   "group_stage": [
     {
@@ -1638,8 +1638,8 @@
         "team_he": "בלגיה",
         "team_code": "BEL",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "הולנד",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 195,
-    "projected_total": 215,
+    "official_total": 200,
+    "projected_total": 220,
     "extra_points": 20,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T19:08:03+00:00"
+  "synced_at": "2026-07-02T06:22:41+00:00"
 }

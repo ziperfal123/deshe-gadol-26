@@ -1,7 +1,7 @@
 {
   "player_id": "6a2af7cb3bee36dc117a1c70",
   "name": "אסקובר ובניו",
-  "total_points": 182,
+  "total_points": 192,
   "correct_group": 43,
   "group_stage": [
     {
@@ -1666,8 +1666,8 @@
         "team_he": "ארצות הברית",
         "team_code": "USA",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "אורוגוואי",
@@ -1680,8 +1680,8 @@
         "team_he": "בלגיה",
         "team_code": "BEL",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "פרגוואי",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 182,
-    "projected_total": 202,
+    "official_total": 192,
+    "projected_total": 212,
     "extra_points": 20,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T19:08:03+00:00"
+  "synced_at": "2026-07-02T06:22:41+00:00"
 }

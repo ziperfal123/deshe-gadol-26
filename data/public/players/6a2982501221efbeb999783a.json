@@ -1,7 +1,7 @@
 {
   "player_id": "6a2982501221efbeb999783a",
   "name": "עומר שגיא",
-  "total_points": 176,
+  "total_points": 181,
   "correct_group": 35,
   "group_stage": [
     {
@@ -1603,8 +1603,8 @@
         "team_he": "בלגיה",
         "team_code": "BEL",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "אנגליה",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 176,
-    "projected_total": 176,
+    "official_total": 181,
+    "projected_total": 181,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T19:08:03+00:00"
+  "synced_at": "2026-07-02T06:22:41+00:00"
 }

@@ -1,7 +1,7 @@
 {
   "player_id": "6a29110727106df835d89d4a",
   "name": "איל להב",
-  "total_points": 166,
+  "total_points": 176,
   "correct_group": 34,
   "group_stage": [
     {
@@ -1642,7 +1642,7 @@
         "team_he": "סנגל",
         "team_code": "SEN",
         "points_if_correct": 5,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1656,8 +1656,8 @@
         "team_he": "בלגיה",
         "team_code": "BEL",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "צרפת",
@@ -1670,8 +1670,8 @@
         "team_he": "ארצות הברית",
         "team_code": "USA",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "נורבגיה",
@@ -1892,8 +1892,8 @@
     }
   ],
   "projected": {
-    "official_total": 166,
-    "projected_total": 176,
+    "official_total": 176,
+    "projected_total": 186,
     "extra_points": 10,
     "fields": [
       {
@@ -1962,5 +1962,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-01T19:08:03+00:00"
+  "synced_at": "2026-07-02T06:22:41+00:00"
 }
