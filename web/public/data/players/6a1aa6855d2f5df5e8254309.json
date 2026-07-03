@@ -1,7 +1,7 @@
 {
   "player_id": "6a1aa6855d2f5df5e8254309",
   "name": "גיא גרוס 10",
-  "total_points": 181,
+  "total_points": 196,
   "correct_group": 34,
   "group_stage": [
     {
@@ -1596,7 +1596,7 @@
         "team_he": "קרואטיה",
         "team_code": "CRO",
         "points_if_correct": 5,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1617,8 +1617,8 @@
         "team_he": "פורטוגל",
         "team_code": "POR",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "ארגנטינה",
@@ -1631,8 +1631,8 @@
         "team_he": "שווייץ",
         "team_code": "SUI",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "ארצות הברית",
@@ -1673,8 +1673,8 @@
         "team_he": "ספרד",
         "team_code": "ESP",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "נורבגיה",
@@ -1724,7 +1724,7 @@
         "team_he": "קרואטיה",
         "team_code": "CRO",
         "points_if_correct": 10,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 181,
-    "projected_total": 201,
+    "official_total": 196,
+    "projected_total": 216,
     "extra_points": 20,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-02T06:22:41+00:00"
+  "synced_at": "2026-07-03T06:38:15+00:00"
 }

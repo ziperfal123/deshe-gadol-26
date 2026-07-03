@@ -1,7 +1,7 @@
 {
   "player_id": "6a259e0de00d4a54b4ce2447",
   "name": "יונתן ברוייר",
-  "total_points": 196,
+  "total_points": 211,
   "correct_group": 41,
   "group_stage": [
     {
@@ -1589,7 +1589,7 @@
         "team_he": "קרואטיה",
         "team_code": "CRO",
         "points_if_correct": 5,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1617,8 +1617,8 @@
         "team_he": "ספרד",
         "team_code": "ESP",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "ארגנטינה",
@@ -1631,8 +1631,8 @@
         "team_he": "שווייץ",
         "team_code": "SUI",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "בלגיה",
@@ -1645,8 +1645,8 @@
         "team_he": "פורטוגל",
         "team_code": "POR",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "אנגליה",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 196,
-    "projected_total": 196,
+    "official_total": 211,
+    "projected_total": 211,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-02T06:22:41+00:00"
+  "synced_at": "2026-07-03T06:38:15+00:00"
 }

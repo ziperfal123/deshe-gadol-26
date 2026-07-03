@@ -7,8 +7,8 @@
     "sf": "Semi-finals / חצי גמר (4→2). Winners reach גמר. These score 'final' picks."
   },
   "r32": {
-    "winners": ["MAR", "BRA", "PAR", "CAN", "FRA", "MEX", "NOR", "ENG", "USA", "BEL"],
-    "losers": ["NED", "JPN", "GER", "RSA", "SWE", "ECU", "CIV", "COD", "BIH", "SEN"]
+    "winners": ["MAR", "BRA", "PAR", "CAN", "FRA", "MEX", "NOR", "ENG", "USA", "BEL", "SUI", "ESP", "POR"],
+    "losers": ["NED", "JPN", "GER", "RSA", "SWE", "ECU", "CIV", "COD", "BIH", "SEN", "ALG", "AUT", "CRO"]
   },
   "r16": {
     "winners": [],

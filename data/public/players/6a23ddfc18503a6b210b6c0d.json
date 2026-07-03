@@ -1,7 +1,7 @@
 {
   "player_id": "6a23ddfc18503a6b210b6c0d",
   "name": "שקד טבצ׳ניק",
-  "total_points": 216,
+  "total_points": 231,
   "correct_group": 48,
   "group_stage": [
     {
@@ -1652,15 +1652,15 @@
         "team_he": "פורטוגל",
         "team_code": "POR",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "ספרד",
         "team_code": "ESP",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "דרום קוריאה",
@@ -1687,8 +1687,8 @@
         "team_he": "שווייץ",
         "team_code": "SUI",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "אנגליה",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 216,
-    "projected_total": 261,
+    "official_total": 231,
+    "projected_total": 276,
     "extra_points": 45,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-02T06:22:41+00:00"
+  "synced_at": "2026-07-03T06:38:15+00:00"
 }

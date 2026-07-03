@@ -1,7 +1,7 @@
 {
   "player_id": "6a15e1efbefc2ad2c1d59f59",
   "name": "חנן ברגר 1",
-  "total_points": 175,
+  "total_points": 185,
   "correct_group": 36,
   "group_stage": [
     {
@@ -1638,8 +1638,8 @@
         "team_he": "פורטוגל",
         "team_code": "POR",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "בלגיה",
@@ -1652,8 +1652,8 @@
         "team_he": "שווייץ",
         "team_code": "SUI",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "טורקיה",
@@ -1680,7 +1680,7 @@
         "team_he": "קרואטיה",
         "team_code": "CRO",
         "points_if_correct": 5,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1745,7 +1745,7 @@
         "team_he": "קרואטיה",
         "team_code": "CRO",
         "points_if_correct": 10,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 175,
-    "projected_total": 175,
+    "official_total": 185,
+    "projected_total": 185,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-02T06:22:41+00:00"
+  "synced_at": "2026-07-03T06:38:15+00:00"
 }

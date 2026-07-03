@@ -1,7 +1,7 @@
 {
   "player_id": "6a2982501221efbeb999783a",
   "name": "עומר שגיא",
-  "total_points": 181,
+  "total_points": 191,
   "correct_group": 35,
   "group_stage": [
     {
@@ -1589,14 +1589,14 @@
         "team_he": "פורטוגל",
         "team_code": "POR",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "קרואטיה",
         "team_code": "CRO",
         "points_if_correct": 5,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1617,7 +1617,7 @@
         "team_he": "אוסטריה",
         "team_code": "AUT",
         "points_if_correct": 5,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1673,8 +1673,8 @@
         "team_he": "ספרד",
         "team_code": "ESP",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "צרפת",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 181,
-    "projected_total": 181,
+    "official_total": 191,
+    "projected_total": 191,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-02T06:22:41+00:00"
+  "synced_at": "2026-07-03T06:38:15+00:00"
 }

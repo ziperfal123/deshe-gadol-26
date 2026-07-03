@@ -1,7 +1,7 @@
 {
   "player_id": "6a23fa9db71bae4913530b40",
   "name": "אריאל זיני",
-  "total_points": 136,
+  "total_points": 146,
   "correct_group": 27,
   "group_stage": [
     {
@@ -1589,22 +1589,22 @@
         "team_he": "פורטוגל",
         "team_code": "POR",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "אוסטריה",
         "team_code": "AUT",
         "points_if_correct": 5,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
         "team_he": "ספרד",
         "team_code": "ESP",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "סקוטלנד",
@@ -1680,7 +1680,7 @@
         "team_he": "קרואטיה",
         "team_code": "CRO",
         "points_if_correct": 5,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 136,
-    "projected_total": 166,
+    "official_total": 146,
+    "projected_total": 176,
     "extra_points": 30,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-02T06:22:41+00:00"
+  "synced_at": "2026-07-03T06:38:15+00:00"
 }

@@ -1,7 +1,7 @@
 {
   "player_id": "6a29110727106df835d89d4a",
   "name": "איל להב",
-  "total_points": 176,
+  "total_points": 191,
   "correct_group": 34,
   "group_stage": [
     {
@@ -1572,8 +1572,8 @@
         "team_he": "שווייץ",
         "team_code": "SUI",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "הולנד",
@@ -1593,7 +1593,7 @@
         "team_he": "קרואטיה",
         "team_code": "CRO",
         "points_if_correct": 5,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1607,8 +1607,8 @@
         "team_he": "פורטוגל",
         "team_code": "POR",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "אנגליה",
@@ -1628,8 +1628,8 @@
         "team_he": "ספרד",
         "team_code": "ESP",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "ארגנטינה",
@@ -1707,7 +1707,7 @@
         "team_he": "קרואטיה",
         "team_code": "CRO",
         "points_if_correct": 10,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1765,7 +1765,7 @@
         "team_he": "קרואטיה",
         "team_code": "CRO",
         "points_if_correct": 15,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       }
     ],
@@ -1781,7 +1781,7 @@
         "team_he": "קרואטיה",
         "team_code": "CRO",
         "points_if_correct": 20,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       }
     ]
@@ -1892,8 +1892,8 @@
     }
   ],
   "projected": {
-    "official_total": 176,
-    "projected_total": 186,
+    "official_total": 191,
+    "projected_total": 201,
     "extra_points": 10,
     "fields": [
       {
@@ -1962,5 +1962,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-02T06:22:41+00:00"
+  "synced_at": "2026-07-03T06:38:15+00:00"
 }

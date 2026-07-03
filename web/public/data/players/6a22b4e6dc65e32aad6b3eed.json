@@ -1,7 +1,7 @@
 {
   "player_id": "6a22b4e6dc65e32aad6b3eed",
   "name": "שיי גרינברג",
-  "total_points": 211,
+  "total_points": 226,
   "correct_group": 46,
   "group_stage": [
     {
@@ -1596,15 +1596,15 @@
         "team_he": "קרואטיה",
         "team_code": "CRO",
         "points_if_correct": 5,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
         "team_he": "ספרד",
         "team_code": "ESP",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "מקסיקו",
@@ -1617,8 +1617,8 @@
         "team_he": "שווייץ",
         "team_code": "SUI",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "הולנד",
@@ -1659,8 +1659,8 @@
         "team_he": "פורטוגל",
         "team_code": "POR",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "גרמניה",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 211,
-    "projected_total": 221,
+    "official_total": 226,
+    "projected_total": 236,
     "extra_points": 10,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-02T06:22:41+00:00"
+  "synced_at": "2026-07-03T06:38:15+00:00"
 }

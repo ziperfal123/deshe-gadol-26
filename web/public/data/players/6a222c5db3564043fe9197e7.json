@@ -1,7 +1,7 @@
 {
   "player_id": "6a222c5db3564043fe9197e7",
   "name": "עידו זהר",
-  "total_points": 206,
+  "total_points": 221,
   "correct_group": 45,
   "group_stage": [
     {
@@ -1589,8 +1589,8 @@
         "team_he": "שווייץ",
         "team_code": "SUI",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "קולומביה",
@@ -1624,8 +1624,8 @@
         "team_he": "ספרד",
         "team_code": "ESP",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "בלגיה",
@@ -1638,8 +1638,8 @@
         "team_he": "פורטוגל",
         "team_code": "POR",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "ארצות הברית",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 206,
-    "projected_total": 226,
+    "official_total": 221,
+    "projected_total": 241,
     "extra_points": 20,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-02T06:22:41+00:00"
+  "synced_at": "2026-07-03T06:38:15+00:00"
 }
