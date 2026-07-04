@@ -1,7 +1,7 @@
 {
   "player_id": "6a1475eeaae0fbf34c9d481a",
   "name": "רני גרינברג",
-  "total_points": 195,
+  "total_points": 205,
   "correct_group": 40,
   "group_stage": [
     {
@@ -1673,8 +1673,8 @@
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "אנגליה",
@@ -1694,8 +1694,8 @@
         "team_he": "מצרים",
         "team_code": "EGY",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       }
     ],
     "quarter_final": [
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 195,
-    "projected_total": 210,
+    "official_total": 205,
+    "projected_total": 220,
     "extra_points": 15,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-03T06:38:15+00:00"
+  "synced_at": "2026-07-04T05:48:42+00:00"
 }

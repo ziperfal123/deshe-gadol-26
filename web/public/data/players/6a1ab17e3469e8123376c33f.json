@@ -1,7 +1,7 @@
 {
   "player_id": "6a1ab17e3469e8123376c33f",
   "name": "אופיר פז",
-  "total_points": 201,
+  "total_points": 206,
   "correct_group": 43,
   "group_stage": [
     {
@@ -1680,8 +1680,8 @@
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "בלגיה",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 201,
-    "projected_total": 211,
+    "official_total": 206,
+    "projected_total": 216,
     "extra_points": 10,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-03T06:38:15+00:00"
+  "synced_at": "2026-07-04T05:48:42+00:00"
 }

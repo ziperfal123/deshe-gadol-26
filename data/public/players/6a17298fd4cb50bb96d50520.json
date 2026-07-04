@@ -1,7 +1,7 @@
 {
   "player_id": "6a17298fd4cb50bb96d50520",
   "name": "אריאל טורנוא",
-  "total_points": 214,
+  "total_points": 224,
   "correct_group": 42,
   "group_stage": [
     {
@@ -1659,8 +1659,8 @@
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "בלגיה",
@@ -1687,8 +1687,8 @@
         "team_he": "קולומביה",
         "team_code": "COL",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "ברזיל",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 214,
-    "projected_total": 249,
+    "official_total": 224,
+    "projected_total": 259,
     "extra_points": 35,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-03T06:38:15+00:00"
+  "synced_at": "2026-07-04T05:48:42+00:00"
 }

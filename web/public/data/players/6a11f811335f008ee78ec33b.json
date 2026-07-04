@@ -1,7 +1,7 @@
 {
   "player_id": "6a11f811335f008ee78ec33b",
   "name": "נאור אלכתב 1",
-  "total_points": 190,
+  "total_points": 195,
   "correct_group": 40,
   "group_stage": [
     {
@@ -1589,8 +1589,8 @@
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "אורוגוואי",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 190,
-    "projected_total": 200,
+    "official_total": 195,
+    "projected_total": 205,
     "extra_points": 10,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-03T06:38:15+00:00"
+  "synced_at": "2026-07-04T05:48:42+00:00"
 }

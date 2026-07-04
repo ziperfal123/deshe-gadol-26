@@ -1,7 +1,7 @@
 {
   "player_id": "6a1897387df20a684e53ad27",
   "name": "אביב שושני",
-  "total_points": 199,
+  "total_points": 209,
   "correct_group": 40,
   "group_stage": [
     {
@@ -1659,15 +1659,15 @@
         "team_he": "קולומביה",
         "team_code": "COL",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "בלגיה",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 199,
-    "projected_total": 209,
+    "official_total": 209,
+    "projected_total": 219,
     "extra_points": 10,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-03T06:38:15+00:00"
+  "synced_at": "2026-07-04T05:48:42+00:00"
 }

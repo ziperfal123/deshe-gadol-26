@@ -1,7 +1,7 @@
 {
   "player_id": "6a11f804bed41f45ec3f7820",
   "name": "תומר אזולאי",
-  "total_points": 186,
+  "total_points": 191,
   "correct_group": 34,
   "group_stage": [
     {
@@ -1631,8 +1631,8 @@
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "ברזיל",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 186,
-    "projected_total": 196,
+    "official_total": 191,
+    "projected_total": 201,
     "extra_points": 10,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-03T06:38:15+00:00"
+  "synced_at": "2026-07-04T05:48:42+00:00"
 }

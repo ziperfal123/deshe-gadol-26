@@ -1,7 +1,7 @@
 {
   "player_id": "6a23fa9db71bae4913530b40",
   "name": "אריאל זיני",
-  "total_points": 146,
+  "total_points": 156,
   "correct_group": 27,
   "group_stage": [
     {
@@ -1638,8 +1638,8 @@
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "טורקיה",
@@ -1666,8 +1666,8 @@
         "team_he": "מצרים",
         "team_code": "EGY",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "חוף השנהב",
@@ -1909,17 +1909,17 @@
     }
   ],
   "projected": {
-    "official_total": 146,
-    "projected_total": 176,
-    "extra_points": 30,
+    "official_total": 156,
+    "projected_total": 166,
+    "extra_points": 10,
     "fields": [
       {
         "key": "top_scorer",
         "value": "קיליאן אמבפה",
         "points_if_correct": 20,
-        "leader": true,
-        "points": 20,
-        "status": "leading"
+        "leader": false,
+        "points": 0,
+        "status": "trailing"
       },
       {
         "key": "top_assists",
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-03T06:38:15+00:00"
+  "synced_at": "2026-07-04T05:48:42+00:00"
 }

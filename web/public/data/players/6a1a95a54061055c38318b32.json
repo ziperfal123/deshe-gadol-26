@@ -1,7 +1,7 @@
 {
   "player_id": "6a1a95a54061055c38318b32",
   "name": "אורי בראונשטיין 1 (NB)",
-  "total_points": 212,
+  "total_points": 217,
   "correct_group": 45,
   "group_stage": [
     {
@@ -1687,8 +1687,8 @@
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "הולנד",
@@ -1909,17 +1909,17 @@
     }
   ],
   "projected": {
-    "official_total": 212,
-    "projected_total": 242,
-    "extra_points": 30,
+    "official_total": 217,
+    "projected_total": 227,
+    "extra_points": 10,
     "fields": [
       {
         "key": "top_scorer",
         "value": "קיליאן אמבפה",
         "points_if_correct": 20,
-        "leader": true,
-        "points": 20,
-        "status": "leading"
+        "leader": false,
+        "points": 0,
+        "status": "trailing"
       },
       {
         "key": "top_assists",
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-03T06:38:15+00:00"
+  "synced_at": "2026-07-04T05:48:42+00:00"
 }

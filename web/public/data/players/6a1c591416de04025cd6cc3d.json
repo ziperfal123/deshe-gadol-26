@@ -1,7 +1,7 @@
 {
   "player_id": "6a1c591416de04025cd6cc3d",
   "name": "מתן אליהו",
-  "total_points": 176,
+  "total_points": 191,
   "correct_group": 31,
   "group_stage": [
     {
@@ -1589,8 +1589,8 @@
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "קרואטיה",
@@ -1610,7 +1610,7 @@
         "team_he": "גאנה",
         "team_code": "GHA",
         "points_if_correct": 5,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1687,15 +1687,15 @@
         "team_he": "קולומביה",
         "team_code": "COL",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "מצרים",
         "team_code": "EGY",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       }
     ],
     "quarter_final": [
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 176,
-    "projected_total": 186,
+    "official_total": 191,
+    "projected_total": 201,
     "extra_points": 10,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-03T06:38:15+00:00"
+  "synced_at": "2026-07-04T05:48:42+00:00"
 }

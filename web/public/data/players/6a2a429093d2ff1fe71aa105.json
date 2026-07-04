@@ -1,7 +1,7 @@
 {
   "player_id": "6a2a429093d2ff1fe71aa105",
   "name": "שגיא גרינצייג",
-  "total_points": 218,
+  "total_points": 228,
   "correct_group": 45,
   "group_stage": [
     {
@@ -1610,8 +1610,8 @@
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "פורטוגל",
@@ -1652,8 +1652,8 @@
         "team_he": "קולומביה",
         "team_code": "COL",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "נורבגיה",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 218,
-    "projected_total": 233,
+    "official_total": 228,
+    "projected_total": 243,
     "extra_points": 15,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-03T06:38:15+00:00"
+  "synced_at": "2026-07-04T05:48:42+00:00"
 }

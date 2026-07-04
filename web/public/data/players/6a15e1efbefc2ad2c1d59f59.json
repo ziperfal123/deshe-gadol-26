@@ -1,7 +1,7 @@
 {
   "player_id": "6a15e1efbefc2ad2c1d59f59",
   "name": "חנן ברגר 1",
-  "total_points": 185,
+  "total_points": 190,
   "correct_group": 36,
   "group_stage": [
     {
@@ -1603,8 +1603,8 @@
         "team_he": "קולומביה",
         "team_code": "COL",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "קנדה",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 185,
-    "projected_total": 185,
+    "official_total": 190,
+    "projected_total": 190,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-03T06:38:15+00:00"
+  "synced_at": "2026-07-04T05:48:42+00:00"
 }

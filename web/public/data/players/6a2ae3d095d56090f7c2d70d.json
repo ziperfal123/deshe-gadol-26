@@ -1,7 +1,7 @@
 {
   "player_id": "6a2ae3d095d56090f7c2d70d",
   "name": "ליאור זיני",
-  "total_points": 201,
+  "total_points": 211,
   "correct_group": 43,
   "group_stage": [
     {
@@ -1603,8 +1603,8 @@
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "צרפת",
@@ -1652,8 +1652,8 @@
         "team_he": "קולומביה",
         "team_code": "COL",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "בלגיה",
@@ -1673,7 +1673,7 @@
         "team_he": "גאנה",
         "team_code": "GHA",
         "points_if_correct": 5,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1909,17 +1909,17 @@
     }
   ],
   "projected": {
-    "official_total": 201,
-    "projected_total": 241,
-    "extra_points": 40,
+    "official_total": 211,
+    "projected_total": 231,
+    "extra_points": 20,
     "fields": [
       {
         "key": "top_scorer",
         "value": "קיליאן אמבפה",
         "points_if_correct": 20,
-        "leader": true,
-        "points": 20,
-        "status": "leading"
+        "leader": false,
+        "points": 0,
+        "status": "trailing"
       },
       {
         "key": "top_assists",
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-03T06:38:15+00:00"
+  "synced_at": "2026-07-04T05:48:42+00:00"
 }

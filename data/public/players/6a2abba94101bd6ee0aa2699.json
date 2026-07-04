@@ -1,7 +1,7 @@
 {
   "player_id": "6a2abba94101bd6ee0aa2699",
   "name": "ניר גרוס",
-  "total_points": 201,
+  "total_points": 206,
   "correct_group": 40,
   "group_stage": [
     {
@@ -1631,8 +1631,8 @@
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "פורטוגל",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 201,
-    "projected_total": 201,
+    "official_total": 206,
+    "projected_total": 206,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-03T06:38:15+00:00"
+  "synced_at": "2026-07-04T05:48:42+00:00"
 }

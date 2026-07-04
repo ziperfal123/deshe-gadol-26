@@ -1,7 +1,7 @@
 {
   "player_id": "6a19e08ed7952402294000d4",
   "name": "אביב שעיר",
-  "total_points": 217,
+  "total_points": 227,
   "correct_group": 43,
   "group_stage": [
     {
@@ -1638,8 +1638,8 @@
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "פורטוגל",
@@ -1659,8 +1659,8 @@
         "team_he": "קולומביה",
         "team_code": "COL",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "אורוגוואי",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 217,
-    "projected_total": 227,
+    "official_total": 227,
+    "projected_total": 237,
     "extra_points": 10,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-03T06:38:15+00:00"
+  "synced_at": "2026-07-04T05:48:42+00:00"
 }

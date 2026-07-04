@@ -1,7 +1,7 @@
 {
   "player_id": "6a2acae064716e719f8a1cb8",
   "name": "דני צחורי 1",
-  "total_points": 229,
+  "total_points": 234,
   "correct_group": 50,
   "group_stage": [
     {
@@ -1687,8 +1687,8 @@
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "קרואטיה",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 229,
-    "projected_total": 229,
+    "official_total": 234,
+    "projected_total": 234,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-03T06:38:15+00:00"
+  "synced_at": "2026-07-04T05:48:42+00:00"
 }

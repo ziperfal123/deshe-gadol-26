@@ -1,7 +1,7 @@
 {
   "player_id": "6a2adde7fed7ef54d00ba8e3",
   "name": "גיא משעלי 2",
-  "total_points": 209,
+  "total_points": 214,
   "correct_group": 42,
   "group_stage": [
     {
@@ -1673,8 +1673,8 @@
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "ארצות הברית",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 209,
-    "projected_total": 219,
+    "official_total": 214,
+    "projected_total": 224,
     "extra_points": 10,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-03T06:38:15+00:00"
+  "synced_at": "2026-07-04T05:48:42+00:00"
 }

@@ -1,7 +1,7 @@
 {
   "player_id": "6a2aa283c9f814db43562d7a",
   "name": "עומר שגב",
-  "total_points": 205,
+  "total_points": 210,
   "correct_group": 45,
   "group_stage": [
     {
@@ -1603,8 +1603,8 @@
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "פורטוגל",
@@ -1909,17 +1909,17 @@
     }
   ],
   "projected": {
-    "official_total": 205,
-    "projected_total": 235,
-    "extra_points": 30,
+    "official_total": 210,
+    "projected_total": 220,
+    "extra_points": 10,
     "fields": [
       {
         "key": "top_scorer",
         "value": "קיליאן אמבפה",
         "points_if_correct": 20,
-        "leader": true,
-        "points": 20,
-        "status": "leading"
+        "leader": false,
+        "points": 0,
+        "status": "trailing"
       },
       {
         "key": "top_assists",
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-03T06:38:15+00:00"
+  "synced_at": "2026-07-04T05:48:42+00:00"
 }

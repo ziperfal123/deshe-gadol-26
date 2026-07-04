@@ -1,7 +1,7 @@
 {
   "player_id": "6a1c57c8878905a3957a78a7",
   "name": "ליאם הופסינק",
-  "total_points": 224,
+  "total_points": 234,
   "correct_group": 44,
   "group_stage": [
     {
@@ -1596,15 +1596,15 @@
         "team_he": "קולומביה",
         "team_code": "COL",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "יפן",
@@ -1909,17 +1909,17 @@
     }
   ],
   "projected": {
-    "official_total": 224,
-    "projected_total": 254,
-    "extra_points": 30,
+    "official_total": 234,
+    "projected_total": 244,
+    "extra_points": 10,
     "fields": [
       {
         "key": "top_scorer",
         "value": "קיליאן אמבפה",
         "points_if_correct": 20,
-        "leader": true,
-        "points": 20,
-        "status": "leading"
+        "leader": false,
+        "points": 0,
+        "status": "trailing"
       },
       {
         "key": "top_assists",
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-03T06:38:15+00:00"
+  "synced_at": "2026-07-04T05:48:42+00:00"
 }

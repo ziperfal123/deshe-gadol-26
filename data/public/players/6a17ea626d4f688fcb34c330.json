@@ -1,7 +1,7 @@
 {
   "player_id": "6a17ea626d4f688fcb34c330",
   "name": "אלי בכר",
-  "total_points": 207,
+  "total_points": 217,
   "correct_group": 42,
   "group_stage": [
     {
@@ -1596,8 +1596,8 @@
         "team_he": "קולומביה",
         "team_code": "COL",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "קרואטיה",
@@ -1610,8 +1610,8 @@
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "אנגליה",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 207,
-    "projected_total": 207,
+    "official_total": 217,
+    "projected_total": 217,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-03T06:38:15+00:00"
+  "synced_at": "2026-07-04T05:48:42+00:00"
 }

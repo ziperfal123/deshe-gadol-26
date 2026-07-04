@@ -1,7 +1,7 @@
 {
   "player_id": "6a29661d0c054edc6f33606b",
   "name": "עמית ויינגרטן 10",
-  "total_points": 220,
+  "total_points": 230,
   "correct_group": 47,
   "group_stage": [
     {
@@ -1624,8 +1624,8 @@
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "ברזיל",
@@ -1666,8 +1666,8 @@
         "team_he": "קולומביה",
         "team_code": "COL",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "אנגליה",
@@ -1909,17 +1909,17 @@
     }
   ],
   "projected": {
-    "official_total": 220,
-    "projected_total": 265,
-    "extra_points": 45,
+    "official_total": 230,
+    "projected_total": 255,
+    "extra_points": 25,
     "fields": [
       {
         "key": "top_scorer",
         "value": "קיליאן אמבפה",
         "points_if_correct": 20,
-        "leader": true,
-        "points": 20,
-        "status": "leading"
+        "leader": false,
+        "points": 0,
+        "status": "trailing"
       },
       {
         "key": "top_assists",
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-03T06:38:15+00:00"
+  "synced_at": "2026-07-04T05:48:42+00:00"
 }

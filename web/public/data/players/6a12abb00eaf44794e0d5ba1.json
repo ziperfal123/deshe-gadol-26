@@ -1,7 +1,7 @@
 {
   "player_id": "6a12abb00eaf44794e0d5ba1",
   "name": "רפאל ברגאי",
-  "total_points": 213,
+  "total_points": 218,
   "correct_group": 44,
   "group_stage": [
     {
@@ -1631,8 +1631,8 @@
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "קרואטיה",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 213,
-    "projected_total": 213,
+    "official_total": 218,
+    "projected_total": 218,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-03T06:38:15+00:00"
+  "synced_at": "2026-07-04T05:48:42+00:00"
 }

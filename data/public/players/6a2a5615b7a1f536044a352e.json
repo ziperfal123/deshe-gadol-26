@@ -1,7 +1,7 @@
 {
   "player_id": "6a2a5615b7a1f536044a352e",
   "name": "שגיא גרינצייג ששל",
-  "total_points": 217,
+  "total_points": 227,
   "correct_group": 46,
   "group_stage": [
     {
@@ -1610,8 +1610,8 @@
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "פורטוגל",
@@ -1666,8 +1666,8 @@
         "team_he": "קולומביה",
         "team_code": "COL",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "אורוגוואי",
@@ -1909,17 +1909,17 @@
     }
   ],
   "projected": {
-    "official_total": 217,
-    "projected_total": 237,
-    "extra_points": 20,
+    "official_total": 227,
+    "projected_total": 227,
+    "extra_points": 0,
     "fields": [
       {
         "key": "top_scorer",
         "value": "קיליאן אמבפה",
         "points_if_correct": 20,
-        "leader": true,
-        "points": 20,
-        "status": "leading"
+        "leader": false,
+        "points": 0,
+        "status": "trailing"
       },
       {
         "key": "top_assists",
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-03T06:38:15+00:00"
+  "synced_at": "2026-07-04T05:48:42+00:00"
 }

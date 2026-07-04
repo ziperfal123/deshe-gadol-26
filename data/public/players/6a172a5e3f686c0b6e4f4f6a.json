@@ -1,7 +1,7 @@
 {
   "player_id": "6a172a5e3f686c0b6e4f4f6a",
   "name": "תום שלו 1",
-  "total_points": 215,
+  "total_points": 225,
   "correct_group": 41,
   "group_stage": [
     {
@@ -1687,15 +1687,15 @@
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "קולומביה",
         "team_code": "COL",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       }
     ],
     "quarter_final": [
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 215,
-    "projected_total": 215,
+    "official_total": 225,
+    "projected_total": 225,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-03T06:38:15+00:00"
+  "synced_at": "2026-07-04T05:48:42+00:00"
 }

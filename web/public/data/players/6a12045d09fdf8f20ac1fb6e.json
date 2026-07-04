@@ -1,7 +1,7 @@
 {
   "player_id": "6a12045d09fdf8f20ac1fb6e",
   "name": "גיא זהר",
-  "total_points": 192,
+  "total_points": 202,
   "correct_group": 39,
   "group_stage": [
     {
@@ -1645,15 +1645,15 @@
         "team_he": "קולומביה",
         "team_code": "COL",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 5,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 5
       },
       {
         "team_he": "אנגליה",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 192,
-    "projected_total": 192,
+    "official_total": 202,
+    "projected_total": 202,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-03T06:38:15+00:00"
+  "synced_at": "2026-07-04T05:48:42+00:00"
 }
