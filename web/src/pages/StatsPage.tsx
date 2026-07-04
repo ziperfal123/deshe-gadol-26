@@ -11,6 +11,7 @@ const KNOCKOUT_STAGES = ['round_of_16', 'quarter_final', 'semi_final', 'final'] 
 
 /** Aggregate statistics across every player's guesses. */
 export function StatsPage() {
+  console.log('deploy trigger')
   const [stats, setStats] = useState<StatsFile | undefined>(peekStats)
   const [error, setError] = useState(false)
 
