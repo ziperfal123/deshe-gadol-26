@@ -1,7 +1,7 @@
 {
   "player_id": "6a255da90a181e72f053f8a5",
   "name": "עובד שאול",
-  "total_points": 220,
+  "total_points": 230,
   "correct_group": 44,
   "group_stage": [
     {
@@ -1717,8 +1717,8 @@
         "team_he": "צרפת",
         "team_code": "FRA",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "אורוגוואי",
@@ -1909,17 +1909,17 @@
     }
   ],
   "projected": {
-    "official_total": 220,
-    "projected_total": 230,
-    "extra_points": 10,
+    "official_total": 230,
+    "projected_total": 260,
+    "extra_points": 30,
     "fields": [
       {
         "key": "top_scorer",
         "value": "קיליאן אמבפה",
         "points_if_correct": 20,
-        "leader": false,
-        "points": 0,
-        "status": "trailing"
+        "leader": true,
+        "points": 20,
+        "status": "leading"
       },
       {
         "key": "top_assists",
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-04T05:48:42+00:00"
+  "synced_at": "2026-07-05T05:39:48+00:00"
 }

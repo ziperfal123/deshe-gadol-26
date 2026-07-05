@@ -1,7 +1,7 @@
 {
   "player_id": "6a188352366d092c5d7ec73e",
   "name": "תום שלו 2",
-  "total_points": 212,
+  "total_points": 222,
   "correct_group": 42,
   "group_stage": [
     {
@@ -1738,8 +1738,8 @@
         "team_he": "מרוקו",
         "team_code": "MAR",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "ארגנטינה",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 212,
-    "projected_total": 212,
+    "official_total": 222,
+    "projected_total": 222,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-04T05:48:42+00:00"
+  "synced_at": "2026-07-05T05:39:48+00:00"
 }

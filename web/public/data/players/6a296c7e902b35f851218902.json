@@ -1,7 +1,7 @@
 {
   "player_id": "6a296c7e902b35f851218902",
   "name": "כרמל רוט",
-  "total_points": 210,
+  "total_points": 220,
   "correct_group": 42,
   "group_stage": [
     {
@@ -1731,8 +1731,8 @@
         "team_he": "צרפת",
         "team_code": "FRA",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "אנגליה",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 210,
-    "projected_total": 225,
+    "official_total": 220,
+    "projected_total": 235,
     "extra_points": 15,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-04T05:48:42+00:00"
+  "synced_at": "2026-07-05T05:39:48+00:00"
 }

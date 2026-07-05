@@ -1,7 +1,7 @@
 {
   "player_id": "6a11e94790dc936b78f3f573",
   "name": "יעד ענבון",
-  "total_points": 208,
+  "total_points": 218,
   "correct_group": 41,
   "group_stage": [
     {
@@ -1738,8 +1738,8 @@
         "team_he": "צרפת",
         "team_code": "FRA",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "נורבגיה",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 208,
-    "projected_total": 218,
+    "official_total": 218,
+    "projected_total": 228,
     "extra_points": 10,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-04T05:48:42+00:00"
+  "synced_at": "2026-07-05T05:39:48+00:00"
 }

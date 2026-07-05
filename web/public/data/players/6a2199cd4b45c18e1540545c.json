@@ -1,7 +1,7 @@
 {
   "player_id": "6a2199cd4b45c18e1540545c",
   "name": "דור מסיקה",
-  "total_points": 217,
+  "total_points": 227,
   "correct_group": 43,
   "group_stage": [
     {
@@ -1717,8 +1717,8 @@
         "team_he": "צרפת",
         "team_code": "FRA",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "אורוגוואי",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 217,
-    "projected_total": 242,
+    "official_total": 227,
+    "projected_total": 252,
     "extra_points": 25,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-04T05:48:42+00:00"
+  "synced_at": "2026-07-05T05:39:48+00:00"
 }

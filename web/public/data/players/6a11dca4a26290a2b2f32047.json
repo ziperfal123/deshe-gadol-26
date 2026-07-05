@@ -1,7 +1,7 @@
 {
   "player_id": "6a11dca4a26290a2b2f32047",
   "name": "גיל גרינברג",
-  "total_points": 207,
+  "total_points": 217,
   "correct_group": 41,
   "group_stage": [
     {
@@ -1703,8 +1703,8 @@
         "team_he": "צרפת",
         "team_code": "FRA",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "ברזיל",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 207,
-    "projected_total": 217,
+    "official_total": 217,
+    "projected_total": 227,
     "extra_points": 10,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-04T05:48:42+00:00"
+  "synced_at": "2026-07-05T05:39:48+00:00"
 }

@@ -1,7 +1,7 @@
 {
   "player_id": "6a21c4dc1fa7788aeed32e9d",
   "name": "יניר בן-אליעזר",
-  "total_points": 209,
+  "total_points": 219,
   "correct_group": 44,
   "group_stage": [
     {
@@ -1703,8 +1703,8 @@
         "team_he": "צרפת",
         "team_code": "FRA",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "יפן",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 209,
-    "projected_total": 209,
+    "official_total": 219,
+    "projected_total": 219,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-04T05:48:42+00:00"
+  "synced_at": "2026-07-05T05:39:48+00:00"
 }

@@ -1,7 +1,7 @@
 {
   "player_id": "6a2b014fc3812af93af33c7e",
   "name": "צור אילון",
-  "total_points": 224,
+  "total_points": 234,
   "correct_group": 44,
   "group_stage": [
     {
@@ -1724,8 +1724,8 @@
         "team_he": "צרפת",
         "team_code": "FRA",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "פורטוגל",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 224,
-    "projected_total": 239,
+    "official_total": 234,
+    "projected_total": 249,
     "extra_points": 15,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-04T05:48:42+00:00"
+  "synced_at": "2026-07-05T05:39:48+00:00"
 }

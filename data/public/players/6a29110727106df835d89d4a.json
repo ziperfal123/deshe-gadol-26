@@ -1,7 +1,7 @@
 {
   "player_id": "6a29110727106df835d89d4a",
   "name": "איל להב",
-  "total_points": 196,
+  "total_points": 206,
   "correct_group": 34,
   "group_stage": [
     {
@@ -1721,8 +1721,8 @@
         "team_he": "צרפת",
         "team_code": "FRA",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "ספרד",
@@ -1892,8 +1892,8 @@
     }
   ],
   "projected": {
-    "official_total": 196,
-    "projected_total": 206,
+    "official_total": 206,
+    "projected_total": 216,
     "extra_points": 10,
     "fields": [
       {
@@ -1962,5 +1962,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-04T05:48:42+00:00"
+  "synced_at": "2026-07-05T05:39:48+00:00"
 }

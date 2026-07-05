@@ -1,7 +1,7 @@
 {
   "player_id": "6a11e1d333d959e7d4e0bcce",
   "name": "מירון לוי",
-  "total_points": 215,
+  "total_points": 225,
   "correct_group": 43,
   "group_stage": [
     {
@@ -1724,8 +1724,8 @@
         "team_he": "צרפת",
         "team_code": "FRA",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "ארגנטינה",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 215,
-    "projected_total": 215,
+    "official_total": 225,
+    "projected_total": 225,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-04T05:48:42+00:00"
+  "synced_at": "2026-07-05T05:39:48+00:00"
 }

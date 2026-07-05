@@ -1,7 +1,7 @@
 {
   "player_id": "6a17254829b6bd6c1b7388e5",
   "name": "תום בן זאב",
-  "total_points": 220,
+  "total_points": 240,
   "correct_group": 43,
   "group_stage": [
     {
@@ -1710,15 +1710,15 @@
         "team_he": "צרפת",
         "team_code": "FRA",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "מרוקו",
         "team_code": "MAR",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "ארצות הברית",
@@ -1909,17 +1909,17 @@
     }
   ],
   "projected": {
-    "official_total": 220,
-    "projected_total": 220,
-    "extra_points": 0,
+    "official_total": 240,
+    "projected_total": 260,
+    "extra_points": 20,
     "fields": [
       {
         "key": "top_scorer",
         "value": "קיליאן אמבפה",
         "points_if_correct": 20,
-        "leader": false,
-        "points": 0,
-        "status": "trailing"
+        "leader": true,
+        "points": 20,
+        "status": "leading"
       },
       {
         "key": "top_assists",
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-04T05:48:42+00:00"
+  "synced_at": "2026-07-05T05:39:48+00:00"
 }

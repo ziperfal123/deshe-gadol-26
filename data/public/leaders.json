@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-07-04T05:48:42+00:00",
+  "synced_at": "2026-07-05T05:39:48+00:00",
   "fields": {
     "top_scorer": {
       "kind": "player",
@@ -7,6 +7,10 @@
       "live": true,
       "value": 7,
       "leaders": [
+        {
+          "name": "Kylian Mbappé",
+          "name_he": "קיליאן אמבפה"
+        },
         {
           "name": "Lionel Messi",
           "name_he": "ליאו מסי"
@@ -69,7 +73,7 @@
       "kind": "team",
       "points": 10,
       "live": true,
-      "value": 13,
+      "value": 14,
       "leaders": [
         {
           "code": "FRA",

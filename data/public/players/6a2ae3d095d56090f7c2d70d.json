@@ -1,7 +1,7 @@
 {
   "player_id": "6a2ae3d095d56090f7c2d70d",
   "name": "ליאור זיני",
-  "total_points": 211,
+  "total_points": 231,
   "correct_group": 43,
   "group_stage": [
     {
@@ -1703,8 +1703,8 @@
         "team_he": "צרפת",
         "team_code": "FRA",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "ארגנטינה",
@@ -1724,8 +1724,8 @@
         "team_he": "מרוקו",
         "team_code": "MAR",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "גרמניה",
@@ -1909,17 +1909,17 @@
     }
   ],
   "projected": {
-    "official_total": 211,
-    "projected_total": 231,
-    "extra_points": 20,
+    "official_total": 231,
+    "projected_total": 271,
+    "extra_points": 40,
     "fields": [
       {
         "key": "top_scorer",
         "value": "קיליאן אמבפה",
         "points_if_correct": 20,
-        "leader": false,
-        "points": 0,
-        "status": "trailing"
+        "leader": true,
+        "points": 20,
+        "status": "leading"
       },
       {
         "key": "top_assists",
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-04T05:48:42+00:00"
+  "synced_at": "2026-07-05T05:39:48+00:00"
 }

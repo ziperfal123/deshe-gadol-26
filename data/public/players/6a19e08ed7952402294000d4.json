@@ -1,7 +1,7 @@
 {
   "player_id": "6a19e08ed7952402294000d4",
   "name": "אביב שעיר",
-  "total_points": 227,
+  "total_points": 237,
   "correct_group": 43,
   "group_stage": [
     {
@@ -1710,8 +1710,8 @@
         "team_he": "צרפת",
         "team_code": "FRA",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "ספרד",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 227,
-    "projected_total": 237,
+    "official_total": 237,
+    "projected_total": 247,
     "extra_points": 10,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-04T05:48:42+00:00"
+  "synced_at": "2026-07-05T05:39:48+00:00"
 }

@@ -1,7 +1,7 @@
 {
   "player_id": "6a25be647993552282d10140",
   "name": "יובל אקרמן",
-  "total_points": 183,
+  "total_points": 193,
   "correct_group": 33,
   "group_stage": [
     {
@@ -1745,8 +1745,8 @@
         "team_he": "צרפת",
         "team_code": "FRA",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "ארגנטינה",
@@ -1909,17 +1909,17 @@
     }
   ],
   "projected": {
-    "official_total": 183,
-    "projected_total": 183,
-    "extra_points": 0,
+    "official_total": 193,
+    "projected_total": 213,
+    "extra_points": 20,
     "fields": [
       {
         "key": "top_scorer",
         "value": "קיליאן אמבפה",
         "points_if_correct": 20,
-        "leader": false,
-        "points": 0,
-        "status": "trailing"
+        "leader": true,
+        "points": 20,
+        "status": "leading"
       },
       {
         "key": "top_assists",
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-04T05:48:42+00:00"
+  "synced_at": "2026-07-05T05:39:48+00:00"
 }
