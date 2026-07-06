@@ -1,7 +1,7 @@
 {
   "player_id": "6a2ab39edf43679cc95f06d3",
   "name": "קרן אורן",
-  "total_points": 223,
+  "total_points": 243,
   "correct_group": 45,
   "group_stage": [
     {
@@ -1731,15 +1731,15 @@
         "team_he": "נורבגיה",
         "team_code": "NOR",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "אנגליה",
         "team_code": "ENG",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "ארגנטינה",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 223,
-    "projected_total": 233,
+    "official_total": 243,
+    "projected_total": 253,
     "extra_points": 10,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-05T05:39:48+00:00"
+  "synced_at": "2026-07-06T04:47:14+00:00"
 }

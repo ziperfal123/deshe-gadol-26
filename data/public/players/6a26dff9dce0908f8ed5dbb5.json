@@ -1,7 +1,7 @@
 {
   "player_id": "6a26dff9dce0908f8ed5dbb5",
   "name": "יותם דוכס",
-  "total_points": 234,
+  "total_points": 244,
   "correct_group": 42,
   "group_stage": [
     {
@@ -1710,7 +1710,7 @@
         "team_he": "ברזיל",
         "team_code": "BRA",
         "points_if_correct": 10,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1731,8 +1731,8 @@
         "team_he": "אנגליה",
         "team_code": "ENG",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "צרפת",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 234,
-    "projected_total": 244,
+    "official_total": 244,
+    "projected_total": 254,
     "extra_points": 10,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-05T05:39:48+00:00"
+  "synced_at": "2026-07-06T04:47:14+00:00"
 }

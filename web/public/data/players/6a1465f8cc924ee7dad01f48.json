@@ -1,7 +1,7 @@
 {
   "player_id": "6a1465f8cc924ee7dad01f48",
   "name": "יונתן אטד",
-  "total_points": 232,
+  "total_points": 242,
   "correct_group": 42,
   "group_stage": [
     {
@@ -1710,7 +1710,7 @@
         "team_he": "ברזיל",
         "team_code": "BRA",
         "points_if_correct": 10,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1724,8 +1724,8 @@
         "team_he": "אנגליה",
         "team_code": "ENG",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "הולנד",
@@ -1775,7 +1775,7 @@
         "team_he": "ברזיל",
         "team_code": "BRA",
         "points_if_correct": 15,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1798,7 +1798,7 @@
         "team_he": "ברזיל",
         "team_code": "BRA",
         "points_if_correct": 20,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       }
     ]
@@ -1909,17 +1909,17 @@
     }
   ],
   "projected": {
-    "official_total": 232,
-    "projected_total": 242,
-    "extra_points": 10,
+    "official_total": 242,
+    "projected_total": 272,
+    "extra_points": 30,
     "fields": [
       {
         "key": "top_scorer",
         "value": "ארלינג האלנד",
         "points_if_correct": 20,
-        "leader": false,
-        "points": 0,
-        "status": "trailing"
+        "leader": true,
+        "points": 20,
+        "status": "leading"
       },
       {
         "key": "top_assists",
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-05T05:39:48+00:00"
+  "synced_at": "2026-07-06T04:47:14+00:00"
 }

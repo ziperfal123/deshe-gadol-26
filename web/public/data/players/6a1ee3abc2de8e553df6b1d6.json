@@ -1,7 +1,7 @@
 {
   "player_id": "6a1ee3abc2de8e553df6b1d6",
   "name": "אביטל לחוביץ האמיתי",
-  "total_points": 198,
+  "total_points": 218,
   "correct_group": 28,
   "group_stage": [
     {
@@ -1731,8 +1731,8 @@
         "team_he": "נורבגיה",
         "team_code": "NOR",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "ארגנטינה",
@@ -1745,14 +1745,14 @@
         "team_he": "אנגליה",
         "team_code": "ENG",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "ברזיל",
         "team_code": "BRA",
         "points_if_correct": 10,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       }
     ],
@@ -1909,17 +1909,17 @@
     }
   ],
   "projected": {
-    "official_total": 198,
-    "projected_total": 208,
-    "extra_points": 10,
+    "official_total": 218,
+    "projected_total": 248,
+    "extra_points": 30,
     "fields": [
       {
         "key": "top_scorer",
         "value": "ארלינג האלנד",
         "points_if_correct": 20,
-        "leader": false,
-        "points": 0,
-        "status": "trailing"
+        "leader": true,
+        "points": 20,
+        "status": "leading"
       },
       {
         "key": "top_assists",
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-05T05:39:48+00:00"
+  "synced_at": "2026-07-06T04:47:14+00:00"
 }

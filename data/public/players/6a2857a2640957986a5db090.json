@@ -1,7 +1,7 @@
 {
   "player_id": "6a2857a2640957986a5db090",
   "name": "אלעד לב",
-  "total_points": 216,
+  "total_points": 226,
   "correct_group": 43,
   "group_stage": [
     {
@@ -1710,8 +1710,8 @@
         "team_he": "אנגליה",
         "team_code": "ENG",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "הולנד",
@@ -1745,7 +1745,7 @@
         "team_he": "ברזיל",
         "team_code": "BRA",
         "points_if_correct": 10,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 216,
-    "projected_total": 231,
+    "official_total": 226,
+    "projected_total": 241,
     "extra_points": 15,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-05T05:39:48+00:00"
+  "synced_at": "2026-07-06T04:47:14+00:00"
 }

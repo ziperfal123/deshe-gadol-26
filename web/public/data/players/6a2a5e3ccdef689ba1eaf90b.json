@@ -1,7 +1,7 @@
 {
   "player_id": "6a2a5e3ccdef689ba1eaf90b",
   "name": "נתי מאי",
-  "total_points": 217,
+  "total_points": 227,
   "correct_group": 39,
   "group_stage": [
     {
@@ -1703,7 +1703,7 @@
         "team_he": "ברזיל",
         "team_code": "BRA",
         "points_if_correct": 10,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1731,8 +1731,8 @@
         "team_he": "אנגליה",
         "team_code": "ENG",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "צרפת",
@@ -1761,7 +1761,7 @@
         "team_he": "ברזיל",
         "team_code": "BRA",
         "points_if_correct": 15,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1798,7 +1798,7 @@
         "team_he": "ברזיל",
         "team_code": "BRA",
         "points_if_correct": 20,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       }
     ]
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 217,
-    "projected_total": 217,
+    "official_total": 227,
+    "projected_total": 227,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-05T05:39:48+00:00"
+  "synced_at": "2026-07-06T04:47:14+00:00"
 }

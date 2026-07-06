@@ -1,7 +1,7 @@
 {
   "player_id": "6a1eec3b403209f3ccd794df",
   "name": "שקד קינן",
-  "total_points": 226,
+  "total_points": 246,
   "correct_group": 41,
   "group_stage": [
     {
@@ -1717,15 +1717,15 @@
         "team_he": "ברזיל",
         "team_code": "BRA",
         "points_if_correct": 10,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
         "team_he": "נורבגיה",
         "team_code": "NOR",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "פורטוגל",
@@ -1745,8 +1745,8 @@
         "team_he": "אנגליה",
         "team_code": "ENG",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "צרפת",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 226,
-    "projected_total": 266,
+    "official_total": 246,
+    "projected_total": 286,
     "extra_points": 40,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-05T05:39:48+00:00"
+  "synced_at": "2026-07-06T04:47:14+00:00"
 }

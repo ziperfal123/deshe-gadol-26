@@ -1,7 +1,7 @@
 {
   "player_id": "6a2adb0bbb5b49dc4453f771",
   "name": "דניאל טורנוא 3",
-  "total_points": 225,
+  "total_points": 245,
   "correct_group": 44,
   "group_stage": [
     {
@@ -1703,8 +1703,8 @@
         "team_he": "נורבגיה",
         "team_code": "NOR",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "צרפת",
@@ -1724,15 +1724,15 @@
         "team_he": "ברזיל",
         "team_code": "BRA",
         "points_if_correct": 10,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
         "team_he": "אנגליה",
         "team_code": "ENG",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "פורטוגל",
@@ -1909,17 +1909,17 @@
     }
   ],
   "projected": {
-    "official_total": 225,
-    "projected_total": 245,
-    "extra_points": 20,
+    "official_total": 245,
+    "projected_total": 285,
+    "extra_points": 40,
     "fields": [
       {
         "key": "top_scorer",
         "value": "ארלינג האלנד",
         "points_if_correct": 20,
-        "leader": false,
-        "points": 0,
-        "status": "trailing"
+        "leader": true,
+        "points": 20,
+        "status": "leading"
       },
       {
         "key": "top_assists",
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-05T05:39:48+00:00"
+  "synced_at": "2026-07-06T04:47:14+00:00"
 }

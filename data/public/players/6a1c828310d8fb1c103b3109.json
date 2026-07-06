@@ -1,7 +1,7 @@
 {
   "player_id": "6a1c828310d8fb1c103b3109",
   "name": "אריאל פורמן",
-  "total_points": 236,
+  "total_points": 256,
   "correct_group": 44,
   "group_stage": [
     {
@@ -1731,15 +1731,15 @@
         "team_he": "נורבגיה",
         "team_code": "NOR",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "אנגליה",
         "team_code": "ENG",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "פורטוגל",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 236,
-    "projected_total": 246,
+    "official_total": 256,
+    "projected_total": 266,
     "extra_points": 10,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-05T05:39:48+00:00"
+  "synced_at": "2026-07-06T04:47:14+00:00"
 }

@@ -11,8 +11,8 @@
     "losers": ["NED", "JPN", "GER", "RSA", "SWE", "ECU", "CIV", "COD", "BIH", "SEN", "ALG", "AUT", "CRO", "CPV", "GHA", "AUS"]
   },
   "r16": {
-    "winners": ["FRA", "MAR"],
-    "losers": ["PAR", "CAN"]
+    "winners": ["FRA", "MAR", "ENG", "NOR"],
+    "losers": ["PAR", "CAN", "MEX", "BRA"]
   },
   "qf": {
     "winners": [],
