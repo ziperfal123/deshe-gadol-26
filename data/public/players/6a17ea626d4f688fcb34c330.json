@@ -1,7 +1,7 @@
 {
   "player_id": "6a17ea626d4f688fcb34c330",
   "name": "אלי בכר",
-  "total_points": 237,
+  "total_points": 247,
   "correct_group": 42,
   "group_stage": [
     {
@@ -1717,7 +1717,7 @@
         "team_he": "פורטוגל",
         "team_code": "POR",
         "points_if_correct": 10,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1752,8 +1752,8 @@
         "team_he": "ספרד",
         "team_code": "ESP",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       }
     ],
     "semi_final": [
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 237,
-    "projected_total": 237,
+    "official_total": 247,
+    "projected_total": 247,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-06T04:47:14+00:00"
+  "synced_at": "2026-07-07T06:56:32+00:00"
 }

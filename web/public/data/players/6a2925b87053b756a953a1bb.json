@@ -1,7 +1,7 @@
 {
   "player_id": "6a2925b87053b756a953a1bb",
   "name": "עודד מכנס נשמה",
-  "total_points": 196,
+  "total_points": 206,
   "correct_group": 37,
   "group_stage": [
     {
@@ -1717,14 +1717,14 @@
         "team_he": "ארצות הברית",
         "team_code": "USA",
         "points_if_correct": 10,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
         "team_he": "פורטוגל",
         "team_code": "POR",
         "points_if_correct": 10,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1738,8 +1738,8 @@
         "team_he": "ספרד",
         "team_code": "ESP",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "ארגנטינה",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 196,
-    "projected_total": 196,
+    "official_total": 206,
+    "projected_total": 206,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-06T04:47:14+00:00"
+  "synced_at": "2026-07-07T06:56:32+00:00"
 }

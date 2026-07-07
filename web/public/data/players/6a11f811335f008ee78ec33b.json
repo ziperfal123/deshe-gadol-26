@@ -1,7 +1,7 @@
 {
   "player_id": "6a11f811335f008ee78ec33b",
   "name": "נאור אלכתב 1",
-  "total_points": 215,
+  "total_points": 235,
   "correct_group": 40,
   "group_stage": [
     {
@@ -1724,15 +1724,15 @@
         "team_he": "ספרד",
         "team_code": "ESP",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "בלגיה",
         "team_code": "BEL",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "ברזיל",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 215,
-    "projected_total": 225,
+    "official_total": 235,
+    "projected_total": 245,
     "extra_points": 10,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-06T04:47:14+00:00"
+  "synced_at": "2026-07-07T06:56:32+00:00"
 }

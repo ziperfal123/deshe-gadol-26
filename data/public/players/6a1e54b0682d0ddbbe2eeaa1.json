@@ -1,7 +1,7 @@
 {
   "player_id": "6a1e54b0682d0ddbbe2eeaa1",
   "name": "שרון גז",
-  "total_points": 243,
+  "total_points": 253,
   "correct_group": 45,
   "group_stage": [
     {
@@ -1717,8 +1717,8 @@
         "team_he": "ספרד",
         "team_code": "ESP",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "קולומביה",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 243,
-    "projected_total": 263,
+    "official_total": 253,
+    "projected_total": 273,
     "extra_points": 20,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-06T04:47:14+00:00"
+  "synced_at": "2026-07-07T06:56:32+00:00"
 }

@@ -1,7 +1,7 @@
 {
   "player_id": "6a243ee7ae8f8ff03cce6644",
   "name": "ניב אפלבאום",
-  "total_points": 234,
+  "total_points": 254,
   "correct_group": 44,
   "group_stage": [
     {
@@ -1703,22 +1703,22 @@
         "team_he": "פורטוגל",
         "team_code": "POR",
         "points_if_correct": 10,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
         "team_he": "ספרד",
         "team_code": "ESP",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "בלגיה",
         "team_code": "BEL",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "ברזיל",
@@ -1775,7 +1775,7 @@
         "team_he": "פורטוגל",
         "team_code": "POR",
         "points_if_correct": 15,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1798,7 +1798,7 @@
         "team_he": "פורטוגל",
         "team_code": "POR",
         "points_if_correct": 20,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       }
     ]
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 234,
-    "projected_total": 254,
+    "official_total": 254,
+    "projected_total": 274,
     "extra_points": 20,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-06T04:47:14+00:00"
+  "synced_at": "2026-07-07T06:56:32+00:00"
 }

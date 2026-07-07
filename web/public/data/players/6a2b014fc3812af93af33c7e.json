@@ -1,7 +1,7 @@
 {
   "player_id": "6a2b014fc3812af93af33c7e",
   "name": "צור אילון",
-  "total_points": 244,
+  "total_points": 254,
   "correct_group": 44,
   "group_stage": [
     {
@@ -1731,7 +1731,7 @@
         "team_he": "פורטוגל",
         "team_code": "POR",
         "points_if_correct": 10,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1745,15 +1745,15 @@
         "team_he": "ארצות הברית",
         "team_code": "USA",
         "points_if_correct": 10,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
         "team_he": "ספרד",
         "team_code": "ESP",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       }
     ],
     "semi_final": [
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 244,
-    "projected_total": 259,
+    "official_total": 254,
+    "projected_total": 269,
     "extra_points": 15,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-06T04:47:14+00:00"
+  "synced_at": "2026-07-07T06:56:32+00:00"
 }

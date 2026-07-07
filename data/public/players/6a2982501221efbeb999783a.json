@@ -1,7 +1,7 @@
 {
   "player_id": "6a2982501221efbeb999783a",
   "name": "עומר שגיא",
-  "total_points": 216,
+  "total_points": 226,
   "correct_group": 35,
   "group_stage": [
     {
@@ -1724,7 +1724,7 @@
         "team_he": "פורטוגל",
         "team_code": "POR",
         "points_if_correct": 10,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1752,8 +1752,8 @@
         "team_he": "ספרד",
         "team_code": "ESP",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       }
     ],
     "semi_final": [
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 216,
-    "projected_total": 216,
+    "official_total": 226,
+    "projected_total": 226,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-06T04:47:14+00:00"
+  "synced_at": "2026-07-07T06:56:32+00:00"
 }

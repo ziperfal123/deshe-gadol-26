@@ -1,7 +1,7 @@
 {
   "player_id": "6a194aed6a31161b05eba333",
   "name": "לוטם הרמן",
-  "total_points": 217,
+  "total_points": 227,
   "correct_group": 42,
   "group_stage": [
     {
@@ -1717,7 +1717,7 @@
         "team_he": "ארצות הברית",
         "team_code": "USA",
         "points_if_correct": 10,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1731,8 +1731,8 @@
         "team_he": "ספרד",
         "team_code": "ESP",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "אנגליה",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 217,
-    "projected_total": 227,
+    "official_total": 227,
+    "projected_total": 237,
     "extra_points": 10,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-06T04:47:14+00:00"
+  "synced_at": "2026-07-07T06:56:32+00:00"
 }

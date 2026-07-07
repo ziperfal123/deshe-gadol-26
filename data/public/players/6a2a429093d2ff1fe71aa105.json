@@ -1,7 +1,7 @@
 {
   "player_id": "6a2a429093d2ff1fe71aa105",
   "name": "שגיא גרינצייג",
-  "total_points": 248,
+  "total_points": 268,
   "correct_group": 45,
   "group_stage": [
     {
@@ -1703,15 +1703,15 @@
         "team_he": "בלגיה",
         "team_code": "BEL",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "ספרד",
         "team_code": "ESP",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "צרפת",
@@ -1738,7 +1738,7 @@
         "team_he": "פורטוגל",
         "team_code": "POR",
         "points_if_correct": 10,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 248,
-    "projected_total": 263,
+    "official_total": 268,
+    "projected_total": 283,
     "extra_points": 15,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-06T04:47:14+00:00"
+  "synced_at": "2026-07-07T06:56:32+00:00"
 }

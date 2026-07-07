@@ -1,7 +1,7 @@
 {
   "player_id": "6a1aa6855d2f5df5e8254309",
   "name": "גיא גרוס 10",
-  "total_points": 211,
+  "total_points": 231,
   "correct_group": 34,
   "group_stage": [
     {
@@ -1703,8 +1703,8 @@
         "team_he": "ספרד",
         "team_code": "ESP",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "צרפת",
@@ -1731,7 +1731,7 @@
         "team_he": "פורטוגל",
         "team_code": "POR",
         "points_if_correct": 10,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1752,8 +1752,8 @@
         "team_he": "בלגיה",
         "team_code": "BEL",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       }
     ],
     "semi_final": [
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 211,
-    "projected_total": 231,
+    "official_total": 231,
+    "projected_total": 251,
     "extra_points": 20,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-06T04:47:14+00:00"
+  "synced_at": "2026-07-07T06:56:32+00:00"
 }

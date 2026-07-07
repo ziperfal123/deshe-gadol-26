@@ -1,7 +1,7 @@
 {
   "player_id": "6a1dbdebe857afac9335af63",
   "name": "ravid sapir",
-  "total_points": 232,
+  "total_points": 242,
   "correct_group": 39,
   "group_stage": [
     {
@@ -1717,7 +1717,7 @@
         "team_he": "פורטוגל",
         "team_code": "POR",
         "points_if_correct": 10,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1738,8 +1738,8 @@
         "team_he": "ספרד",
         "team_code": "ESP",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "אנגליה",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 232,
-    "projected_total": 242,
+    "official_total": 242,
+    "projected_total": 252,
     "extra_points": 10,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-06T04:47:14+00:00"
+  "synced_at": "2026-07-07T06:56:32+00:00"
 }

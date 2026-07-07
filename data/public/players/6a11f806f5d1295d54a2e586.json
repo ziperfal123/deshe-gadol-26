@@ -1,7 +1,7 @@
 {
   "player_id": "6a11f806f5d1295d54a2e586",
   "name": "קליין אסף",
-  "total_points": 242,
+  "total_points": 252,
   "correct_group": 42,
   "group_stage": [
     {
@@ -1703,8 +1703,8 @@
         "team_he": "ספרד",
         "team_code": "ESP",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "ברזיל",
@@ -1745,7 +1745,7 @@
         "team_he": "פורטוגל",
         "team_code": "POR",
         "points_if_correct": 10,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 242,
-    "projected_total": 252,
+    "official_total": 252,
+    "projected_total": 262,
     "extra_points": 10,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-06T04:47:14+00:00"
+  "synced_at": "2026-07-07T06:56:32+00:00"
 }

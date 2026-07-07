@@ -1,7 +1,7 @@
 {
   "player_id": "6a1c591416de04025cd6cc3d",
   "name": "מתן אליהו",
-  "total_points": 201,
+  "total_points": 211,
   "correct_group": 31,
   "group_stage": [
     {
@@ -1710,8 +1710,8 @@
         "team_he": "ספרד",
         "team_code": "ESP",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "אורוגוואי",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 201,
-    "projected_total": 211,
+    "official_total": 211,
+    "projected_total": 221,
     "extra_points": 10,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-06T04:47:14+00:00"
+  "synced_at": "2026-07-07T06:56:32+00:00"
 }

@@ -1,7 +1,7 @@
 {
   "player_id": "6a11f0a98a5afba198872688",
   "name": "נמרוד אקרמן",
-  "total_points": 212,
+  "total_points": 232,
   "correct_group": 36,
   "group_stage": [
     {
@@ -1710,8 +1710,8 @@
         "team_he": "ספרד",
         "team_code": "ESP",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "קרואטיה",
@@ -1724,15 +1724,15 @@
         "team_he": "פורטוגל",
         "team_code": "POR",
         "points_if_correct": 10,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
         "team_he": "בלגיה",
         "team_code": "BEL",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "צרפת",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 212,
-    "projected_total": 212,
+    "official_total": 232,
+    "projected_total": 232,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-06T04:47:14+00:00"
+  "synced_at": "2026-07-07T06:56:32+00:00"
 }
