@@ -1,7 +1,7 @@
 {
   "player_id": "6a2ad55846973d486be4a7ef",
   "name": "מוטי העיט קקון",
-  "total_points": 249,
+  "total_points": 259,
   "correct_group": 43,
   "group_stage": [
     {
@@ -1752,8 +1752,8 @@
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       }
     ],
     "semi_final": [
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 249,
-    "projected_total": 274,
+    "official_total": 259,
+    "projected_total": 284,
     "extra_points": 25,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-07T06:56:32+00:00"
+  "synced_at": "2026-07-07T18:08:38+00:00"
 }

@@ -1,7 +1,7 @@
 {
   "player_id": "6a297aa2654e4d47687fd425",
   "name": "אביב ינישבסקי 1",
-  "total_points": 234,
+  "total_points": 244,
   "correct_group": 40,
   "group_stage": [
     {
@@ -1731,8 +1731,8 @@
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "גרמניה",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 234,
-    "projected_total": 234,
+    "official_total": 244,
+    "projected_total": 244,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-07T06:56:32+00:00"
+  "synced_at": "2026-07-07T18:08:38+00:00"
 }

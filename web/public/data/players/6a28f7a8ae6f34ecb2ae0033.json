@@ -1,7 +1,7 @@
 {
   "player_id": "6a28f7a8ae6f34ecb2ae0033",
   "name": "שקד ענבון",
-  "total_points": 264,
+  "total_points": 274,
   "correct_group": 47,
   "group_stage": [
     {
@@ -1703,8 +1703,8 @@
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "אנגליה",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 264,
-    "projected_total": 284,
+    "official_total": 274,
+    "projected_total": 294,
     "extra_points": 20,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-07T06:56:32+00:00"
+  "synced_at": "2026-07-07T18:08:38+00:00"
 }

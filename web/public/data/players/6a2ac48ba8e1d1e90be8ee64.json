@@ -1,7 +1,7 @@
 {
   "player_id": "6a2ac48ba8e1d1e90be8ee64",
   "name": "אוראל אפלבאום",
-  "total_points": 258,
+  "total_points": 268,
   "correct_group": 46,
   "group_stage": [
     {
@@ -1731,8 +1731,8 @@
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "צרפת",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 258,
-    "projected_total": 258,
+    "official_total": 268,
+    "projected_total": 268,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-07T06:56:32+00:00"
+  "synced_at": "2026-07-07T18:08:38+00:00"
 }

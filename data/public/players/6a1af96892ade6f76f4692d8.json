@@ -1,7 +1,7 @@
 {
   "player_id": "6a1af96892ade6f76f4692d8",
   "name": "נועם דוכס",
-  "total_points": 257,
+  "total_points": 267,
   "correct_group": 43,
   "group_stage": [
     {
@@ -1703,8 +1703,8 @@
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "נורבגיה",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 257,
-    "projected_total": 277,
+    "official_total": 267,
+    "projected_total": 287,
     "extra_points": 20,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-07T06:56:32+00:00"
+  "synced_at": "2026-07-07T18:08:38+00:00"
 }

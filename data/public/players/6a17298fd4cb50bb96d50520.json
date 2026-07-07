@@ -1,7 +1,7 @@
 {
   "player_id": "6a17298fd4cb50bb96d50520",
   "name": "אריאל טורנוא",
-  "total_points": 254,
+  "total_points": 264,
   "correct_group": 42,
   "group_stage": [
     {
@@ -1752,8 +1752,8 @@
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       }
     ],
     "semi_final": [
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 254,
-    "projected_total": 289,
+    "official_total": 264,
+    "projected_total": 299,
     "extra_points": 35,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-07T06:56:32+00:00"
+  "synced_at": "2026-07-07T18:08:38+00:00"
 }

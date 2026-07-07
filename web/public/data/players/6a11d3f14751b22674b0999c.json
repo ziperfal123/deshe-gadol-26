@@ -1,7 +1,7 @@
 {
   "player_id": "6a11d3f14751b22674b0999c",
   "name": "גיא גרוס",
-  "total_points": 227,
+  "total_points": 237,
   "correct_group": 38,
   "group_stage": [
     {
@@ -1731,8 +1731,8 @@
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "אנגליה",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 227,
-    "projected_total": 237,
+    "official_total": 237,
+    "projected_total": 247,
     "extra_points": 10,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-07T06:56:32+00:00"
+  "synced_at": "2026-07-07T18:08:38+00:00"
 }

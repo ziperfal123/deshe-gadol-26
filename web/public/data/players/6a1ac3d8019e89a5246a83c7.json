@@ -1,7 +1,7 @@
 {
   "player_id": "6a1ac3d8019e89a5246a83c7",
   "name": "אורי בראונשטיין 2 (AI)",
-  "total_points": 241,
+  "total_points": 251,
   "correct_group": 44,
   "group_stage": [
     {
@@ -1738,8 +1738,8 @@
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "ברזיל",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 241,
-    "projected_total": 266,
+    "official_total": 251,
+    "projected_total": 276,
     "extra_points": 25,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-07T06:56:32+00:00"
+  "synced_at": "2026-07-07T18:08:38+00:00"
 }

@@ -1,7 +1,7 @@
 {
   "player_id": "6a2a843142c92cf3bd07258b",
   "name": "בועז הורוביץ",
-  "total_points": 269,
+  "total_points": 279,
   "correct_group": 49,
   "group_stage": [
     {
@@ -1724,8 +1724,8 @@
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "אנגליה",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 269,
-    "projected_total": 299,
+    "official_total": 279,
+    "projected_total": 309,
     "extra_points": 30,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-07T06:56:32+00:00"
+  "synced_at": "2026-07-07T18:08:38+00:00"
 }

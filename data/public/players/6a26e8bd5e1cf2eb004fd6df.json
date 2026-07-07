@@ -1,7 +1,7 @@
 {
   "player_id": "6a26e8bd5e1cf2eb004fd6df",
   "name": "לואיס סקלי",
-  "total_points": 251,
+  "total_points": 261,
   "correct_group": 38,
   "group_stage": [
     {
@@ -1731,8 +1731,8 @@
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "צרפת",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 251,
-    "projected_total": 261,
+    "official_total": 261,
+    "projected_total": 271,
     "extra_points": 10,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-07T06:56:32+00:00"
+  "synced_at": "2026-07-07T18:08:38+00:00"
 }
