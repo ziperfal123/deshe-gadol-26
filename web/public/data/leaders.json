@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-07-08T03:27:58+00:00",
+  "synced_at": "2026-07-08T16:17:49+00:00",
   "fields": {
     "top_scorer": {
       "kind": "player",
@@ -115,28 +115,8 @@
       "value": null,
       "leaders": [
         {
-          "code": "ALG",
-          "name_he": "אלג'יריה"
-        },
-        {
           "code": "CZE",
           "name_he": "צ׳כיה"
-        },
-        {
-          "code": "FRA",
-          "name_he": "צרפת"
-        },
-        {
-          "code": "GER",
-          "name_he": "גרמניה"
-        },
-        {
-          "code": "JPN",
-          "name_he": "יפן"
-        },
-        {
-          "code": "NOR",
-          "name_he": "נורבגיה"
         },
         {
           "code": "TUN",

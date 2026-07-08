@@ -1883,7 +1883,7 @@
       "key": "least_cards_team",
       "value": "ספרד",
       "points_if_correct": 10,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
@@ -1897,14 +1897,14 @@
       "key": "total_extra_time",
       "value": 3,
       "points_if_correct": 5,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
       "key": "total_penalties",
       "value": 2,
       "points_if_correct": 5,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     }
   ],
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-08T03:27:58+00:00"
+  "synced_at": "2026-07-08T16:17:49+00:00"
 }

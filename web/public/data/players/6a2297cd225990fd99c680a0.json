@@ -1883,7 +1883,7 @@
       "key": "least_cards_team",
       "value": "יפן",
       "points_if_correct": 10,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
@@ -1897,21 +1897,21 @@
       "key": "total_extra_time",
       "value": 4,
       "points_if_correct": 5,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
       "key": "total_penalties",
       "value": 3,
       "points_if_correct": 5,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     }
   ],
   "projected": {
     "official_total": 265,
-    "projected_total": 275,
-    "extra_points": 10,
+    "projected_total": 265,
+    "extra_points": 0,
     "fields": [
       {
         "key": "top_scorer",
@@ -1973,11 +1973,11 @@
         "key": "least_cards_team",
         "value": "יפן",
         "points_if_correct": 10,
-        "leader": true,
-        "points": 10,
-        "status": "leading"
+        "leader": false,
+        "points": 0,
+        "status": "trailing"
       }
     ]
   },
-  "synced_at": "2026-07-08T03:27:58+00:00"
+  "synced_at": "2026-07-08T16:17:49+00:00"
 }

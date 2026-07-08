@@ -1,7 +1,7 @@
 {
   "player_id": "6a11d3f14751b22674b0999c",
   "name": "גיא גרוס",
-  "total_points": 237,
+  "total_points": 247,
   "correct_group": 38,
   "group_stage": [
     {
@@ -1883,8 +1883,8 @@
       "key": "least_cards_team",
       "value": "תוניסיה",
       "points_if_correct": 10,
-      "status": "pending",
-      "points": 0
+      "status": "correct",
+      "points": 10
     },
     {
       "key": "total_red_cards",
@@ -1904,14 +1904,14 @@
       "key": "total_penalties",
       "value": 3,
       "points_if_correct": 5,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     }
   ],
   "projected": {
-    "official_total": 237,
+    "official_total": 247,
     "projected_total": 247,
-    "extra_points": 10,
+    "extra_points": 0,
     "fields": [
       {
         "key": "top_scorer",
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-08T03:27:58+00:00"
+  "synced_at": "2026-07-08T16:17:49+00:00"
 }

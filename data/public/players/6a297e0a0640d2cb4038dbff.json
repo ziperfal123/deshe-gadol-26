@@ -1883,14 +1883,14 @@
       "key": "least_cards_team",
       "value": "קטאר",
       "points_if_correct": 10,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
       "key": "total_red_cards",
       "value": 12,
       "points_if_correct": 8,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-08T03:27:58+00:00"
+  "synced_at": "2026-07-08T16:17:49+00:00"
 }

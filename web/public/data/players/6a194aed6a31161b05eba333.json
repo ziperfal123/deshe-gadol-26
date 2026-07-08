@@ -1,7 +1,7 @@
 {
   "player_id": "6a194aed6a31161b05eba333",
   "name": "לוטם הרמן",
-  "total_points": 237,
+  "total_points": 247,
   "correct_group": 42,
   "group_stage": [
     {
@@ -1883,8 +1883,8 @@
       "key": "least_cards_team",
       "value": "צ׳כיה",
       "points_if_correct": 10,
-      "status": "pending",
-      "points": 0
+      "status": "correct",
+      "points": 10
     },
     {
       "key": "total_red_cards",
@@ -1897,7 +1897,7 @@
       "key": "total_extra_time",
       "value": 4,
       "points_if_correct": 5,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
@@ -1909,9 +1909,9 @@
     }
   ],
   "projected": {
-    "official_total": 237,
+    "official_total": 247,
     "projected_total": 247,
-    "extra_points": 10,
+    "extra_points": 0,
     "fields": [
       {
         "key": "top_scorer",
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-08T03:27:58+00:00"
+  "synced_at": "2026-07-08T16:17:49+00:00"
 }

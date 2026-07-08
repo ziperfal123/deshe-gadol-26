@@ -22,7 +22,13 @@
       "final": true
     },
     "total_red_cards": {
-      "min_confirmed": 11
+      "min_confirmed": 13
+    },
+    "total_extra_time": {
+      "min_confirmed": 6
+    },
+    "total_penalties": {
+      "min_confirmed": 4
     },
     "most_cards_team": {
       "teams": ["PAR"],
@@ -30,9 +36,10 @@
       "value": 8
     },
     "least_cards_team": {
-      "teams": ["CZE", "GER", "JPN", "TUN", "FRA", "NOR", "ALG"],
-      "teams_he": ["צ׳כיה", "גרמניה", "יפן", "תוניסיה", "צרפת", "נורבגיה", "אלג'יריה"],
-      "value": null
+      "teams": ["CZE", "TUN"],
+      "teams_he": ["צ׳כיה", "תוניסיה"],
+      "value": null,
+      "final": true
     }
   }
 }
