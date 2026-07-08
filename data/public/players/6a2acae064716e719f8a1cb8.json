@@ -1910,16 +1910,16 @@
   ],
   "projected": {
     "official_total": 284,
-    "projected_total": 304,
-    "extra_points": 20,
+    "projected_total": 284,
+    "extra_points": 0,
     "fields": [
       {
         "key": "top_scorer",
         "value": "ארלינג האלנד",
         "points_if_correct": 20,
-        "leader": true,
-        "points": 20,
-        "status": "leading"
+        "leader": false,
+        "points": 0,
+        "status": "trailing"
       },
       {
         "key": "top_assists",
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-07T18:11:03+00:00"
+  "synced_at": "2026-07-08T03:27:58+00:00"
 }

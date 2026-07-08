@@ -1,20 +1,12 @@
 {
-  "synced_at": "2026-07-07T18:11:03+00:00",
+  "synced_at": "2026-07-08T03:27:58+00:00",
   "fields": {
     "top_scorer": {
       "kind": "player",
       "points": 20,
       "live": true,
-      "value": 7,
+      "value": 8,
       "leaders": [
-        {
-          "name": "Erling Haaland",
-          "name_he": "ארלינג האלנד"
-        },
-        {
-          "name": "Kylian Mbappé",
-          "name_he": "קיליאן אמבפה"
-        },
         {
           "name": "Lionel Messi",
           "name_he": "ליאו מסי"

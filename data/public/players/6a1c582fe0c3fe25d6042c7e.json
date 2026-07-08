@@ -1,7 +1,7 @@
 {
   "player_id": "6a1c582fe0c3fe25d6042c7e",
   "name": "ירדן עוואד",
-  "total_points": 263,
+  "total_points": 273,
   "correct_group": 47,
   "group_stage": [
     {
@@ -1703,8 +1703,8 @@
         "team_he": "שווייץ",
         "team_code": "SUI",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "אנגליה",
@@ -1909,17 +1909,17 @@
     }
   ],
   "projected": {
-    "official_total": 263,
-    "projected_total": 293,
-    "extra_points": 30,
+    "official_total": 273,
+    "projected_total": 283,
+    "extra_points": 10,
     "fields": [
       {
         "key": "top_scorer",
         "value": "קיליאן אמבפה",
         "points_if_correct": 20,
-        "leader": true,
-        "points": 20,
-        "status": "leading"
+        "leader": false,
+        "points": 0,
+        "status": "trailing"
       },
       {
         "key": "top_assists",
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-07T18:11:03+00:00"
+  "synced_at": "2026-07-08T03:27:58+00:00"
 }

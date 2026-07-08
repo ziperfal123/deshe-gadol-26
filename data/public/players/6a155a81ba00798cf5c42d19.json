@@ -1,7 +1,7 @@
 {
   "player_id": "6a155a81ba00798cf5c42d19",
   "name": "רותם בן אור",
-  "total_points": 259,
+  "total_points": 269,
   "correct_group": 40,
   "group_stage": [
     {
@@ -1745,8 +1745,8 @@
         "team_he": "שווייץ",
         "team_code": "SUI",
         "points_if_correct": 10,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 10
       },
       {
         "team_he": "צרפת",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 259,
-    "projected_total": 269,
+    "official_total": 269,
+    "projected_total": 279,
     "extra_points": 10,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-07T18:11:03+00:00"
+  "synced_at": "2026-07-08T03:27:58+00:00"
 }
