@@ -1,7 +1,7 @@
 {
   "player_id": "6a1bb66c6995ab1f4de23e6e",
   "name": "עדי זהר",
-  "total_points": 270,
+  "total_points": 285,
   "correct_group": 42,
   "group_stage": [
     {
@@ -1775,8 +1775,8 @@
         "team_he": "צרפת",
         "team_code": "FRA",
         "points_if_correct": 15,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 15
       },
       {
         "team_he": "אנגליה",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 270,
-    "projected_total": 270,
+    "official_total": 285,
+    "projected_total": 285,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-08T16:17:49+00:00"
+  "synced_at": "2026-07-10T05:42:17+00:00"
 }

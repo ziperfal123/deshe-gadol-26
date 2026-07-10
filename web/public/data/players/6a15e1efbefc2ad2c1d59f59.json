@@ -1,7 +1,7 @@
 {
   "player_id": "6a15e1efbefc2ad2c1d59f59",
   "name": "חנן ברגר 1",
-  "total_points": 220,
+  "total_points": 235,
   "correct_group": 36,
   "group_stage": [
     {
@@ -1775,8 +1775,8 @@
         "team_he": "צרפת",
         "team_code": "FRA",
         "points_if_correct": 15,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 15
       },
       {
         "team_he": "אורוגוואי",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 220,
-    "projected_total": 220,
+    "official_total": 235,
+    "projected_total": 235,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-08T16:17:49+00:00"
+  "synced_at": "2026-07-10T05:42:17+00:00"
 }

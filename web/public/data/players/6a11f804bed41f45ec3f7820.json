@@ -1,7 +1,7 @@
 {
   "player_id": "6a11f804bed41f45ec3f7820",
   "name": "תומר אזולאי",
-  "total_points": 231,
+  "total_points": 246,
   "correct_group": 34,
   "group_stage": [
     {
@@ -1761,8 +1761,8 @@
         "team_he": "צרפת",
         "team_code": "FRA",
         "points_if_correct": 15,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 15
       },
       {
         "team_he": "ספרד",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 231,
-    "projected_total": 231,
+    "official_total": 246,
+    "projected_total": 246,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-08T16:17:49+00:00"
+  "synced_at": "2026-07-10T05:42:17+00:00"
 }

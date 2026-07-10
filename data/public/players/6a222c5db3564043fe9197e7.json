@@ -1,7 +1,7 @@
 {
   "player_id": "6a222c5db3564043fe9197e7",
   "name": "עידו זהר",
-  "total_points": 291,
+  "total_points": 306,
   "correct_group": 45,
   "group_stage": [
     {
@@ -1782,8 +1782,8 @@
         "team_he": "צרפת",
         "team_code": "FRA",
         "points_if_correct": 15,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 15
       }
     ],
     "final": [
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 291,
-    "projected_total": 301,
+    "official_total": 306,
+    "projected_total": 316,
     "extra_points": 10,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-08T16:17:49+00:00"
+  "synced_at": "2026-07-10T05:42:17+00:00"
 }

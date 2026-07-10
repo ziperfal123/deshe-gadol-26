@@ -1,7 +1,7 @@
 {
   "player_id": "6a27ee6b6923a7d46145e1d4",
   "name": "יותם אליהו",
-  "total_points": 250,
+  "total_points": 265,
   "correct_group": 44,
   "group_stage": [
     {
@@ -1775,8 +1775,8 @@
         "team_he": "צרפת",
         "team_code": "FRA",
         "points_if_correct": 15,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 15
       },
       {
         "team_he": "פורטוגל",
@@ -1909,17 +1909,17 @@
     }
   ],
   "projected": {
-    "official_total": 250,
-    "projected_total": 265,
-    "extra_points": 15,
+    "official_total": 265,
+    "projected_total": 300,
+    "extra_points": 35,
     "fields": [
       {
         "key": "top_scorer",
         "value": "קיליאן אמבפה",
         "points_if_correct": 20,
-        "leader": false,
-        "points": 0,
-        "status": "trailing"
+        "leader": true,
+        "points": 20,
+        "status": "leading"
       },
       {
         "key": "top_assists",
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-08T16:17:49+00:00"
+  "synced_at": "2026-07-10T05:42:17+00:00"
 }
