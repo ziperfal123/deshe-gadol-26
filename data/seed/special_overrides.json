@@ -31,9 +31,9 @@
       "min_confirmed": 4
     },
     "most_cards_team": {
-      "teams": ["PAR"],
-      "teams_he": ["פרגוואי"],
-      "value": 8
+      "teams": ["EGY"],
+      "teams_he": ["מצרים"],
+      "value": 12
     },
     "least_cards_team": {
       "teams": ["CZE", "TUN"],

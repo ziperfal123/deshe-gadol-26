@@ -1910,8 +1910,8 @@
   ],
   "projected": {
     "official_total": 236,
-    "projected_total": 236,
-    "extra_points": 0,
+    "projected_total": 246,
+    "extra_points": 10,
     "fields": [
       {
         "key": "top_scorer",
@@ -1965,9 +1965,9 @@
         "key": "most_cards_team",
         "value": "מצרים",
         "points_if_correct": 10,
-        "leader": false,
-        "points": 0,
-        "status": "trailing"
+        "leader": true,
+        "points": 10,
+        "status": "leading"
       },
       {
         "key": "least_cards_team",
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-11T17:17:37+00:00"
+  "synced_at": "2026-07-11T17:19:50+00:00"
 }

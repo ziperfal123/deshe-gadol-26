@@ -1910,8 +1910,8 @@
   ],
   "projected": {
     "official_total": 250,
-    "projected_total": 260,
-    "extra_points": 10,
+    "projected_total": 250,
+    "extra_points": 0,
     "fields": [
       {
         "key": "top_scorer",
@@ -1965,9 +1965,9 @@
         "key": "most_cards_team",
         "value": "פרגוואי",
         "points_if_correct": 10,
-        "leader": true,
-        "points": 10,
-        "status": "leading"
+        "leader": false,
+        "points": 0,
+        "status": "trailing"
       },
       {
         "key": "least_cards_team",
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-11T17:17:37+00:00"
+  "synced_at": "2026-07-11T17:19:50+00:00"
 }

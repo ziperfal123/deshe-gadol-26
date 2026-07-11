@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-07-11T17:17:37+00:00",
+  "synced_at": "2026-07-11T17:19:50+00:00",
   "fields": {
     "top_scorer": {
       "kind": "player",
@@ -103,11 +103,11 @@
       "kind": "team",
       "points": 10,
       "live": true,
-      "value": 8,
+      "value": 12,
       "leaders": [
         {
-          "code": "PAR",
-          "name_he": "פרגוואי"
+          "code": "EGY",
+          "name_he": "מצרים"
         }
       ],
       "source": "override"

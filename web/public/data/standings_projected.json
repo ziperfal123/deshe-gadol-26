@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-07-11T17:17:37+00:00",
+  "synced_at": "2026-07-11T17:19:50+00:00",
   "players_played": 72,
   "included_fields": [
     "top_scorer",
@@ -274,13 +274,23 @@
       "tied": false
     },
     {
+      "player_id": "6a2ad909b29c744b5050a895",
+      "name": "דני צחורי 2",
+      "official_total": 301,
+      "projected_total": 321,
+      "correct_group": 44,
+      "extra_points": 20,
+      "rank": 25,
+      "tied": false
+    },
+    {
       "player_id": "6a17254829b6bd6c1b7388e5",
       "name": "תום בן זאב",
       "official_total": 300,
       "projected_total": 320,
       "correct_group": 43,
       "extra_points": 20,
-      "rank": 25,
+      "rank": 26,
       "tied": false
     },
     {
@@ -290,7 +300,7 @@
       "projected_total": 320,
       "correct_group": 45,
       "extra_points": 30,
-      "rank": 26,
+      "rank": 27,
       "tied": false
     },
     {
@@ -300,7 +310,7 @@
       "projected_total": 317,
       "correct_group": 45,
       "extra_points": 0,
-      "rank": 27,
+      "rank": 28,
       "tied": true
     },
     {
@@ -310,7 +320,7 @@
       "projected_total": 317,
       "correct_group": 44,
       "extra_points": 0,
-      "rank": 27,
+      "rank": 28,
       "tied": true
     },
     {
@@ -320,7 +330,7 @@
       "projected_total": 317,
       "correct_group": 42,
       "extra_points": 20,
-      "rank": 28,
+      "rank": 29,
       "tied": false
     },
     {
@@ -330,7 +340,7 @@
       "projected_total": 316,
       "correct_group": 44,
       "extra_points": 10,
-      "rank": 29,
+      "rank": 30,
       "tied": true
     },
     {
@@ -340,7 +350,7 @@
       "projected_total": 316,
       "correct_group": 46,
       "extra_points": 10,
-      "rank": 29,
+      "rank": 30,
       "tied": true
     },
     {
@@ -350,7 +360,7 @@
       "projected_total": 316,
       "correct_group": 45,
       "extra_points": 30,
-      "rank": 30,
+      "rank": 31,
       "tied": false
     },
     {
@@ -360,7 +370,7 @@
       "projected_total": 315,
       "correct_group": 48,
       "extra_points": 10,
-      "rank": 31,
+      "rank": 32,
       "tied": false
     },
     {
@@ -370,7 +380,7 @@
       "projected_total": 315,
       "correct_group": 44,
       "extra_points": 30,
-      "rank": 32,
+      "rank": 33,
       "tied": false
     },
     {
@@ -380,7 +390,7 @@
       "projected_total": 315,
       "correct_group": 44,
       "extra_points": 35,
-      "rank": 33,
+      "rank": 34,
       "tied": false
     },
     {
@@ -390,7 +400,7 @@
       "projected_total": 314,
       "correct_group": 42,
       "extra_points": 10,
-      "rank": 34,
+      "rank": 35,
       "tied": false
     },
     {
@@ -400,7 +410,7 @@
       "projected_total": 314,
       "correct_group": 43,
       "extra_points": 25,
-      "rank": 35,
+      "rank": 36,
       "tied": false
     },
     {
@@ -410,7 +420,7 @@
       "projected_total": 313,
       "correct_group": 45,
       "extra_points": 10,
-      "rank": 36,
+      "rank": 37,
       "tied": false
     },
     {
@@ -420,7 +430,7 @@
       "projected_total": 313,
       "correct_group": 45,
       "extra_points": 20,
-      "rank": 37,
+      "rank": 38,
       "tied": false
     },
     {
@@ -430,16 +440,6 @@
       "projected_total": 312,
       "correct_group": 43,
       "extra_points": 15,
-      "rank": 38,
-      "tied": false
-    },
-    {
-      "player_id": "6a2ad909b29c744b5050a895",
-      "name": "דני צחורי 2",
-      "official_total": 301,
-      "projected_total": 311,
-      "correct_group": 44,
-      "extra_points": 10,
       "rank": 39,
       "tied": false
     },
@@ -1194,13 +1194,23 @@
       "tied": true
     },
     {
+      "player_id": "6a284883d2e828c22e54f0c3",
+      "name": "מורן בכור 1",
+      "official_total": 246,
+      "projected_total": 276,
+      "correct_group": 41,
+      "extra_points": 30,
+      "rank": 103,
+      "tied": false
+    },
+    {
       "player_id": "6a11dbbc740d7d8220c5550c",
       "name": "הדר שלזינגר",
       "official_total": 275,
       "projected_total": 275,
       "correct_group": 43,
       "extra_points": 0,
-      "rank": 103,
+      "rank": 104,
       "tied": false
     },
     {
@@ -1210,7 +1220,7 @@
       "projected_total": 274,
       "correct_group": 40,
       "extra_points": 0,
-      "rank": 104,
+      "rank": 105,
       "tied": false
     },
     {
@@ -1220,7 +1230,7 @@
       "projected_total": 272,
       "correct_group": 39,
       "extra_points": 0,
-      "rank": 105,
+      "rank": 106,
       "tied": true
     },
     {
@@ -1230,7 +1240,7 @@
       "projected_total": 272,
       "correct_group": 36,
       "extra_points": 0,
-      "rank": 105,
+      "rank": 106,
       "tied": true
     },
     {
@@ -1240,7 +1250,7 @@
       "projected_total": 272,
       "correct_group": 33,
       "extra_points": 0,
-      "rank": 105,
+      "rank": 106,
       "tied": true
     },
     {
@@ -1250,7 +1260,7 @@
       "projected_total": 269,
       "correct_group": 41,
       "extra_points": 0,
-      "rank": 106,
+      "rank": 107,
       "tied": false
     },
     {
@@ -1260,7 +1270,7 @@
       "projected_total": 268,
       "correct_group": 34,
       "extra_points": 10,
-      "rank": 107,
+      "rank": 108,
       "tied": false
     },
     {
@@ -1270,7 +1280,7 @@
       "projected_total": 266,
       "correct_group": 35,
       "extra_points": 0,
-      "rank": 108,
+      "rank": 109,
       "tied": true
     },
     {
@@ -1280,18 +1290,8 @@
       "projected_total": 266,
       "correct_group": 43,
       "extra_points": 0,
-      "rank": 108,
-      "tied": true
-    },
-    {
-      "player_id": "6a284883d2e828c22e54f0c3",
-      "name": "מורן בכור 1",
-      "official_total": 246,
-      "projected_total": 266,
-      "correct_group": 41,
-      "extra_points": 20,
       "rank": 109,
-      "tied": false
+      "tied": true
     },
     {
       "player_id": "6a172a5e3f686c0b6e4f4f6a",
@@ -1434,23 +1434,13 @@
       "tied": true
     },
     {
-      "player_id": "6a2aedcc11ffbcb8d4082059",
-      "name": "דן פורת",
-      "official_total": 250,
-      "projected_total": 260,
-      "correct_group": 44,
-      "extra_points": 10,
-      "rank": 119,
-      "tied": false
-    },
-    {
       "player_id": "6a14342051625b3e1e6036a0",
       "name": "אור מרכס",
       "official_total": 257,
       "projected_total": 257,
       "correct_group": 42,
       "extra_points": 0,
-      "rank": 120,
+      "rank": 119,
       "tied": false
     },
     {
@@ -1460,7 +1450,7 @@
       "projected_total": 252,
       "correct_group": 39,
       "extra_points": 0,
-      "rank": 121,
+      "rank": 120,
       "tied": false
     },
     {
@@ -1470,7 +1460,27 @@
       "projected_total": 251,
       "correct_group": 34,
       "extra_points": 0,
+      "rank": 121,
+      "tied": false
+    },
+    {
+      "player_id": "6a2aedcc11ffbcb8d4082059",
+      "name": "דן פורת",
+      "official_total": 250,
+      "projected_total": 250,
+      "correct_group": 44,
+      "extra_points": 0,
       "rank": 122,
+      "tied": false
+    },
+    {
+      "player_id": "6a1c591416de04025cd6cc3d",
+      "name": "מתן אליהו",
+      "official_total": 236,
+      "projected_total": 246,
+      "correct_group": 31,
+      "extra_points": 10,
+      "rank": 123,
       "tied": false
     },
     {
@@ -1480,16 +1490,6 @@
       "projected_total": 237,
       "correct_group": 34,
       "extra_points": 10,
-      "rank": 123,
-      "tied": false
-    },
-    {
-      "player_id": "6a1c591416de04025cd6cc3d",
-      "name": "מתן אליהו",
-      "official_total": 236,
-      "projected_total": 236,
-      "correct_group": 31,
-      "extra_points": 0,
       "rank": 124,
       "tied": false
     },
