@@ -1,7 +1,7 @@
 {
   "player_id": "6a2199cd4b45c18e1540545c",
   "name": "דור מסיקה",
-  "total_points": 282,
+  "total_points": 297,
   "correct_group": 43,
   "group_stage": [
     {
@@ -1768,8 +1768,8 @@
         "team_he": "ספרד",
         "team_code": "ESP",
         "points_if_correct": 15,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 15
       },
       {
         "team_he": "ברזיל",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 282,
-    "projected_total": 297,
+    "official_total": 297,
+    "projected_total": 312,
     "extra_points": 15,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-10T05:42:17+00:00"
+  "synced_at": "2026-07-11T17:17:37+00:00"
 }

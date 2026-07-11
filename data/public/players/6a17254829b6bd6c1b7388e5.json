@@ -1,7 +1,7 @@
 {
   "player_id": "6a17254829b6bd6c1b7388e5",
   "name": "תום בן זאב",
-  "total_points": 285,
+  "total_points": 300,
   "correct_group": 43,
   "group_stage": [
     {
@@ -1782,8 +1782,8 @@
         "team_he": "ספרד",
         "team_code": "ESP",
         "points_if_correct": 15,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 15
       }
     ],
     "final": [
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 285,
-    "projected_total": 305,
+    "official_total": 300,
+    "projected_total": 320,
     "extra_points": 20,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-10T05:42:17+00:00"
+  "synced_at": "2026-07-11T17:17:37+00:00"
 }

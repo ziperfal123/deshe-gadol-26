@@ -1,7 +1,7 @@
 {
   "player_id": "6a2ad55846973d486be4a7ef",
   "name": "מוטי העיט קקון",
-  "total_points": 274,
+  "total_points": 289,
   "correct_group": 43,
   "group_stage": [
     {
@@ -1768,8 +1768,8 @@
         "team_he": "ספרד",
         "team_code": "ESP",
         "points_if_correct": 15,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 15
       },
       {
         "team_he": "אנגליה",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 274,
-    "projected_total": 299,
+    "official_total": 289,
+    "projected_total": 314,
     "extra_points": 25,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-10T05:42:17+00:00"
+  "synced_at": "2026-07-11T17:17:37+00:00"
 }

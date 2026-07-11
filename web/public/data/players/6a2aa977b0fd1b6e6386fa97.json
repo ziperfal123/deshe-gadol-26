@@ -1,7 +1,7 @@
 {
   "player_id": "6a2aa977b0fd1b6e6386fa97",
   "name": "דביר קורן",
-  "total_points": 293,
+  "total_points": 308,
   "correct_group": 45,
   "group_stage": [
     {
@@ -1761,8 +1761,8 @@
         "team_he": "ספרד",
         "team_code": "ESP",
         "points_if_correct": 15,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 15
       },
       {
         "team_he": "צרפת",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 293,
-    "projected_total": 318,
+    "official_total": 308,
+    "projected_total": 333,
     "extra_points": 25,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-10T05:42:17+00:00"
+  "synced_at": "2026-07-11T17:17:37+00:00"
 }

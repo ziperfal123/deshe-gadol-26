@@ -1,7 +1,7 @@
 {
   "player_id": "6a21c4dc1fa7788aeed32e9d",
   "name": "יניר בן-אליעזר",
-  "total_points": 249,
+  "total_points": 264,
   "correct_group": 44,
   "group_stage": [
     {
@@ -1761,8 +1761,8 @@
         "team_he": "ספרד",
         "team_code": "ESP",
         "points_if_correct": 15,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 15
       },
       {
         "team_he": "יפן",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 249,
-    "projected_total": 249,
+    "official_total": 264,
+    "projected_total": 264,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-10T05:42:17+00:00"
+  "synced_at": "2026-07-11T17:17:37+00:00"
 }

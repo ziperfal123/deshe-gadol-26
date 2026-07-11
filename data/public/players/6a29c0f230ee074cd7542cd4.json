@@ -1,7 +1,7 @@
 {
   "player_id": "6a29c0f230ee074cd7542cd4",
   "name": "נעם בלטיאנסקי",
-  "total_points": 284,
+  "total_points": 299,
   "correct_group": 45,
   "group_stage": [
     {
@@ -1768,8 +1768,8 @@
         "team_he": "ספרד",
         "team_code": "ESP",
         "points_if_correct": 15,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 15
       },
       {
         "team_he": "אנגליה",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 284,
-    "projected_total": 294,
+    "official_total": 299,
+    "projected_total": 309,
     "extra_points": 10,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-10T05:42:17+00:00"
+  "synced_at": "2026-07-11T17:17:37+00:00"
 }

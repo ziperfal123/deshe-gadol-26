@@ -1,7 +1,7 @@
 {
   "player_id": "6a1eec3b403209f3ccd794df",
   "name": "שקד קינן",
-  "total_points": 271,
+  "total_points": 286,
   "correct_group": 41,
   "group_stage": [
     {
@@ -1761,8 +1761,8 @@
         "team_he": "ספרד",
         "team_code": "ESP",
         "points_if_correct": 15,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 15
       },
       {
         "team_he": "צרפת",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 271,
-    "projected_total": 311,
+    "official_total": 286,
+    "projected_total": 326,
     "extra_points": 40,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-10T05:42:17+00:00"
+  "synced_at": "2026-07-11T17:17:37+00:00"
 }

@@ -1,7 +1,7 @@
 {
   "player_id": "6a252710deaba8f75bd5e39e",
   "name": "אופיר אליאס 2",
-  "total_points": 278,
+  "total_points": 293,
   "correct_group": 42,
   "group_stage": [
     {
@@ -1761,8 +1761,8 @@
         "team_he": "ספרד",
         "team_code": "ESP",
         "points_if_correct": 15,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 15
       },
       {
         "team_he": "צרפת",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 278,
-    "projected_total": 288,
+    "official_total": 293,
+    "projected_total": 303,
     "extra_points": 10,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-10T05:42:17+00:00"
+  "synced_at": "2026-07-11T17:17:37+00:00"
 }
