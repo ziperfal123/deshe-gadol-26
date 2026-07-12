@@ -1,7 +1,7 @@
 {
   "player_id": "6a172455bab2e69ce217b4f0",
   "name": "עומר כץ לא השוער של פ\"ת",
-  "total_points": 291,
+  "total_points": 321,
   "correct_group": 38,
   "group_stage": [
     {
@@ -1768,15 +1768,15 @@
         "team_he": "אנגליה",
         "team_code": "ENG",
         "points_if_correct": 15,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 15
       },
       {
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 15,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 15
       },
       {
         "team_he": "צרפת",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 291,
-    "projected_total": 311,
+    "official_total": 321,
+    "projected_total": 341,
     "extra_points": 20,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-11T17:19:50+00:00"
+  "synced_at": "2026-07-12T06:08:23+00:00"
 }

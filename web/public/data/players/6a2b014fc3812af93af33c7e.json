@@ -1,7 +1,7 @@
 {
   "player_id": "6a2b014fc3812af93af33c7e",
   "name": "צור אילון",
-  "total_points": 279,
+  "total_points": 294,
   "correct_group": 44,
   "group_stage": [
     {
@@ -1782,8 +1782,8 @@
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 15,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 15
       }
     ],
     "final": [
@@ -1897,7 +1897,7 @@
       "key": "total_extra_time",
       "value": 6,
       "points_if_correct": 5,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 279,
-    "projected_total": 294,
+    "official_total": 294,
+    "projected_total": 309,
     "extra_points": 15,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-11T17:19:50+00:00"
+  "synced_at": "2026-07-12T06:08:23+00:00"
 }

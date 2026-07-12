@@ -1,7 +1,7 @@
 {
   "player_id": "6a22b4e6dc65e32aad6b3eed",
   "name": "שיי גרינברג",
-  "total_points": 306,
+  "total_points": 336,
   "correct_group": 46,
   "group_stage": [
     {
@@ -1761,8 +1761,8 @@
         "team_he": "אנגליה",
         "team_code": "ENG",
         "points_if_correct": 15,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 15
       },
       {
         "team_he": "צרפת",
@@ -1775,8 +1775,8 @@
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 15,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 15
       },
       {
         "team_he": "ספרד",
@@ -1897,7 +1897,7 @@
       "key": "total_extra_time",
       "value": 6,
       "points_if_correct": 5,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 306,
-    "projected_total": 316,
+    "official_total": 336,
+    "projected_total": 346,
     "extra_points": 10,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-11T17:19:50+00:00"
+  "synced_at": "2026-07-12T06:08:23+00:00"
 }

@@ -1,7 +1,7 @@
 {
   "player_id": "6a1ae9d132fea698558ef71e",
   "name": "אליאל פרץ",
-  "total_points": 256,
+  "total_points": 286,
   "correct_group": 46,
   "group_stage": [
     {
@@ -1775,15 +1775,15 @@
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 15,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 15
       },
       {
         "team_he": "אנגליה",
         "team_code": "ENG",
         "points_if_correct": 15,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 15
       }
     ],
     "final": [
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 256,
-    "projected_total": 276,
+    "official_total": 286,
+    "projected_total": 306,
     "extra_points": 20,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-11T17:19:50+00:00"
+  "synced_at": "2026-07-12T06:08:23+00:00"
 }

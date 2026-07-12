@@ -1,7 +1,7 @@
 {
   "player_id": "6a172a5e3f686c0b6e4f4f6a",
   "name": "תום שלו 1",
-  "total_points": 265,
+  "total_points": 280,
   "correct_group": 41,
   "group_stage": [
     {
@@ -1768,8 +1768,8 @@
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 15,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 15
       },
       {
         "team_he": "ברזיל",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 265,
-    "projected_total": 265,
+    "official_total": 280,
+    "projected_total": 280,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-11T17:19:50+00:00"
+  "synced_at": "2026-07-12T06:08:23+00:00"
 }

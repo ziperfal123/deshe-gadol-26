@@ -15,8 +15,8 @@
     "losers": ["PAR", "CAN", "MEX", "BRA", "POR", "USA", "EGY", "COL"]
   },
   "qf": {
-    "winners": ["FRA", "ESP"],
-    "losers": ["MAR", "BEL"]
+    "winners": ["FRA", "ESP", "ARG", "ENG"],
+    "losers": ["MAR", "BEL", "SUI", "NOR"]
   },
   "sf": {
     "winners": [],

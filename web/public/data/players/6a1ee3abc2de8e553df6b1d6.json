@@ -1,7 +1,7 @@
 {
   "player_id": "6a1ee3abc2de8e553df6b1d6",
   "name": "אביטל לחוביץ האמיתי",
-  "total_points": 253,
+  "total_points": 268,
   "correct_group": 28,
   "group_stage": [
     {
@@ -1761,14 +1761,14 @@
         "team_he": "אנגליה",
         "team_code": "ENG",
         "points_if_correct": 15,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 15
       },
       {
         "team_he": "נורבגיה",
         "team_code": "NOR",
         "points_if_correct": 15,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 253,
-    "projected_total": 263,
+    "official_total": 268,
+    "projected_total": 278,
     "extra_points": 10,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-11T17:19:50+00:00"
+  "synced_at": "2026-07-12T06:08:23+00:00"
 }

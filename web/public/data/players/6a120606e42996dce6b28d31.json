@@ -1,7 +1,7 @@
 {
   "player_id": "6a120606e42996dce6b28d31",
   "name": "שרון הופסינק",
-  "total_points": 292,
+  "total_points": 307,
   "correct_group": 42,
   "group_stage": [
     {
@@ -1782,8 +1782,8 @@
         "team_he": "אנגליה",
         "team_code": "ENG",
         "points_if_correct": 15,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 15
       }
     ],
     "final": [
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 292,
-    "projected_total": 292,
+    "official_total": 307,
+    "projected_total": 307,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-11T17:19:50+00:00"
+  "synced_at": "2026-07-12T06:08:23+00:00"
 }
