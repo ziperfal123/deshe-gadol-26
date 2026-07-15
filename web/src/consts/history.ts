@@ -6,7 +6,7 @@ export interface HistoryFinisher {
   prize?: number
 }
 
-/** One past tournament and its top-3 podium. */
+/** One tournament and its top-3 podium. */
 export interface HistoryTournament {
   id: string
   title: string
@@ -14,13 +14,27 @@ export interface HistoryTournament {
   host: string
   emoji: string
   podium: HistoryFinisher[]
+  /** The in-progress tournament: podium is not decided yet (shown as question marks). */
+  pending?: boolean
 }
 
 /**
- * Historic winners of previous editions, newest first.
- * Read-only reference data; unrelated to the live 2026 scoring.
+ * Tournament podiums, newest first. The first entry is the current, still-running
+ * edition (undecided). Read-only reference data; unrelated to the live 2026 scoring.
  */
 export const HISTORY_TOURNAMENTS: HistoryTournament[] = [
+  {
+    id: 'mondial-2026',
+    title: 'מונדיאל 2026',
+    host: 'קנדה · מקסיקו · ארה״ב',
+    emoji: '⚽',
+    pending: true,
+    podium: [
+      { place: 1, name: '?' },
+      { place: 2, name: '?' },
+      { place: 3, name: '?' },
+    ],
+  },
   {
     id: 'euro-2024',
     title: 'יורו 2024',
@@ -36,7 +50,7 @@ export const HISTORY_TOURNAMENTS: HistoryTournament[] = [
     id: 'mondial-2022',
     title: 'מונדיאל 2022',
     host: 'קטאר',
-    emoji: '🏜️',
+    emoji: '💰',
     podium: [
       { place: 1, name: 'רועי לובל', prize: 2385 },
       { place: 2, name: 'שקד טבצ׳ניק', prize: 1325 },

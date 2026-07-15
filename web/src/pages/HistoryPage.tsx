@@ -16,7 +16,7 @@ export function HistoryPage() {
       </div>
       <div className="mx-auto max-w-3xl px-4 pb-16 pt-3">
         <p className="text-center text-xs text-ink/45">היכל התהילה · אלופי העבר של הדשא הגדול</p>
-        <div className="mt-6 space-y-8">
+        <div className="mt-6 space-y-14">
           {HISTORY_TOURNAMENTS.map((t) => (
             <TournamentPodium key={t.id} tournament={t} />
           ))}
@@ -45,9 +45,9 @@ function TournamentPodium({ tournament }: { tournament: HistoryTournament }) {
       <div className="rounded-3xl border border-ink/5 bg-white p-4 pt-2 shadow-soft sm:p-6">
         {/* Visual order: 2nd · 1st · 3rd, aligned at the base. */}
         <div className="flex items-end justify-center gap-2 sm:gap-4">
-          <PodiumColumn finisher={second} />
-          <PodiumColumn finisher={first} />
-          <PodiumColumn finisher={third} />
+          <PodiumColumn finisher={second} pending={tournament.pending} />
+          <PodiumColumn finisher={first} pending={tournament.pending} />
+          <PodiumColumn finisher={third} pending={tournament.pending} />
         </div>
       </div>
     </section>
@@ -61,16 +61,16 @@ const PLACE_STYLE: Record<number, { block: string; badge: string; medal: string;
   3: { block: 'bg-gradient-to-b from-[#E7A986] to-clay', badge: 'bg-clay text-white', medal: '🥉', height: 'h-16 sm:h-20' },
 }
 
-function PodiumColumn({ finisher }: { finisher?: HistoryFinisher }) {
+function PodiumColumn({ finisher, pending }: { finisher?: HistoryFinisher; pending?: boolean }) {
   if (!finisher) return <></>
   const style = PLACE_STYLE[finisher.place]
   const isWinner = finisher.place === 1
 
   return (
     <div className="flex flex-1 flex-col items-center">
-      <PodiumAvatar name={finisher.name} winner={isWinner} />
+      <PodiumAvatar name={finisher.name} winner={isWinner} pending={pending} />
       <div className="mt-2 min-h-[2.5rem] px-0.5 text-center">
-        <div className="text-[13px] font-bold leading-tight text-ink sm:text-sm">{finisher.name}</div>
+        {renderNameIfNeeded(finisher.name, pending)}
         {renderPrizeIfNeeded(finisher.prize)}
       </div>
       <div
@@ -80,21 +80,25 @@ function PodiumColumn({ finisher }: { finisher?: HistoryFinisher }) {
           style.height,
         )}
       >
-        <span aria-hidden className="text-2xl drop-shadow-sm sm:text-3xl">{style.medal}</span>
+        <span aria-hidden className="text-4xl drop-shadow-sm sm:text-5xl">{style.medal}</span>
       </div>
     </div>
   )
 }
 
-function PodiumAvatar({ name, winner }: { name: string; winner: boolean }) {
-  const initials = getInitials(name)
-  const { bg, fg } = avatarColor(initials)
-  const size = winner ? 'h-16 w-16 text-xl sm:h-20 sm:w-20 sm:text-2xl' : 'h-12 w-12 text-base sm:h-14 sm:w-14 sm:text-lg'
+function PodiumAvatar({ name, winner, pending }: { name: string; winner: boolean; pending?: boolean }) {
+  const initials = pending ? '?' : getInitials(name)
+  const { bg, fg } = pending ? { bg: '#EDE6D4', fg: '#9A9482' } : avatarColor(initials)
+  const size = winner ? 'h-16 w-16 text-2xl sm:h-20 sm:w-20 sm:text-3xl' : 'h-12 w-12 text-lg sm:h-14 sm:w-14 sm:text-xl'
   return (
     <div className="relative">
       {renderCrownIfNeeded(winner)}
       <div
-        className={cn('flex items-center justify-center rounded-full font-extrabold ring-2 ring-white', size)}
+        className={cn(
+          'flex items-center justify-center rounded-full font-extrabold ring-2 ring-white',
+          size,
+          pending && 'border-2 border-dashed border-ink/20',
+        )}
         style={{ backgroundColor: bg, color: fg }}
       >
         {initials}
@@ -106,10 +110,15 @@ function PodiumAvatar({ name, winner }: { name: string; winner: boolean }) {
 function renderCrownIfNeeded(winner: boolean) {
   if (!winner) return <></>
   return (
-    <span aria-hidden className="absolute -right-3 -top-2 rotate-12 text-2xl drop-shadow-sm sm:text-3xl">
+    <span aria-hidden className="absolute -right-4 -top-3 rotate-12 text-4xl drop-shadow-sm sm:text-5xl">
       👑
     </span>
   )
+}
+
+function renderNameIfNeeded(name: string, pending?: boolean) {
+  if (pending) return <div className="text-lg font-extrabold leading-tight text-ink/30">?</div>
+  return <div className="text-[13px] font-bold leading-tight text-ink sm:text-sm">{name}</div>
 }
 
 function renderPrizeIfNeeded(prize?: number) {
