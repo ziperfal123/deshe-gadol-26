@@ -64,7 +64,7 @@ export const HISTORY_TOURNAMENTS: HistoryTournament[] = [
     emoji: '🏆',
     podium: [
       { place: 1, name: 'עומר כהן', prize: 1500 },
-      { place: 2, name: 'נועם דוכם', prize: 937 },
+      { place: 2, name: 'נועם דוכס', prize: 937 },
       { place: 3, name: 'ניר גרוס', prize: 562 },
     ],
   },
