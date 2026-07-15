@@ -1791,7 +1791,7 @@
         "team_he": "צרפת",
         "team_code": "FRA",
         "points_if_correct": 20,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-12T06:08:23+00:00"
+  "synced_at": "2026-07-15T03:27:31+00:00"
 }

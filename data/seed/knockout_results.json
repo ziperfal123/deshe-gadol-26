@@ -19,8 +19,8 @@
     "losers": ["MAR", "BEL", "SUI", "NOR"]
   },
   "sf": {
-    "winners": [],
-    "losers": []
+    "winners": ["ESP"],
+    "losers": ["FRA"]
   },
   "winner": null,
   "runner_up": null

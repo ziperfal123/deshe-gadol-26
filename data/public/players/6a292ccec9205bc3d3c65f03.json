@@ -1,7 +1,7 @@
 {
   "player_id": "6a292ccec9205bc3d3c65f03",
   "name": "סיון עוואד",
-  "total_points": 313,
+  "total_points": 333,
   "correct_group": 45,
   "group_stage": [
     {
@@ -1791,14 +1791,14 @@
         "team_he": "ספרד",
         "team_code": "ESP",
         "points_if_correct": 20,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 20
       },
       {
         "team_he": "צרפת",
         "team_code": "FRA",
         "points_if_correct": 20,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       }
     ]
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 313,
-    "projected_total": 343,
+    "official_total": 333,
+    "projected_total": 363,
     "extra_points": 30,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-12T06:08:23+00:00"
+  "synced_at": "2026-07-15T03:27:31+00:00"
 }

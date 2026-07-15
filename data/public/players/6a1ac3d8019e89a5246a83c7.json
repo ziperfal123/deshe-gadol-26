@@ -1,7 +1,7 @@
 {
   "player_id": "6a1ac3d8019e89a5246a83c7",
   "name": "אורי בראונשטיין 2 (AI)",
-  "total_points": 296,
+  "total_points": 316,
   "correct_group": 44,
   "group_stage": [
     {
@@ -1791,15 +1791,15 @@
         "team_he": "צרפת",
         "team_code": "FRA",
         "points_if_correct": 20,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       },
       {
         "team_he": "ספרד",
         "team_code": "ESP",
         "points_if_correct": 20,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 20
       }
     ]
   },
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 296,
-    "projected_total": 311,
+    "official_total": 316,
+    "projected_total": 331,
     "extra_points": 15,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-12T06:08:23+00:00"
+  "synced_at": "2026-07-15T03:27:31+00:00"
 }

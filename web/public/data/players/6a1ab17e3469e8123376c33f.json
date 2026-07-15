@@ -1,7 +1,7 @@
 {
   "player_id": "6a1ab17e3469e8123376c33f",
   "name": "אופיר פז",
-  "total_points": 291,
+  "total_points": 311,
   "correct_group": 43,
   "group_stage": [
     {
@@ -1798,8 +1798,8 @@
         "team_he": "ספרד",
         "team_code": "ESP",
         "points_if_correct": 20,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 20
       }
     ]
   },
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 291,
-    "projected_total": 291,
+    "official_total": 311,
+    "projected_total": 311,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-12T06:08:23+00:00"
+  "synced_at": "2026-07-15T03:27:31+00:00"
 }
