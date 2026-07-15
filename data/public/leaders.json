@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-07-15T03:29:10+00:00",
+  "synced_at": "2026-07-15T03:31:45+00:00",
   "fields": {
     "top_scorer": {
       "kind": "player",
@@ -73,14 +73,14 @@
       "kind": "team",
       "points": 10,
       "live": true,
-      "value": 16,
+      "value": 17,
       "leaders": [
         {
-          "code": "FRA",
-          "name_he": "צרפת"
+          "code": "ARG",
+          "name_he": "ארגנטינה"
         }
       ],
-      "source": "computed"
+      "source": "override"
     },
     "most_conceded_tournament_team": {
       "kind": "team",

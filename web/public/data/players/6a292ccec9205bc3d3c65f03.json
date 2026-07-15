@@ -1910,8 +1910,8 @@
   ],
   "projected": {
     "official_total": 333,
-    "projected_total": 363,
-    "extra_points": 30,
+    "projected_total": 353,
+    "extra_points": 20,
     "fields": [
       {
         "key": "top_scorer",
@@ -1949,9 +1949,9 @@
         "key": "most_goals_tournament_team",
         "value": "צרפת",
         "points_if_correct": 10,
-        "leader": true,
-        "points": 10,
-        "status": "leading"
+        "leader": false,
+        "points": 0,
+        "status": "trailing"
       },
       {
         "key": "most_conceded_tournament_team",
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-15T03:29:10+00:00"
+  "synced_at": "2026-07-15T03:31:45+00:00"
 }
