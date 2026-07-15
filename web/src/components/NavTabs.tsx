@@ -5,6 +5,7 @@ const TABS = [
   { to: '/', label: 'טבלה', end: true },
   { to: '/stats', label: 'סטטיסטיקות', end: false },
   { to: '/rules', label: 'חוקים', end: false },
+  { to: '/history', label: 'היכל התהילה', end: false },
 ]
 
 /** Shared top navigation between the standings table and the statistics page. */
