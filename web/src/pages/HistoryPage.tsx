@@ -15,8 +15,8 @@ export function HistoryPage() {
         </div>
       </div>
       <div className="mx-auto max-w-3xl px-4 pb-16 pt-3">
-        <p className="text-center text-xs text-ink/45">היכל התהילה · אלופי העבר של הדשא הגדול</p>
-        <div className="mt-6 space-y-14">
+        <p className="text-center text-sm font-medium text-ink/55">על כתפי ענקים · החברים שהזיעו, ניחשו, וזכו</p>
+        <div className="mt-6 space-y-20">
           {HISTORY_TOURNAMENTS.map((t) => (
             <TournamentPodium key={t.id} tournament={t} />
           ))}
@@ -34,12 +34,12 @@ function TournamentPodium({ tournament }: { tournament: HistoryTournament }) {
 
   return (
     <section>
-      <div className="mb-1 text-center">
-        <h2 className="text-lg font-extrabold text-ink">
+      <div className="mb-2 text-center">
+        <h2 className="text-2xl font-extrabold text-ink sm:text-3xl">
           <span aria-hidden className="ml-1.5">{tournament.emoji}</span>
           {tournament.title}
         </h2>
-        <p className="text-xs font-medium text-leaf">{tournament.host}</p>
+        <p className="text-sm font-medium text-leaf">{tournament.host}</p>
       </div>
 
       <div className="rounded-3xl border border-ink/5 bg-white p-4 pt-2 shadow-soft sm:p-6">
