@@ -15,8 +15,8 @@ export function HistoryPage() {
         </div>
       </div>
       <div className="mx-auto max-w-3xl px-4 pb-16 pt-3">
-        <p className="text-center text-sm font-medium text-ink/55">על כתפי ענקים · החברים שהזיעו, ניחשו, וזכו</p>
-        <div className="mt-6 space-y-20">
+        <p className="mt-6 text-center text-sm font-medium text-ink/55">על כתפי ענקים · החברים שהזיעו, ניחשו, וזכו</p>
+        <div className="mt-10 space-y-28">
           {HISTORY_TOURNAMENTS.map((t) => (
             <TournamentPodium key={t.id} tournament={t} />
           ))}
