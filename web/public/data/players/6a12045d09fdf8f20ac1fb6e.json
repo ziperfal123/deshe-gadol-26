@@ -1,7 +1,7 @@
 {
   "player_id": "6a12045d09fdf8f20ac1fb6e",
   "name": "גיא זהר",
-  "total_points": 302,
+  "total_points": 322,
   "correct_group": 39,
   "group_stage": [
     {
@@ -1791,8 +1791,8 @@
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 20,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 20
       },
       {
         "team_he": "צרפת",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 302,
-    "projected_total": 302,
+    "official_total": 322,
+    "projected_total": 322,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-15T03:31:45+00:00"
+  "synced_at": "2026-07-16T05:18:17+00:00"
 }

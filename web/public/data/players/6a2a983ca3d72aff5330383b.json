@@ -1,7 +1,7 @@
 {
   "player_id": "6a2a983ca3d72aff5330383b",
   "name": "איציק עוזר *",
-  "total_points": 331,
+  "total_points": 351,
   "correct_group": 43,
   "group_stage": [
     {
@@ -1791,8 +1791,8 @@
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 20,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 20
       },
       {
         "team_he": "ספרד",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 331,
-    "projected_total": 331,
+    "official_total": 351,
+    "projected_total": 351,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-15T03:31:45+00:00"
+  "synced_at": "2026-07-16T05:18:17+00:00"
 }

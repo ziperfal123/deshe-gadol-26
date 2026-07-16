@@ -1,7 +1,7 @@
 {
   "player_id": "6a172660da8096c3ffbd4857",
   "name": "דולב יצחקי",
-  "total_points": 310,
+  "total_points": 330,
   "correct_group": 43,
   "group_stage": [
     {
@@ -1791,14 +1791,14 @@
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 20,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 20
       },
       {
         "team_he": "אנגליה",
         "team_code": "ENG",
         "points_if_correct": 20,
-        "status": "pending",
+        "status": "wrong",
         "points": 0
       }
     ]
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 310,
-    "projected_total": 310,
+    "official_total": 330,
+    "projected_total": 330,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-15T03:31:45+00:00"
+  "synced_at": "2026-07-16T05:18:17+00:00"
 }

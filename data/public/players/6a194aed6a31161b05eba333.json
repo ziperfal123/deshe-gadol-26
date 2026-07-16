@@ -1,7 +1,7 @@
 {
   "player_id": "6a194aed6a31161b05eba333",
   "name": "לוטם הרמן",
-  "total_points": 312,
+  "total_points": 332,
   "correct_group": 42,
   "group_stage": [
     {
@@ -1798,8 +1798,8 @@
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 20,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 20
       }
     ]
   },
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 312,
-    "projected_total": 312,
+    "official_total": 332,
+    "projected_total": 332,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-15T03:31:45+00:00"
+  "synced_at": "2026-07-16T05:18:17+00:00"
 }

@@ -1,7 +1,7 @@
 {
   "player_id": "6a13d8d2f8f25792a44fe133",
   "name": "גל רגב",
-  "total_points": 320,
+  "total_points": 340,
   "correct_group": 47,
   "group_stage": [
     {
@@ -1791,8 +1791,8 @@
         "team_he": "ארגנטינה",
         "team_code": "ARG",
         "points_if_correct": 20,
-        "status": "pending",
-        "points": 0
+        "status": "correct",
+        "points": 20
       },
       {
         "team_he": "צרפת",
@@ -1909,8 +1909,8 @@
     }
   ],
   "projected": {
-    "official_total": 320,
-    "projected_total": 320,
+    "official_total": 340,
+    "projected_total": 340,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-15T03:31:45+00:00"
+  "synced_at": "2026-07-16T05:18:17+00:00"
 }
