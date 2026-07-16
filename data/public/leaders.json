@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-07-16T05:18:17+00:00",
+  "synced_at": "2026-07-16T05:20:01+00:00",
   "fields": {
     "top_scorer": {
       "kind": "player",
@@ -73,7 +73,7 @@
       "kind": "team",
       "points": 10,
       "live": true,
-      "value": 17,
+      "value": 19,
       "leaders": [
         {
           "code": "ARG",
