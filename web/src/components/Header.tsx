@@ -15,7 +15,21 @@ export function Header({ syncedAt }: HeaderProps) {
       </div>
       <p className="mt-1 text-sm font-medium text-leaf">מונדיאל 2026 · טבלת הניחושים</p>
       {renderSyncIfNeeded(syncedAt)}
+      <FinalizingBanner />
     </header>
+  )
+}
+
+/** Tournament-finale notice: results are being finalized, current standings are provisional. */
+function FinalizingBanner() {
+  return (
+    <div className="mt-2 rounded-2xl border border-clay/40 bg-gradient-to-l from-sun/30 to-clay/20 px-4 py-2.5 text-center shadow-soft">
+      <p className="flex items-center justify-center gap-1.5 text-sm font-extrabold text-ink">
+        <span aria-hidden className="animate-pulse">⏳</span>
+        תוצאות האמת מחושבות...
+      </p>
+      <p className="mt-0.5 text-xs font-medium text-ink/60">יש להתעלם ממצבה הנוכחי של הטבלה</p>
+    </div>
   )
 }
 

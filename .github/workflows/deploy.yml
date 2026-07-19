@@ -6,16 +6,9 @@ on:
   # Rebuild + deploy on every push to main.
   push:
     branches: [main]
-  # Twice-daily refresh of live results, then rebuild + deploy.
-  # GitHub cron is UTC and does NOT observe daylight saving time.
-  # The World Cup 2026 runs June-July 2026, entirely within Israel
-  # Daylight Time (IDT = UTC+3), so we hard-code the UTC+3 offset.
-  # Minutes are intentionally OFF the round :00/:30 marks: GitHub's
-  # scheduled runs are best-effort and get delayed or dropped under
-  # load, which is worst at the top of the hour. Odd minutes reduce that.
-  # NOTE: outside IDT (Israel Standard Time, UTC+2) these drift by one hour.
-  schedule:
-    - cron: '7 8 * * *'    # ~11:07 Israel time (IDT, UTC+3)
+  # NOTE: the scheduled auto-sync was disabled for the tournament finale —
+  # results are being finalized manually. Re-enable by restoring a `schedule:`
+  # block here if live auto-refresh is ever wanted again.
 
 # Least-privilege permissions required for GitHub Pages deployment.
 permissions:
