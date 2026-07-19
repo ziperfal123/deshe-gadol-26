@@ -1,28 +1,24 @@
 {
-  "synced_at": "2026-07-16T05:20:01+00:00",
+  "synced_at": "2026-07-19T10:15:35+00:00",
   "fields": {
     "top_scorer": {
       "kind": "player",
       "points": 20,
       "live": true,
-      "value": 8,
+      "value": 10,
       "leaders": [
         {
           "name": "Kylian Mbappé",
           "name_he": "קיליאן אמבפה"
-        },
-        {
-          "name": "Lionel Messi",
-          "name_he": "ליאו מסי"
         }
       ],
-      "source": "computed"
+      "source": "override"
     },
     "top_assists": {
       "kind": "player",
       "points": 15,
       "live": true,
-      "value": null,
+      "value": 7,
       "leaders": [
         {
           "name": "michael olise",
@@ -73,11 +69,15 @@
       "kind": "team",
       "points": 10,
       "live": true,
-      "value": 19,
+      "value": 20,
       "leaders": [
         {
-          "code": "ARG",
-          "name_he": "ארגנטינה"
+          "code": "ENG",
+          "name_he": "אנגליה"
+        },
+        {
+          "code": "FRA",
+          "name_he": "צרפת"
         }
       ],
       "source": "override"
@@ -89,6 +89,10 @@
       "value": 12,
       "leaders": [
         {
+          "code": "ENG",
+          "name_he": "אנגליה"
+        },
+        {
           "code": "IRQ",
           "name_he": "עיראק"
         },
@@ -97,7 +101,7 @@
           "name_he": "תוניסיה"
         }
       ],
-      "source": "computed"
+      "source": "override"
     },
     "most_cards_team": {
       "kind": "team",
@@ -116,7 +120,7 @@
       "kind": "team",
       "points": 10,
       "live": true,
-      "value": null,
+      "value": 1,
       "leaders": [
         {
           "code": "CZE",

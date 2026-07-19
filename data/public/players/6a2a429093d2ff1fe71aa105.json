@@ -1910,8 +1910,8 @@
   ],
   "projected": {
     "official_total": 338,
-    "projected_total": 353,
-    "extra_points": 15,
+    "projected_total": 373,
+    "extra_points": 35,
     "fields": [
       {
         "key": "top_scorer",
@@ -1949,17 +1949,17 @@
         "key": "most_goals_tournament_team",
         "value": "אנגליה",
         "points_if_correct": 10,
-        "leader": false,
-        "points": 0,
-        "status": "trailing"
+        "leader": true,
+        "points": 10,
+        "status": "leading"
       },
       {
         "key": "most_conceded_tournament_team",
         "value": "אנגליה",
         "points_if_correct": 10,
-        "leader": false,
-        "points": 0,
-        "status": "trailing"
+        "leader": true,
+        "points": 10,
+        "status": "leading"
       },
       {
         "key": "most_cards_team",
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-16T05:20:01+00:00"
+  "synced_at": "2026-07-19T10:15:35+00:00"
 }
