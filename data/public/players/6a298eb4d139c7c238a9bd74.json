@@ -1,7 +1,7 @@
 {
   "player_id": "6a298eb4d139c7c238a9bd74",
   "name": "יואב צימרמן 3",
-  "total_points": 349,
+  "total_points": 377,
   "correct_group": 48,
   "group_stage": [
     {
@@ -1814,7 +1814,7 @@
     "team_he": "פורטוגל",
     "team_code": "POR",
     "points_if_correct": 28,
-    "status": "pending",
+    "status": "wrong",
     "points": 0,
     "crowd": {
       "count": 25,
@@ -1827,21 +1827,21 @@
       "key": "top_scorer",
       "value": "קיליאן אמבפה",
       "points_if_correct": 20,
-      "status": "pending",
-      "points": 0
+      "status": "correct",
+      "points": 20
     },
     {
       "key": "best_player",
       "value": "למין ימאל",
       "points_if_correct": 20,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
       "key": "top_assists",
       "value": "ברונו פרננדש",
       "points_if_correct": 15,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
@@ -1862,21 +1862,21 @@
       "key": "most_goals_tournament_team",
       "value": "ספרד",
       "points_if_correct": 10,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
       "key": "most_conceded_tournament_team",
       "value": "ברזיל",
       "points_if_correct": 10,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
       "key": "most_cards_team",
       "value": "אורוגוואי",
       "points_if_correct": 10,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
@@ -1890,28 +1890,28 @@
       "key": "total_red_cards",
       "value": 15,
       "points_if_correct": 8,
-      "status": "pending",
-      "points": 0
+      "status": "correct",
+      "points": 8
     },
     {
       "key": "total_extra_time",
       "value": 10,
       "points_if_correct": 5,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
       "key": "total_penalties",
       "value": 5,
       "points_if_correct": 5,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     }
   ],
   "projected": {
-    "official_total": 349,
-    "projected_total": 369,
-    "extra_points": 20,
+    "official_total": 377,
+    "projected_total": 377,
+    "extra_points": 0,
     "fields": [
       {
         "key": "top_scorer",
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-19T10:15:35+00:00"
+  "synced_at": "2026-07-20T04:16:07+00:00"
 }

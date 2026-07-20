@@ -22,6 +22,6 @@
     "winners": ["ESP", "ARG"],
     "losers": ["FRA", "ENG"]
   },
-  "winner": null,
-  "runner_up": null
+  "winner": "ESP",
+  "runner_up": "ARG"
 }

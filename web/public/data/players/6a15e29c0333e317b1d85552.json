@@ -1,7 +1,7 @@
 {
   "player_id": "6a15e29c0333e317b1d85552",
   "name": "חנן ברגר 2",
-  "total_points": 294,
+  "total_points": 334,
   "correct_group": 41,
   "group_stage": [
     {
@@ -1814,7 +1814,7 @@
     "team_he": "פורטוגל",
     "team_code": "POR",
     "points_if_correct": 28,
-    "status": "pending",
+    "status": "wrong",
     "points": 0,
     "crowd": {
       "count": 25,
@@ -1827,21 +1827,21 @@
       "key": "top_scorer",
       "value": "קיליאן אמבפה",
       "points_if_correct": 20,
-      "status": "pending",
-      "points": 0
+      "status": "correct",
+      "points": 20
     },
     {
       "key": "best_player",
       "value": "כריסטיאנו רונאלדו",
       "points_if_correct": 20,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
       "key": "top_assists",
       "value": "ברונו פרננדש",
       "points_if_correct": 15,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
@@ -1862,22 +1862,22 @@
       "key": "most_goals_tournament_team",
       "value": "צרפת",
       "points_if_correct": 10,
-      "status": "pending",
-      "points": 0
+      "status": "correct",
+      "points": 10
     },
     {
       "key": "most_conceded_tournament_team",
       "value": "האיטי",
       "points_if_correct": 10,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
       "key": "most_cards_team",
       "value": "ארגנטינה",
       "points_if_correct": 10,
-      "status": "pending",
-      "points": 0
+      "status": "correct",
+      "points": 10
     },
     {
       "key": "least_cards_team",
@@ -1909,9 +1909,9 @@
     }
   ],
   "projected": {
-    "official_total": 294,
-    "projected_total": 324,
-    "extra_points": 30,
+    "official_total": 334,
+    "projected_total": 334,
+    "extra_points": 0,
     "fields": [
       {
         "key": "top_scorer",
@@ -1965,9 +1965,9 @@
         "key": "most_cards_team",
         "value": "ארגנטינה",
         "points_if_correct": 10,
-        "leader": false,
-        "points": 0,
-        "status": "trailing"
+        "leader": true,
+        "points": 10,
+        "status": "leading"
       },
       {
         "key": "least_cards_team",
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-19T10:15:35+00:00"
+  "synced_at": "2026-07-20T04:16:07+00:00"
 }

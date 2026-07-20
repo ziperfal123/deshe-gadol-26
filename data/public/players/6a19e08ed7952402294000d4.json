@@ -1,7 +1,7 @@
 {
   "player_id": "6a19e08ed7952402294000d4",
   "name": "אביב שעיר",
-  "total_points": 307,
+  "total_points": 312,
   "correct_group": 43,
   "group_stage": [
     {
@@ -1814,7 +1814,7 @@
     "team_he": "ברזיל",
     "team_code": "BRA",
     "points_if_correct": 24,
-    "status": "pending",
+    "status": "wrong",
     "points": 0,
     "crowd": {
       "count": 14,
@@ -1827,21 +1827,21 @@
       "key": "top_scorer",
       "value": "אנדריק",
       "points_if_correct": 20,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
       "key": "best_player",
       "value": "ראפיניה",
       "points_if_correct": 20,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
       "key": "top_assists",
       "value": "ברונו פרננדש",
       "points_if_correct": 15,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
@@ -1862,21 +1862,21 @@
       "key": "most_goals_tournament_team",
       "value": "ברזיל",
       "points_if_correct": 10,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
       "key": "most_conceded_tournament_team",
       "value": "אוזבקיסטן",
       "points_if_correct": 10,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
       "key": "most_cards_team",
       "value": "ירדן",
       "points_if_correct": 10,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
@@ -1897,20 +1897,20 @@
       "key": "total_extra_time",
       "value": 9,
       "points_if_correct": 5,
-      "status": "pending",
-      "points": 0
+      "status": "correct",
+      "points": 5
     },
     {
       "key": "total_penalties",
       "value": 5,
       "points_if_correct": 5,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     }
   ],
   "projected": {
-    "official_total": 307,
-    "projected_total": 307,
+    "official_total": 312,
+    "projected_total": 312,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-19T10:15:35+00:00"
+  "synced_at": "2026-07-20T04:16:07+00:00"
 }

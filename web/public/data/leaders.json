@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-07-19T10:15:35+00:00",
+  "synced_at": "2026-07-20T04:16:07+00:00",
   "fields": {
     "top_scorer": {
       "kind": "player",
@@ -107,11 +107,11 @@
       "kind": "team",
       "points": 10,
       "live": true,
-      "value": 12,
+      "value": 16,
       "leaders": [
         {
-          "code": "EGY",
-          "name_he": "מצרים"
+          "code": "ARG",
+          "name_he": "ארגנטינה"
         }
       ],
       "source": "override"

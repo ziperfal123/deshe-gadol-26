@@ -1,7 +1,7 @@
 {
   "player_id": "6a12040d7166ddfad1cc9633",
   "name": "נאור אלכתב 2",
-  "total_points": 242,
+  "total_points": 252,
   "correct_group": 34,
   "group_stage": [
     {
@@ -1814,7 +1814,7 @@
     "team_he": "ברזיל",
     "team_code": "BRA",
     "points_if_correct": 24,
-    "status": "pending",
+    "status": "wrong",
     "points": 0,
     "crowd": {
       "count": 14,
@@ -1827,21 +1827,21 @@
       "key": "top_scorer",
       "value": "ארלינג האלנד",
       "points_if_correct": 20,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
       "key": "best_player",
       "value": "ארלינג האלנד",
       "points_if_correct": 20,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
       "key": "top_assists",
       "value": "מרטין אודגור",
       "points_if_correct": 15,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
@@ -1862,21 +1862,21 @@
       "key": "most_goals_tournament_team",
       "value": "צרפת",
       "points_if_correct": 10,
-      "status": "pending",
-      "points": 0
+      "status": "correct",
+      "points": 10
     },
     {
       "key": "most_conceded_tournament_team",
       "value": "כף ורדה",
       "points_if_correct": 10,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
       "key": "most_cards_team",
       "value": "טורקיה",
       "points_if_correct": 10,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
@@ -1897,21 +1897,21 @@
       "key": "total_extra_time",
       "value": 12,
       "points_if_correct": 5,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
       "key": "total_penalties",
       "value": 8,
       "points_if_correct": 5,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     }
   ],
   "projected": {
-    "official_total": 242,
+    "official_total": 252,
     "projected_total": 252,
-    "extra_points": 10,
+    "extra_points": 0,
     "fields": [
       {
         "key": "top_scorer",
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-19T10:15:35+00:00"
+  "synced_at": "2026-07-20T04:16:07+00:00"
 }

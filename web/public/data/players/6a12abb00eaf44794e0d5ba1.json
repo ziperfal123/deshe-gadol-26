@@ -1,7 +1,7 @@
 {
   "player_id": "6a12abb00eaf44794e0d5ba1",
   "name": "רפאל ברגאי",
-  "total_points": 318,
+  "total_points": 340,
   "correct_group": 44,
   "group_stage": [
     {
@@ -1814,8 +1814,8 @@
     "team_he": "ספרד",
     "team_code": "ESP",
     "points_if_correct": 22,
-    "status": "pending",
-    "points": 0,
+    "status": "correct",
+    "points": 22,
     "crowd": {
       "count": 33,
       "total": 153,
@@ -1827,21 +1827,21 @@
       "key": "top_scorer",
       "value": "הארי קיין",
       "points_if_correct": 20,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
       "key": "best_player",
       "value": "פדרי",
       "points_if_correct": 20,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
       "key": "top_assists",
       "value": "למין ימאל",
       "points_if_correct": 15,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
@@ -1862,21 +1862,21 @@
       "key": "most_goals_tournament_team",
       "value": "גרמניה",
       "points_if_correct": 10,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
       "key": "most_conceded_tournament_team",
       "value": "האיטי",
       "points_if_correct": 10,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
       "key": "most_cards_team",
       "value": "איראן",
       "points_if_correct": 10,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
@@ -1904,13 +1904,13 @@
       "key": "total_penalties",
       "value": 5,
       "points_if_correct": 5,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     }
   ],
   "projected": {
-    "official_total": 318,
-    "projected_total": 318,
+    "official_total": 340,
+    "projected_total": 340,
     "extra_points": 0,
     "fields": [
       {
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-19T10:15:35+00:00"
+  "synced_at": "2026-07-20T04:16:07+00:00"
 }

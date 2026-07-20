@@ -1,15 +1,20 @@
 {
-  "note": "Hardcoded FALLBACK answers for special-bet superlatives. Priority: the live feed/API is preferred when available (it's fresher); a field here is used ONLY when that field has no live data (e.g. cards/assists with no API key). If a field has neither, it shows 'לא זמין'. Ties: list every leader; all pickers of any listed entry are scored. Team fields use FIFA codes (see teams.json); player fields use canonical Hebrew names (player_alias.json). `value` is the metric (goals/cards/assists) shown in the UI.",
+  "note": "FINAL official answers for the special-bet superlatives. `final: true` means the field is settled and scored into the official total (correct/wrong for everyone). Team fields use FIFA codes (see teams.json); player fields use canonical Hebrew names (player_alias.json). Numeric fields (red cards / extra time / penalties) score on an EXACT match to `value`. Ties: list every leader; all pickers of any listed entry are scored.",
   "fields": {
+    "best_player": {
+      "players": ["רודרי"],
+      "value": null,
+      "final": true
+    },
     "top_scorer": {
       "players": ["קיליאן אמבפה"],
       "value": 10,
-      "force": true
+      "final": true
     },
     "top_assists": {
       "players": ["מייקל אוליסה"],
       "value": 7,
-      "force": true
+      "final": true
     },
     "most_goals_group_stage_team": {
       "teams": ["GER", "NED", "FRA"],
@@ -27,32 +32,36 @@
       "teams": ["FRA", "ENG"],
       "teams_he": ["צרפת", "אנגליה"],
       "value": 20,
-      "force": true
+      "final": true
     },
     "most_conceded_tournament_team": {
       "teams": ["IRQ", "TUN", "ENG"],
       "teams_he": ["עיראק", "תוניסיה", "אנגליה"],
       "value": 12,
-      "force": true
-    },
-    "total_red_cards": {
-      "min_confirmed": 14
-    },
-    "total_extra_time": {
-      "min_confirmed": 8
-    },
-    "total_penalties": {
-      "min_confirmed": 4
+      "final": true
     },
     "most_cards_team": {
-      "teams": ["EGY"],
-      "teams_he": ["מצרים"],
-      "value": 12
+      "teams": ["ARG"],
+      "teams_he": ["ארגנטינה"],
+      "value": 16,
+      "final": true
     },
     "least_cards_team": {
       "teams": ["CZE", "TUN"],
       "teams_he": ["צ׳כיה", "תוניסיה"],
       "value": 1,
+      "final": true
+    },
+    "total_red_cards": {
+      "value": 15,
+      "final": true
+    },
+    "total_extra_time": {
+      "value": 9,
+      "final": true
+    },
+    "total_penalties": {
+      "value": 4,
       "final": true
     }
   }

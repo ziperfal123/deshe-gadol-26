@@ -1,7 +1,7 @@
 {
   "player_id": "6a1ac3d8019e89a5246a83c7",
   "name": "אורי בראונשטיין 2 (AI)",
-  "total_points": 316,
+  "total_points": 331,
   "correct_group": 44,
   "group_stage": [
     {
@@ -1814,7 +1814,7 @@
     "team_he": "צרפת",
     "team_code": "FRA",
     "points_if_correct": 20,
-    "status": "pending",
+    "status": "wrong",
     "points": 0,
     "crowd": {
       "count": 41,
@@ -1827,22 +1827,22 @@
       "key": "top_scorer",
       "value": "ויניסיוס ג'וניור",
       "points_if_correct": 20,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
       "key": "best_player",
       "value": "קיליאן אמבפה",
       "points_if_correct": 20,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
       "key": "top_assists",
       "value": "מייקל אוליסה",
       "points_if_correct": 15,
-      "status": "pending",
-      "points": 0
+      "status": "correct",
+      "points": 15
     },
     {
       "key": "most_goals_group_stage_team",
@@ -1862,21 +1862,21 @@
       "key": "most_goals_tournament_team",
       "value": "ספרד",
       "points_if_correct": 10,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
       "key": "most_conceded_tournament_team",
       "value": "האיטי",
       "points_if_correct": 10,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
       "key": "most_cards_team",
       "value": "אורוגוואי",
       "points_if_correct": 10,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
@@ -1897,21 +1897,21 @@
       "key": "total_extra_time",
       "value": 12,
       "points_if_correct": 5,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
       "key": "total_penalties",
       "value": 7,
       "points_if_correct": 5,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     }
   ],
   "projected": {
-    "official_total": 316,
+    "official_total": 331,
     "projected_total": 331,
-    "extra_points": 15,
+    "extra_points": 0,
     "fields": [
       {
         "key": "top_scorer",
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-19T10:15:35+00:00"
+  "synced_at": "2026-07-20T04:16:07+00:00"
 }

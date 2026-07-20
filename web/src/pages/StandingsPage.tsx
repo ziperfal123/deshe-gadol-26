@@ -1,46 +1,21 @@
-import { useEffect, useRef, useState } from 'react'
+import { Fragment, useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useEventListener, useLocalStorage } from 'usehooks-ts'
-import type { CustomGroup, LeadersFile, ProjectedStandings, ScoreMode, Standings, StandingsRow } from '../types'
-import {
-  fetchLeaders,
-  fetchProjectedStandings,
-  fetchStandings,
-  peekLeaders,
-  peekProjectedStandings,
-  peekStandings,
-} from '../lib/data'
+import type { CustomGroup, Standings, StandingsRow } from '../types'
+import { fetchStandings, peekStandings } from '../lib/data'
 import { useFlashScroll } from '../lib/useFlashScroll'
 import { rankStandings } from '../lib/ranking'
 import { cn } from '../lib/cn'
 import { Header } from '../components/Header'
 import { NavTabs } from '../components/NavTabs'
-import { ScoreModeTabs } from '../components/ScoreModeTabs'
-import { ProjectedBanner } from '../components/ProjectedBanner'
-import { ProjectedDialog } from '../components/ProjectedDialog'
 import { GroupViewBar } from '../components/GroupViewBar'
 import { GroupEditorDialog } from '../components/GroupEditorDialog'
+import { WinnerCelebration } from '../components/WinnerCelebration'
+import { PRIZE_PLACES } from '../consts/prizes'
 
-/** Map a projected-standings row to the shared StandingsRow shape (projected_total as the displayed score). */
-function projectedToRows(p: ProjectedStandings): StandingsRow[] {
-  return p.standings.map((r) => ({
-    rank: r.rank,
-    player_id: r.player_id,
-    name: r.name,
-    total_points: r.projected_total,
-    correct_group: r.correct_group,
-    tied: r.tied,
-    extra_points: r.extra_points,
-    official_total: r.official_total,
-  }))
-}
-
-/** Home screen: the standings table (all players or a custom group view). */
+/** Home screen: the final standings table (all players or a custom group view). */
 export function StandingsPage() {
   const [data, setData] = useState<Standings | undefined>(peekStandings)
-  const [mode, setMode] = useLocalStorage<ScoreMode>('score-mode', 'official')
-  const [proj, setProj] = useState<ProjectedStandings | undefined>(peekProjectedStandings)
-  const [leaders, setLeaders] = useState<LeadersFile | undefined>(peekLeaders)
   const [error, setError] = useState<string>()
   const [query, setQuery] = useState('')
   const [scrolled, setScrolled] = useState(false)
@@ -55,15 +30,6 @@ export function StandingsPage() {
   const headerRef = useRef<HTMLDivElement>(null)
   const [headerH, setHeaderH] = useState(0)
   const [isDesktop, setIsDesktop] = useState(false)
-  // When the space below the header is too short for the tall stacked sidebar,
-  // collapse its fields to single lines so the box clears the header.
-  const [tightSidebar, setTightSidebar] = useState(false)
-  // The projected sidebar's measured top: centered below the header when it fits,
-  // otherwise pinned just under the header so it never overlaps it.
-  const sidebarRef = useRef<HTMLElement>(null)
-  const [sidebarTop, setSidebarTop] = useState(0)
-  const projected = mode === 'projected'
-  const [projDialog, setProjDialog] = useState(false)
 
   useEventListener('scroll', () => setScrolled(window.scrollY > 250))
 
@@ -71,14 +37,7 @@ export function StandingsPage() {
     const el = headerRef.current
     const measure = () => {
       setIsDesktop(window.innerWidth >= 640)
-      const hH = el?.offsetHeight ?? 0
-      if (el) setHeaderH(hH)
-      const avail = window.innerHeight - hH
-      // ~620px is the room the tall stacked sidebar needs; below that, collapse to one-line fields.
-      setTightSidebar(avail < 620)
-      const boxH = sidebarRef.current?.offsetHeight ?? 0
-      // center the box below the header when there's room, else pin it just below (never overlap).
-      setSidebarTop(boxH > 0 && boxH < avail - 16 ? hH + (avail - boxH) / 2 : hH + 8)
+      if (el) setHeaderH(el.offsetHeight)
     }
     measure()
     const ro = el ? new ResizeObserver(measure) : undefined
@@ -88,7 +47,7 @@ export function StandingsPage() {
       ro?.disconnect()
       window.removeEventListener('resize', measure)
     }
-  }, [data, groups, activeView, projected, tightSidebar, leaders])
+  }, [data, groups, activeView])
 
   useEffect(() => {
     fetchStandings()
@@ -96,18 +55,10 @@ export function StandingsPage() {
       .catch(() => setError('שגיאה בטעינת הטבלה'))
   }, [])
 
-  // Projected data (+ live leaders) is loaded lazily the first time it's needed.
-  useEffect(() => {
-    if (mode !== 'projected' || proj) return
-    fetchProjectedStandings().then(setProj).catch(() => setError('שגיאה בטעינת הטבלה'))
-    fetchLeaders().then(setLeaders).catch(() => undefined)
-  }, [mode, proj])
-
   const onRowClick = (id: string) => navigate(`/player/${id}`)
   const activeGroup = groups.find((g) => g.id === activeView)
-  // Base list for the active mode (official SSOT or projected total).
-  const baseStandings: StandingsRow[] = projected ? (proj ? projectedToRows(proj) : []) : data?.standings ?? []
-  const ready = projected ? !!proj : !!data
+  const baseStandings: StandingsRow[] = data?.standings ?? []
+  const ready = !!data
   // Custom group views are re-ranked within the chosen subset.
   const rows = activeGroup
     ? rankStandings(baseStandings.filter((r) => activeGroup.playerIds.includes(r.player_id)))
@@ -133,11 +84,11 @@ export function StandingsPage() {
 
   return (
     <div>
+      {data && <WinnerCelebration standings={data.standings} />}
       <div ref={headerRef} className="sm:sticky sm:top-0 sm:z-20 sm:w-full sm:bg-sand/95 sm:backdrop-blur">
         <div className="mx-auto max-w-3xl px-4 pb-2 sm:pb-3">
-          <Header syncedAt={(projected ? proj?.synced_at : undefined) ?? data?.synced_at} />
+          <Header syncedAt={data?.synced_at} />
           <NavTabs />
-          <ScoreModeTabs mode={mode} onChange={setMode} />
           {data && (
             <GroupViewBar
               groups={groups}
@@ -155,37 +106,13 @@ export function StandingsPage() {
           style={{ top: isDesktop ? headerH : 0 }}
         >
           <div className="mx-auto max-w-3xl px-4 py-3">
-            {/* mobile/tablet: tappable in-flow banner (opens the expanded dialog); desktop (xl): fixed gutter sidebar below */}
-            {projected && (
-              <button
-                type="button"
-                onClick={() => setProjDialog(true)}
-                aria-label="הצג ניקוד משוער מורחב"
-                className="block w-full text-right transition active:scale-[0.99] xl:hidden"
-              >
-                <ProjectedBanner leaders={leaders} />
-              </button>
-            )}
             {renderSearchIfNeeded(data, query, setQuery, rows, scrolled, flashScrollTo)}
           </div>
         </div>
       )}
-      {/* desktop (xl+) only: vertical call-out pinned in the RIGHT gutter beside the centered table,
-          vertically centered in the table area (below the header). position:fixed keeps it out of the
-          header flow, so the header height no longer changes between modes. */}
-      {projected && (
-        <aside
-          ref={sidebarRef}
-          className="fixed left-[calc(75vw_+_12rem)] z-10 hidden w-52 -translate-x-1/2 xl:block 2xl:w-60"
-          style={{ top: sidebarTop }}
-        >
-          <ProjectedBanner leaders={leaders} vertical compact={tightSidebar} />
-        </aside>
-      )}
       <div className="mx-auto max-w-3xl px-4 pb-16 pt-3">
-        {renderListIfNeeded(ready, error, rows, query, projected, onRowClick)}
+        {renderListIfNeeded(ready, error, rows, query, onRowClick)}
       </div>
-      {projected && projDialog && <ProjectedDialog leaders={leaders} onClose={() => setProjDialog(false)} />}
       {renderEditorIfNeeded(editor, data, onSaveGroup, onDeleteGroup, () => setEditor({ open: false }))}
     </div>
   )
@@ -253,7 +180,6 @@ function renderListIfNeeded(
   error: string | undefined,
   rows: StandingsRow[],
   query: string,
-  projected: boolean,
   onRowClick: (id: string) => void,
 ) {
   if (error) return <p className="mt-10 text-center text-clay">{error}</p>
@@ -261,11 +187,29 @@ function renderListIfNeeded(
   const filtered = rows.filter((r) => r.name.includes(query.trim()))
   return (
     <ul className="mt-3 space-y-2">
-      {filtered.map((row) => (
-        <StandingRow key={row.player_id} row={row} projected={projected} onClick={onRowClick} />
+      {filtered.map((row, i) => (
+        <Fragment key={row.player_id}>
+          {renderPrizeLineIfNeeded(filtered[i - 1], row)}
+          <StandingRow row={row} onClick={onRowClick} />
+        </Fragment>
       ))}
       {renderEmptyIfNeeded(filtered.length)}
     </ul>
+  )
+}
+
+/** The "prize cutoff" line, drawn once between the last prize-winning row and the first below it. */
+function renderPrizeLineIfNeeded(prev: StandingsRow | undefined, row: StandingsRow) {
+  const crossesCutoff = !!prev && prev.rank <= PRIZE_PLACES && row.rank > PRIZE_PLACES
+  if (!crossesCutoff) return <></>
+  return (
+    <li aria-hidden className="flex items-center gap-3 py-2">
+      <div className="h-0.5 flex-1 rounded-full bg-clay/60" />
+      <span className="whitespace-nowrap rounded-full bg-clay px-3 py-0.5 text-xs font-extrabold text-white shadow-soft">
+        🏆 קו הפרסים
+      </span>
+      <div className="h-0.5 flex-1 rounded-full bg-clay/60" />
+    </li>
   )
 }
 
@@ -312,29 +256,31 @@ function renderEmptyIfNeeded(count: number) {
 
 interface RowProps {
   row: StandingsRow
-  projected: boolean
   onClick: (id: string) => void
 }
 
-function StandingRow({ row, projected, onClick }: RowProps) {
+/** Per-rank row appearance: gold/silver/bronze for the podium, a subtle tint for the rest of the prize zone. */
+const ROW_STYLE: Record<number, { row: string; name: string }> = {
+  1: { row: 'border-sun/70 bg-gradient-to-l from-sun/35 to-white ring-1 ring-sun/60 hover:border-sun', name: 'text-lg font-extrabold' },
+  2: { row: 'border-[#C7CDD6] bg-gradient-to-l from-[#E6EAF0] to-white ring-1 ring-[#C7CDD6] hover:border-[#B9C0CC]', name: 'font-bold' },
+  3: { row: 'border-clay/40 bg-gradient-to-l from-[#EAC4B2] to-white ring-1 ring-clay/30 hover:border-clay/60', name: 'font-bold' },
+}
+
+const PRIZE_ZONE_STYLE = { row: 'border-leaf/25 bg-leaf/[0.06] hover:border-leaf/50', name: 'font-semibold' }
+const DEFAULT_ROW_STYLE = { row: 'border-ink/5 hover:border-sage/40', name: 'font-semibold' }
+
+function StandingRow({ row, onClick }: RowProps) {
   const isTop3 = row.rank <= 3
-  const extra = row.extra_points ?? 0
+  const style = ROW_STYLE[row.rank] ?? (row.rank <= PRIZE_PLACES ? PRIZE_ZONE_STYLE : DEFAULT_ROW_STYLE)
+  const className = cn(
+    'flex w-full items-center gap-3 rounded-2xl border bg-white px-3 py-3 text-right shadow-soft transition hover:-translate-y-0.5 hover:shadow-lg',
+    style.row,
+  )
   return (
     <li id={`player-${row.player_id}`} className="scroll-mt-24">
-      <button
-        onClick={() => onClick(row.player_id)}
-        className="flex w-full items-center gap-3 rounded-2xl border border-ink/5 bg-white px-3 py-3 text-right shadow-soft transition hover:-translate-y-0.5 hover:border-sage/40 hover:shadow-lg"
-      >
+      <button onClick={() => onClick(row.player_id)} className={className}>
         <RankBadge rank={row.rank} isTop3={isTop3} />
-        <span className="flex-1 truncate font-semibold text-ink">{row.name}</span>
-        {projected ? (
-          <span className="text-xs text-ink/45">
-            רשמי {row.official_total ?? row.total_points}
-            {extra > 0 && <span className="font-bold text-leaf"> +{extra}</span>}
-          </span>
-        ) : (
-          <span />
-        )}
+        <span className={cn('flex-1 truncate text-ink', style.name)}>{row.name}</span>
         <span className="min-w-[3.5rem] rounded-xl bg-sun/40 px-3 py-1 text-center font-bold text-ink">
           {row.total_points}
         </span>
@@ -346,6 +292,17 @@ function StandingRow({ row, projected, onClick }: RowProps) {
 const MEDALS: Record<number, string> = { 1: '🥇', 2: '🥈', 3: '🥉' }
 
 function RankBadge({ rank, isTop3 }: { rank: number; isTop3: boolean }) {
+  // The champion row gets a big crown perched over the gold medal.
+  if (rank === 1) {
+    return (
+      <span className="relative w-9 text-center text-2xl">
+        <span aria-hidden className="absolute -top-3.5 right-1/2 translate-x-1/2 rotate-12 text-2xl drop-shadow-sm">
+          👑
+        </span>
+        {MEDALS[1]}
+      </span>
+    )
+  }
   if (isTop3) {
     return <span className="w-8 text-center text-xl">{MEDALS[rank]}</span>
   }

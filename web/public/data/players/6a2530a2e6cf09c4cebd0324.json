@@ -1,7 +1,7 @@
 {
   "player_id": "6a2530a2e6cf09c4cebd0324",
   "name": "תום דרזיה",
-  "total_points": 272,
+  "total_points": 287,
   "correct_group": 41,
   "group_stage": [
     {
@@ -1814,7 +1814,7 @@
     "team_he": "גרמניה",
     "team_code": "GER",
     "points_if_correct": 28,
-    "status": "pending",
+    "status": "wrong",
     "points": 0,
     "crowd": {
       "count": 7,
@@ -1827,21 +1827,21 @@
       "key": "top_scorer",
       "value": "ראפיניה",
       "points_if_correct": 20,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
       "key": "best_player",
       "value": "קאי הברץ",
       "points_if_correct": 20,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
       "key": "top_assists",
       "value": "לירוי סאנה",
       "points_if_correct": 15,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
@@ -1862,21 +1862,21 @@
       "key": "most_goals_tournament_team",
       "value": "ברזיל",
       "points_if_correct": 10,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
       "key": "most_conceded_tournament_team",
       "value": "עיראק",
       "points_if_correct": 10,
-      "status": "pending",
-      "points": 0
+      "status": "correct",
+      "points": 10
     },
     {
       "key": "most_cards_team",
       "value": "ברזיל",
       "points_if_correct": 10,
-      "status": "pending",
+      "status": "wrong",
       "points": 0
     },
     {
@@ -1904,14 +1904,14 @@
       "key": "total_penalties",
       "value": 4,
       "points_if_correct": 5,
-      "status": "pending",
-      "points": 0
+      "status": "correct",
+      "points": 5
     }
   ],
   "projected": {
-    "official_total": 272,
-    "projected_total": 282,
-    "extra_points": 10,
+    "official_total": 287,
+    "projected_total": 287,
+    "extra_points": 0,
     "fields": [
       {
         "key": "top_scorer",
@@ -1979,5 +1979,5 @@
       }
     ]
   },
-  "synced_at": "2026-07-19T10:15:35+00:00"
+  "synced_at": "2026-07-20T04:16:07+00:00"
 }

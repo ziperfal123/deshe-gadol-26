@@ -314,6 +314,8 @@ except FileNotFoundError:
 TEAM_FIELDS = {"most_goals_group_stage_team", "most_conceded_group_stage_team",
                "most_goals_tournament_team", "most_conceded_tournament_team",
                "most_cards_team", "least_cards_team"}
+# Whole-number tournament tallies (guess is correct only on an exact match to the final count).
+NUMERIC_FIELDS = {"total_red_cards", "total_extra_time", "total_penalties"}
 POINTS = {"top_scorer": 20, "top_assists": 15, "most_goals_group_stage_team": 10,
           "most_conceded_group_stage_team": 10, "most_goals_tournament_team": 10,
           "most_conceded_tournament_team": 10, "most_cards_team": 10, "least_cards_team": 10}
@@ -334,6 +336,7 @@ live = {"top_scorer": bool(of_full), "top_assists": api_state == "live",
         "most_cards_team": api_state == "live", "least_cards_team": api_state == "live"}
 overridden = set()
 final_fields = set()  # fields with confirmed official results (everyone scored correct/wrong)
+final_numeric = {}   # numeric fields with a confirmed final count (exact-match scoring)
 min_confirmed = {}   # fields where values BELOW this number are definitively wrong
 for key, o in SPECIAL_OVERRIDES.items():
     is_final = o.get("final", False)
@@ -342,7 +345,10 @@ for key, o in SPECIAL_OVERRIDES.items():
         min_confirmed[key] = o["min_confirmed"]
     if live.get(key) and not is_force:  # FRESH feed/API data exists -> prefer it (unless forced/final)
         continue
-    if key in TEAM_FIELDS and o.get("teams") is not None:
+    if key in NUMERIC_FIELDS and o.get("value") is not None:
+        lead_val[key] = o.get("value"); live[key] = True; overridden.add(key)
+        if is_final: final_fields.add(key); final_numeric[key] = o["value"]
+    elif key in TEAM_FIELDS and o.get("teams") is not None:
         lead_set[key] = set(o["teams"]); lead_val[key] = o.get("value"); live[key] = True; overridden.add(key)
         if is_final: final_fields.add(key)
     elif key not in TEAM_FIELDS and o.get("players") is not None:
@@ -500,9 +506,18 @@ for pl in players:
     winner_he = (tp.get("winner") or [None])[0]
     wc = he2code(winner_he) if winner_he else None
     champ_count = champ_pick_cnt.get(winner_he, 0) if winner_he else 0
+    champ_worth = champ["points"].get(wc) if wc else None
+    # Champion scoring: settled once the tournament winner is known. Correct = picked the actual winner.
+    champ_status, champ_pts = "pending", 0
+    if ko_winner and wc:
+        if wc == ko_winner:
+            champ_status, champ_pts = "correct", (champ_worth or 0)
+        else:
+            champ_status = "wrong"
+    total += champ_pts
     champion = {"team_he": winner_he, "team_code": wc,
-                "points_if_correct": champ["points"].get(wc) if wc else None,
-                "status": "pending", "points": 0,
+                "points_if_correct": champ_worth,
+                "status": champ_status, "points": champ_pts,
                 "crowd": {"count": champ_count, "total": champ_pick_tot,
                           "pct": round(100 * champ_count / champ_pick_tot) if champ_pick_tot else 0}
                 if winner_he else None}
@@ -516,7 +531,15 @@ for pl in players:
     spec_pts_earned = 0
     for k, v in SPEC_PTS.items():
         val = sp.get(k)
-        if k in final_fields and val is not None:
+        if k in final_numeric and val is not None:
+            try:
+                is_correct = int(val) == int(final_numeric[k])
+            except (ValueError, TypeError):
+                is_correct = False
+            status = "correct" if is_correct else "wrong"
+            pts = v if is_correct else 0
+            spec_pts_earned += pts
+        elif k in final_fields and val is not None:
             is_correct = _matcher(k)(val, lead_set[k])
             status = "correct" if is_correct else "wrong"
             pts = v if is_correct else 0

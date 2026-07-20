@@ -115,24 +115,13 @@ function renderBodyIfNeeded(
 }
 
 function PlayerSummary({ player }: { player: PlayerFile }) {
-  const proj = player.projected
-  const showProjected = proj && proj.extra_points > 0
   return (
     <div className="mt-3 rounded-3xl bg-gradient-to-bl from-leaf to-sage p-5 text-white shadow-soft">
       <h1 className="text-2xl font-extrabold">{player.name}</h1>
       <div className="mt-3 flex gap-3">
         <Stat label="נקודות" value={player.total_points} />
-        {showProjected ? (
-          <Stat label="ניקוד משוער" value={proj.projected_total} />
-        ) : (
-          <Stat label="פגיעות בבתים" value={player.correct_group} />
-        )}
+        <Stat label="פגיעות בבתים" value={player.correct_group} />
       </div>
-      {showProjected && (
-        <p className="mt-2 text-center text-[11px] font-medium text-white/80">
-          ניקוד משוער כולל ‎+{proj.extra_points} מהימורים מיוחדים (לא סופי)
-        </p>
-      )}
     </div>
   )
 }
@@ -658,10 +647,17 @@ function ChampionSection({ player, championStat }: { player: PlayerFile; champio
         </div>
         <StatTooltip stat={championStat} />
         {renderChampionPotentialIfNeeded(c.points_if_correct)}
-        <Chip label={c.status === 'pending' ? 'ממתין' : `+${c.points}`} status={c.status} />
+        <Chip label={championChipLabel(c.status, c.points)} status={c.status} />
       </div>
     </Section>
   )
+}
+
+/** Chip text for the champion pick: waiting, wrong, or the points earned. */
+function championChipLabel(status: PlayerFile['champion']['status'], points: number): string {
+  if (status === 'correct') return `נכון · +${points}`
+  if (status === 'wrong') return 'לא נכון'
+  return 'ממתין'
 }
 
 function renderChampionPotentialIfNeeded(pts?: number) {

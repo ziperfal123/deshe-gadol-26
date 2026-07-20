@@ -32,11 +32,17 @@ export default {
           '70%': { boxShadow: '0 0 0 6px rgba(45,140,210,0.85), 0 0 18px 4px rgba(45,140,210,0.45)' },
           '100%': { boxShadow: '0 0 0 12px rgba(45,140,210,0), 0 0 0 0 rgba(45,140,210,0)' },
         },
+        'confetti-fall': {
+          '0%': { transform: 'translateY(-12vh) rotate(0deg)', opacity: '0' },
+          '8%': { opacity: '1' },
+          '100%': { transform: 'translateY(110vh) rotate(720deg)', opacity: '0.9' },
+        },
       },
       animation: {
         'fade-in': 'fade-in 200ms ease-out',
         'pop-in': 'pop-in 260ms cubic-bezier(0.22, 1, 0.36, 1)',
         flash: 'flash 1.3s ease-out',
+        'confetti-fall': 'confetti-fall 3s linear forwards',
       },
     },
   },
