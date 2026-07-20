@@ -567,24 +567,35 @@ for pl in players:
         "projected": {"official_total": total, "projected_total": projected_total,
                       "extra_points": proj_gain, "fields": proj_fields},
     }
-    rows.append({"player_id": pid, "name": pl["name"], "total_points": total, "correct_group": correct})
+    # Official tie-break key (rules א-ז), applied in order when total points are equal.
+    # ח (pub appearances) is not tracked, so ties past ז fall back to name for determinism.
+    def _stage_correct(stage):
+        return sum(1 for x in advancement.get(stage, []) if x["status"] == "correct")
+    tie_break = (
+        1 if champion["status"] == "correct" else 0,  # א ניחוש האלופה
+        _stage_correct("final"),                        # ב נבחרות בגמר
+        _stage_correct("semi_final"),                   # ג נבחרות בחצי הגמר
+        _stage_correct("quarter_final"),                # ד נבחרות ברבע הגמר
+        _stage_correct("round_of_16"),                  # ה נבחרות בשמינית הגמר
+        qual_correct,                                   # ו נבחרות בשלב הנוקאאוט הראשון
+        correct,                                        # ז ניחושי 1X2 בשלב הבתים
+    )
+    rows.append({"player_id": pid, "name": pl["name"], "total_points": total,
+                 "correct_group": correct, "_tb": tie_break})
     proj_rows.append({"player_id": pid, "name": pl["name"], "official_total": total,
                       "projected_total": projected_total, "correct_group": correct,
                       "extra_points": proj_gain})
 
-# rank: DENSE ranking — equal scores share a position, ranks ascend 1,2,3 with
-# NO gaps (so 4-way tie for 1st is 1,1,1,1 then 2, not 1,1,1,1,5). Sort by
-# points desc, correct_group desc, name asc (stable). `tied` flags shared scores.
-rows.sort(key=lambda r: (-r["total_points"], -r["correct_group"], r["name"]))
-score_counts = Counter((r["total_points"], r["correct_group"]) for r in rows)
-rank, prev = 0, None
-for r in rows:
-    key = (r["total_points"], r["correct_group"])
-    if key != prev:
-        rank += 1
-        prev = key
-    r["rank"] = rank
-    r["tied"] = score_counts[key] > 1
+# rank: STRICT ranking (1..N, unique positions) — prizes are per exact place, so
+# equal-point players are separated by the official tie-break (rules א-ז). `tied`
+# stays true only for players indistinguishable on every tracked criterion.
+rows.sort(key=lambda r: (-r["total_points"],) + tuple(-x for x in r["_tb"]) + (r["name"],))
+full_key = lambda r: (r["total_points"], r["_tb"])
+tie_counts = Counter(full_key(r) for r in rows)
+for i, r in enumerate(rows):
+    r["rank"] = i + 1
+    r["tied"] = tie_counts[full_key(r)] > 1
+    del r["_tb"]
 
 # ---- projected ranking: by projected_total, then official_total, then name (dense, same as official) ----
 proj_rows.sort(key=lambda r: (-r["projected_total"], -r["official_total"], r["name"]))

@@ -28,11 +28,10 @@ export const HISTORY_TOURNAMENTS: HistoryTournament[] = [
     title: 'מונדיאל 2026',
     host: 'קנדה · מקסיקו · ארה״ב',
     emoji: '⚽',
-    pending: true,
     podium: [
-      { place: 1, name: '?' },
-      { place: 2, name: '?' },
-      { place: 3, name: '?' },
+      { place: 1, name: 'שיי גרינברג', prize: 2920 },
+      { place: 2, name: 'שקד טבצ׳ניק', prize: 1825 },
+      { place: 3, name: 'יניב סיפרפאל', prize: 1460 },
     ],
   },
   {

@@ -1,4 +1,5 @@
 import { formatSync } from '../lib/format'
+import { TOURNAMENT_FINALIZED } from '../consts/tournament'
 
 interface HeaderProps {
   syncedAt?: string
@@ -15,8 +16,38 @@ export function Header({ syncedAt }: HeaderProps) {
       </div>
       <p className="mt-1 text-sm font-medium text-leaf">מונדיאל 2026 · טבלת הניחושים</p>
       {renderSyncIfNeeded(syncedAt)}
-      <FinalizingBanner />
+      {renderBannerIfNeeded()}
     </header>
+  )
+}
+
+function renderSyncIfNeeded(syncedAt?: string) {
+  // Once finalized, the "final results" banner carries the state — no freshness line.
+  if (TOURNAMENT_FINALIZED) return <></>
+  // Always render the line (with a non-breaking placeholder when there's no
+  // timestamp) so the header keeps a constant height across pages and the tabs
+  // below it don't jump when navigating.
+  return (
+    <p className="mt-2 h-4 text-xs text-ink/50">
+      {syncedAt ? `עודכן לאחרונה: ${formatSync(syncedAt)}` : ' '}
+    </p>
+  )
+}
+
+function renderBannerIfNeeded() {
+  return TOURNAMENT_FINALIZED ? <FinalBanner /> : <FinalizingBanner />
+}
+
+/** Final-state notice: the tournament is over and the standings are official and locked. */
+function FinalBanner() {
+  return (
+    <div className="mt-2 rounded-2xl border border-leaf/40 bg-gradient-to-l from-sage/25 to-leaf/15 px-4 py-2.5 text-center shadow-soft">
+      <p className="flex items-center justify-center gap-1.5 text-sm font-extrabold text-ink">
+        <span aria-hidden>🏆</span>
+        התוצאות הסופיות · הטבלה נעולה
+      </p>
+      <p className="mt-0.5 text-xs font-medium text-ink/60">מונדיאל 2026 הסתיים · אלה התוצאות הרשמיות</p>
+    </div>
   )
 }
 
@@ -30,16 +61,5 @@ function FinalizingBanner() {
       </p>
       <p className="mt-0.5 text-xs font-medium text-ink/60">יש להתעלם ממצבה הנוכחי של הטבלה</p>
     </div>
-  )
-}
-
-function renderSyncIfNeeded(syncedAt?: string) {
-  // Always render the line (with a non-breaking placeholder when there's no
-  // timestamp) so the header keeps a constant height across pages and the tabs
-  // below it don't jump when navigating.
-  return (
-    <p className="mt-2 h-4 text-xs text-ink/50">
-      {syncedAt ? `עודכן לאחרונה: ${formatSync(syncedAt)}` : ' '}
-    </p>
   )
 }
