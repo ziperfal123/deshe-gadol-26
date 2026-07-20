@@ -35,7 +35,7 @@ const CONFETTI = buildConfetti(70)
  * consolation. Auto-opens on the first few visits, then stops nagging.
  */
 export function WinnerCelebration({ standings }: { standings: StandingsRow[] }) {
-  const [views, setViews] = useLocalStorage('celebration-views', 0)
+  const [views, setViews] = useLocalStorage('celebration-final-views', 0)
   const [open, setOpen] = useState(views < CELEBRATION_MAX_VIEWS)
 
   // Count this auto-open once (on mount) so it stops after CELEBRATION_MAX_VIEWS visits.

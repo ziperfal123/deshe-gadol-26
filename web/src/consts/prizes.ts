@@ -14,4 +14,4 @@ export const LAST_PLACE_PRIZE = 50
 export const PRIZE_PLACES = 5
 
 /** Number of times the winner celebration auto-opens before it stops nagging. */
-export const CELEBRATION_MAX_VIEWS = 3
+export const CELEBRATION_MAX_VIEWS = 5
